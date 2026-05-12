@@ -1,37 +1,34 @@
 site_name: tw-utils Doku
 site_description: Anleitungen und Hilfen für tw-utils — Tools für Die Stämme
 site_url: https://docs.tw-utils.net/
-repo_url: https://github.com/Tanzlehrer/tw-utils-Docs
-repo_name: Tanzlehrer/tw-utils-Docs
-edit_uri: edit/main/docs/
 
 theme:
   name: material
   language: de
+  favicon: assets/logo.png
   features:
-    - navigation.tabs
     - navigation.sections
-    - navigation.top
     - navigation.indexes
+    - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Zu Dark Mode wechseln
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Zu Light Mode wechseln
-  icon:
-    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search
@@ -54,10 +51,17 @@ plugins:
             AG-Planner: AG-Planner
             ZWC-Planner: ZWC-Planner
             Discord-Bot: Discord Bot
+            Einführung: Introduction
+            Konfiguration: Configuration
+            FAQ: FAQ
 
 nav:
   - Startseite: index.md
-  - Off-Planner: off-planner/index.md
+  - Off-Planner:
+      - off-planner/index.md
+      - Einführung: off-planner/einfuehrung.md
+      - Konfiguration: off-planner/konfiguration.md
+      - FAQ: off-planner/faq.md
   - AG-Planner: ag-planner/index.md
   - ZWC-Planner: zwc-planner/index.md
   - Discord-Bot: discord-bot/index.md
@@ -75,8 +79,3 @@ markdown_extensions:
       alternate_style: true
   - toc:
       permalink: true
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Tanzlehrer/tw-utils
