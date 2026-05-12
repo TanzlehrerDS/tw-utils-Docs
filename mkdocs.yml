@@ -7,7 +7,6 @@ theme:
   language: de
   favicon: assets/logo.png
   features:
-    - navigation.sections
     - navigation.indexes
     - navigation.top
     - search.suggest
