@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://docs.tw-utils.net/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/ag-planner/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/discord-bot/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/einfuehrung/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/einfuehrung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/einfuehrung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/faq/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/faq/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/faq/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/konfiguration/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/konfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/konfiguration/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/zwc-planner/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/zwc-planner/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/zwc-planner/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/ag-planner/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/einfuehrung/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/einfuehrung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/einfuehrung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/faq/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/faq/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/faq/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/konfiguration/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/konfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/konfiguration/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/zwc-planner/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/zwc-planner/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/zwc-planner/"/>
+    </url>
+</urlset>
