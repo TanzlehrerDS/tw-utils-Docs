@@ -60,7 +60,7 @@ plugins:
             Zwischencleaner & Fake-UT: Cleaner and Fake-UT
             Der Leaderview: Leader-View
             Discordbot: Discordbot
-            Allgemein: Overview
+            Video-Tutorial: Video Tutorial
             "Tab 1: Daten & Vorbereitung": "Tab 1: Data & Preparations"
             "Tab 2: Angriffsplanung": "Tab 2: Nuke-Planning"
             "Tab 3: Fakeplanung": "Tab 3: Fake-Planning"
@@ -81,19 +81,19 @@ plugins:
 nav:
   - Startseite: index.md
   - Off-Planungstool:
-      - Allgemein: off-planner/allgemein.md
+      - Video-Tutorial: off-planner/allgemein.md
       - "Tab 1: Daten & Vorbereitung": off-planner/tab1-daten.md
       - "Tab 2: Angriffsplanung": off-planner/tab2-angriffsplanung.md
       - "Tab 3: Fakeplanung": off-planner/tab3-fakeplanung.md
       - "Tab 4: Berechnung": off-planner/tab4-berechnung.md
   - AG-Planungstool:
-      - Allgemein: ag-planner/allgemein.md
+      - Video-Tutorial: ag-planner/allgemein.md
       - "Tab 1: AG-Meldungen": ag-planner/tab1-ag-meldungen.md
       - "Tab 2: Zieldörfer": ag-planner/tab2-zieldoerfer.md
       - "Tab 3: Einstellungen": ag-planner/tab3-einstellungen.md
       - "Tab 4: Ergebnisübersicht": ag-planner/tab4-ergebnisuebersicht.md
   - Zwischencleaner & Fake-UT:
-      - Allgemein: cleaner-fake-ut/allgemein.md
+      - Video-Tutorial: cleaner-fake-ut/allgemein.md
       - XXX (Platzhalter): cleaner-fake-ut/platzhalter.md
   - Der Leaderview:
       - Mitglieder: leader-view/mitglieder.md
