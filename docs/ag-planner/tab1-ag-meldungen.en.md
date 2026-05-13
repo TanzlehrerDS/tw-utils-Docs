@@ -1,20 +1,40 @@
 # Tab 1: Snob-Entries
 
-In Tab 1 you enter the source villages that will provide the noblemen.
+![Overview of the Snob-Entries tab](../assets/snob-planning-tool/tab1_01_overview.png){ .screenshot }
 
-## Adding entries
+In Tab 1 you specify the noblemen you want to plan with.
 
-- **Discord import:** If your tribe uses the tw-utils Discord bot, you can
-  import the nobleman reports from your Discord server with a single click.
-- **Manual entry:** Click the button for manual entries, paste the village
-  coordinates and define the number of noblemen available per village.
+There are two ways to import noblemen into the tool:
 
-## Overview panel
+## 1. Import via the Discord bot
 
-After your entries, an overview panel shows the key figures: total noblemen,
-full trains, and combinations of three, two and one nobleman.
+![Import via the Discord bot](../assets/snob-planning-tool/tab1_02_import_from_discordbot.png){ .screenshot }
 
-## Managing entries
+Select the appropriate Discord server and click the import button. The
+noblemen reported on the Discord server are then transferred to the tool
+automatically.
 
-- The number of noblemen per village can be edited at any time.
-- A search field and a per-row delete button keep larger lists manageable.
+!!! info "Multiple Discord servers"
+    You can also import noblemen from several Discord servers. Just run the
+    import one after another for each server.
+
+## 2. Manual import
+
+![Manual import of noblemen](../assets/snob-planning-tool/tab1_03_manual_import.png){ .screenshot }
+
+Clicking the button for manual entries opens a modal. Paste the coordinates
+of the source villages here — any additional text around them does not affect
+the coordinate detection. Then enter the number of noblemen per village and
+confirm your selection.
+
+!!! info "Repeated imports"
+    You can run the import multiple times in a row. If the same coordinate is
+    imported again, the noblemen count from the most recent import takes
+    precedence.
+
+## 3. Overview of imported noblemen
+
+![Table of imported noblemen](../assets/snob-planning-tool/tab1_04_snob_table.png){ .screenshot }
+
+After the import, all noblemen are listed in a clear overview table. You can
+also adjust the number of noblemen per coordinate here after the import.
