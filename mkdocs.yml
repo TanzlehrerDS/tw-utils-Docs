@@ -29,6 +29,15 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - assets/yt-consent.js
+
+copyright: >
+  &copy; 2026 tw-utils &middot;
+  <a href="https://tw-utils.net/impressum/#impressum" target="_blank" rel="noopener">Impressum</a>
+  &middot;
+  <a href="https://tw-utils.net/datenschutz/#datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+
 plugins:
   - search
   - i18n:
