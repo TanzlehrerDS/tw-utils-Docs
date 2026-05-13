@@ -40,6 +40,9 @@ copyright: >
 
 plugins:
   - search
+  - glightbox:
+      auto_caption: true
+      caption_position: bottom
   - i18n:
       docs_structure: suffix
       reconfigure_material: true
