@@ -94,15 +94,20 @@
   border-right: 1px solid #30363d;
 }
 
-/* --- Header: flat, thin separator instead of drop shadow --- */
+/* --- Header: glassmorphism (semi-transparent navy + backdrop blur) --- */
 .md-header {
-  box-shadow: none;
+  background-color: rgba(13, 27, 42, 0.75);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
 }
 
-/* --- Tabs (if ever re-enabled): clean separator --- */
+/* --- Tabs (if ever re-enabled): match glass effect --- */
 .md-tabs {
-  background-color: var(--md-primary-fg-color);
+  background-color: rgba(13, 27, 42, 0.75);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 

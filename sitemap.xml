@@ -2,114 +2,338 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://docs.tw-utils.net/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/ag-planner/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/ag-planner/allgemein/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/allgemein/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/allgemein/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/discord-bot/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/ag-planner/tab1-ag-meldungen/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/tab1-ag-meldungen/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/tab1-ag-meldungen/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/off-planner/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/ag-planner/tab2-zieldoerfer/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/tab2-zieldoerfer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/tab2-zieldoerfer/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/off-planner/einfuehrung/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/ag-planner/tab3-einstellungen/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/einfuehrung/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/einfuehrung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/tab3-einstellungen/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/tab3-einstellungen/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/off-planner/faq/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/ag-planner/tab4-ergebnisuebersicht/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/faq/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/faq/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/tab4-ergebnisuebersicht/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/tab4-ergebnisuebersicht/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/off-planner/konfiguration/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/cleaner-fake-ut/allgemein/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/konfiguration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/konfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/allgemein/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/allgemein/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/zwc-planner/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/cleaner-fake-ut/platzhalter/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/zwc-planner/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/zwc-planner/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/platzhalter/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/platzhalter/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/discord-bot/benachrichtigungen/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/benachrichtigungen/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/discord-bot/bunker-info/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/bunker-info/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/bunker-info/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/discord-bot/planning-system/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/planning-system/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/planning-system/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/discord-bot/quick-setup/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/quick-setup/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/quick-setup/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/discord-bot/search-system/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/search-system/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/search-system/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/discord-bot/sitting-system/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/sitting-system/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/sitting-system/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/discord-bot/verifizierung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/verifizierung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/verifizierung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/leader-view/bunker-info/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/leader-view/bunker-info/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/leader-view/bunker-info/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/leader-view/mitglieder/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/leader-view/mitglieder/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/leader-view/mitglieder/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/leader-view/planung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/leader-view/planung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/leader-view/planung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/leader-view/truppen/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/leader-view/truppen/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/leader-view/truppen/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/allgemein/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/allgemein/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/allgemein/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/tab1-daten/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/tab1-daten/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/tab1-daten/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/tab2-angriffsplanung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/tab2-angriffsplanung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/tab2-angriffsplanung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/tab3-fakeplanung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/tab3-fakeplanung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/tab3-fakeplanung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/off-planner/tab4-berechnung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/tab4-berechnung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/tab4-berechnung/"/>
     </url>
     <url>
         <loc>https://docs.tw-utils.net/en/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/en/ag-planner/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/en/ag-planner/allgemein/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/allgemein/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/allgemein/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/en/discord-bot/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/en/ag-planner/tab1-ag-meldungen/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/tab1-ag-meldungen/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/tab1-ag-meldungen/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/en/off-planner/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/en/ag-planner/tab2-zieldoerfer/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/tab2-zieldoerfer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/tab2-zieldoerfer/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/en/off-planner/einfuehrung/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/en/ag-planner/tab3-einstellungen/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/einfuehrung/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/einfuehrung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/tab3-einstellungen/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/tab3-einstellungen/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/en/off-planner/faq/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/en/ag-planner/tab4-ergebnisuebersicht/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/faq/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/faq/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/ag-planner/tab4-ergebnisuebersicht/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/ag-planner/tab4-ergebnisuebersicht/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/en/off-planner/konfiguration/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/en/cleaner-fake-ut/allgemein/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/konfiguration/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/konfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/allgemein/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/allgemein/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/en/zwc-planner/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <loc>https://docs.tw-utils.net/en/cleaner-fake-ut/platzhalter/</loc>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/zwc-planner/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/zwc-planner/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/platzhalter/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/platzhalter/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/benachrichtigungen/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/bunker-info/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/bunker-info/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/bunker-info/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/planning-system/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/planning-system/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/planning-system/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/quick-setup/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/quick-setup/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/quick-setup/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/search-system/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/search-system/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/search-system/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/sitting-system/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/sitting-system/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/sitting-system/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/verifizierung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/verifizierung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/verifizierung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/leader-view/bunker-info/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/leader-view/bunker-info/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/leader-view/bunker-info/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/leader-view/mitglieder/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/leader-view/mitglieder/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/leader-view/mitglieder/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/leader-view/planung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/leader-view/planung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/leader-view/planung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/leader-view/truppen/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/leader-view/truppen/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/leader-view/truppen/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/allgemein/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/allgemein/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/allgemein/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/tab1-daten/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/tab1-daten/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/tab1-daten/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/tab2-angriffsplanung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/tab2-angriffsplanung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/tab2-angriffsplanung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/tab3-fakeplanung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/tab3-fakeplanung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/tab3-fakeplanung/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/off-planner/tab4-berechnung/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/off-planner/tab4-berechnung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/off-planner/tab4-berechnung/"/>
     </url>
 </urlset>
