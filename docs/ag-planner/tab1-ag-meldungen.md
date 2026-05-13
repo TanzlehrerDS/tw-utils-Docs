@@ -14,6 +14,10 @@ Wähle den passenden Discord-Server aus und klicke auf den Import-Button. Die
 im Discord-Server gemeldeten Adelsgeschlechter werden automatisch in das
 Tool übernommen.
 
+!!! info "Mehrere Discord-Server"
+    Du kannst Adelsgeschlechter auch von mehreren Discord-Servern importieren.
+    Führe den Import dafür nacheinander für jeden Server aus.
+
 ## 2. Manueller Import
 
 ![Manueller Import der Adelsgeschlechter](../assets/snob-planning-tool/03_manual_import.png){ .screenshot }
