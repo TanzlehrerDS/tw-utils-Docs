@@ -115,3 +115,153 @@
 .md-header__button.md-logo {
   display: none;
 }
+
+/* =========================================================
+   YouTube 2-click consent embed (GDPR-friendly)
+   ========================================================= */
+
+.yt-consent {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-width: 900px;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+
+.yt-consent__preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.yt-consent__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.yt-consent__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(13, 27, 42, 0.78);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+  pointer-events: none; /* clicks are handled by the parent .yt-consent__preview */
+}
+
+.yt-consent__preview:hover .yt-consent__play,
+.yt-consent__preview:focus-visible .yt-consent__play {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: rgba(9, 105, 218, 0.92);
+}
+
+.yt-consent__preview:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: -3px;
+}
+
+.yt-consent__play svg {
+  margin-left: 4px; /* optisches Zentrum für das Dreieck */
+}
+
+.yt-consent__confirm {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.25rem;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.yt-consent__confirm[hidden] {
+  display: none;
+}
+
+.yt-consent__confirm p {
+  margin: 0;
+  max-width: 520px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.yt-consent__confirm a {
+  color: #58a6ff;
+  text-decoration: underline;
+}
+
+.yt-consent__confirm a:hover,
+.yt-consent__confirm a:focus-visible {
+  color: #fff;
+  outline: none;
+}
+
+.yt-consent__accept {
+  background: var(--md-accent-fg-color);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.65rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.yt-consent__accept:hover,
+.yt-consent__accept:focus-visible {
+  filter: brightness(1.15);
+  outline: none;
+}
+
+.yt-consent__accept:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.yt-consent--loaded iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Mobile: kleinerer Play-Button, kompakterer Hinweistext */
+@media (max-width: 768px) {
+  .yt-consent__play {
+    width: 64px;
+    height: 64px;
+  }
+  .yt-consent__play svg {
+    width: 36px;
+    height: 36px;
+  }
+  .yt-consent__confirm p {
+    font-size: 0.875rem;
+  }
+}
