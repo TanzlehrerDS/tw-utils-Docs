@@ -50,11 +50,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/allgemein/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/cleaner-fake-ut/platzhalter/</loc>
+        <loc>https://docs.tw-utils.net/cleaner-fake-ut/anleitung/</loc>
         <lastmod>2026-05-15</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/platzhalter/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/platzhalter/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/anleitung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/anleitung/"/>
     </url>
     <url>
         <loc>https://docs.tw-utils.net/discord-bot/benachrichtigungen/</loc>
@@ -218,11 +218,11 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/allgemein/"/>
     </url>
     <url>
-        <loc>https://docs.tw-utils.net/en/cleaner-fake-ut/platzhalter/</loc>
+        <loc>https://docs.tw-utils.net/en/cleaner-fake-ut/anleitung/</loc>
         <lastmod>2026-05-15</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/platzhalter/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/platzhalter/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/anleitung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/anleitung/"/>
     </url>
     <url>
         <loc>https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/</loc>
