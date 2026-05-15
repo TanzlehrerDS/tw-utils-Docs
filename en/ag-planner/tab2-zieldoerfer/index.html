@@ -687,10 +687,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#adding-targets" class="md-nav__link">
+  <a href="#1-adding-targets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding targets
+        1. Adding targets
       
     </span>
   </a>
@@ -698,10 +698,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-priority" class="md-nav__link">
+  <a href="#2-targets-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runtime priority
+        2. Targets overview
       
     </span>
   </a>
@@ -709,10 +709,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#3-runtime-priority" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        3. Runtime Priority
       
     </span>
   </a>
@@ -1376,10 +1376,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#adding-targets" class="md-nav__link">
+  <a href="#1-adding-targets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding targets
+        1. Adding targets
       
     </span>
   </a>
@@ -1387,10 +1387,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-priority" class="md-nav__link">
+  <a href="#2-targets-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runtime priority
+        2. Targets overview
       
     </span>
   </a>
@@ -1398,10 +1398,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#3-runtime-priority" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        3. Runtime Priority
       
     </span>
   </a>
@@ -1426,15 +1426,36 @@
 
 
 <h1 id="tab-2-targets">Tab 2: Targets<a class="headerlink" href="#tab-2-targets" title="Permanent link">¶</a></h1>
-<p>In Tab 2 you list the villages you want to attack with your noblemen.</p>
-<h2 id="adding-targets">Adding targets<a class="headerlink" href="#adding-targets" title="Permanent link">¶</a></h2>
-<p>Click the "Add targets" button and paste the coordinates of the target villages.</p>
-<h2 id="runtime-priority">Runtime priority<a class="headerlink" href="#runtime-priority" title="Permanent link">¶</a></h2>
-<p>You can then assign a runtime priority to each target. It determines the order
-in which the planner tries to assign noblemen to a target.</p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
-<p>As in Tab 1, a search field helps you keep an overview as the target list
-grows.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/snob-planning-tool/tab2_01_overview.png" data-title="Overview of the Targets tab" data-desc-position="bottom"><img alt="Overview of the Targets tab" class="screenshot" src="../../../assets/snob-planning-tool/tab2_01_overview.png"></a></p>
+<p>In Tab 2 you enter the villages you want to attack with your noblemen.</p>
+<h2 id="1-adding-targets">1. Adding targets<a class="headerlink" href="#1-adding-targets" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/snob-planning-tool/tab2_02_adding_targets.png" data-title="Modal for adding targets" data-desc-position="bottom"><img alt="Modal for adding targets" class="screenshot" src="../../../assets/snob-planning-tool/tab2_02_adding_targets.png"></a></p>
+<p>Clicking the <strong>"Add targets"</strong> button opens a modal. Paste the coordinates of
+the target villages there — any additional text between or next to the
+coordinates does not affect the detection. The tool shows you how many
+coordinates were detected. Confirm with <strong>"Add"</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Repeated imports</p>
+<p>You can repeat this process as often as you like to add more targets.</p>
+</div>
+<h2 id="2-targets-overview">2. Targets overview<a class="headerlink" href="#2-targets-overview" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/snob-planning-tool/tab2_03_targets_table.png" data-title="Table of added targets" data-desc-position="bottom"><img alt="Table of added targets" class="screenshot" src="../../../assets/snob-planning-tool/tab2_03_targets_table.png"></a></p>
+<p>After adding, all targets are listed in a clear overview table. It contains
+the coordinate, the player and the tribe as well as the points of the
+village — and a slider for the <strong>Runtime Priority</strong> of each target.</p>
+<h2 id="3-runtime-priority">3. Runtime Priority<a class="headerlink" href="#3-runtime-priority" title="Permanent link">¶</a></h2>
+<p>Use the slider in the <strong>"Runtime Priority"</strong> column to define the runtime
+with which a target should be attacked. There are three possible settings:</p>
+<ul>
+<li><strong>Short</strong> — The planner tries to achieve the <strong>shortest possible</strong> runtime
+  on this target by choosing a source village as <strong>close</strong> to the target as
+  possible. Short targets are planned first.</li>
+<li><strong>Long</strong> — The planner tries to achieve the <strong>longest possible</strong> runtime on
+  this target by choosing a source village as <strong>far away</strong> as possible. Long
+  targets are planned after the Short targets.</li>
+<li><strong>N. A.</strong> — No preference; the planner is free to choose the source
+  village. These targets are planned last.</li>
+</ul>
 
 
 
