@@ -60,7 +60,7 @@ plugins:
             Startseite: Home
             Off-Planungstool: Nuke-Planning
             AG-Planungstool: Snob-Planning
-            Zwischencleaner & Fake-UT: Cleaner and Fake-UT
+            Zwischencleaner & Fake-UT: Cleaner & Fake-Sup
             Der Leaderview: Leader-View
             Discordbot: Discordbot
             Video-Tutorial: Video Tutorial
@@ -72,7 +72,7 @@ plugins:
             "Tab 2: Zieldörfer": "Tab 2: Targets"
             "Tab 3: Einstellungen": "Tab 3: Settings"
             "Tab 4: Ergebnisübersicht": "Tab 4: Results Overview"
-            XXX (Platzhalter): XXX (Placeholder)
+            Anleitung: Instructions
             Mitglieder: Members
             Truppen: Troops
             Bunker-Info: Bunker-Info
@@ -97,7 +97,7 @@ nav:
       - "Tab 4: Ergebnisübersicht": ag-planner/tab4-ergebnisuebersicht.md
   - Zwischencleaner & Fake-UT:
       - Video-Tutorial: cleaner-fake-ut/allgemein.md
-      - XXX (Platzhalter): cleaner-fake-ut/platzhalter.md
+      - Anleitung: cleaner-fake-ut/anleitung.md
   - Der Leaderview:
       - Mitglieder: leader-view/mitglieder.md
       - Truppen: leader-view/truppen.md
