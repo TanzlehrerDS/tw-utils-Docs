@@ -24,10 +24,9 @@ viele Koordinaten erkannt wurden. Bestätige anschließend mit **„Hinzufügen"
 
 Nach dem Hinzufügen werden alle Ziele in einer Tabelle übersichtlich
 aufgelistet. Sie enthält die Koordinate, den Spieler und den Stamm sowie die
-Punkte des Dorfes — und einen Slider für die **Laufzeit-Priorität** jedes
-Ziels.
+Punkte des Dorfes — und einen Slider für die **Laufzeit-Prio** jedes Ziels.
 
-## 3. Laufzeit-Priorität
+## 3. Laufzeit-Prio
 
 Über den Slider in der Spalte **„Runtime Priority"** legst du fest, mit
 welcher Laufzeit ein Ziel angegriffen werden soll. Es gibt drei mögliche
