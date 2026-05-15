@@ -715,10 +715,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#planning-mode" class="md-nav__link">
+  <a href="#1-planning-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Planning mode
+        1. Planning mode
       
     </span>
   </a>
@@ -726,10 +726,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arrival-time" class="md-nav__link">
+  <a href="#2-arrival-time-launch-times" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arrival time
+        2. Arrival time &amp; launch times
       
     </span>
   </a>
@@ -737,21 +737,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#excluded-launch-windows" class="md-nav__link">
+  <a href="#3-start-the-calculation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Excluded launch windows
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Start calculation
+        3. Start the calculation
       
     </span>
   </a>
@@ -1387,10 +1376,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#planning-mode" class="md-nav__link">
+  <a href="#1-planning-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Planning mode
+        1. Planning mode
       
     </span>
   </a>
@@ -1398,10 +1387,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arrival-time" class="md-nav__link">
+  <a href="#2-arrival-time-launch-times" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arrival time
+        2. Arrival time &amp; launch times
       
     </span>
   </a>
@@ -1409,21 +1398,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#excluded-launch-windows" class="md-nav__link">
+  <a href="#3-start-the-calculation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Excluded launch windows
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Start calculation
+        3. Start the calculation
       
     </span>
   </a>
@@ -1448,25 +1426,36 @@
 
 
 <h1 id="tab-3-settings">Tab 3: Settings<a class="headerlink" href="#tab-3-settings" title="Permanent link">¶</a></h1>
-<p>In Tab 3 you configure how the planner works.</p>
-<h2 id="planning-mode">Planning mode<a class="headerlink" href="#planning-mode" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/snob-planning-tool/tab3_01_overview.png" data-title="Overview of the Settings tab" data-desc-position="bottom"><img alt="Overview of the Settings tab" class="screenshot" src="../../../assets/snob-planning-tool/tab3_01_overview.png"></a></p>
+<p>In Tab 3 you define how the planner should work and when your noblemen are
+expected to arrive at their targets.</p>
+<h2 id="1-planning-mode">1. Planning mode<a class="headerlink" href="#1-planning-mode" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/snob-planning-tool/tab3_02_planning_mode.png" data-title="Selection of the planning mode" data-desc-position="bottom"><img alt="Selection of the planning mode" class="screenshot" src="../../../assets/snob-planning-tool/tab3_02_planning_mode.png"></a></p>
+<p>The <strong>planning mode</strong> controls whether noblemen are assigned automatically
+or manually:</p>
 <ul>
-<li><strong>Automatic mode (recommended for most cases):</strong> The planner assigns trains
-  to targets automatically — based on travel time, priority and availability.</li>
-<li><strong>Manual mode:</strong> No automatic assignment takes place. You place every
-  nobleman yourself. Especially helpful in the early phase of a world, when
-  not all tribe members have complete trains available.</li>
+<li><strong>Automatic mode</strong> — Trains and noblemen are calculated and assigned
+  automatically. Manual changes are still possible afterwards.</li>
+<li><strong>Manual mode</strong> — No automatic assignment takes place. You pick all trains
+  and noblemen yourself from the results overview.</li>
 </ul>
-<h2 id="arrival-time">Arrival time<a class="headerlink" href="#arrival-time" title="Permanent link">¶</a></h2>
-<p>Set the desired arrival time — all nobleman attacks will be planned to land
-at that moment.</p>
-<h2 id="excluded-launch-windows">Excluded launch windows<a class="headerlink" href="#excluded-launch-windows" title="Permanent link">¶</a></h2>
-<p>Define one or more time ranges in which no nobleman attack should be launched
-(for example during working hours or at night). The planner routes its
-calculations around those windows.</p>
-<h2 id="start-calculation">Start calculation<a class="headerlink" href="#start-calculation" title="Permanent link">¶</a></h2>
-<p>Click "Start calculation" to run the planner. A status indicator reports back
-when the plan is complete.</p>
+<h2 id="2-arrival-time-launch-times">2. Arrival time &amp; launch times<a class="headerlink" href="#2-arrival-time-launch-times" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/snob-planning-tool/tab3_03_arrival_time.png" data-title="Arrival time and exclusion of specific launch times" data-desc-position="bottom"><img alt="Arrival time and exclusion of specific launch times" class="screenshot" src="../../../assets/snob-planning-tool/tab3_03_arrival_time.png"></a></p>
+<p>In the <strong>Arrival time</strong> field you set the date and time at which the
+noblemen should arrive at the target. From this, the planner automatically
+calculates the matching launch times for the individual trains.</p>
+<p>Via <strong>"Exclude launch times"</strong> you can additionally define one or more time
+windows in which no noblemen should be launched — for example at night or
+during your working hours. The planner takes these blocked windows into
+account in its calculation.</p>
+<div class="admonition info">
+<p class="admonition-title">Only applies to automatic train assignment</p>
+<p>Excluded launch times only affect the automatic train assignment. The
+"further snob options" in the results overview are not affected.</p>
+</div>
+<h2 id="3-start-the-calculation">3. Start the calculation<a class="headerlink" href="#3-start-the-calculation" title="Permanent link">¶</a></h2>
+<p>Clicking the <strong>"Start calculation"</strong> button runs the planner. You can find
+the results in Tab 4 afterwards.</p>
 
 
 
