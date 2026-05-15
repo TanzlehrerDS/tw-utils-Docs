@@ -1,28 +1,42 @@
 # Tab 3: Einstellungen
 
-In Tab 3 konfigurierst du, wie der Planer arbeitet.
+![Übersicht Tab Einstellungen](../assets/snob-planning-tool/tab3_01_overview.png){ .screenshot }
 
-## Planungsmodus
+In Tab 3 legst du fest, wie der Planer arbeiten soll und wann die
+Adelsgeschlechter ihre Ziele erreichen.
 
-- **Automatik-Modus (empfohlen für die meisten Fälle):** Der Planer ordnet die
-  Züge selbstständig den Zielen zu — auf Basis von Laufzeit, Priorität und
-  Verfügbarkeit.
-- **Manueller Modus:** Es findet keine automatische Zuordnung statt. Jede AG
-  setzt du selbst. Hilfreich besonders in der Anfangsphase einer Welt, wenn
-  noch nicht alle Mitspieler vollständige Züge haben.
+## 1. Planungsmodus
 
-## Ankunftszeit
+![Auswahl des Planungsmodus](../assets/snob-planning-tool/tab3_02_planning_mode.png){ .screenshot }
 
-Lege die gewünschte Ankunftszeit fest — alle AG-Angriffe werden auf diesen
-Zeitpunkt geplant.
+Der **Planungsmodus** bestimmt, ob die Zuordnung der Adelsgeschlechter
+automatisch oder manuell erfolgt:
 
-## Startzeiten ausschließen
+- **Automatik-Modus** — Trains und Adelsgeschlechter werden automatisch
+  berechnet und zugeordnet. Manuelle Anpassungen sind danach trotzdem möglich.
+- **Manueller Modus** — Es findet keine automatische Zuordnung statt. Du
+  wählst alle Trains und Adelsgeschlechter in der Ergebnisübersicht selbst
+  aus.
 
-Definiere ein oder mehrere Zeitfenster, in denen keine AG-Angriffe gestartet
-werden sollen (z. B. während der Arbeitszeit oder nachts). Der Planer
-berücksichtigt diese Sperrzeiten in seinen Berechnungen.
+## 2. Ankunftszeit & Abschickzeiten
 
-## Berechnung starten
+![Ankunftszeit und Ausschluss bestimmter Abschickzeiten](../assets/snob-planning-tool/tab3_03_arrival_time.png){ .screenshot }
 
-Mit einem Klick auf "Berechnung starten" wird die Planung ausgeführt. Eine
-Status-Anzeige meldet, sobald sie abgeschlossen ist.
+Im Feld **Ankunftszeit** legst du Datum und Uhrzeit fest, an dem die
+Adelsgeschlechter am Ziel eintreffen sollen. Daraus berechnet der Planer
+automatisch die passenden Abschickzeiten der einzelnen Trains.
+
+Über **„Abschickzeiten ausschließen"** kannst du zusätzlich ein oder mehrere
+Zeitfenster festlegen, in denen keine Adelsgeschlechter abgeschickt werden
+sollen — zum Beispiel nachts oder während deiner Arbeitszeit. Der Planer
+berücksichtigt diese Sperrzeiten in seiner Berechnung.
+
+!!! info "Gilt nur für die automatische Train-Zuordnung"
+    Die ausgeschlossenen Abschickzeiten wirken sich ausschließlich auf die
+    automatische Train-Zuordnung aus. Die „weiteren AG-Optionen" in der
+    Ergebnisübersicht sind davon nicht betroffen.
+
+## 3. Berechnung starten
+
+Mit einem Klick auf den Button **„Berechnung starten"** führt das Tool die
+Planung aus. Die Ergebnisse findest du anschließend in Tab 4.
