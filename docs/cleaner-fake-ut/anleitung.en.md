@@ -1,17 +1,16 @@
 # Instructions
 
-The tool calculates **cleaners** and **fake-support commands** whose launch
+The tool calculates **cleaners** and **Fake-Sup commands** whose launch
 times are placed as close as possible to another command — typically a
-nobleman or train. This lets you add cleaners and fake supports with
-perfect timing alongside an existing snob plan.
+nobleman or train. This lets you add cleaners and Fake-Sup with perfect
+timing alongside an existing snob plan.
 
 ## 1. Import troops
 
 ![Troop import](../assets/cleaner-fake-ut-tool/01_troop_import.png){ .screenshot }
 
 In the **"Troop data"** section you upload the troops from which the
-cleaners and fake supports should be calculated. There are two ways to do
-this.
+cleaners and Fake-Sup should be calculated. There are two ways to do this.
 
 ### Option A: Copy & Paste
 
@@ -37,12 +36,12 @@ via the
 
 ![Snob-plan import](../assets/cleaner-fake-ut-tool/02_import_snob_plan.png){ .screenshot }
 
-In the **"Import snob plan"** section you select a snob plan that was
+In the **"Import Snob-Plan"** section you select a snob plan that was
 already created in tw-utils. The commands from that plan are imported
 automatically — based on them, the tool then calculates the matching
-cleaners and fake supports.
+cleaners and Fake-Sup.
 
-Click **"Add another plan"** to import several plans one after the other.
+Click **"Add further plans"** to import several plans one after the other.
 
 !!! info "View entries"
     Use the **"View entries"** button to inspect the imported snob commands
@@ -58,7 +57,7 @@ paths:
 
 - **Alternative A: Copy & Paste** — paste the Workbench commands directly
   into the text field (e.g. copied from the Workbench export window).
-- **Alternative B: Upload via TXT file** — upload a TXT file containing
+- **Alternative B: Upload via TXT-File** — upload a TXT file containing
   Workbench commands; the content is read into the tool automatically.
 
 ## 3. Settings
@@ -80,30 +79,30 @@ of the cleaner — as a count of **axemen** and **light cavalry**.
 You can also configure:
 
 - **Cleaners per target** — how many cleaners are planned per target.
-- **Cleaners per source village** — how many cleaners can be sent from the
-  same source village at most.
+- **Cleaners per origin village** — how many cleaners can be sent from the
+  same origin village at most.
 - **Icon** — which icon the cleaner commands should receive.
 
-### Fake support
+### Fake-Sup
 
-![Fake-support settings](../assets/cleaner-fake-ut-tool/05_settings_fake-sup.png){ .screenshot }
+![Fake-Sup settings](../assets/cleaner-fake-ut-tool/05_settings_fake-sup.png){ .screenshot }
 
-Use the **"Plan fake support?"** toggle to activate the fake-support
-calculation. Afterwards, two checkboxes are available:
+Use the **"Plan Fake-Sup?"** toggle to activate the Fake-Sup calculation.
+Afterwards, two checkboxes are available:
 
-- **"Plan fake support only from defense villages"** — restricts the
-  source-village selection to purely defensive villages.
-- **"Don't plan light cavalry or scouts as fake support"** — excludes fast
-  units from being used as fake support.
+- **"Send Fake-Sup only from def-villages"** — restricts the origin-village
+  selection to purely defensive villages.
+- **"do not allow light cavalry and scouts being planned as Fake-Sup"** —
+  excludes fast units from being used as Fake-Sup.
 
 !!! info "World settings are taken into account"
-    When planning fake support, the tool takes the world settings around
+    When planning Fake-Sup, the tool takes the world settings around
     tribe-internal support into account.
 
-You can also set the **fake-support count** and select the **icon** that is
-assigned to the fake-support commands.
+You can also set the **Number of Fake-Sup** and select the **icon** that is
+assigned to the Fake-Sup commands.
 
 ## 4. Start the calculation
 
-Clicking the **"Start calculation"** button runs the calculation of the
-cleaners and fake supports.
+Clicking the **"Start Calculation"** button runs the calculation of the
+cleaners and Fake-Sup.
