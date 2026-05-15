@@ -1,17 +1,44 @@
 # Tab 2: Zieldörfer
 
-In Tab 2 listest du die Dörfer auf, die du mit AGs angreifen möchtest.
+![Übersicht Tab Zieldörfer](../assets/snob-planning-tool/tab2_01_overview.png){ .screenshot }
 
-## Ziele hinzufügen
+In Tab 2 trägst du die Dörfer ein, die du mit deinen Adelsgeschlechtern
+angreifen möchtest.
 
-Über den "Ziele hinzufügen"-Button fügst du die Koordinaten der Zieldörfer ein.
+## 1. Ziele hinzufügen
 
-## Laufzeit-Priorität
+![Modal zum Hinzufügen von Zielen](../assets/snob-planning-tool/tab2_02_adding_targets.png){ .screenshot }
 
-Jedem Ziel lässt sich anschließend eine Laufzeit-Priorität zuweisen. Sie
-bestimmt, in welcher Reihenfolge der Planer versucht, AGs einem Ziel zuzuordnen.
+Über den Button **„Ziele hinzufügen"** öffnet sich ein Modal. Füge dort die
+Koordinaten der Zieldörfer ein — ob zusätzlicher Text zwischen oder neben den
+Koordinaten steht, ist für die Erkennung egal. Das Tool zeigt dir an, wie
+viele Koordinaten erkannt wurden. Bestätige anschließend mit **„Hinzufügen"**.
 
-## Übersicht
+!!! info "Mehrfach-Import"
+    Du kannst den Vorgang beliebig oft wiederholen, um weitere Ziele zu
+    ergänzen.
 
-Wie schon in Tab 1 hilft ein Suchfeld dabei, auch bei wachsender Zielliste den
-Überblick zu behalten.
+## 2. Übersicht der Ziele
+
+![Tabelle der hinzugefügten Ziele](../assets/snob-planning-tool/tab2_03_targets_table.png){ .screenshot }
+
+Nach dem Hinzufügen werden alle Ziele in einer Tabelle übersichtlich
+aufgelistet. Sie enthält die Koordinate, den Spieler und den Stamm sowie die
+Punkte des Dorfes — und einen Slider für die **Laufzeit-Priorität** jedes
+Ziels.
+
+## 3. Laufzeit-Priorität
+
+Über den Slider in der Spalte **„Runtime Priority"** legst du fest, mit
+welcher Laufzeit ein Ziel angegriffen werden soll. Es gibt drei mögliche
+Einstellungen:
+
+- **Short** — Es wird versucht, eine möglichst **kurze** Laufzeit auf dieses
+  Ziel zu realisieren. Der Planer wählt dafür ein möglichst **nah** am Ziel
+  liegendes Herkunftsdorf. Short-Ziele werden zuerst verplant.
+- **Long** — Es wird versucht, eine möglichst **lange** Laufzeit auf dieses
+  Ziel zu realisieren. Der Planer wählt dafür ein möglichst **weit
+  entferntes** Herkunftsdorf. Long-Ziele werden nach den Short-Zielen
+  verplant.
+- **N. A.** (Egal) — Es gibt keine Präferenz; der Planer ist bei der Auswahl
+  des Herkunftsdorfs frei. Diese Ziele werden zuletzt verplant.
