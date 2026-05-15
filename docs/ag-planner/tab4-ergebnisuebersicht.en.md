@@ -1,31 +1,58 @@
 # Tab 4: Results Overview
 
-Tab 4 only appears once a calculation has been run. It shows the finished
-plan.
+![Overview of the Results Overview tab](../assets/snob-planning-tool/tab4_01_overview.png){ .screenshot }
 
-## Train table
+Tab 4 only appears once a calculation has been started in Tab 3. Here you
+see the finished plan and can extend it manually if needed.
 
-For every target, a table shows the complete train: source village, target
-village, attack type, slowest unit, launch time, arrival time, distance and
-runtime.
+## 1. Train table
 
-## Additional nobleman options
+![Train table with target navigation](../assets/snob-planning-tool/tab4_02_train_table.png){ .screenshot }
 
-Below the train table, additional nobleman options for the same target are
-offered. Tick a checkbox to add an option to the train table above.
+For each target, the train table shows the planned train with source and
+target village, slowest unit, launch and arrival time, distance and runtime.
 
-## Navigation
+Use the **"Previous"** and **"Next"** buttons to flip through the targets —
+or jump directly to a specific coordinate via the search field.
 
-The navigation buttons at the top let you flip through targets — or jump
-directly to a specific coordinate via the search field.
+## 2. Further Snob-Options
 
-## Save & export
+![Selecting further snob options](../assets/snob-planning-tool/tab4_03_further_snob_options.png){ .screenshot }
 
-Once you are happy with the result, you can save the plan to your account or
-copy ready-to-paste commands for the Workbench.
+Below the train table you find the **"Further Snob-Options"** section. Here
+you can manually plan additional noblemen for the currently displayed
+target by ticking the desired option's checkbox.
 
-## Note on manual mode
+In the **"Count"** field you define how many noblemen from the respective
+village should be used for this target. You can enter at most the number
+shown under **"Available"**.
 
-In manual mode, the train table is empty after the calculation. You fill it
-yourself by ticking the desired nobleman attacks from the option list below
-the table.
+!!! info "Only runtime-feasible options"
+    The list only shows options that are technically feasible in terms of
+    runtime — i.e. depending on the world settings.
+
+!!! info "Dynamic availability"
+    The **"Available"** column always reflects only the noblemen that are
+    actually still free in a village. If you assign, for example, 2 of 4
+    available noblemen to another target, only 2 noblemen from that village
+    remain available for the other targets — and that is exactly what is
+    displayed here.
+
+## 3. Result after manual selection
+
+![Train table after manual selection](../assets/snob-planning-tool/tab4_04_train_table_after_choosing_snob_options.png){ .screenshot }
+
+As soon as you tick an option from "Further Snob-Options", it is added to
+the train table above and shown there as an additional row (e.g.
+**Snob (1)**, **Snob (2)**) alongside the planned train.
+
+## 4. Saving & exporting the plan
+
+![Buttons for saving and exporting](../assets/snob-planning-tool/tab4_05_saving_buttons.png){ .screenshot }
+
+Above the results overview you have two options at your disposal:
+
+- **Save Plan** — saves the current plan to your account so you can open it
+  again later.
+- **Copy WB** — copies the ready-to-paste Workbench commands to your
+  clipboard.
