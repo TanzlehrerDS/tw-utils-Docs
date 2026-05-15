@@ -15,10 +15,9 @@ zur Verfügung.
 
 ### Option A: Copy & Paste
 
-Kopiere die Truppen-Übersicht aus dem Ingame-Truppendaten-Bildschirm
-(Strg+A, Strg+C) und füge sie in das linke Textfeld ein. Über die beiden
-Radio-Buttons legst du fest, welche Spalte aus der Ingame-Ansicht das Tool
-verwenden soll:
+Kopiere die Truppen aus der Ingame-Truppenübersicht (Strg+A, Strg+C) und
+füge sie in das linke Textfeld ein. Über die beiden Radio-Buttons legst du
+fest, welche Informationen aus der Truppenübersicht das Tool verwenden soll:
 
 - **Total troops** — die insgesamt vorhandenen Truppen (eigene + unterwegs).
 - **Troops in village** — nur die aktuell im Dorf stehenden Truppen.
@@ -38,7 +37,7 @@ erzeugst du am bequemsten über das
 
 ![AG-Plan-Import](../assets/cleaner-fake-ut-tool/02_import_snob_plan.png){ .screenshot }
 
-Im Bereich **„Importiere AG-Plan (oder WB-Befehle)"** wählst du einen
+Im Bereich **„Importiere AG-Plan"** wählst du einen
 bereits in tw-utils erstellten AG-Plan aus. Die Befehle aus diesem Plan
 werden automatisch übernommen — auf Basis dieser Befehle berechnet das Tool
 anschließend die passenden Zwischencleaner und Fake-UT.
@@ -54,15 +53,15 @@ importieren.
 
 ![Alternative Eingabemethoden für den AG-Plan-Import](../assets/cleaner-fake-ut-tool/03_import_snob_plan_alternatives.png){ .screenshot }
 
-Hast du keinen tw-utils-Plan zur Hand, kannst du den Klappbereich
-**„Alternative Eingabemethoden"** ausklappen und auf zwei weiteren Wegen
-einlesen:
+Wenn du einen externen Plan nutzen möchtest, kannst du den Klappbereich
+**„Alternative Eingabemethoden"** ausklappen. Dort gibt es zwei alternative
+Importwege:
 
 - **Alternative A: Copy & Paste** — füge die Workbench-Befehle direkt in
   das Textfeld ein (z. B. kopiert aus dem Workbench-Export-Fenster).
 - **Alternative B: Upload per TXT-Datei** — lade eine TXT-Datei mit
-  Workbench-Befehlen hoch; der Inhalt wird automatisch ins Textfeld
-  übernommen.
+  Workbench-Befehlen hoch; der Inhalt wird automatisch ins Tool
+  eingelesen.
 
 ## 3. Einstellungen
 
@@ -87,8 +86,7 @@ Zusätzlich kannst du festlegen:
 - **Zwischencleaner pro Ziel** — wie viele Cleaner pro Ziel verplant werden.
 - **Zwischencleaner pro Herkunftsdorf** — wie viele Cleaner aus demselben
   Herkunftsdorf maximal verschickt werden.
-- **Icon** — welches Icon die Cleaner-Befehle in der Workbench erhalten
-  sollen.
+- **Icon** — welches Icon die Cleaner-Befehle erhalten sollen.
 
 ### Fake-UT
 
@@ -107,7 +105,7 @@ Fake-UT. Anschließend stehen dir zwei Ankreuzkästchen zur Verfügung:
     Welteneinstellungen rund um Unterstützungen im eigenen Stamm.
 
 Zusätzlich kannst du die **Anzahl Fake-UT** festlegen sowie das **Icon**
-auswählen, das den Fake-UT-Befehlen in der Workbench zugewiesen wird.
+auswählen, das den Fake-UT-Befehlen zugewiesen wird.
 
 ## 4. Berechnung starten
 
