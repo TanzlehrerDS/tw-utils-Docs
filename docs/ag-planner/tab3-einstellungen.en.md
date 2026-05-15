@@ -1,27 +1,40 @@
 # Tab 3: Settings
 
-In Tab 3 you configure how the planner works.
+![Overview of the Settings tab](../assets/snob-planning-tool/tab3_01_overview.png){ .screenshot }
 
-## Planning mode
+In Tab 3 you define how the planner should work and when your noblemen are
+expected to arrive at their targets.
 
-- **Automatic mode (recommended for most cases):** The planner assigns trains
-  to targets automatically — based on travel time, priority and availability.
-- **Manual mode:** No automatic assignment takes place. You place every
-  nobleman yourself. Especially helpful in the early phase of a world, when
-  not all tribe members have complete trains available.
+## 1. Planning mode
 
-## Arrival time
+![Selection of the planning mode](../assets/snob-planning-tool/tab3_02_planning_mode.png){ .screenshot }
 
-Set the desired arrival time — all nobleman attacks will be planned to land
-at that moment.
+The **planning mode** controls whether noblemen are assigned automatically
+or manually:
 
-## Excluded launch windows
+- **Automatic mode** — Trains and noblemen are calculated and assigned
+  automatically. Manual changes are still possible afterwards.
+- **Manual mode** — No automatic assignment takes place. You pick all trains
+  and noblemen yourself from the results overview.
 
-Define one or more time ranges in which no nobleman attack should be launched
-(for example during working hours or at night). The planner routes its
-calculations around those windows.
+## 2. Arrival time & launch times
 
-## Start calculation
+![Arrival time and exclusion of specific launch times](../assets/snob-planning-tool/tab3_03_arrival_time.png){ .screenshot }
 
-Click "Start calculation" to run the planner. A status indicator reports back
-when the plan is complete.
+In the **Arrival time** field you set the date and time at which the
+noblemen should arrive at the target. From this, the planner automatically
+calculates the matching launch times for the individual trains.
+
+Via **"Exclude launch times"** you can additionally define one or more time
+windows in which no noblemen should be launched — for example at night or
+during your working hours. The planner takes these blocked windows into
+account in its calculation.
+
+!!! info "Only applies to automatic train assignment"
+    Excluded launch times only affect the automatic train assignment. The
+    "further snob options" in the results overview are not affected.
+
+## 3. Start the calculation
+
+Clicking the **"Start calculation"** button runs the planner. You can find
+the results in Tab 4 afterwards.
