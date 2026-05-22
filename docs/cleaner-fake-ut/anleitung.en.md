@@ -23,10 +23,20 @@ which information from the troop overview the tool should use:
 
 ### Option B: TXT upload
 
-Alternatively, you can upload a TXT file in a fixed format (coordinates,
-player, spear, sword, … per line). The easiest way to create this file is
-via the
+Alternatively, you can upload a TXT file in a fixed format. The easiest
+way to create this file is via the
 [quick-bar script "Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/).
+
+Expected file format:
+
+```
+Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
+483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
+543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
+467|559,Testuser A,3779,4836,100,4803,40,50,6309,1584,5,80,0,0
+465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
+468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
+```
 
 !!! info "View entries"
     Use the **"View entries"** button to inspect the imported troops at
