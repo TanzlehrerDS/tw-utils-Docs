@@ -9,9 +9,9 @@ zeitlich passgenau zu einem bestehenden AG-Plan ergänzen.
 
 ![Truppen-Import](../assets/cleaner-fake-ut-tool/01_troop_import.png){ .screenshot }
 
-Im Bereich **„Troop data"** lädst du die Truppen hoch, aus denen die
-Zwischencleaner und Fake-UT berechnet werden sollen. Es stehen zwei Wege
-zur Verfügung.
+Im Bereich **„Truppendaten importieren"** lädst du die Truppen hoch, aus
+denen die Zwischencleaner und Fake-UT berechnet werden sollen. Es stehen
+zwei Wege zur Verfügung.
 
 ### Option A: Copy & Paste
 
@@ -24,10 +24,20 @@ fest, welche Informationen aus der Truppenübersicht das Tool verwenden soll:
 
 ### Option B: TXT-Upload
 
-Alternativ kannst du eine TXT-Datei in einem festen Format hochladen
-(Koordinaten, Spieler, Speere, Schwerter usw. pro Zeile). Diese Datei
-erzeugst du am bequemsten über das
+Alternativ kannst du eine TXT-Datei in einem festen Format hochladen.
+Diese Datei erzeugst du am bequemsten über das
 [Schnellleisten-Script „Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/).
+
+Erwartetes Format der Datei:
+
+```
+Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
+483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
+543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
+467|559,Testuser A,3779,4836,100,4803,40,50,6309,1584,5,80,0,0
+465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
+468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
+```
 
 !!! info "Liste ansehen"
     Über den Button **„Liste ansehen"** kannst du dir die importierten
