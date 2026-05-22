@@ -526,10 +526,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#typ-2-individuelle-abschickfenster" class="md-nav__link">
+  <a href="#typ-2-spielerindividuelle-abschickfenster" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Typ 2: Individuelle Abschickfenster
+        Typ 2: Spielerindividuelle Abschickfenster
       
     </span>
   </a>
@@ -1544,10 +1544,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#typ-2-individuelle-abschickfenster" class="md-nav__link">
+  <a href="#typ-2-spielerindividuelle-abschickfenster" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Typ 2: Individuelle Abschickfenster
+        Typ 2: Spielerindividuelle Abschickfenster
       
     </span>
   </a>
@@ -1616,39 +1616,43 @@
 
 
 <h1 id="tab-1-daten-vorbereitung">Tab 1: Daten &amp; Vorbereitung<a class="headerlink" href="#tab-1-daten-vorbereitung" title="Permanent link">¶</a></h1>
-<p>In Tab 1 legst du die gesamte Datenbasis für die Off-Planung an: Truppen,
-manuell ausgeschlossene Herkunftsdörfer, Abschickzeiten und die
-Frontlinie. Am Ende des Tabs siehst du in einer Übersichtstabelle, wie
-viele Offs dem Tool für die Planung tatsächlich zur Verfügung stehen.</p>
+<p>In Tab 1 definierst du die grundlegenden Prämissen für die Planung.</p>
 <h2 id="1-truppen-importieren">1. Truppen importieren<a class="headerlink" href="#1-truppen-importieren" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_01_troop_import.png" data-title="Truppen-Import" data-desc-position="bottom"><img alt="Truppen-Import" class="screenshot" src="../../assets/nuke-planning-tool/tab1_01_troop_import.png"></a></p>
-<p>Im Bereich <strong>„Troop data"</strong> lädst du die Truppen hoch, aus denen das Tool
-die Offs verplanen soll. Es stehen zwei Wege zur Verfügung.</p>
+<p>Im Bereich <strong>„Truppendaten importieren"</strong> lädst du die Truppen hoch, aus
+denen das Tool die Offs verplanen soll. Es stehen zwei Wege zur Verfügung.</p>
 <h3 id="option-a-copy-paste">Option A: Copy &amp; Paste<a class="headerlink" href="#option-a-copy-paste" title="Permanent link">¶</a></h3>
 <p>Kopiere die Truppen aus der Ingame-Truppenübersicht (Strg+A, Strg+C) und
 füge sie in das linke Textfeld ein. Über die beiden Radio-Buttons legst du
 fest, welche Informationen aus der Truppenübersicht das Tool verwenden soll:</p>
 <ul>
-<li><strong>Total troops</strong> — die insgesamt vorhandenen Truppen (eigene + unterwegs).</li>
-<li><strong>Troops in village</strong> — nur die aktuell im Dorf stehenden Truppen.</li>
+<li><strong>Gesamte Truppen</strong> — die insgesamt vorhandenen Truppen (eigene + unterwegs).</li>
+<li><strong>Truppen im Dorf</strong> — nur die aktuell im Dorf stehenden Truppen.</li>
 </ul>
 <h3 id="option-b-txt-upload">Option B: TXT-Upload<a class="headerlink" href="#option-b-txt-upload" title="Permanent link">¶</a></h3>
-<p>Alternativ kannst du eine TXT-Datei in einem festen Format hochladen
-(Koordinaten, Spieler, Speere, Schwerter usw. pro Zeile). Diese Datei
-erzeugst du am bequemsten über das
+<p>Alternativ kannst du eine TXT-Datei in einem festen Format hochladen.
+Diese Datei erzeugst du am bequemsten über das
 <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">Schnellleisten-Script „Download Tribe Info"</a>.</p>
+<p>Erwartetes Format der Datei:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>467|559,Testuser A,3779,4836,100,4803,40,50,6309,1584,5,80,0,0
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
+</code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Liste ansehen</p>
-<p>Über den Button <strong>„View entries"</strong> kannst du dir die importierten
+<p>Über den Button <strong>„Liste ansehen"</strong> kannst du dir die importierten
 Truppen jederzeit anzeigen lassen und prüfen.</p>
 </div>
 <h2 id="2-herkunftsdorfer-ausplanen">2. Herkunftsdörfer ausplanen<a class="headerlink" href="#2-herkunftsdorfer-ausplanen" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png" data-title="Herkunftsdörfer ausplanen" data-desc-position="bottom"><img alt="Herkunftsdörfer ausplanen" class="screenshot" src="../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png"></a></p>
-<p>Im Bereich <strong>„Exclude origin villages"</strong> kannst du einzelne Dörfer von der
-Planung ausschließen. Füge die Koordinaten in das Textfeld ein und klicke
-auf <strong>„Add"</strong>. Umgebender Text stört dabei nicht — das Tool erkennt die
-Koordinaten automatisch.</p>
-<p>Über den Button <strong>„View entries"</strong> kannst du die ausgeplanten Dörfer
+<p>Im Bereich <strong>„Herkunftsdörfer ausplanen"</strong> kannst du einzelne Dörfer von
+der Planung ausschließen. Füge die Koordinaten in das Textfeld ein und
+klicke auf <strong>„Hinzufügen"</strong>. Umgebender Text stört dabei nicht — das Tool
+erkennt die Koordinaten automatisch.</p>
+<p>Über den Button <strong>„Liste ansehen"</strong> kannst du die ausgeplanten Dörfer
 jederzeit einsehen und verwalten.</p>
 <div class="admonition info">
 <p class="admonition-title">Keine Befehle aus ausgeplanten Dörfern</p>
@@ -1658,21 +1662,35 @@ ausgeschlossen.</p>
 </div>
 <h2 id="3-abschickzeiten-festlegen">3. Abschickzeiten festlegen<a class="headerlink" href="#3-abschickzeiten-festlegen" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_03_launch_times.png" data-title="Abschickzeiten" data-desc-position="bottom"><img alt="Abschickzeiten" class="screenshot" src="../../assets/nuke-planning-tool/tab1_03_launch_times.png"></a></p>
-<p>Im Bereich <strong>„Launch times"</strong> legst du fest, in welchen Zeitfenstern die
-Offs abgeschickt werden sollen. Es gibt zwei Arten von Abschickzeiten.</p>
+<p>Im Bereich <strong>„Abschickzeiten"</strong> legst du fest, in welchen Zeitfenstern die
+Befehle abgeschickt werden sollen. Es gibt zwei Arten von Abschickzeiten.</p>
 <h3 id="typ-1-standard-abschickfenster">Typ 1: Standard-Abschickfenster<a class="headerlink" href="#typ-1-standard-abschickfenster" title="Permanent link">¶</a></h3>
-<p>Im Bereich <strong>„Standard launch time windows"</strong> gibst du Datum, Startzeit
-und Endzeit ein und fügst das Fenster über <strong>„Add"</strong> hinzu. Du kannst
+<p>Im Bereich <strong>„Standard-Abschickfenster"</strong> gibst du Datum, Startzeit und
+Endzeit ein und fügst das Fenster über <strong>„Hinzufügen"</strong> hinzu. Du kannst
 mehrere Fenster nacheinander anlegen. Diese Standard-Fenster gelten für
 alle Spieler, für die keine individuellen Zeiten hinterlegt sind.</p>
-<h3 id="typ-2-individuelle-abschickfenster">Typ 2: Individuelle Abschickfenster<a class="headerlink" href="#typ-2-individuelle-abschickfenster" title="Permanent link">¶</a></h3>
-<p>Im Bereich <strong>„Player-individual launch times (via Upload)"</strong> kannst du
-spielerindividuelle Abschickzeiten hochladen. Die Spieler geben dir dazu
-ihre persönlichen Zeiten, die du anschließend als strukturierte Datei
+<h3 id="typ-2-spielerindividuelle-abschickfenster">Typ 2: Spielerindividuelle Abschickfenster<a class="headerlink" href="#typ-2-spielerindividuelle-abschickfenster" title="Permanent link">¶</a></h3>
+<p>Im Bereich <strong>„Spielerindividuelle Abschickzeiten (per Upload)"</strong> kannst du
+individuelle Abschickzeiten pro Spieler hochladen. Die Spieler geben dir
+dazu ihre persönlichen Zeiten, die du anschließend als strukturierte Datei
 (.csv oder .txt) in das Tool lädst.</p>
 <p>Erwartetes Format der Datei:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Player, Date_from, Time_from, Date_to, Time_to
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Testuser A,10.05.2026,10:00:00,10.05.2026,10:07:00
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Testuser A,10.05.2026,12:00:00,10.05.2026,12:15:00
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Testuser B,10.05.2026,11:30:00,10.05.2026,12:00:00
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Testuser B,10.05.2026,17:15:00,10.05.2026,18:15:00
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Testuser C,10.05.2026,10:00:00,10.05.2026,10:05:00
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Testuser C,10.05.2026,12:00:00,10.05.2026,12:15:00
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Testuser C,10.05.2026,17:00:00,10.05.2026,19:00:00
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Testuser C,10.05.2026,21:00:00,10.05.2026,21:15:00
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Spielerindividuelle Zeiten über den tw-utils-Discordbot sammeln</p>
+<p>Das Sammeln der spielerindividuellen Abschickzeiten kann auch
+komfortabel über den tw-utils-Discordbot erfolgen. Die abgegebenen
+Zeiten lassen sich anschließend exportieren und direkt in das Tool
+hochladen.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Standard- vs. individuelle Abschickfenster</p>
 <p>Standard-Abschickfenster und individuelle Abschickfenster schließen
@@ -1682,42 +1700,42 @@ Standard-Fenster gelten für diesen Spieler dann nicht.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Liste ansehen</p>
-<p>Über den Button <strong>„View entries"</strong> kannst du dir für jeden eingeplanten
-Spieler anzeigen lassen, welche Abschickzeiten gelten (Standard oder
-individuell). Der Button ist erst verfügbar, nachdem du Truppen
-importiert hast.</p>
+<p>Über den Button <strong>„Liste ansehen"</strong> kannst du dir für jeden
+eingeplanten Spieler anzeigen lassen, welche Abschickzeiten gelten
+(Standard oder individuell). Der Button ist erst verfügbar, nachdem du
+Truppen importiert hast.</p>
 </div>
 <h2 id="4-frontlinie-definieren">4. Frontlinie definieren<a class="headerlink" href="#4-frontlinie-definieren" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_04_frontline_definition.png" data-title="Frontlinie definieren" data-desc-position="bottom"><img alt="Frontlinie definieren" class="screenshot" src="../../assets/nuke-planning-tool/tab1_04_frontline_definition.png"></a></p>
-<p>Im Bereich <strong>„Frontline definition"</strong> legst du fest, welche Dörfer als
-Frontspieler gelten und damit von der Off-Planung ausgenommen werden
-sollen. Füge dazu im Feld <strong>„Coordinates"</strong> die Koordinaten ein, die deine
-Frontlinie definieren, und gib unter <strong>„Distance (fields)"</strong> den
+<p>Im Bereich <strong>„Frontlinie definieren"</strong> legst du fest, welche Dörfer als
+Frontdörfer gelten und damit bei der Verplanung von Offs ausgenommen
+werden sollen. Füge dazu im Feld <strong>„Koordinaten"</strong> die Koordinaten ein,
+die deine Frontlinie definieren, und gib unter <strong>„Abstand (Felder)"</strong> den
 gewünschten Mindestabstand zur Frontlinie an. Klicke anschließend auf
-<strong>„Add to the frontline"</strong>.</p>
+<strong>„Zur Frontlinie hinzufügen"</strong>.</p>
 <p>Der eingestellte Abstand erzeugt einen sogenannten <strong>Frontbereich</strong> rund um
 die Frontlinien-Koordinaten. Aus diesem Frontbereich werden keine Offs
 verplant — so bleiben Frontspieler mobil und können kurzfristig auf
 Angriffe reagieren.</p>
-<p>Über den Button <strong>„View entries"</strong> kannst du die eingetragenen
+<p>Über den Button <strong>„Liste ansehen"</strong> kannst du die eingetragenen
 Frontlinien-Koordinaten jederzeit einsehen und bearbeiten.</p>
 <h3 id="kartenvisualisierung">Kartenvisualisierung<a class="headerlink" href="#kartenvisualisierung" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_05_frontline_definition_map.png" data-title="Kartenvisualisierung des Frontbereichs" data-desc-position="bottom"><img alt="Kartenvisualisierung des Frontbereichs" class="screenshot" src="../../assets/nuke-planning-tool/tab1_05_frontline_definition_map.png"></a></p>
-<p>Über den Button <strong>„Map"</strong> öffnest du eine Karte, auf der der erzeugte
+<p>Über den Button <strong>„Karte"</strong> öffnest du eine Karte, auf der der erzeugte
 Frontbereich gelb markiert ist. Alle Dörfer innerhalb des gelben Bereichs
 werden nicht als Offs eingeplant. Die Karte hilft dir, deine Eingaben
 visuell zu überprüfen.</p>
 <h2 id="5-truppenverfugbarkeit">5. Truppenverfügbarkeit<a class="headerlink" href="#5-truppenverfugbarkeit" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_06_troop_availability.png" data-title="Truppenverfügbarkeit" data-desc-position="bottom"><img alt="Truppenverfügbarkeit" class="screenshot" src="../../assets/nuke-planning-tool/tab1_06_troop_availability.png"></a></p>
-<p>Im Bereich <strong>„Troop Availability"</strong> siehst du auf einen Blick, wie viele
+<p>Im Bereich <strong>„Truppenverfügbarkeit"</strong> siehst du auf einen Blick, wie viele
 Offs das Tool tatsächlich verplanen kann. Die Tabelle zeigt:</p>
 <ul>
-<li><strong>All</strong> — die insgesamt importierten Offs.</li>
-<li><strong>Manual</strong> — Offs, die durch manuelle Ausplanung von Herkunftsdörfern
+<li><strong>Alle</strong> — die insgesamt importierten Offs.</li>
+<li><strong>Manuell</strong> — Offs, die durch manuelle Ausplanung von Herkunftsdörfern
   ausgeschlossen wurden.</li>
-<li><strong>Frontline</strong> — Offs, die aufgrund der Frontliniendefinition
+<li><strong>Frontlinie</strong> — Offs, die aufgrund der Frontliniendefinition
   ausgeschlossen wurden.</li>
-<li><strong>Available</strong> — die Offs, die nach allen Ausschlüssen für die Planung
+<li><strong>Verfügbar</strong> — die Offs, die nach allen Ausschlüssen für die Planung
   zur Verfügung stehen.</li>
 </ul>
 <p>So hast du jederzeit eine klare Übersicht, welche Ressourcen für die
