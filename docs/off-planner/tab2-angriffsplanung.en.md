@@ -174,15 +174,17 @@ The following fields are available per target:
 
 ![Catapult-Splits per building](../assets/nuke-planning-tool/tab2_09_c-split_planning.png){ .screenshot }
 
-In the **"Catapult-Splits (C-Splits)"** area you define, per building,
-how many levels should be torn down by catapult-splits. There is a
-dedicated input field for each building: **Headquarters**, **Barracks**,
-**Stable**, **Workshop**, **Academy**, **Smithy**, **Rally point**,
-**Statue**, **Market**, **Timber camp**, **Clay pit**, **Iron mine**,
-**Farm**, **Warehouse**, **Hiding place** and **Wall**.
+In the **"Catapult-Splits (Buildings)"** area you define, per building,
+how many catapult-splits the tool should plan against it. The number
+you enter is the number of **individual splits** the tool will try to
+plan against that building.
 
-A value of **`-1`** means that the building should be torn down
-**completely** by catapult-splits.
+For example, entering `3` for the **Headquarters** tells the tool to
+plan **three** catapult-splits against the headquarters — and each of
+these splits uses the standard unit count defined under
+[Global Settings → Standard C-split](#22-global-limits).
+
+Which buildings are available depends on the world.
 
 ## 9. Setting the fake time period
 
@@ -195,19 +197,39 @@ window and the distribution of accompanying fakes around the 1st nuke:
   nuke the fake period may start.
 - **Ext. after 1st Nuke (min.)** — how many minutes **after** the 1st
   nuke the fake period may end.
-- **Share of 1st/2nd/3rd third (%)** — percentage distribution of fakes
-  across the three thirds of the time window. The three values should
-  add up to 100 %.
-- **Fill up with fakes until** — minimum number of fakes that should be
-  filled up per target if resources allow.
+- **Share of 1st/2nd/3rd third (%)** — the entire fake time window is
+  internally divided into **three equal-sized time thirds**. Here you
+  define what percentage of the fakes falls into each third. An **even
+  distribution** (e.g. 33/34/33) spreads the fakes across the whole
+  window; an **uneven distribution** (e.g. 50/30/20) concentrates them
+  for example **before** the 1st nuke. The three values should add up
+  to 100 %.
+- **Fill up with fakes until** — the number of commands per target you
+  want each target to **always carry** in this category. Useful when
+  you want every target to end up with the **same number of incs**. If
+  a command (nuke, catapult-cleaner or C-split) cannot be planned for a
+  target, the missing commands are **filled up with fakes** when this
+  option is enabled — so each target in this category still ends up
+  with the same total number of commands.
 
 ## 10. Distances between nukes and C-Splits
 
 ![Distances between nukes and C-Splits](../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png){ .screenshot }
 
-In the **"Distance between Nukes (minutes)"** area you define the
-minimum and maximum distance between consecutive nukes pairwise — one
-min/max pair for **Nuke 1 → 2**, **Nuke 2 → 3** and so on.
+In the **"Distance between Nukes (minutes)"** area you control how
+close or far apart consecutive nukes on a target should **arrive in
+time**. For each pair of consecutive nukes you enter a **min** and
+**max** value in minutes:
+
+- **Nuke 1 → 2** — the distance of the **2nd nuke** to the **1st nuke**.
+- **Nuke 2 → 3** — the distance of the **3rd nuke** to the **2nd nuke**.
+- and so on — same scheme for all further nukes.
+
+**Example:** with **Min = 1** and **Max = 5** for **Nuke 1 → 2**, the
+second nuke is planned to arrive between **one** and **five minutes**
+after the first nuke on the target. This avoids multiple nukes hitting
+at **exactly the same moment** while still giving the defence only
+**very little reaction time**.
 
 In the **"Distance of C-Splits to last Nuke"** area you define how far
 the catapult-splits should arrive in time after the last nuke
@@ -225,13 +247,14 @@ right list **"Prioritized"** via the arrow buttons and sort them by
 priority.
 
 The checkbox **"Strict prioritization (enforcing order)"** controls how
-strictly the priority is applied:
+the prioritization is interpreted:
 
-- **Off** — Priority is treated as a preference; the tool may use other
-  categories if it improves the planning.
+- **Off** — The selected source categories are merged into a **single
+  shared pool** from which nukes are planned. The order in the
+  prioritized list then has no effect on the planning.
 - **On** — Priority is strictly enforced: a lower-priority category is
-  only used **once the higher-priority category has been fully
-  exhausted**.
+  only used **once no valid options can be found** in the
+  higher-priority category.
 
 ## 12. Summary & Map
 

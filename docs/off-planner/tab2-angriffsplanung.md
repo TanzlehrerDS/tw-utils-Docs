@@ -179,16 +179,18 @@ Die folgenden Felder stehen pro Ziel zur Verfügung:
 
 ![Katta-Splits pro Gebäude](../assets/nuke-planning-tool/tab2_09_c-split_planning.png){ .screenshot }
 
-Im Bereich **„Katta-Splits (C-Splits)"** legst du pro Gebäude fest, wie
-viele Stufen durch Katta-Splits gezielt abgerissen werden sollen. Für
-jedes Gebäude steht ein eigenes Zahlenfeld zur Verfügung: **Hauptgebäude**,
-**Kaserne**, **Stall**, **Werkstatt**, **Adelshof**, **Schmiede**,
-**Versammlungsplatz**, **Statue**, **Marktplatz**, **Holzfäller**,
-**Lehmgrube**, **Eisenmine**, **Bauernhof**, **Speicher**, **Versteck**
-und **Wall**.
+Im Bereich **„Kattasplits (Gebäude)"** legst du pro Gebäude fest, wie
+viele Katta-Splits dort verplant werden sollen. Die hinterlegte Zahl
+gibt an, wie viele **einzelne Splits** das Tool auf das jeweilige
+Gebäude zu verplanen versucht.
 
-Ein Wert von **`-1`** bedeutet, dass das Gebäude **vollständig** durch
-Katta-Splits abgerissen werden soll.
+Trägst du beispielsweise für das **Hauptgebäude** den Wert `3` ein,
+versucht das Tool, **drei** Katta-Splits auf das Hauptgebäude zu
+verplanen — und setzt für jeden dieser Splits jeweils die unter
+[Globale Einstellungen → Standard-C-Split](#22-globale-limits)
+hinterlegte Standard-Einheitenanzahl an.
+
+Welche Gebäude konkret auswählbar sind, hängt von der jeweiligen Welt ab.
 
 ## 9. Fake-Zeitraum festlegen
 
@@ -201,19 +203,40 @@ und die Verteilung der Begleitfakes rund um die 1. Off:
   Fake-Zeitraum beginnen darf.
 - **Erw. nach 1. Off (Min.)** — wie viele Minuten **nach** der 1. Off
   der Fake-Zeitraum enden darf.
-- **Anteil 1./2./3. Drittel (%)** — prozentuale Verteilung der Fakes
-  auf die drei Drittel des Zeitfensters. Die drei Werte sollten in
-  Summe 100 % ergeben.
-- **Auffüllen mit Fakes bis** — Mindestanzahl an Fakes, mit der pro
-  Ziel aufgefüllt wird, sofern die Ressourcen es zulassen.
+- **Anteil 1./2./3. Drittel (%)** — das gesamte Fake-Zeitfenster wird
+  intern in **drei gleich große Zeitdrittel** geteilt. Hier legst du
+  fest, welcher Anteil der Fakes prozentual in welches Drittel fällt.
+  Eine **gleichmäßige Verteilung** (z. B. 33/34/33) streut die Fakes
+  über das gesamte Fenster; eine **ungleichmäßige Verteilung** (z. B.
+  50/30/20) konzentriert sie z. B. **vor** der 1. Off. Die drei Werte
+  sollten in Summe 100 % ergeben.
+- **Auffüllen mit Fakes bis** — die Anzahl an Befehlen, mit denen ein
+  Ziel innerhalb dieser Kategorie möglichst **immer belegt** sein soll.
+  Sinnvoll, wenn du möchtest, dass am Ende auf jedes Ziel **dieselbe
+  Anzahl an Incs** geplant wird. Sollte ein Befehl (Off, Katta-Cleaner
+  oder C-Split) auf ein Ziel nicht verplant werden können, wird die
+  fehlende Befehlszahl bei aktivierter Option mit **Fakes aufgefüllt**
+  — sodass pro Ziel in dieser Kategorie am Ende trotzdem die gleiche
+  Gesamtzahl an Befehlen erreicht wird.
 
 ## 10. Abstände zwischen Offs und C-Splits
 
 ![Abstände zwischen Offs und C-Splits](../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png){ .screenshot }
 
-Im Bereich **„Abstand zwischen Offs (Minuten)"** legst du paarweise den
-minimalen und maximalen Abstand zwischen aufeinanderfolgenden Offs fest
-— jeweils ein Min/Max-Wert für **Off 1 → 2**, **Off 2 → 3** usw.
+Im Bereich **„Abstand zwischen Offs (Minuten)"** steuerst du, wie eng
+oder weit aufeinanderfolgende Offs auf einem Ziel **zeitlich
+beieinanderliegen** sollen. Für jedes Paar aufeinanderfolgender Offs
+gibst du jeweils einen **Min-** und **Max-Wert** in Minuten an:
+
+- **Off 1 → 2** — Abstand der **2. Off** zur **1. Off**.
+- **Off 2 → 3** — Abstand der **3. Off** zur **2. Off**.
+- usw. — entsprechend für alle weiteren Offs.
+
+**Beispiel:** Trägst du für **Off 1 → 2** **Min = 1** und **Max = 5**
+ein, plant das Tool die zweite Off so, dass sie zwischen **einer** und
+**fünf Minuten** nach der ersten Off auf dem Ziel eintrifft. So
+vermeidest du, dass mehrere Offs **exakt gleichzeitig** ankommen, und
+gibst der Verteidigung gleichzeitig nur **wenig Reaktionszeit**.
 
 Im Bereich **„Abstand der C-Splits zum letzten Off"** legst du fest, wie
 weit die Katta-Splits zeitlich von der letzten Off entfernt eintreffen
@@ -231,13 +254,16 @@ gewünschten Kategorien über die Pfeil-Buttons in die rechte Liste
 **„Priorisiert"** und sortiere sie nach Priorität.
 
 Die Checkbox **„Strikte Priorisierung (Reihenfolge erzwingen)"** legt
-fest, wie streng diese Priorisierung gilt:
+fest, wie die Priorisierung interpretiert wird:
 
-- **Aus** — Die Priorisierung wirkt als Präferenz; das Tool darf andere
-  Kategorien nutzen, wenn das die Planung verbessert.
+- **Aus** — Aus den ausgewählten Off-Kategorien wird ein **einziger
+  gemeinsamer Pool** gebildet, aus dem die Offs verplant werden. Die
+  Reihenfolge in der priorisierten Liste hat dann keine Auswirkung auf
+  die Verplanung.
 - **Ein** — Die Priorisierung wird strikt eingehalten: Eine niedriger
-  priorisierte Kategorie wird **erst dann** angefasst, wenn die
-  höher priorisierte Kategorie vollständig ausgeschöpft ist.
+  priorisierte Kategorie wird **erst dann** angefasst, wenn in der
+  höher priorisierten Kategorie **keine validen Optionen** mehr
+  gefunden werden konnten.
 
 ## 12. Zusammenfassung & Karte
 
