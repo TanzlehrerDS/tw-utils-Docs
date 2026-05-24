@@ -1708,12 +1708,6 @@ mit echten Offs angegriffen werden sollen. Es gibt drei Kategorien:
 scharfen Zielen werden ebenfalls hier definiert. Die Verplanung <strong>reiner
 Fakeziele</strong> (Ziele, die ausschließlich Fakes erhalten) erfolgt separat in
 <a href="../tab3-fakeplanung/">Tab 3: Fakeplanung</a>.</p>
-<div class="admonition info">
-<p class="admonition-title">UI-Sprache des Tools</p>
-<p>Das Off-Planungstool ist aktuell englischsprachig. In dieser Doku
-werden die UI-Labels in deutscher Übersetzung genannt — die Screenshots
-zeigen die englische Originalbeschriftung.</p>
-</div>
 <h2 id="1-ankunftszeitkorridor">1. Ankunftszeitkorridor<a class="headerlink" href="#1-ankunftszeitkorridor" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_01_arrival_times.png" data-title="Ankunftszeitkorridor" data-desc-position="bottom"><img alt="Ankunftszeitkorridor" class="screenshot" src="../../assets/nuke-planning-tool/tab2_01_arrival_times.png"></a></p>
 <p>Im Bereich <strong>„Ankunftszeitkorridor"</strong> legst du den Zeitrahmen fest, in
@@ -1749,8 +1743,8 @@ daher an die erste Position.</p>
 <ul>
 <li><strong>Maximale Anzahl Fakes pro Herkunftsdorf</strong> — wie viele Fakes
   insgesamt aus einem einzelnen Dorf gestartet werden dürfen.</li>
-<li><strong>Standard-C-Split</strong> — die Standard-Stärke (Angriffspunkte) eines
-  einzelnen Katta-Splits, sofern nicht anders konfiguriert.</li>
+<li><strong>Standard-C-Split</strong> — die Standard-Einheitenanzahl eines einzelnen
+  Katta-Splits.</li>
 </ul>
 <h3 id="23-katta-cleaner-c-cleaner">2.3 Katta-Cleaner (C-Cleaner)<a class="headerlink" href="#23-katta-cleaner-c-cleaner" title="Permanent link">¶</a></h3>
 <p>Im Bereich <strong>„Katta-Cleaner (C-Cleaner)"</strong> definierst du die
@@ -1774,12 +1768,9 @@ Pfeil-Buttons in die rechte Liste und sortiere sie nach Priorität.</p>
 <h2 id="3-die-drei-standard-kategorien">3. Die drei Standard-Kategorien<a class="headerlink" href="#3-die-drei-standard-kategorien" title="Permanent link">¶</a></h2>
 <p>Das Tool kennt drei Kategorien scharfer Ziele:</p>
 <ul>
-<li><strong>AG-Spam</strong> — Adelsketten auf ein Ziel, begleitet von Offs und
-  optionalen Fakes.</li>
-<li><strong>Katta-Spam</strong> — massive Katapult-Salven, um gezielt bestimmte Gebäude
-  eines Ziels zu zerstören.</li>
-<li><strong>Bunker brechen</strong> — wiederholte Off-Angriffe auf stark verteidigte
-  Bunker-Dörfer, um deren Verteidigung systematisch abzubauen.</li>
+<li><strong>AG-Spam</strong></li>
+<li><strong>Katta-Spam</strong></li>
+<li><strong>Bunker brechen</strong></li>
 </ul>
 <p>Für jede dieser Kategorien wird eine eigene Spalte angezeigt, in der du
 Ziele und Befehlsstruktur unabhängig konfigurierst.</p>
@@ -1832,7 +1823,17 @@ entfernen; <strong>„Alle löschen"</strong> leert die gesamte Kategorie.</p>
 <h2 id="7-befehlsplanung-pro-kategorie">7. Befehlsplanung pro Kategorie<a class="headerlink" href="#7-befehlsplanung-pro-kategorie" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_08_command_planning.png" data-title="Befehlsplanung pro Kategorie" data-desc-position="bottom"><img alt="Befehlsplanung pro Kategorie" class="screenshot" src="../../assets/nuke-planning-tool/tab2_08_command_planning.png"></a></p>
 <p>Im Bereich <strong>„Befehlsplanung"</strong> legst du pro Kategorie fest, <strong>wie viele
-Befehle pro Ziel</strong> verplant werden sollen:</p>
+Befehle pro Ziel</strong> verplant werden sollen.</p>
+<div class="admonition info">
+<p class="admonition-title">AG-Spam und Katta-Spam identisch — Bunker brechen reduziert</p>
+<p>Die Befehlsplanung ist für die Kategorien <strong>AG-Spam</strong> und
+<strong>Katta-Spam</strong> identisch aufgebaut. Die Kategorie <strong>Bunker brechen</strong>
+bietet eine <strong>leicht reduzierte</strong> Auswahl an
+Einstellungsmöglichkeiten — die Anzahl der Offs pro Ziel wird dort
+bereits beim <a href="#5-ziele-hinzufugen">Hinzufügen der Ziele</a> festgelegt
+und entfällt daher in der Befehlsplanung.</p>
+</div>
+<p>Die folgenden Felder stehen pro Ziel zur Verfügung:</p>
 <ul>
 <li><strong>Offs</strong> — Anzahl scharfer Off-Angriffe pro Ziel.</li>
 <li><strong>Fakes (nur Off-Dörfer)</strong> — Begleit-Fakes, die ausschließlich aus

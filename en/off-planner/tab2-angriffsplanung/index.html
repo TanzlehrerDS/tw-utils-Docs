@@ -1708,11 +1708,6 @@ with actual nukes. There are three categories: <strong>Snob-Spam</strong>,
 real targets are also defined here. Planning of <strong>pure fake targets</strong>
 (targets that only receive fakes) is done separately in
 <a href="../tab3-fakeplanung/">Tab 3: Fake-Planning</a>.</p>
-<div class="admonition info">
-<p class="admonition-title">Tool UI language</p>
-<p>The Nuke-Planning tool is currently available in English only. The
-screenshots show the original English labels.</p>
-</div>
 <h2 id="1-arrival-time-corridor">1. Arrival time corridor<a class="headerlink" href="#1-arrival-time-corridor" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_01_arrival_times.png" data-title="Arrival time corridor" data-desc-position="bottom"><img alt="Arrival time corridor" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_01_arrival_times.png"></a></p>
 <p>In the <strong>"Arrival time corridor"</strong> section you define the timeframe in
@@ -1746,8 +1741,8 @@ most important category at the top.</p>
 <ul>
 <li><strong>Maximum number of fakes per origin village</strong> — how many fakes in
   total may launch from a single village.</li>
-<li><strong>Standard C-split</strong> — the standard attack strength (attack points)
-  of a single catapult-split unless configured otherwise.</li>
+<li><strong>Standard C-split</strong> — the standard unit count of a single
+  catapult-split.</li>
 </ul>
 <h3 id="23-catapult-cleaner-c-cleaners">2.3 Catapult-Cleaner (C-Cleaners)<a class="headerlink" href="#23-catapult-cleaner-c-cleaners" title="Permanent link">¶</a></h3>
 <p>In the <strong>"Catapult-Cleaner (C-Cleaners)"</strong> area you define the default
@@ -1771,12 +1766,9 @@ using the arrow buttons and sort them by priority.</p>
 <h2 id="3-the-three-standard-categories">3. The three standard categories<a class="headerlink" href="#3-the-three-standard-categories" title="Permanent link">¶</a></h2>
 <p>The tool knows three categories of real targets:</p>
 <ul>
-<li><strong>Snob-Spam</strong> — noble trains on a single target, accompanied by nukes
-  and optional fakes.</li>
-<li><strong>Catapult-Spam</strong> — massive catapult salvoes to systematically destroy
-  specific buildings of a target.</li>
-<li><strong>Breaking Bunkers</strong> — repeated nuke attacks on heavily defended
-  bunker villages to dismantle their defence step by step.</li>
+<li><strong>Snob-Spam</strong></li>
+<li><strong>Catapult-Spam</strong></li>
+<li><strong>Breaking Bunkers</strong></li>
 </ul>
 <p>Each category gets its own column where you configure targets and
 command structure independently.</p>
@@ -1827,7 +1819,16 @@ column showing the configured number of nukes for each target.</p>
 <h2 id="7-command-planning-per-category">7. Command planning per category<a class="headerlink" href="#7-command-planning-per-category" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_08_command_planning.png" data-title="Command planning per category" data-desc-position="bottom"><img alt="Command planning per category" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_08_command_planning.png"></a></p>
 <p>In the <strong>"Command Planning"</strong> area you define per category <strong>how many
-commands per target</strong> should be planned:</p>
+commands per target</strong> should be planned.</p>
+<div class="admonition info">
+<p class="admonition-title">Snob-Spam and Catapult-Spam identical — Breaking Bunkers reduced</p>
+<p>Command planning is structured identically for the <strong>Snob-Spam</strong> and
+<strong>Catapult-Spam</strong> categories. The <strong>Breaking Bunkers</strong> category
+offers a <strong>slightly reduced</strong> set of options — the number of nukes
+per target is already defined when <a href="#5-adding-targets">adding the
+targets</a> and is therefore omitted here.</p>
+</div>
+<p>The following fields are available per target:</p>
 <ul>
 <li><strong>Nukes</strong> — number of real nuke attacks per target.</li>
 <li><strong>Fakes (off-villages only)</strong> — accompanying fakes launched
