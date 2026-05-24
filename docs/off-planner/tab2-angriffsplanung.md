@@ -2,7 +2,7 @@
 
 In Tab 2 verplanst du alle **scharf angelaufenen Ziele** — also Ziele, die
 mit echten Offs angegriffen werden sollen. Es gibt drei Kategorien:
-**AG-Spam**, **Katta-Spam** und **Bunker brechen**. Begleitfakes zu diesen
+**AG-Spam**, **Kattern** und **Bunker brechen**. Begleitfakes zu diesen
 scharfen Zielen werden ebenfalls hier definiert. Die Verplanung **reiner
 Fakeziele** (Ziele, die ausschließlich Fakes erhalten) erfolgt separat in
 [Tab 3: Fakeplanung](tab3-fakeplanung.md).
@@ -11,10 +11,10 @@ Fakeziele** (Ziele, die ausschließlich Fakes erhalten) erfolgt separat in
 
 ![Ankunftszeitkorridor](../assets/nuke-planning-tool/tab2_01_arrival_times.png){ .screenshot }
 
-Im Bereich **„Ankunftszeitkorridor"** legst du den Zeitrahmen fest, in
-dem die Angriffe eintreffen sollen. Gib **Datum**, **Start** und **Ende**
-ein und klicke anschließend auf **„Korridor übernehmen"**, um den
-Korridor zu aktivieren.
+Im Bereich **„Ankunftszeiten-Korridor festlegen"** legst du den
+Zeitrahmen fest, in dem die Angriffe eintreffen sollen. Gib **Datum**,
+**Start** und **Ende** ein und klicke anschließend auf
+**„Korridor übernehmen"**, um den Korridor zu aktivieren.
 
 !!! info "Korridor gilt nur für die 1. Off"
     Der Korridor bestimmt, in welchem Zeitrahmen die **1. geplante Off**
@@ -32,9 +32,9 @@ für alle drei Kategorien gemeinsam gelten.
 ### 2.1 Planungsreihenfolge
 
 Im Bereich **„Planungsreihenfolge"** sortierst du die drei Kategorien
-(**AG-Spam**, **Katta-Spam**, **Bunker brechen**) über die Pfeil-Buttons
-in die gewünschte Reihenfolge. Die Reihenfolge bestimmt, in welcher
-Abfolge die Kategorien verplant werden.
+(**AG-Spam**, **Kattern**, **Bunker brechen**) über die Buttons
+**„Nach oben"** / **„Nach unten"** in die gewünschte Reihenfolge. Die
+Reihenfolge bestimmt, in welcher Abfolge die Kategorien verplant werden.
 
 !!! info "Reihenfolge ist bei knappen Ressourcen entscheidend"
     Bei knappen Off-Ressourcen werden die in der Planungsreihenfolge
@@ -43,42 +43,44 @@ Abfolge die Kategorien verplant werden.
     alle erforderlichen Offs zugewiesen. Stelle die wichtigste Kategorie
     daher an die erste Position.
 
-### 2.2 Globale Limits
+### 2.2 Globale Grenzwerte
 
-Im Bereich **„Globale Limits"** legst du übergreifende Grenzwerte fest:
+Im Bereich **„Globale Grenzwerte"** legst du übergreifende Grenzwerte
+fest:
 
-- **Maximale Anzahl Fakes pro Herkunftsdorf** — wie viele Fakes
+- **„zulässige Anzahl Fakes pro Herkunftsdorf"** — wie viele Fakes
   insgesamt aus einem einzelnen Dorf gestartet werden dürfen.
-- **Standard-C-Split** — die Standard-Einheitenanzahl eines einzelnen
-  Katta-Splits.
+- **„Standard Kattasplit"** — die Standard-Einheitenanzahl eines
+  einzelnen Katta-Splits.
 
-### 2.3 Katta-Cleaner (C-Cleaner)
+### 2.3 Katta-Zwischencleaner
 
-Im Bereich **„Katta-Cleaner (C-Cleaner)"** definierst du die
-Standard-Truppenzusammensetzung der Zwischencleaner: **Äxte**, **leichte
-Kavallerie** und **Rammen**.
+Im Bereich **„Katta-Zwischencleaner"** definierst du im Unterbereich
+**„Truppenzusammensetzung"** die Standard-Truppen der Zwischencleaner:
+**Axt**, **Lkav** und **Rammen**.
 
 !!! info "Dynamische Truppenzusammensetzung"
     Ist die Option **„Dynamische Truppenzusammensetzung erlauben"**
     aktiviert, werden auch Zwischencleaner verplant, die **nicht exakt**
     der eingegebenen Truppenzusammensetzung entsprechen (z. B. wenn dem
     Dorf Äxte fehlen). Das Tool füllt dann automatisch mit Äxten oder
-    leichter Kavallerie auf, bis die resultierende Angriffsstärke
-    erreicht ist. So lassen sich auch Dörfer als Cleaner einsetzen, die
-    nicht perfekt der Soll-Zusammensetzung entsprechen.
+    Lkav auf, bis die resultierende Angriffsstärke erreicht ist. So
+    lassen sich auch Dörfer als Cleaner einsetzen, die nicht perfekt
+    der Soll-Zusammensetzung entsprechen.
 
-Rechts daneben legst du im Bereich **„Priorisierte Herkunfts-Kategorien"**
-fest, aus welchen Dorf-Kategorien (z. B. *Dörfer >500 Axt*, *>1000 Axt*,
-*>2000 Axt*, …, *Verbleibende Dörfer*) die C-Cleaner bevorzugt
-gestartet werden sollen. Verschiebe die gewünschten Kategorien über die
-Pfeil-Buttons in die rechte Liste und sortiere sie nach Priorität.
+Rechts daneben legst du im Bereich **„Priorisierte Quell-Kategorien
+(Oben = Prio 1)"** fest, aus welchen Dorf-Kategorien (z. B. *Dörfer
+>500 Axt*, *>1000 Axt*, *>2000 Axt*, …, *Verbleibende Dörfer*) die
+Zwischencleaner bevorzugt gestartet werden sollen. Verschiebe die
+gewünschten Kategorien über die Pfeil-Buttons in die rechte Liste
+**„Ausgewählt (Prio)"** und sortiere sie nach Priorität.
 
 ## 3. Die drei Standard-Kategorien
 
 Das Tool kennt drei Kategorien scharfer Ziele:
 
 - **AG-Spam**
-- **Katta-Spam**
+- **Kattern**
 - **Bunker brechen**
 
 Für jede dieser Kategorien wird eine eigene Spalte angezeigt, in der du
@@ -89,16 +91,14 @@ Ziele und Befehlsstruktur unabhängig konfigurierst.
 ![Übersicht Zielauswahl & Befehlsplanung](../assets/nuke-planning-tool/tab2_03_overview_target_selection.png){ .screenshot }
 
 Im Bereich **„Zielauswahl & Befehlsplanung"** siehst du die drei
-Kategorien nebeneinander als Spalten (AG-Spam, Katta-Spam, Bunker
-brechen). Pro Spalte stehen die gleichen Bedienelemente zur Verfügung:
+Kategorien nebeneinander als Spalten (AG-Spam, Kattern, Bunker brechen).
+Pro Spalte stehen die gleichen Bedienelemente zur Verfügung:
 
-- **„+ Ziele hinzufügen"** — öffnet das Modal zum Hinzufügen neuer
-  Ziele.
-- **Stift-Icon** — öffnet das Modal zum Bearbeiten der vorhandenen
-  Zielliste.
+- **„Ziele hinzufügen"** — öffnet das Modal zum Hinzufügen neuer Ziele.
+- **Stift-Icon** — öffnet das Modal **„Liste bearbeiten"** zum
+  Bearbeiten der vorhandenen Zielliste.
 - **Mülltonnen-Icon** — löscht alle Ziele dieser Kategorie auf einmal.
-- **Counter „X Ziele"** — zeigt die aktuelle Anzahl Ziele in der
-  Kategorie.
+- **Counter** — zeigt die aktuelle Anzahl Ziele in der Kategorie an.
 
 Darunter folgen die kategoriespezifischen Befehls- und
 Detail-Einstellungen, die in den nächsten Abschnitten beschrieben werden.
@@ -107,18 +107,18 @@ Detail-Einstellungen, die in den nächsten Abschnitten beschrieben werden.
 
 ![Modal „Ziele hinzufügen" – AG-Spam](../assets/nuke-planning-tool/tab2_04_add_targets_modal_1.png){ .screenshot }
 
-Über den Button **„+ Ziele hinzufügen"** öffnet sich das Modal
-**„Ziele hinzufügen: <Kategorie>"**. Füge die **Koordinaten** der
-Zieldörfer im Format `XXX|YYY` in das Textfeld ein — umliegender Text
-oder Skript-Output ist egal, das Tool filtert die Koordinaten automatisch
-heraus. Bestätige anschließend mit **„Hinzufügen"**.
+Über den Button **„Ziele hinzufügen"** öffnet sich das gleichnamige
+Modal. Füge die **Koordinaten** der Zieldörfer im Format
+**„Koordinaten (XXX|YYY)"** in das Textfeld ein — *„Andere Texte/Skripte
+werden ignoriert."* Bestätige anschließend mit dem entsprechenden
+Hinzufügen-Button.
 
 ![Modal „Ziele hinzufügen" – Bunker brechen](../assets/nuke-planning-tool/tab2_05_add_targets_modal_2.png){ .screenshot }
 
 Für die Kategorie **Bunker brechen** gibt es zusätzlich das Feld
-**„Anzahl Offs pro Ziel"**. Der hier eingegebene Wert wird auf **alle**
-im Textfeld eingegebenen Koordinaten gleichermaßen angewendet. So
-kannst du bequem in einem Schritt eine ganze Liste Bunker mit einer
+**„Anzahl Offs pro Ziel"**. Wie das Tool dort vermerkt, gilt: *„Dieser
+Wert wird für alle oben eingegebenen Koordinaten übernommen."* So kannst
+du bequem in einem Schritt eine ganze Liste Bunker mit einer
 einheitlichen Anzahl Offs pro Ziel anlegen.
 
 !!! info "Keine Duplikate"
@@ -131,11 +131,11 @@ einheitlichen Anzahl Offs pro Ziel anlegen.
 
 ![Modal „Liste bearbeiten" – AG-Spam](../assets/nuke-planning-tool/tab2_06_edit_targets_modal_1.png){ .screenshot }
 
-Über das **Stift-Icon** öffnet sich das Modal **„Liste bearbeiten:
-<Kategorie>"**. Es enthält eine Suchleiste sowie eine Tabelle mit den
-Spalten **#**, **Koord.**, **Spieler** und **Aktion**. Über das
-Mülltonnen-Icon in der Spalte **Aktion** kannst du einzelne Ziele
-entfernen; **„Alle löschen"** leert die gesamte Kategorie.
+Über das **Stift-Icon** öffnet sich das Modal **„Liste bearbeiten"**.
+Es enthält eine Suchleiste sowie eine Tabelle mit den Spalten **#**,
+**Koord.**, **Spieler** und **Aktion**. Über das Mülltonnen-Icon in der
+Spalte **Aktion** kannst du einzelne Ziele entfernen;
+**„Alles löschen"** leert die gesamte Kategorie.
 
 ![Modal „Liste bearbeiten" – Bunker brechen](../assets/nuke-planning-tool/tab2_07_edit_targets_modal_2.png){ .screenshot }
 
@@ -149,9 +149,9 @@ Bei der Kategorie **Bunker brechen** gibt es zusätzlich die Spalte
 Im Bereich **„Befehlsplanung"** legst du pro Kategorie fest, **wie viele
 Befehle pro Ziel** verplant werden sollen.
 
-!!! info "AG-Spam und Katta-Spam identisch — Bunker brechen reduziert"
+!!! info "AG-Spam und Kattern identisch — Bunker brechen reduziert"
     Die Befehlsplanung ist für die Kategorien **AG-Spam** und
-    **Katta-Spam** identisch aufgebaut. Die Kategorie **Bunker brechen**
+    **Kattern** identisch aufgebaut. Die Kategorie **Bunker brechen**
     bietet eine **leicht reduzierte** Auswahl an
     Einstellungsmöglichkeiten — die Anzahl der Offs pro Ziel wird dort
     bereits beim [Hinzufügen der Ziele](#5-ziele-hinzufugen) festgelegt
@@ -159,15 +159,15 @@ Befehle pro Ziel** verplant werden sollen.
 
 Die folgenden Felder stehen pro Ziel zur Verfügung:
 
-- **Offs** — Anzahl scharfer Off-Angriffe pro Ziel.
-- **Fakes (nur Off-Dörfer)** — Begleit-Fakes, die ausschließlich aus
+- **„Anzahl Offs"** — Anzahl scharfer Off-Angriffe pro Ziel.
+- **„Fakes (aus Offdörfern)"** — Begleit-Fakes, die ausschließlich aus
   Off-Dörfern gestartet werden.
-- **Fakes (nur Deff-Dörfer)** — Begleit-Fakes, die ausschließlich aus
-  Deff-Dörfern gestartet werden.
-- **Fakes (alle Dorftypen)** — Begleit-Fakes, die aus beliebigen Dörfern
-  gestartet werden dürfen.
-- **Katta-Cleaner** — Anzahl Zwischencleaner pro Ziel (siehe Globale
-  Einstellungen für die Truppenzusammensetzung).
+- **„Fakes (aus Deffdörfern)"** — Begleit-Fakes, die ausschließlich
+  aus Deff-Dörfern gestartet werden.
+- **„Fakes (Dorftyp egal)"** — Begleit-Fakes, die aus beliebigen
+  Dörfern gestartet werden dürfen.
+- **„Katta-Zwischencleaner"** — Anzahl Zwischencleaner pro Ziel (siehe
+  Globale Einstellungen für die Truppenzusammensetzung).
 
 !!! info "Begleitfakes ≠ Tab 3"
     Die hier definierten Fakes sind **Begleitfakes für die scharfen
@@ -175,9 +175,9 @@ Die folgenden Felder stehen pro Ziel zur Verfügung:
     scharfen Hintergrund) erfolgt separat in
     [Tab 3: Fakeplanung](tab3-fakeplanung.md).
 
-## 8. Katta-Splits (C-Splits)
+## 8. Kattasplits (Gebäude)
 
-![Katta-Splits pro Gebäude](../assets/nuke-planning-tool/tab2_09_c-split_planning.png){ .screenshot }
+![Kattasplits pro Gebäude](../assets/nuke-planning-tool/tab2_09_c-split_planning.png){ .screenshot }
 
 Im Bereich **„Kattasplits (Gebäude)"** legst du pro Gebäude fest, wie
 viele Katta-Splits dort verplant werden sollen. Die hinterlegte Zahl
@@ -187,44 +187,45 @@ Gebäude zu verplanen versucht.
 Trägst du beispielsweise für das **Hauptgebäude** den Wert `3` ein,
 versucht das Tool, **drei** Katta-Splits auf das Hauptgebäude zu
 verplanen — und setzt für jeden dieser Splits jeweils die unter
-[Globale Einstellungen → Standard-C-Split](#22-globale-limits)
+[Globale Einstellungen → Standard Kattasplit](#22-globale-grenzwerte)
 hinterlegte Standard-Einheitenanzahl an.
 
 Welche Gebäude konkret auswählbar sind, hängt von der jeweiligen Welt ab.
 
-## 9. Fake-Zeitraum festlegen
+## 9. Festlegung Fake-Zeitraum
 
-![Fake-Zeitraum festlegen](../assets/nuke-planning-tool/tab2_10_setting_fake_time_period.png){ .screenshot }
+![Festlegung Fake-Zeitraum](../assets/nuke-planning-tool/tab2_10_setting_fake_time_period.png){ .screenshot }
 
-Im Bereich **„Fake-Zeitraum festlegen"** definierst du das Zeitfenster
+Im Bereich **„Festlegung Fake-Zeitraum"** definierst du das Zeitfenster
 und die Verteilung der Begleitfakes rund um die 1. Off:
 
-- **Erw. vor 1. Off (Min.)** — wie viele Minuten **vor** der 1. Off der
-  Fake-Zeitraum beginnen darf.
-- **Erw. nach 1. Off (Min.)** — wie viele Minuten **nach** der 1. Off
-  der Fake-Zeitraum enden darf.
-- **Anteil 1./2./3. Drittel (%)** — das gesamte Fake-Zeitfenster wird
+- **„Erw. vor 1. Off (Min.)"** — wie viele Minuten **vor** der 1. Off
+  der Fake-Zeitraum beginnen darf.
+- **„Erw. nach letzter Off (Min.)"** — wie viele Minuten **nach** der
+  letzten Off der Fake-Zeitraum enden darf.
+- **„Anteil 1. Drittel (%)"**, **„Anteil 2. Drittel (%)"**,
+  **„Anteil 3. Drittel (%)"** — das gesamte Fake-Zeitfenster wird
   intern in **drei gleich große Zeitdrittel** geteilt. Hier legst du
   fest, welcher Anteil der Fakes prozentual in welches Drittel fällt.
   Eine **gleichmäßige Verteilung** (z. B. 33/34/33) streut die Fakes
   über das gesamte Fenster; eine **ungleichmäßige Verteilung** (z. B.
   50/30/20) konzentriert sie z. B. **vor** der 1. Off. Die drei Werte
   sollten in Summe 100 % ergeben.
-- **Auffüllen mit Fakes bis** — die Anzahl an Befehlen, mit denen ein
-  Ziel innerhalb dieser Kategorie möglichst **immer belegt** sein soll.
-  Sinnvoll, wenn du möchtest, dass am Ende auf jedes Ziel **dieselbe
-  Anzahl an Incs** geplant wird. Sollte ein Befehl (Off, Katta-Cleaner
-  oder C-Split) auf ein Ziel nicht verplant werden können, wird die
-  fehlende Befehlszahl bei aktivierter Option mit **Fakes aufgefüllt**
-  — sodass pro Ziel in dieser Kategorie am Ende trotzdem die gleiche
-  Gesamtzahl an Befehlen erreicht wird.
+- **„Mit Fakes auffüllen bis"** — die Anzahl an Befehlen, mit denen
+  ein Ziel innerhalb dieser Kategorie möglichst **immer belegt** sein
+  soll. Sinnvoll, wenn du möchtest, dass am Ende auf jedes Ziel
+  **dieselbe Anzahl an Incs** geplant wird. Sollte ein Befehl (Off,
+  Katta-Zwischencleaner oder Kattasplit) auf ein Ziel nicht verplant
+  werden können, wird die fehlende Befehlszahl bei aktivierter Option
+  mit **Fakes aufgefüllt** — sodass pro Ziel in dieser Kategorie am
+  Ende trotzdem die gleiche Gesamtzahl an Befehlen erreicht wird.
 
-## 10. Abstände zwischen Offs und C-Splits
+## 10. Abstände der Offs und Kattasplits
 
-![Abstände zwischen Offs und C-Splits](../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png){ .screenshot }
+![Abstände der Offs und Kattasplits](../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png){ .screenshot }
 
-Im Bereich **„Abstand zwischen Offs (Minuten)"** steuerst du, wie eng
-oder weit aufeinanderfolgende Offs auf einem Ziel **zeitlich
+Im Bereich **„Abstände der Offs (Min.)"** steuerst du, wie eng oder
+weit aufeinanderfolgende Offs auf einem Ziel **zeitlich
 beieinanderliegen** sollen. Für jedes Paar aufeinanderfolgender Offs
 gibst du jeweils einen **Min-** und **Max-Wert** in Minuten an:
 
@@ -238,15 +239,16 @@ ein, plant das Tool die zweite Off so, dass sie zwischen **einer** und
 vermeidest du, dass mehrere Offs **exakt gleichzeitig** ankommen, und
 gibst der Verteidigung gleichzeitig nur **wenig Reaktionszeit**.
 
-Im Bereich **„Abstand der C-Splits zum letzten Off"** legst du fest, wie
-weit die Katta-Splits zeitlich von der letzten Off entfernt eintreffen
-sollen (**Min-Abstand** / **Max-Abstand** in Minuten).
+Im Bereich **„Abstand Kattasplits zur letzten Off"** legst du fest, wie
+weit die Kattasplits zeitlich von der letzten Off entfernt eintreffen
+sollen — mit den Feldern **„Min-Abstand (Min)"** und **„Max-Abstand
+(Min)"**.
 
-## 11. Priorisierung der Off-Kategorien
+## 11. Priorisierung Off-Kategorien
 
-![Priorisierung der Off-Kategorien](../assets/nuke-planning-tool/tab2_12_prioritizing_nuke_categories.png){ .screenshot }
+![Priorisierung Off-Kategorien](../assets/nuke-planning-tool/tab2_12_prioritizing_nuke_categories.png){ .screenshot }
 
-Im Bereich **„Priorisierung der Off-Kategorien"** legst du fest, aus
+Im Bereich **„Priorisierung Off-Kategorien"** legst du fest, aus
 welchen Herkunfts-Kategorien die Offs bevorzugt verplant werden sollen.
 Verfügbare Kategorien sind z. B. *Verbleibende Dörfer*, *Dörfer >500
 Axt*, *>1000 Axt*, *>2000 Axt*, …, *>6000 Axt*. Verschiebe die
@@ -273,16 +275,18 @@ Im Bereich **„Zusammenfassung & Karte"** siehst du nach der Planung eine
 Übersicht aller geplanten Angriffe.
 
 Die Tabelle **„Geplante Angriffe pro Spieler"** zeigt pro Spieler die
-Anzahl an **Targets**, **Offs**, **Catapult**, **C-Cleaner**, **Fakes**
-und **Alle** — sowie eine Summenzeile **TOTAL**. Über die Suche im
-Tabellen-Header kannst du nach einzelnen Spielern filtern.
+Anzahl an **Ziele**, **Offs**, **Kattas**, **K-ZWC** (Katta-Zwischencleaner /
+Cleaner), **Fakes** und **Gesamt** — sowie eine Summenzeile **Gesamt**.
+Über das Suchfeld kannst du nach einzelnen Spielern filtern.
 
-Im Bereich **Overview** kannst du außerdem einzelne **Spieler markieren**
-(grün) oder einen ganzen **Stamm markieren** (rot), um sie auf der Karte
-hervorzuheben.
+Darunter befindet sich der Bereich **„Visuelle Übersicht"**. Hier kannst
+du über das Feld **„Spieler markieren:"** einzelne Spieler (Standard:
+grün) und über das Feld **„Stamm markieren:"** einen ganzen Stamm
+(Standard: rot) hervorheben.
 
-Auf der Karte lassen sich verschiedene **Layer** ein- und ausblenden
-(Klick auf die Button-Leiste): **Backline**, **Player**, **Off**,
-**Frontline**, **AG-Spam**, **Katta-Spam** und **Bunker**. So kannst du
-die Verteilung der geplanten Angriffe visuell prüfen, bevor du in
-[Tab 3](tab3-fakeplanung.md) bzw. [Tab 4](tab4-berechnung.md) weitermachst.
+Unter der Beschriftung **„Ebenen ein/ausblenden (Klick):"** lassen sich
+auf der Karte die folgenden Layer ein- und ausblenden:
+**Barbaren**, **Spieler**, **Eigene**, **Frontlinie**, **AG-Spam**,
+**Kattern** und **Bunker**. So kannst du die Verteilung der geplanten
+Angriffe visuell prüfen, bevor du in [Tab 3](tab3-fakeplanung.md) bzw.
+[Tab 4](tab4-berechnung.md) weitermachst.
