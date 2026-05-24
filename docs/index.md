@@ -8,6 +8,5 @@ Browserspiel *Die Stämme*.
 
 ## Über tw-utils
 
-tw-utils ist ein Hobby-Projekt. Den Quellcode findest du auf
-[GitHub](https://github.com/Tanzlehrer/tw-utils). Für Fragen und Austausch
-gibt es den [Community Discord](https://discord.com/invite/rfnGvvGs78).
+tw-utils ist ein Hobby-Projekt. Für Fragen und Austausch gibt es den
+[Community Discord](https://discord.com/invite/rfnGvvGs78).

@@ -8,6 +8,5 @@ browser game *Tribal Wars*.
 
 ## About tw-utils
 
-tw-utils is a hobby project. The source code is available on
-[GitHub](https://github.com/Tanzlehrer/tw-utils). For questions and
-discussion, join the [Community Discord](https://discord.com/invite/rfnGvvGs78).
+tw-utils is a hobby project. For questions and discussion, join the
+[Community Discord](https://discord.com/invite/rfnGvvGs78).
