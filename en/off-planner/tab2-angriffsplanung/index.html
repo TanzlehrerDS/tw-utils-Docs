@@ -1849,14 +1849,15 @@ targets</strong> of this category. Planning of <strong>pure fake targets</strong
 </div>
 <h2 id="8-catapult-splits-c-splits">8. Catapult-Splits (C-Splits)<a class="headerlink" href="#8-catapult-splits-c-splits" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_09_c-split_planning.png" data-title="Catapult-Splits per building" data-desc-position="bottom"><img alt="Catapult-Splits per building" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_09_c-split_planning.png"></a></p>
-<p>In the <strong>"Catapult-Splits (C-Splits)"</strong> area you define, per building,
-how many levels should be torn down by catapult-splits. There is a
-dedicated input field for each building: <strong>Headquarters</strong>, <strong>Barracks</strong>,
-<strong>Stable</strong>, <strong>Workshop</strong>, <strong>Academy</strong>, <strong>Smithy</strong>, <strong>Rally point</strong>,
-<strong>Statue</strong>, <strong>Market</strong>, <strong>Timber camp</strong>, <strong>Clay pit</strong>, <strong>Iron mine</strong>,
-<strong>Farm</strong>, <strong>Warehouse</strong>, <strong>Hiding place</strong> and <strong>Wall</strong>.</p>
-<p>A value of <strong><code>-1</code></strong> means that the building should be torn down
-<strong>completely</strong> by catapult-splits.</p>
+<p>In the <strong>"Catapult-Splits (Buildings)"</strong> area you define, per building,
+how many catapult-splits the tool should plan against it. The number
+you enter is the number of <strong>individual splits</strong> the tool will try to
+plan against that building.</p>
+<p>For example, entering <code>3</code> for the <strong>Headquarters</strong> tells the tool to
+plan <strong>three</strong> catapult-splits against the headquarters — and each of
+these splits uses the standard unit count defined under
+<a href="#22-global-limits">Global Settings → Standard C-split</a>.</p>
+<p>Which buildings are available depends on the world.</p>
 <h2 id="9-setting-the-fake-time-period">9. Setting the fake time period<a class="headerlink" href="#9-setting-the-fake-time-period" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_10_setting_fake_time_period.png" data-title="Setting the fake time period" data-desc-position="bottom"><img alt="Setting the fake time period" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_10_setting_fake_time_period.png"></a></p>
 <p>In the <strong>"Setting the fake time period"</strong> area you define the time
@@ -1866,17 +1867,37 @@ window and the distribution of accompanying fakes around the 1st nuke:</p>
   nuke the fake period may start.</li>
 <li><strong>Ext. after 1st Nuke (min.)</strong> — how many minutes <strong>after</strong> the 1st
   nuke the fake period may end.</li>
-<li><strong>Share of 1st/2nd/3rd third (%)</strong> — percentage distribution of fakes
-  across the three thirds of the time window. The three values should
-  add up to 100 %.</li>
-<li><strong>Fill up with fakes until</strong> — minimum number of fakes that should be
-  filled up per target if resources allow.</li>
+<li><strong>Share of 1st/2nd/3rd third (%)</strong> — the entire fake time window is
+  internally divided into <strong>three equal-sized time thirds</strong>. Here you
+  define what percentage of the fakes falls into each third. An <strong>even
+  distribution</strong> (e.g. 33/34/33) spreads the fakes across the whole
+  window; an <strong>uneven distribution</strong> (e.g. 50/30/20) concentrates them
+  for example <strong>before</strong> the 1st nuke. The three values should add up
+  to 100 %.</li>
+<li><strong>Fill up with fakes until</strong> — the number of commands per target you
+  want each target to <strong>always carry</strong> in this category. Useful when
+  you want every target to end up with the <strong>same number of incs</strong>. If
+  a command (nuke, catapult-cleaner or C-split) cannot be planned for a
+  target, the missing commands are <strong>filled up with fakes</strong> when this
+  option is enabled — so each target in this category still ends up
+  with the same total number of commands.</li>
 </ul>
 <h2 id="10-distances-between-nukes-and-c-splits">10. Distances between nukes and C-Splits<a class="headerlink" href="#10-distances-between-nukes-and-c-splits" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png" data-title="Distances between nukes and C-Splits" data-desc-position="bottom"><img alt="Distances between nukes and C-Splits" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png"></a></p>
-<p>In the <strong>"Distance between Nukes (minutes)"</strong> area you define the
-minimum and maximum distance between consecutive nukes pairwise — one
-min/max pair for <strong>Nuke 1 → 2</strong>, <strong>Nuke 2 → 3</strong> and so on.</p>
+<p>In the <strong>"Distance between Nukes (minutes)"</strong> area you control how
+close or far apart consecutive nukes on a target should <strong>arrive in
+time</strong>. For each pair of consecutive nukes you enter a <strong>min</strong> and
+<strong>max</strong> value in minutes:</p>
+<ul>
+<li><strong>Nuke 1 → 2</strong> — the distance of the <strong>2nd nuke</strong> to the <strong>1st nuke</strong>.</li>
+<li><strong>Nuke 2 → 3</strong> — the distance of the <strong>3rd nuke</strong> to the <strong>2nd nuke</strong>.</li>
+<li>and so on — same scheme for all further nukes.</li>
+</ul>
+<p><strong>Example:</strong> with <strong>Min = 1</strong> and <strong>Max = 5</strong> for <strong>Nuke 1 → 2</strong>, the
+second nuke is planned to arrive between <strong>one</strong> and <strong>five minutes</strong>
+after the first nuke on the target. This avoids multiple nukes hitting
+at <strong>exactly the same moment</strong> while still giving the defence only
+<strong>very little reaction time</strong>.</p>
 <p>In the <strong>"Distance of C-Splits to last Nuke"</strong> area you define how far
 the catapult-splits should arrive in time after the last nuke
 (<strong>Min-Distance</strong> / <strong>Max-Distance</strong> in minutes).</p>
@@ -1889,13 +1910,14 @@ axe</em>, <em>&gt;2000 axe</em>, …, <em>&gt;6000 axe</em>. Move the desired ca
 right list <strong>"Prioritized"</strong> via the arrow buttons and sort them by
 priority.</p>
 <p>The checkbox <strong>"Strict prioritization (enforcing order)"</strong> controls how
-strictly the priority is applied:</p>
+the prioritization is interpreted:</p>
 <ul>
-<li><strong>Off</strong> — Priority is treated as a preference; the tool may use other
-  categories if it improves the planning.</li>
+<li><strong>Off</strong> — The selected source categories are merged into a <strong>single
+  shared pool</strong> from which nukes are planned. The order in the
+  prioritized list then has no effect on the planning.</li>
 <li><strong>On</strong> — Priority is strictly enforced: a lower-priority category is
-  only used <strong>once the higher-priority category has been fully
-  exhausted</strong>.</li>
+  only used <strong>once no valid options can be found</strong> in the
+  higher-priority category.</li>
 </ul>
 <h2 id="12-summary-map">12. Summary &amp; Map<a class="headerlink" href="#12-summary-map" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_13_summary_map.png" data-title="Summary &amp; Map" data-desc-position="bottom"><img alt="Summary &amp; Map" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_13_summary_map.png"></a></p>
