@@ -7,11 +7,6 @@ scharfen Zielen werden ebenfalls hier definiert. Die Verplanung **reiner
 Fakeziele** (Ziele, die ausschließlich Fakes erhalten) erfolgt separat in
 [Tab 3: Fakeplanung](tab3-fakeplanung.md).
 
-!!! info "UI-Sprache des Tools"
-    Das Off-Planungstool ist aktuell englischsprachig. In dieser Doku
-    werden die UI-Labels in deutscher Übersetzung genannt — die Screenshots
-    zeigen die englische Originalbeschriftung.
-
 ## 1. Ankunftszeitkorridor
 
 ![Ankunftszeitkorridor](../assets/nuke-planning-tool/tab2_01_arrival_times.png){ .screenshot }
@@ -54,8 +49,8 @@ Im Bereich **„Globale Limits"** legst du übergreifende Grenzwerte fest:
 
 - **Maximale Anzahl Fakes pro Herkunftsdorf** — wie viele Fakes
   insgesamt aus einem einzelnen Dorf gestartet werden dürfen.
-- **Standard-C-Split** — die Standard-Stärke (Angriffspunkte) eines
-  einzelnen Katta-Splits, sofern nicht anders konfiguriert.
+- **Standard-C-Split** — die Standard-Einheitenanzahl eines einzelnen
+  Katta-Splits.
 
 ### 2.3 Katta-Cleaner (C-Cleaner)
 
@@ -82,12 +77,9 @@ Pfeil-Buttons in die rechte Liste und sortiere sie nach Priorität.
 
 Das Tool kennt drei Kategorien scharfer Ziele:
 
-- **AG-Spam** — Adelsketten auf ein Ziel, begleitet von Offs und
-  optionalen Fakes.
-- **Katta-Spam** — massive Katapult-Salven, um gezielt bestimmte Gebäude
-  eines Ziels zu zerstören.
-- **Bunker brechen** — wiederholte Off-Angriffe auf stark verteidigte
-  Bunker-Dörfer, um deren Verteidigung systematisch abzubauen.
+- **AG-Spam**
+- **Katta-Spam**
+- **Bunker brechen**
 
 Für jede dieser Kategorien wird eine eigene Spalte angezeigt, in der du
 Ziele und Befehlsstruktur unabhängig konfigurierst.
@@ -155,7 +147,17 @@ Bei der Kategorie **Bunker brechen** gibt es zusätzlich die Spalte
 ![Befehlsplanung pro Kategorie](../assets/nuke-planning-tool/tab2_08_command_planning.png){ .screenshot }
 
 Im Bereich **„Befehlsplanung"** legst du pro Kategorie fest, **wie viele
-Befehle pro Ziel** verplant werden sollen:
+Befehle pro Ziel** verplant werden sollen.
+
+!!! info "AG-Spam und Katta-Spam identisch — Bunker brechen reduziert"
+    Die Befehlsplanung ist für die Kategorien **AG-Spam** und
+    **Katta-Spam** identisch aufgebaut. Die Kategorie **Bunker brechen**
+    bietet eine **leicht reduzierte** Auswahl an
+    Einstellungsmöglichkeiten — die Anzahl der Offs pro Ziel wird dort
+    bereits beim [Hinzufügen der Ziele](#5-ziele-hinzufugen) festgelegt
+    und entfällt daher in der Befehlsplanung.
+
+Die folgenden Felder stehen pro Ziel zur Verfügung:
 
 - **Offs** — Anzahl scharfer Off-Angriffe pro Ziel.
 - **Fakes (nur Off-Dörfer)** — Begleit-Fakes, die ausschließlich aus

@@ -7,10 +7,6 @@ real targets are also defined here. Planning of **pure fake targets**
 (targets that only receive fakes) is done separately in
 [Tab 3: Fake-Planning](tab3-fakeplanung.md).
 
-!!! info "Tool UI language"
-    The Nuke-Planning tool is currently available in English only. The
-    screenshots show the original English labels.
-
 ## 1. Arrival time corridor
 
 ![Arrival time corridor](../assets/nuke-planning-tool/tab2_01_arrival_times.png){ .screenshot }
@@ -51,8 +47,8 @@ In the **"Global limits"** area you define overarching limits:
 
 - **Maximum number of fakes per origin village** — how many fakes in
   total may launch from a single village.
-- **Standard C-split** — the standard attack strength (attack points)
-  of a single catapult-split unless configured otherwise.
+- **Standard C-split** — the standard unit count of a single
+  catapult-split.
 
 ### 2.3 Catapult-Cleaner (C-Cleaners)
 
@@ -79,12 +75,9 @@ using the arrow buttons and sort them by priority.
 
 The tool knows three categories of real targets:
 
-- **Snob-Spam** — noble trains on a single target, accompanied by nukes
-  and optional fakes.
-- **Catapult-Spam** — massive catapult salvoes to systematically destroy
-  specific buildings of a target.
-- **Breaking Bunkers** — repeated nuke attacks on heavily defended
-  bunker villages to dismantle their defence step by step.
+- **Snob-Spam**
+- **Catapult-Spam**
+- **Breaking Bunkers**
 
 Each category gets its own column where you configure targets and
 command structure independently.
@@ -150,7 +143,16 @@ column showing the configured number of nukes for each target.
 ![Command planning per category](../assets/nuke-planning-tool/tab2_08_command_planning.png){ .screenshot }
 
 In the **"Command Planning"** area you define per category **how many
-commands per target** should be planned:
+commands per target** should be planned.
+
+!!! info "Snob-Spam and Catapult-Spam identical — Breaking Bunkers reduced"
+    Command planning is structured identically for the **Snob-Spam** and
+    **Catapult-Spam** categories. The **Breaking Bunkers** category
+    offers a **slightly reduced** set of options — the number of nukes
+    per target is already defined when [adding the
+    targets](#5-adding-targets) and is therefore omitted here.
+
+The following fields are available per target:
 
 - **Nukes** — number of real nuke attacks per target.
 - **Fakes (off-villages only)** — accompanying fakes launched
