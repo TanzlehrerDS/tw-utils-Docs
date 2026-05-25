@@ -73,6 +73,7 @@ plugins:
             "Tab 3: Einstellungen": "Tab 3: Settings"
             "Tab 4: Ergebnisübersicht": "Tab 4: Results Overview"
             Anleitung: Instructions
+            Übersicht: Overview
             Mitglieder: Members
             Truppen: Troops
             Bunker-Info: Bunker-Info
@@ -99,6 +100,7 @@ nav:
       - Video-Tutorial: cleaner-fake-ut/allgemein.md
       - Anleitung: cleaner-fake-ut/anleitung.md
   - Der Leaderview:
+      - Übersicht: leader-view/uebersicht.md
       - Mitglieder: leader-view/mitglieder.md
       - Truppen: leader-view/truppen.md
       - Bunker-Info: leader-view/bunker-info.md
