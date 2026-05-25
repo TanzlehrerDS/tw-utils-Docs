@@ -195,9 +195,10 @@ absteigend sortiert nach Offs. Die Spalten sind identisch zu §4.3
 (Spieler, Offs, ZWC, K-Splits, Fakes, Gesamt), die Werte beziehen sich
 hier aber auf den **angegriffenen** Spieler.
 
-!!! info "Nicht zufrieden mit dem Ergebnis?"
-    Solltest du mit dem Planungsergebnis nicht zufrieden sein,
-    springst du jederzeit zurück in die vorherigen Tabs
-    ([Tab 1](tab1-daten.md), [Tab 2](tab2-angriffsplanung.md) oder
-    [Tab 3](tab3-fakeplanung.md)), passt deine Einstellungen an und
-    startest die Berechnung in Tab 4 erneut.
+## 5. Berechnung wiederholen
+
+Solltest du mit dem Planungsergebnis nicht zufrieden sein, springst du
+jederzeit zurück in die vorherigen Tabs ([Tab 1](tab1-daten.md),
+[Tab 2](tab2-angriffsplanung.md) oder [Tab 3](tab3-fakeplanung.md)),
+passt deine Einstellungen an und startest die Berechnung in Tab 4
+erneut.
