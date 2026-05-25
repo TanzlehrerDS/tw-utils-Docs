@@ -250,14 +250,7 @@ gibst du jeweils einen **Min-** und **Max-Wert** in Minuten an:
 - **Off 2 → 3** — Abstand der **3. Off** zur **2. Off**.
 - usw. — entsprechend für alle weiteren Offs.
 
-**Beispiel 1 — Verteidigung wenig Reaktionszeit lassen:** Trägst du
-für **Off 1 → 2** **Min = 1** und **Max = 5** ein, plant das Tool die
-zweite Off so, dass sie zwischen **einer** und **fünf Minuten** nach
-der ersten Off auf dem Ziel eintrifft. So vermeidest du, dass mehrere
-Offs **exakt gleichzeitig** ankommen, und gibst der Verteidigung
-gleichzeitig nur **wenig Reaktionszeit**.
-
-**Beispiel 2 — Verspätungen beim Abschicken einplanen:** Großzügigere
+**Beispiel — Verspätungen beim Abschicken einplanen:** Großzügigere
 Off-Abstände sind insbesondere dann sinnvoll, wenn du
 **Nachlässigkeiten beim Abschicken** der Incs schon bei der Planung
 berücksichtigen willst. Angenommen, du planst eine **Katta-Aktion**:

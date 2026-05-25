@@ -242,23 +242,16 @@ time**. For each pair of consecutive nukes you enter a **min** and
 - **Nuke 2 → 3** — the distance of the **3rd nuke** to the **2nd nuke**.
 - and so on — same scheme for all further nukes.
 
-**Example 1 — Giving the defence little reaction time:** with
-**Min = 1** and **Max = 5** for **Nuke 1 → 2**, the second nuke is
-planned to arrive between **one** and **five minutes** after the first
-nuke on the target. This avoids multiple nukes hitting at **exactly
-the same moment** while still giving the defence only **very little
-reaction time**.
-
-**Example 2 — Accounting for late sending:** More generous nuke
-spacing is especially useful when you want to factor **late sending**
-of the incs into the planning itself. Imagine a **catapult action**:
-per target you plan **2 nukes** and **5 C-Splits**, and the
-**distance of the C-Splits to the last nuke** is set to **3 minutes**.
-If the distance between the **1st and 2nd nuke** is very small, a
-**late send** can cause the nukes to actually arrive **behind the
-C-Splits**. If you instead set **Nuke 1 → 2** to e.g. **10 minutes**,
-the 1st nuke would still arrive safely **before** the C-Splits even
-if **both nukes were sent 5 minutes late**.
+**Example — Accounting for late sending:** More generous nuke spacing
+is especially useful when you want to factor **late sending** of the
+incs into the planning itself. Imagine a **catapult action**: per
+target you plan **2 nukes** and **5 C-Splits**, and the **distance of
+the C-Splits to the last nuke** is set to **3 minutes**. If the
+distance between the **1st and 2nd nuke** is very small, a **late
+send** can cause the nukes to actually arrive **behind the C-Splits**.
+If you instead set **Nuke 1 → 2** to e.g. **10 minutes**, the 1st
+nuke would still arrive safely **before** the C-Splits even if **both
+nukes were sent 5 minutes late**.
 
 ## 11. Prioritizing Nuke-Categories
 
