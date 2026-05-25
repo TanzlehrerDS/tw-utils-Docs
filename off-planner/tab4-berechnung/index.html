@@ -1616,23 +1616,18 @@ Planungsmodus stehen folgende Algorithmen zur Verfügung:</p>
   nicht durch bekannte Wachturm-Radien laufen."</em> Verfügbar nur auf
   Welten mit aktivem Wachturm. Bei Auswahl erscheint zusätzlich der
   Konfigurationsbereich (siehe <a href="#21-wachturm-konfiguration">§2.1</a>).</li>
-<li><strong>Moral-optimiert</strong> — bevorzugt Quell-Dörfer mit hoher Moral
-  gegenüber dem jeweiligen Ziel-Spieler. Liefert auf Welten mit
-  aktiver Moral spürbar stärkere Offs.</li>
-<li><strong>Kürzeste Laufzeit</strong> — wählt pro Ziel das Quell-Dorf mit der
-  <strong>kürzesten</strong> Reisezeit. Maximiert die Reaktionszeit gegenüber
-  Late-Sends und gibt der gegnerischen Defensive wenig Zeit zum
-  Reagieren.</li>
-<li><strong>Längste Laufzeit</strong> — Gegenstück dazu: bevorzugt <strong>lange</strong>
-  Laufwege, etwa um den Ankunfts-Korridor zeitlich besser zu füllen
-  oder Versand-Zeitpunkte günstiger zu legen.</li>
+<li><strong>Moral-optimiert</strong> — bevorzugt aus dem Pool der möglichen
+  Quell-Dörfer diejenigen mit hoher Moral.</li>
+<li><strong>Kürzeste Laufzeit</strong> — wählt pro Ziel aus den möglichen Optionen
+  das Quell-Dorf mit der kürzesten Reisezeit.</li>
+<li><strong>Längste Laufzeit</strong> — wählt pro Ziel aus den möglichen Optionen
+  das Quell-Dorf mit der längsten Reisezeit.</li>
 <li><strong>Zufällig</strong> — wählt aus den möglichen Quellen zufällig aus.
   Nützlich, wenn keine spezifische Optimierung gewünscht ist oder der
   Plan möglichst unspezifisch wirken soll.</li>
 <li><strong>Knappheit-optimiert (Verteilung)</strong> — <em>nur im Modus Wellen-basiert
-  verfügbar.</em> Verteilt knappe Ressourcen (z. B. wenige Offs auf viele
-  Ziele) so, dass möglichst jedes Ziel zumindest die ersten Wellen
-  bekommt.</li>
+  verfügbar.</em> Verplant zuerst diejenigen Quell-Dörfer, die es
+  laufzeittechnisch zu den wenigsten Zielen schaffen würden.</li>
 </ul>
 <p>Hat man eine Auswahl getroffen, startet man die Berechnung mit dem
 Button <strong>"Berechnung starten"</strong> rechts neben dem Dropdown.</p>
