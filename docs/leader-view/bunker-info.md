@@ -25,6 +25,12 @@ Stammes. Pro Dorf wird ein **Soll-Wert** (Dual-Stärke) hinterlegt; das
 System vergleicht ihn fortlaufend mit dem aktuellen **Ist-Wert** aus
 den Truppendaten und zeigt fehlende Refills an.
 
+In der Liste tauchen sowohl manuell eingetragene Bunker als auch
+Bunker auf, die die Stammesmitglieder über das
+[Bunker-Information-System](../discord-bot/bunker-info.md) des
+tw-utils-Discordbots beantragt haben und die von einem Leader genehmigt
+wurden.
+
 ![Genehmigte Bunker — Übersicht](../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png){ .screenshot }
 
 Die Tabelle hat folgende Spalten:
@@ -48,9 +54,16 @@ Die Tabelle hat folgende Spalten:
 | 🟠 orange | Warnung |
 | 🔴 rot | Kritisch |
 
-### Bunker eintragen
+### Bunker manuell eintragen
 
-Über **„Bunker eintragen"** öffnet sich ein Dialog mit zwei Feldern:
+Der **Standardweg** für neue Bunker führt über das
+[Bunker-Information-System](../discord-bot/bunker-info.md) des
+Discordbots: Spieler beantragen dort Bunker, Leader genehmigen sie und
+sie landen automatisch in dieser Liste.
+
+Zusätzlich können Leader Bunker direkt im Leader-View eintragen. Über
+den Button **„Bunker eintragen"** öffnet sich ein Dialog mit zwei
+Feldern:
 
 ![Bunker eintragen](../assets/leaderview/06_leaderview_bunkerinfo_approvedbunkers_add_bunker.png){ .screenshot }
 
@@ -60,8 +73,10 @@ Die Tabelle hat folgende Spalten:
 
 ### Aufstocken (Soll-Wert erhöhen)
 
-Über das blaue **`+`-Symbol** in der Spalte **„Aktionen"** lässt sich
-die Soll-Größe eines bestehenden Bunkers nachträglich erhöhen.
+Aufstockungen kommen normalerweise ebenfalls über den Discordbot.
+Leader können sie aber jederzeit auch manuell vornehmen: Über das
+blaue **`+`-Symbol** in der Spalte **„Aktionen"** lässt sich die
+Soll-Größe eines bestehenden Bunkers nachträglich erhöhen.
 
 ![Aufstocken](../assets/leaderview/07_leaderview_bunkerinfo_approvedbunkers_topup_bunker.png){ .screenshot }
 
@@ -77,9 +92,7 @@ Textblock, der über den **„Kopieren"**-Button in die Zwischenablage
 
 ![Refills anfordern](../assets/leaderview/08_leaderview_bunkerinfo_approvedbunkers_copy_refills.png){ .screenshot }
 
-Den kopierten Text kannst du z. B. als Ingame-Massennachricht in den
-Stamm schicken — die Spieler erhalten so direkt eine fertige
-Refill-Anfrage für „ihren" Bunker.
+Den kopierten Text kannst du z. B. ins Stammesforum stellen.
 
 ### Tabellenzeile im Detail
 

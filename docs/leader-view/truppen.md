@@ -69,9 +69,3 @@ Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight
 465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
 468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
 ```
-
-Spalten der Reihe nach:
-
-`Coords` (Koordinaten `X|Y`), `Player` (Spielername), gefolgt von den
-Truppenanzahlen für `spear`, `sword`, `axe`, `archer`, `spy`, `light`,
-`marcher`, `heavy`, `ram`, `catapult`, `knight`, `snob`.
