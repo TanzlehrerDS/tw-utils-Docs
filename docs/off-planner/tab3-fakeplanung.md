@@ -6,22 +6,7 @@ werden. Begleitfakes zu realen Zielen werden weiterhin in
 [Tab 2: Angriffsplanung](tab2-angriffsplanung.md) zusammen mit den
 dazugehörigen Offs, K-Splits und Zwischencleanern geplant.
 
-## 1. Zwei Wege der Zielauswahl
-
-Tab 3 bietet zwei grundsätzlich unterschiedliche Wege, Fakeziele
-festzulegen:
-
-- **Manuelle Auswahl** — du gibst die Koordinaten der Fakeziele selbst
-  ein, ganz wie aus Tab 2 gewohnt.
-- **Automatische Auswahl per Referenzkoordinaten** — das Tool sucht die
-  Fakeziele anhand bestimmter Filterkriterien (Stamm, Punkte,
-  Referenzkoordinaten mit Radius) selbstständig heraus.
-
-Beide Wege schließen sich gegenseitig aus: sobald du in einem Modus
-Ziele oder Filter angelegt hast, sperrt das Tool den jeweils anderen
-Modus (siehe [§3 Planungsmethode wählen](#3-planungsmethode-wahlen)).
-
-## 2. Ankunftszeiten-Korridor
+## 1. Ankunftszeiten-Korridor
 
 ![Ankunftszeiten-Korridor festlegen (Fakes)](../assets/nuke-planning-tool/tab3_01_arrival_times.png){ .screenshot }
 
@@ -43,6 +28,21 @@ werden.
     im [Fake-Zeitraum (§4.3)](#43-befehlsplanung-pro-kategorie) leicht
     außerhalb des Korridors landen — es lohnt sich daher, einen
     ausreichenden Puffer zum Nachtbonus zu lassen.
+
+## 2. Zwei Wege der Zielauswahl
+
+Tab 3 bietet zwei grundsätzlich unterschiedliche Wege, Fakeziele
+festzulegen:
+
+- **Manuelle Auswahl** — du gibst die Koordinaten der Fakeziele selbst
+  ein, ganz wie aus Tab 2 gewohnt.
+- **Automatische Auswahl per Referenzkoordinaten** — das Tool sucht die
+  Fakeziele anhand bestimmter Filterkriterien (Stamm, Punkte,
+  Referenzkoordinaten mit Radius) selbstständig heraus.
+
+Beide Wege schließen sich gegenseitig aus: sobald du in einem Modus
+Ziele oder Filter angelegt hast, sperrt das Tool den jeweils anderen
+Modus (siehe [§3 Planungsmethode wählen](#3-planungsmethode-wahlen)).
 
 ## 3. Planungsmethode wählen
 
