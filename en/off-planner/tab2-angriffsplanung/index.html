@@ -1711,14 +1711,17 @@ real targets are also defined here. Planning of <strong>pure fake targets</stron
 <h2 id="1-arrival-time-corridor">1. Arrival time corridor<a class="headerlink" href="#1-arrival-time-corridor" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_01_arrival_times.png" data-title="Arrival time corridor" data-desc-position="bottom"><img alt="Arrival time corridor" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_01_arrival_times.png"></a></p>
 <p>In the <strong>"Arrival time corridor"</strong> section you define the timeframe in
-which the attacks should arrive. Enter <strong>Date</strong>, <strong>Start</strong> and <strong>End</strong>
-and then click <strong>"Set Corridor"</strong> to activate the corridor.</p>
+which the attacks should arrive. Enter <strong>Date</strong>, <strong>Start time</strong> and
+<strong>End time</strong> and then click <strong>"Set Corridor"</strong> to activate the corridor.</p>
 <div class="admonition info">
 <p class="admonition-title">Corridor applies only to the 1st nuke</p>
 <p>The corridor defines the timeframe in which the <strong>1st planned nuke</strong>
 must arrive. Subsequent nukes and fakes can easily arrive outside the
-defined corridor — depending on the settings for the fake time
-period and the minimum/maximum distance.</p>
+defined corridor — depending on the settings for the
+<a href="#9-setting-the-fake-time-period">fake time period</a> and the
+<a href="#10-distances-between-nukes-and-c-splits">minimum/maximum distance</a>.
+It is therefore recommended to leave a sufficient <strong>buffer to the
+night bonus</strong> when defining the corridor.</p>
 </div>
 <h2 id="2-global-settings">2. Global Settings<a class="headerlink" href="#2-global-settings" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_02_global_settings.png" data-title="Global Settings" data-desc-position="bottom"><img alt="Global Settings" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_02_global_settings.png"></a></p>
@@ -1740,7 +1743,7 @@ most important category at the top.</p>
 <p>In the <strong>"Global limits"</strong> area you define overarching limits:</p>
 <ul>
 <li><strong>Maximum number of fakes per origin village</strong> — how many fakes in
-  total may launch from a single village.</li>
+  total may be planned from a single village.</li>
 <li><strong>Standard C-split</strong> — the standard unit count of a single
   catapult-split.</li>
 </ul>
@@ -1772,6 +1775,16 @@ using the arrow buttons and sort them by priority.</p>
 </ul>
 <p>Each category gets its own column where you configure targets and
 command structure independently.</p>
+<div class="admonition info">
+<p class="admonition-title">Category names are only a suggestion</p>
+<p>The <strong>Snob-Spam</strong> and <strong>Catapult-Spam</strong> categories are
+<strong>structurally identical</strong> in terms of their settings — only the
+<strong>Breaking Bunkers</strong> category offers a slightly reduced set of
+options. You therefore don't have to take the names literally: you
+could, for example, use both columns to plan <strong>two different
+catapult actions</strong> in parallel. The labels merely reflect a typical
+use case, but are not mandatory.</p>
+</div>
 <h2 id="4-target-selection-command-planning-overview">4. Target selection &amp; Command planning – Overview<a class="headerlink" href="#4-target-selection-command-planning-overview" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_03_overview_target_selection.png" data-title="Target selection &amp; Command planning overview" data-desc-position="bottom"><img alt="Target selection &amp; Command planning overview" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_03_overview_target_selection.png"></a></p>
 <p>In the <strong>"Target selection &amp; Command planning"</strong> section the three
@@ -1802,20 +1815,19 @@ conveniently set up a whole list of bunkers with a uniform number of
 nukes per target in one go.</p>
 <div class="admonition info">
 <p class="admonition-title">No duplicates</p>
-<p>The tool ensures that <strong>no real attack targets are duplicated</strong>
-within a single category. Coordinates that already exist are
-automatically filtered out when adding new ones.</p>
+<p>The tool ensures that <strong>no real attack targets can be duplicated
+across all three categories</strong>. Coordinates that already exist in
+another category are automatically filtered out when adding new
+ones.</p>
 </div>
 <h2 id="6-editing-targets">6. Editing targets<a class="headerlink" href="#6-editing-targets" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_06_edit_targets_modal_1.png" data-title="Edit list modal – Snob-Spam" data-desc-position="bottom"><img alt="Edit list modal – Snob-Spam" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_06_edit_targets_modal_1.png"></a></p>
-<p>The <strong>pencil icon</strong> opens the <strong>"Edit List: <category>"</category></strong> modal. It
-contains a search bar and a table with the columns <strong>#</strong>, <strong>Coord.</strong>,
-<strong>Player</strong> and <strong>Action</strong>. Use the trash icon in the <strong>Action</strong> column
-to remove individual targets; <strong>"Delete All"</strong> empties the entire
-category.</p>
+<p>The <strong>pencil icon</strong> opens the <strong>"Edit List: <category>"</category></strong> modal. Here
+you can remove individual targets from the list, or use
+<strong>"Delete All"</strong> to empty the entire category at once.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_07_edit_targets_modal_2.png" data-title="Edit list modal – Breaking Bunkers" data-desc-position="bottom"><img alt="Edit list modal – Breaking Bunkers" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_07_edit_targets_modal_2.png"></a></p>
-<p>For the <strong>Breaking Bunkers</strong> category there is an additional <strong>Nukes</strong>
-column showing the configured number of nukes for each target.</p>
+<p>For the <strong>Breaking Bunkers</strong> category, the configured number of nukes
+per target is additionally displayed.</p>
 <h2 id="7-command-planning-per-category">7. Command planning per category<a class="headerlink" href="#7-command-planning-per-category" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_08_command_planning.png" data-title="Command planning per category" data-desc-position="bottom"><img alt="Command planning per category" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_08_command_planning.png"></a></p>
 <p>In the <strong>"Command Planning"</strong> area you define per category <strong>how many
@@ -1843,9 +1855,8 @@ targets</a> and is therefore omitted here.</p>
 <div class="admonition info">
 <p class="admonition-title">Accompanying fakes ≠ Tab 3</p>
 <p>The fakes defined here are <strong>accompanying fakes for the real
-targets</strong> of this category. Planning of <strong>pure fake targets</strong>
-(without a real attack background) is done separately in
-<a href="../tab3-fakeplanung/">Tab 3: Fake-Planning</a>.</p>
+targets</strong> of this category. Planning of <strong>pure fake targets</strong> is
+done separately in <a href="../tab3-fakeplanung/">Tab 3: Fake-Planning</a>.</p>
 </div>
 <h2 id="8-catapult-splits-c-splits">8. Catapult-Splits (C-Splits)<a class="headerlink" href="#8-catapult-splits-c-splits" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_09_c-split_planning.png" data-title="Catapult-Splits per building" data-desc-position="bottom"><img alt="Catapult-Splits per building" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_09_c-split_planning.png"></a></p>

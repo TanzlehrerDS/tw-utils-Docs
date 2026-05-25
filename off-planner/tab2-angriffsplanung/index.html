@@ -1712,14 +1712,17 @@ Fakeziele</strong> (Ziele, die ausschließlich Fakes erhalten) erfolgt separat i
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_01_arrival_times.png" data-title="Ankunftszeitkorridor" data-desc-position="bottom"><img alt="Ankunftszeitkorridor" class="screenshot" src="../../assets/nuke-planning-tool/tab2_01_arrival_times.png"></a></p>
 <p>Im Bereich <strong>„Ankunftszeiten-Korridor festlegen"</strong> legst du den
 Zeitrahmen fest, in dem die Angriffe eintreffen sollen. Gib <strong>Datum</strong>,
-<strong>Start</strong> und <strong>Ende</strong> ein und klicke anschließend auf
+<strong>Startzeit</strong> und <strong>Endzeit</strong> ein und klicke anschließend auf
 <strong>„Korridor übernehmen"</strong>, um den Korridor zu aktivieren.</p>
 <div class="admonition info">
 <p class="admonition-title">Korridor gilt nur für die 1. Off</p>
 <p>Der Korridor bestimmt, in welchem Zeitrahmen die <strong>1. geplante Off</strong>
 eintreffen muss. Weitere Offs und Fakes können leicht außerhalb des
 festgelegten Korridors eintreffen — je nachdem, welche Einstellungen
-zum Fake-Zeitraum sowie zum Min-/Max-Abstand getroffen wurden.</p>
+zum <a href="#9-festlegung-fake-zeitraum">Fake-Zeitraum</a> sowie zum
+<a href="#10-abstande-der-offs-und-kattasplits">Min-/Max-Abstand</a> getroffen
+wurden. Es empfiehlt sich daher, beim Festlegen des Korridors einen
+ausreichenden <strong>Abstand zum Nachtbonus</strong> einzuplanen.</p>
 </div>
 <h2 id="2-globale-einstellungen">2. Globale Einstellungen<a class="headerlink" href="#2-globale-einstellungen" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_02_global_settings.png" data-title="Globale Einstellungen" data-desc-position="bottom"><img alt="Globale Einstellungen" class="screenshot" src="../../assets/nuke-planning-tool/tab2_02_global_settings.png"></a></p>
@@ -1743,7 +1746,7 @@ daher an die erste Position.</p>
 fest:</p>
 <ul>
 <li><strong>„zulässige Anzahl Fakes pro Herkunftsdorf"</strong> — wie viele Fakes
-  insgesamt aus einem einzelnen Dorf gestartet werden dürfen.</li>
+  insgesamt aus einem einzelnen Dorf verplant werden dürfen.</li>
 <li><strong>„Standard Kattasplit"</strong> — die Standard-Einheitenanzahl eines
   einzelnen Katta-Splits.</li>
 </ul>
@@ -1761,14 +1764,12 @@ Lkav auf, bis die resultierende Angriffsstärke erreicht ist. So
 lassen sich auch Dörfer als Cleaner einsetzen, die nicht perfekt
 der Soll-Zusammensetzung entsprechen.</p>
 </div>
-<p>Rechts daneben legst du im Bereich <strong>„Priorisierte Quell-Kategorien
-(Oben = Prio 1)"</strong> fest, aus welchen Dorf-Kategorien (z. B. *Dörfer</p>
-<blockquote>
-<p>500 Axt<em>, </em>&gt;1000 Axt<em>, </em>&gt;2000 Axt<em>, …, </em>Verbleibende Dörfer<em>) die
-Zwischencleaner bevorzugt gestartet werden sollen. Verschiebe die
-gewünschten Kategorien über die Pfeil-Buttons in die rechte Liste
-</em><em>„Ausgewählt (Prio)"</em>* und sortiere sie nach Priorität.</p>
-</blockquote>
+<p>Rechts daneben legst du im Bereich <strong>„Priorisierte Quell-Kategorien"</strong>
+fest, aus welchen Dorf-Kategorien (z. B. <em>Dörfer &gt;500 Axt</em>,
+<em>&gt;1000 Axt</em>, <em>&gt;2000 Axt</em>, …, <em>Verbleibende Dörfer</em>) die Zwischencleaner
+bevorzugt gestartet werden sollen. Verschiebe die gewünschten
+Kategorien über die Pfeil-Buttons in die rechte Liste
+<strong>„Ausgewählt (Prio)"</strong> und sortiere sie nach Priorität.</p>
 <h2 id="3-die-drei-standard-kategorien">3. Die drei Standard-Kategorien<a class="headerlink" href="#3-die-drei-standard-kategorien" title="Permanent link">¶</a></h2>
 <p>Das Tool kennt drei Kategorien scharfer Ziele:</p>
 <ul>
@@ -1778,6 +1779,16 @@ gewünschten Kategorien über die Pfeil-Buttons in die rechte Liste
 </ul>
 <p>Für jede dieser Kategorien wird eine eigene Spalte angezeigt, in der du
 Ziele und Befehlsstruktur unabhängig konfigurierst.</p>
+<div class="admonition info">
+<p class="admonition-title">Kategorienamen sind nur ein Vorschlag</p>
+<p>Die Kategorien <strong>AG-Spam</strong> und <strong>Kattern</strong> sind hinsichtlich der
+Einstellungsmöglichkeiten <strong>identisch aufgebaut</strong> — nur die Kategorie
+<strong>Bunker brechen</strong> bietet leicht reduzierte Optionen. Du musst die
+Namen also nicht wörtlich nehmen: Du kannst die beiden Spalten z. B.
+auch nutzen, um <strong>zwei unterschiedliche Katter-Aktionen</strong> parallel
+zu planen. Die Bezeichnungen dienen lediglich als typischer
+Anwendungsfall, sind aber nicht zwingend.</p>
+</div>
 <h2 id="4-zielauswahl-befehlsplanung-ubersicht">4. Zielauswahl &amp; Befehlsplanung – Übersicht<a class="headerlink" href="#4-zielauswahl-befehlsplanung-ubersicht" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_03_overview_target_selection.png" data-title="Übersicht Zielauswahl &amp; Befehlsplanung" data-desc-position="bottom"><img alt="Übersicht Zielauswahl &amp; Befehlsplanung" class="screenshot" src="../../assets/nuke-planning-tool/tab2_03_overview_target_selection.png"></a></p>
 <p>Im Bereich <strong>„Zielauswahl &amp; Befehlsplanung"</strong> siehst du die drei
@@ -1795,10 +1806,9 @@ Detail-Einstellungen, die in den nächsten Abschnitten beschrieben werden.</p>
 <h2 id="5-ziele-hinzufugen">5. Ziele hinzufügen<a class="headerlink" href="#5-ziele-hinzufugen" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_04_add_targets_modal_1.png" data-title="Modal „Ziele hinzufügen&quot; – AG-Spam" data-desc-position="bottom"><img alt="Modal „Ziele hinzufügen&quot; – AG-Spam" class="screenshot" src="../../assets/nuke-planning-tool/tab2_04_add_targets_modal_1.png"></a></p>
 <p>Über den Button <strong>„Ziele hinzufügen"</strong> öffnet sich das gleichnamige
-Modal. Füge die <strong>Koordinaten</strong> der Zieldörfer im Format
-<strong>„Koordinaten (XXX|YYY)"</strong> in das Textfeld ein — <em>„Andere Texte/Skripte
-werden ignoriert."</em> Bestätige anschließend mit dem entsprechenden
-Hinzufügen-Button.</p>
+Modal. Füge die <strong>Koordinaten</strong> der Zieldörfer im Format <strong>XXX|YYY</strong> in
+das Textfeld ein — <em>„Andere Texte/Skripte werden ignoriert."</em> Bestätige
+anschließend mit dem entsprechenden Hinzufügen-Button.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_05_add_targets_modal_2.png" data-title="Modal „Ziele hinzufügen&quot; – Bunker brechen" data-desc-position="bottom"><img alt="Modal „Ziele hinzufügen&quot; – Bunker brechen" class="screenshot" src="../../assets/nuke-planning-tool/tab2_05_add_targets_modal_2.png"></a></p>
 <p>Für die Kategorie <strong>Bunker brechen</strong> gibt es zusätzlich das Feld
 <strong>„Anzahl Offs pro Ziel"</strong>. Wie das Tool dort vermerkt, gilt: <em>„Dieser
@@ -1807,21 +1817,19 @@ du bequem in einem Schritt eine ganze Liste Bunker mit einer
 einheitlichen Anzahl Offs pro Ziel anlegen.</p>
 <div class="admonition info">
 <p class="admonition-title">Keine Duplikate</p>
-<p>Das Tool stellt sicher, dass innerhalb einer Kategorie <strong>keine
-scharfen Angriffsziele doppelt</strong> enthalten sein können. Bereits
-vorhandene Koordinaten werden beim Hinzufügen automatisch
-herausgefiltert.</p>
+<p>Das Tool stellt sicher, dass <strong>über alle drei Kategorien hinweg
+keine scharfen Angriffsziele doppelt</strong> enthalten sein können.
+Bereits in einer anderen Kategorie vorhandene Koordinaten werden
+beim Hinzufügen automatisch herausgefiltert.</p>
 </div>
 <h2 id="6-ziele-bearbeiten">6. Ziele bearbeiten<a class="headerlink" href="#6-ziele-bearbeiten" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_06_edit_targets_modal_1.png" data-title="Modal „Liste bearbeiten&quot; – AG-Spam" data-desc-position="bottom"><img alt="Modal „Liste bearbeiten&quot; – AG-Spam" class="screenshot" src="../../assets/nuke-planning-tool/tab2_06_edit_targets_modal_1.png"></a></p>
 <p>Über das <strong>Stift-Icon</strong> öffnet sich das Modal <strong>„Liste bearbeiten"</strong>.
-Es enthält eine Suchleiste sowie eine Tabelle mit den Spalten <strong>#</strong>,
-<strong>Koord.</strong>, <strong>Spieler</strong> und <strong>Aktion</strong>. Über das Mülltonnen-Icon in der
-Spalte <strong>Aktion</strong> kannst du einzelne Ziele entfernen;
-<strong>„Alles löschen"</strong> leert die gesamte Kategorie.</p>
+Hier kannst du einzelne Ziele aus der Liste entfernen oder über
+<strong>„Alles löschen"</strong> die gesamte Kategorie auf einmal leeren.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_07_edit_targets_modal_2.png" data-title="Modal „Liste bearbeiten&quot; – Bunker brechen" data-desc-position="bottom"><img alt="Modal „Liste bearbeiten&quot; – Bunker brechen" class="screenshot" src="../../assets/nuke-planning-tool/tab2_07_edit_targets_modal_2.png"></a></p>
-<p>Bei der Kategorie <strong>Bunker brechen</strong> gibt es zusätzlich die Spalte
-<strong>Offs</strong>, die für jedes Ziel die hinterlegte Anzahl Offs anzeigt.</p>
+<p>Bei der Kategorie <strong>Bunker brechen</strong> wird pro Ziel zusätzlich die
+hinterlegte Anzahl Offs angezeigt.</p>
 <h2 id="7-befehlsplanung-pro-kategorie">7. Befehlsplanung pro Kategorie<a class="headerlink" href="#7-befehlsplanung-pro-kategorie" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_08_command_planning.png" data-title="Befehlsplanung pro Kategorie" data-desc-position="bottom"><img alt="Befehlsplanung pro Kategorie" class="screenshot" src="../../assets/nuke-planning-tool/tab2_08_command_planning.png"></a></p>
 <p>Im Bereich <strong>„Befehlsplanung"</strong> legst du pro Kategorie fest, <strong>wie viele
@@ -1850,9 +1858,8 @@ und entfällt daher in der Befehlsplanung.</p>
 <div class="admonition info">
 <p class="admonition-title">Begleitfakes ≠ Tab 3</p>
 <p>Die hier definierten Fakes sind <strong>Begleitfakes für die scharfen
-Ziele</strong> dieser Kategorie. Die Planung <strong>reiner Fakeziele</strong> (ohne
-scharfen Hintergrund) erfolgt separat in
-<a href="../tab3-fakeplanung/">Tab 3: Fakeplanung</a>.</p>
+Ziele</strong> dieser Kategorie. Die Planung <strong>reiner Fakeziele</strong> erfolgt
+separat in <a href="../tab3-fakeplanung/">Tab 3: Fakeplanung</a>.</p>
 </div>
 <h2 id="8-kattasplits-gebaude">8. Kattasplits (Gebäude)<a class="headerlink" href="#8-kattasplits-gebaude" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_09_c-split_planning.png" data-title="Kattasplits pro Gebäude" data-desc-position="bottom"><img alt="Kattasplits pro Gebäude" class="screenshot" src="../../assets/nuke-planning-tool/tab2_09_c-split_planning.png"></a></p>
