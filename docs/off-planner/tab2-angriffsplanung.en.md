@@ -12,14 +12,17 @@ real targets are also defined here. Planning of **pure fake targets**
 ![Arrival time corridor](../assets/nuke-planning-tool/tab2_01_arrival_times.png){ .screenshot }
 
 In the **"Arrival time corridor"** section you define the timeframe in
-which the attacks should arrive. Enter **Date**, **Start** and **End**
-and then click **"Set Corridor"** to activate the corridor.
+which the attacks should arrive. Enter **Date**, **Start time** and
+**End time** and then click **"Set Corridor"** to activate the corridor.
 
 !!! info "Corridor applies only to the 1st nuke"
     The corridor defines the timeframe in which the **1st planned nuke**
     must arrive. Subsequent nukes and fakes can easily arrive outside the
-    defined corridor — depending on the settings for the fake time
-    period and the minimum/maximum distance.
+    defined corridor — depending on the settings for the
+    [fake time period](#9-setting-the-fake-time-period) and the
+    [minimum/maximum distance](#10-distances-between-nukes-and-c-splits).
+    It is therefore recommended to leave a sufficient **buffer to the
+    night bonus** when defining the corridor.
 
 ## 2. Global Settings
 
@@ -46,7 +49,7 @@ which the categories are planned.
 In the **"Global limits"** area you define overarching limits:
 
 - **Maximum number of fakes per origin village** — how many fakes in
-  total may launch from a single village.
+  total may be planned from a single village.
 - **Standard C-split** — the standard unit count of a single
   catapult-split.
 
@@ -81,6 +84,15 @@ The tool knows three categories of real targets:
 
 Each category gets its own column where you configure targets and
 command structure independently.
+
+!!! info "Category names are only a suggestion"
+    The **Snob-Spam** and **Catapult-Spam** categories are
+    **structurally identical** in terms of their settings — only the
+    **Breaking Bunkers** category offers a slightly reduced set of
+    options. You therefore don't have to take the names literally: you
+    could, for example, use both columns to plan **two different
+    catapult actions** in parallel. The labels merely reflect a typical
+    use case, but are not mandatory.
 
 ## 4. Target selection & Command planning – Overview
 
@@ -119,24 +131,23 @@ conveniently set up a whole list of bunkers with a uniform number of
 nukes per target in one go.
 
 !!! info "No duplicates"
-    The tool ensures that **no real attack targets are duplicated**
-    within a single category. Coordinates that already exist are
-    automatically filtered out when adding new ones.
+    The tool ensures that **no real attack targets can be duplicated
+    across all three categories**. Coordinates that already exist in
+    another category are automatically filtered out when adding new
+    ones.
 
 ## 6. Editing targets
 
 ![Edit list modal – Snob-Spam](../assets/nuke-planning-tool/tab2_06_edit_targets_modal_1.png){ .screenshot }
 
-The **pencil icon** opens the **"Edit List: <category>"** modal. It
-contains a search bar and a table with the columns **#**, **Coord.**,
-**Player** and **Action**. Use the trash icon in the **Action** column
-to remove individual targets; **"Delete All"** empties the entire
-category.
+The **pencil icon** opens the **"Edit List: <category>"** modal. Here
+you can remove individual targets from the list, or use
+**"Delete All"** to empty the entire category at once.
 
 ![Edit list modal – Breaking Bunkers](../assets/nuke-planning-tool/tab2_07_edit_targets_modal_2.png){ .screenshot }
 
-For the **Breaking Bunkers** category there is an additional **Nukes**
-column showing the configured number of nukes for each target.
+For the **Breaking Bunkers** category, the configured number of nukes
+per target is additionally displayed.
 
 ## 7. Command planning per category
 
@@ -166,9 +177,8 @@ The following fields are available per target:
 
 !!! info "Accompanying fakes ≠ Tab 3"
     The fakes defined here are **accompanying fakes for the real
-    targets** of this category. Planning of **pure fake targets**
-    (without a real attack background) is done separately in
-    [Tab 3: Fake-Planning](tab3-fakeplanung.md).
+    targets** of this category. Planning of **pure fake targets** is
+    done separately in [Tab 3: Fake-Planning](tab3-fakeplanung.md).
 
 ## 8. Catapult-Splits (C-Splits)
 
