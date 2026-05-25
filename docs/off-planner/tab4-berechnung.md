@@ -114,13 +114,12 @@ Rechts neben den Karten stehen drei Aktions-Buttons:
 
 - **Plan speichern** — öffnet das Modal **"Plan speichern"**, in das
   du im Feld **"Name des Plans"** einen Namen einträgst und mit
-  **Speichern** ablegst. Gespeicherte Pläne stehen anschließend im
-  Plan-Viewer zur Verfügung.
+  **Speichern** ablegst. Gespeicherte Pläne stehen anschließend unter
+  "Meine Pläne & Container" zur Verfügung.
 - **WORKBENCH** — kopiert sämtliche Befehle als Workbench-Strings in
-  die Zwischenablage. Im Spiel über das Workbench-Skript einfügen.
+  die Zwischenablage.
 - **Excel** — lädt das komplette Planungsergebnis als Excel-Datei
-  herunter (inklusive Discord-Import-Strings, Workbench-Strings,
-  Quell-/Ziel-Spielern, Abschick- und Ankunftszeiten).
+  herunter.
 
 ## 4. Detail-Reiter
 
@@ -144,12 +143,13 @@ Spalten:
 - **Typ** — Befehlstyp als Badge (Off, Fake, ZWC, K-Split, …).
 - **Herkunft** — Quell-Koordinate und Quell-Spieler.
 - **Ziel** — Ziel-Koordinate und Ziel-Spieler.
-- **Einheit** — gewählte Anführer-Einheit.
-- **Icon** — Befehls-Icon (z. B. Mörser, Doppelaxt).
-- **Abschickzeit / Ankunftszeit** — Klick auf den Spaltenkopf
-  sortiert die Befehle entsprechend.
+- **Einheit** — gewählte Einheit, mit welcher der Befehl geplant
+  wurde.
+- **Icon** — Befehls-Icon.
+- **Abschickzeit / Ankunftszeit** — zeigt die jeweilige Abschick-
+  bzw. Ankunftszeit des Befehls.
 - **Distanz** — Entfernung zum Ziel in Feldern.
-- **Laufzeit** — Reisezeit der Einheit.
+- **Laufzeit** — Reisezeit der Einheit in Minuten.
 
 ### 4.2 Unvollständige Ziele
 
@@ -194,3 +194,10 @@ zeigt, **welche gegnerischen Spieler** wie viele Befehle erhalten —
 absteigend sortiert nach Offs. Die Spalten sind identisch zu §4.3
 (Spieler, Offs, ZWC, K-Splits, Fakes, Gesamt), die Werte beziehen sich
 hier aber auf den **angegriffenen** Spieler.
+
+!!! info "Nicht zufrieden mit dem Ergebnis?"
+    Solltest du mit dem Planungsergebnis nicht zufrieden sein,
+    springst du jederzeit zurück in die vorherigen Tabs
+    ([Tab 1](tab1-daten.md), [Tab 2](tab2-angriffsplanung.md) oder
+    [Tab 3](tab3-fakeplanung.md)), passt deine Einstellungen an und
+    startest die Berechnung in Tab 4 erneut.
