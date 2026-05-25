@@ -1039,16 +1039,22 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verknupfung-mit-dem-discordbot" class="md-nav__link">
+    <nav class="md-nav" aria-label="Truppen hochladen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erwartetes-datei-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verknüpfung mit dem Discordbot
+        Erwartetes Datei-Format
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1447,16 +1453,22 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verknupfung-mit-dem-discordbot" class="md-nav__link">
+    <nav class="md-nav" aria-label="Truppen hochladen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erwartetes-datei-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verknüpfung mit dem Discordbot
+        Erwartetes Datei-Format
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1538,37 +1550,38 @@ synchronisiert</strong> und im Rahmen der folgenden Module genutzt:
 Beide Sichten lassen sich parallel pflegen.</p>
 <ul>
 <li><strong>Truppen im Dorf</strong> — nur die Truppen, die aktuell tatsächlich im
-  Dorf stehen (also keine unterwegs befindlichen oder gestützten
-  Truppen). Diese Sicht ist die Daten-Grundlage für das
-  <strong>Bunker-Information-System</strong> und die
-  <strong>Off/Deff/Snob-Search-Systems</strong> des Discordbots und wird automatisch
-  mit dem Bot synchronisiert.</li>
+  Dorf stehen (also keine unterwegs befindlichen Truppen).</li>
 <li><strong>Truppen Insgesamt</strong> — alle vorhandenen Truppen eines Dorfes (im
-  Dorf + unterwegs + gestützt). Sie dient als reine
-  Bestands-/Auswertungs-Sicht.</li>
+  Dorf + unterwegs). Reine Bestands-/Auswertungs-Sicht.</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Automatische Synchronisation mit dem Discordbot</p>
-<p>Sobald du neue <strong>„Truppen im Dorf"</strong>-Daten hochlädst, stehen sie
-dem Discordbot ohne weiteren Schritt zur Verfügung. Bunker-Status,
-Off-/Deff-/Snob-Suchen und das Planning-System greifen jeweils auf
-den jüngsten Upload zu.</p>
-</div>
 <h2 id="truppen-hochladen">Truppen hochladen<a class="headerlink" href="#truppen-hochladen" title="Permanent link">¶</a></h2>
-<p>Über den Button <strong>„Upload Troops"</strong> (oben rechts) öffnest du den
-Upload-Dialog. Es wird dieselbe TXT-Datei erwartet, die auch im
-Off-Planungstool verwendet wird — Format und Erzeugung sind in
-<a href="../../off-planner/tab1-daten/">Tab 1: Daten &amp; Vorbereitung</a> beschrieben.</p>
-<h2 id="verknupfung-mit-dem-discordbot">Verknüpfung mit dem Discordbot<a class="headerlink" href="#verknupfung-mit-dem-discordbot" title="Permanent link">¶</a></h2>
-<p>Die hochgeladenen „Truppen im Dorf" werden direkt von folgenden Modulen
-verwendet:</p>
+<p>Über den Button <strong>„Truppen hochladen"</strong> (oben rechts) öffnet sich der
+Upload-Dialog:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/38_leaderview_troops_upload.png" data-title="Truppen hochladen — Dialog" data-desc-position="bottom"><img alt="Truppen hochladen — Dialog" class="screenshot" src="../../assets/leaderview/38_leaderview_troops_upload.png"></a></p>
+<p>Felder im Dialog:</p>
 <ul>
-<li><a href="../../discord-bot/bunker-info/">Bunker-Information-System</a> — prüft
-  den Soll-/Ist-Stand der Bunker.</li>
-<li><a href="../../discord-bot/search-system/">Off/Deff/Snob-Search-System</a> —
-  ermittelt Quelldörfer mit ausreichend Truppen für Off-, Deff- bzw.
-  AG-Anfragen.</li>
+<li><strong>Stammeskürzel</strong> — Tag des Stammes, zu dem die Daten gehören
+  (z. B. <code>ABC</code>).</li>
+<li><strong>Scope</strong> — wähle entweder <strong>„Truppen im Dorf"</strong> oder
+  <strong>„Truppen Insgesamt"</strong> (siehe <a href="#die-beiden-scopes">Die beiden Scopes</a>).</li>
+<li><strong>Truppen-Datei (.txt)</strong> — die mit dem
+  <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">Schnellleistenscript</a>
+  erzeugte TXT-Datei.</li>
 </ul>
+<h3 id="erwartetes-datei-format">Erwartetes Datei-Format<a class="headerlink" href="#erwartetes-datei-format" title="Permanent link">¶</a></h3>
+<p>Die TXT-Datei muss als erste Zeile eine Header-Zeile mit den
+Spaltennamen enthalten, gefolgt von einer Zeile pro Dorf:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>467|559,Testuser A,3779,4836,100,4803,40,50,6309,1584,5,80,0,0
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
+</code></pre></div>
+<p>Spalten der Reihe nach:</p>
+<p><code>Coords</code> (Koordinaten <code>X|Y</code>), <code>Player</code> (Spielername), gefolgt von den
+Truppenanzahlen für <code>spear</code>, <code>sword</code>, <code>axe</code>, <code>archer</code>, <code>spy</code>, <code>light</code>,
+<code>marcher</code>, <code>heavy</code>, <code>ram</code>, <code>catapult</code>, <code>knight</code>, <code>snob</code>.</p>
 
 
 
