@@ -1715,10 +1715,10 @@
 
 <h1 id="tab-3-fakeplanung">Tab 3: Fakeplanung<a class="headerlink" href="#tab-3-fakeplanung" title="Permanent link">¶</a></h1>
 <p>In Tab 3 planst du alle <strong>reinen Fakeziele</strong> — also Ziele, die
-ausschließlich Fakes erhalten und nicht mit scharfen Offs beschossen
+ausschließlich Fakes erhalten und nicht mit scharfen Offs angelaufen
 werden. Begleitfakes zu realen Zielen werden weiterhin in
 <a href="../tab2-angriffsplanung/">Tab 2: Angriffsplanung</a> zusammen mit den
-dazugehörigen Offs/Kattern/Bunkern geplant.</p>
+dazugehörigen Offs, K-Splits und Zwischencleanern geplant.</p>
 <h2 id="1-zwei-wege-der-zielauswahl">1. Zwei Wege der Zielauswahl<a class="headerlink" href="#1-zwei-wege-der-zielauswahl" title="Permanent link">¶</a></h2>
 <p>Tab 3 bietet zwei grundsätzlich unterschiedliche Wege, Fakeziele
 festzulegen:</p>
@@ -1735,9 +1735,9 @@ Modus (siehe <a href="#3-planungsmethode-wahlen">§3 Planungsmethode wählen</a>
 <h2 id="2-ankunftszeiten-korridor">2. Ankunftszeiten-Korridor<a class="headerlink" href="#2-ankunftszeiten-korridor" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab3_01_arrival_times.png" data-title="Ankunftszeiten-Korridor festlegen (Fakes)" data-desc-position="bottom"><img alt="Ankunftszeiten-Korridor festlegen (Fakes)" class="screenshot" src="../../assets/nuke-planning-tool/tab3_01_arrival_times.png"></a></p>
 <p>Im Bereich <strong>"Ankunftszeiten-Korridor festlegen (Fakes)"</strong> legst du den
-Zeitrahmen fest, in dem die Fakes ankommen sollen. Die Felder
-<strong>Ankunftsdatum</strong>, <strong>Von (Uhrzeit)</strong> und <strong>Bis (Uhrzeit)</strong> ausfüllen
-und mit <strong>Übernehmen</strong> bestätigen — Bedienung identisch zu
+Zeitrahmen fest, in dem die Fakes ankommen sollen. <strong>Datum</strong>,
+<strong>Startzeit</strong> und <strong>Endzeit</strong> eintragen und mit <strong>Übernehmen</strong>
+bestätigen — Bedienung identisch zu
 <a href="../tab2-angriffsplanung/#1-ankunftszeitkorridor">Tab 2 §1</a>.</p>
 <p>Rechts neben dem Übernehmen-Button findest du zusätzlich einen kleinen
 <strong>Kopier-Button</strong> mit dem Tooltip <strong>"Aus Angriffen kopieren"</strong>. Ein
@@ -1785,7 +1785,7 @@ Koordinaten ein — das Vorgehen ist eng an Tab 2 angelehnt.</p>
 <li><strong>Normal-Fakes</strong></li>
 <li><strong>Bunker-Fakes</strong></li>
 </ul>
-<p>Jede Kategorie bekommt eine eigene Karte mit Buttons zum
+<p>Jede Kategorie bekommt einen eigenen Eingabebereich mit Buttons zum
 Hinzufügen/Bearbeiten von Zielen, einer eigenen Befehlsplanung und
 einem eigenen Fake-Zeitraum.</p>
 <div class="admonition info">
@@ -1793,11 +1793,11 @@ einem eigenen Fake-Zeitraum.</p>
 <p>Die beiden Kategorien <strong>Normal-Fakes</strong> und <strong>Bunker-Fakes</strong> sind
 in ihren Einstellungen <strong>strukturell identisch</strong>. Die Namen
 spiegeln nur einen typischen Anwendungsfall wider, sind aber
-nicht bindend — du kannst die beiden Karten genauso gut für
-<strong>zwei beliebige parallele Fake-Aktionen</strong> verwenden.</p>
+nicht bindend — du kannst die beiden Eingabebereiche genauso gut
+für <strong>zwei beliebige parallele Fake-Aktionen</strong> verwenden.</p>
 </div>
 <h3 id="42-ziele-hinzufugen-bearbeiten">4.2 Ziele hinzufügen &amp; bearbeiten<a class="headerlink" href="#42-ziele-hinzufugen-bearbeiten" title="Permanent link">¶</a></h3>
-<p>In jeder Kategorie-Karte stehen dieselben drei Bedienelemente wie aus
+<p>In jedem Kategorie-Eingabebereich stehen dieselben drei Bedienelemente wie aus
 Tab 2 zur Verfügung: <strong>Ziele hinzufügen</strong> (öffnet das Modal zum
 Eintragen), das <strong>Stift-Icon</strong> (öffnet die Liste der bereits
 eingetragenen Ziele) und das <strong>Mülleimer-Icon</strong> (löscht alle Ziele
@@ -1817,6 +1817,7 @@ werden — weder innerhalb der beiden Tab-3-Kategorien noch
 tab-übergreifend mit Tab 2.</p>
 </div>
 <h3 id="43-befehlsplanung-pro-kategorie">4.3 Befehlsplanung pro Kategorie<a class="headerlink" href="#43-befehlsplanung-pro-kategorie" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab3_08_planning_method_manual_selection_command_planning.png" data-title="Befehlsplanung pro Kategorie (Normal-Fakes &amp; Bunker-Fakes)" data-desc-position="bottom"><img alt="Befehlsplanung pro Kategorie (Normal-Fakes &amp; Bunker-Fakes)" class="screenshot" src="../../assets/nuke-planning-tool/tab3_08_planning_method_manual_selection_command_planning.png"></a></p>
 <p>Unter den Bedien-Buttons folgt pro Kategorie der Block
 <strong>"Befehlsplanung"</strong> mit drei Eingabefeldern:</p>
 <ul>
@@ -1840,11 +1841,12 @@ beiden Feldern:</p>
 — der Zeitraum bestimmt das Fenster, in dem die Fakes rund um den 1.
 geplanten Fake-Einschlag herum verteilt eintreffen.</p>
 <h3 id="44-ubersichtstabelle-gewahlte-ziele-manuell">4.4 Übersichtstabelle "Gewählte Ziele (Manuell)"<a class="headerlink" href="#44-ubersichtstabelle-gewahlte-ziele-manuell" title="Permanent link">¶</a></h3>
-<p>Unter den beiden Kategorie-Karten zeigt die Tabelle <strong>"Gewählte Ziele
-(Manuell)"</strong> alle eingetragenen Ziele auf einen Blick — mit den
-Spalten <strong>#</strong>, <strong>Koord.</strong>, <strong>Spieler</strong>, <strong>Stamm</strong>, <strong>Punkte</strong>, <strong>Typ</strong>
-(Badge <strong>Normal</strong> oder <strong>Bunker</strong>) und <strong>Aktion</strong> (Löschen-Icon je
-Zeile).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab3_09_planning_method_manual_selection_choosen_targets.png" data-title="Übersichtstabelle Gewählte Ziele (Manuell)" data-desc-position="bottom"><img alt="Übersichtstabelle Gewählte Ziele (Manuell)" class="screenshot" src="../../assets/nuke-planning-tool/tab3_09_planning_method_manual_selection_choosen_targets.png"></a></p>
+<p>Unter den beiden Kategorie-Eingabebereichen zeigt die Tabelle
+<strong>"Gewählte Ziele (Manuell)"</strong> alle eingetragenen Ziele auf einen
+Blick — mit den Spalten <strong>#</strong>, <strong>Koord.</strong>, <strong>Spieler</strong>, <strong>Stamm</strong>,
+<strong>Punkte</strong>, <strong>Typ</strong> (Badge <strong>Normal</strong> oder <strong>Bunker</strong>) und <strong>Aktion</strong>
+(Löschen-Icon je Zeile).</p>
 <p>Oben rechts findest du drei Zähler-Badges (<strong>Alle: N</strong>, <strong>Normal: N</strong>,
 <strong>Bunker: N</strong>) als schnelle Übersicht über die Anzahl Ziele pro
 Kategorie.</p>
