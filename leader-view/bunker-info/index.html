@@ -1049,10 +1049,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bunker-eintragen" class="md-nav__link">
+  <a href="#bunker-manuell-eintragen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bunker eintragen
+        Bunker manuell eintragen
       
     </span>
   </a>
@@ -1496,10 +1496,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bunker-eintragen" class="md-nav__link">
+  <a href="#bunker-manuell-eintragen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bunker eintragen
+        Bunker manuell eintragen
       
     </span>
   </a>
@@ -1635,6 +1635,11 @@ Flexbunker-Kontrolle ausgewertet werden.</p>
 Stammes. Pro Dorf wird ein <strong>Soll-Wert</strong> (Dual-Stärke) hinterlegt; das
 System vergleicht ihn fortlaufend mit dem aktuellen <strong>Ist-Wert</strong> aus
 den Truppendaten und zeigt fehlende Refills an.</p>
+<p>In der Liste tauchen sowohl manuell eingetragene Bunker als auch
+Bunker auf, die die Stammesmitglieder über das
+<a href="../../discord-bot/bunker-info/">Bunker-Information-System</a> des
+tw-utils-Discordbots beantragt haben und die von einem Leader genehmigt
+wurden.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png" data-title="Genehmigte Bunker — Übersicht" data-desc-position="bottom"><img alt="Genehmigte Bunker — Übersicht" class="screenshot" src="../../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png"></a></p>
 <p>Die Tabelle hat folgende Spalten:</p>
 <table>
@@ -1702,8 +1707,14 @@ den Truppendaten und zeigt fehlende Refills an.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="bunker-eintragen">Bunker eintragen<a class="headerlink" href="#bunker-eintragen" title="Permanent link">¶</a></h3>
-<p>Über <strong>„Bunker eintragen"</strong> öffnet sich ein Dialog mit zwei Feldern:</p>
+<h3 id="bunker-manuell-eintragen">Bunker manuell eintragen<a class="headerlink" href="#bunker-manuell-eintragen" title="Permanent link">¶</a></h3>
+<p>Der <strong>Standardweg</strong> für neue Bunker führt über das
+<a href="../../discord-bot/bunker-info/">Bunker-Information-System</a> des
+Discordbots: Spieler beantragen dort Bunker, Leader genehmigen sie und
+sie landen automatisch in dieser Liste.</p>
+<p>Zusätzlich können Leader Bunker direkt im Leader-View eintragen. Über
+den Button <strong>„Bunker eintragen"</strong> öffnet sich ein Dialog mit zwei
+Feldern:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/06_leaderview_bunkerinfo_approvedbunkers_add_bunker.png" data-title="Bunker eintragen" data-desc-position="bottom"><img alt="Bunker eintragen" class="screenshot" src="../../assets/leaderview/06_leaderview_bunkerinfo_approvedbunkers_add_bunker.png"></a></p>
 <ul>
 <li><strong>Koordinate</strong> — mehrere Koordinaten möglich, umgebender Text wird
@@ -1711,8 +1722,10 @@ den Truppendaten und zeigt fehlende Refills an.</p>
 <li><strong>Bunker-Größe (Dual-Stärke)</strong> — z. B. <code>25000</code>.</li>
 </ul>
 <h3 id="aufstocken-soll-wert-erhohen">Aufstocken (Soll-Wert erhöhen)<a class="headerlink" href="#aufstocken-soll-wert-erhohen" title="Permanent link">¶</a></h3>
-<p>Über das blaue <strong><code>+</code>-Symbol</strong> in der Spalte <strong>„Aktionen"</strong> lässt sich
-die Soll-Größe eines bestehenden Bunkers nachträglich erhöhen.</p>
+<p>Aufstockungen kommen normalerweise ebenfalls über den Discordbot.
+Leader können sie aber jederzeit auch manuell vornehmen: Über das
+blaue <strong><code>+</code>-Symbol</strong> in der Spalte <strong>„Aktionen"</strong> lässt sich die
+Soll-Größe eines bestehenden Bunkers nachträglich erhöhen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/07_leaderview_bunkerinfo_approvedbunkers_topup_bunker.png" data-title="Aufstocken" data-desc-position="bottom"><img alt="Aufstocken" class="screenshot" src="../../assets/leaderview/07_leaderview_bunkerinfo_approvedbunkers_topup_bunker.png"></a></p>
 <p>Der eingegebene Wert wird <strong>zur aktuellen Soll-Größe addiert</strong> (er
 ersetzt sie nicht).</p>
@@ -1722,9 +1735,7 @@ ersetzt sie nicht).</p>
 Textblock, der über den <strong>„Kopieren"</strong>-Button in die Zwischenablage
 übernommen werden kann.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/08_leaderview_bunkerinfo_approvedbunkers_copy_refills.png" data-title="Refills anfordern" data-desc-position="bottom"><img alt="Refills anfordern" class="screenshot" src="../../assets/leaderview/08_leaderview_bunkerinfo_approvedbunkers_copy_refills.png"></a></p>
-<p>Den kopierten Text kannst du z. B. als Ingame-Massennachricht in den
-Stamm schicken — die Spieler erhalten so direkt eine fertige
-Refill-Anfrage für „ihren" Bunker.</p>
+<p>Den kopierten Text kannst du z. B. ins Stammesforum stellen.</p>
 <h3 id="tabellenzeile-im-detail">Tabellenzeile im Detail<a class="headerlink" href="#tabellenzeile-im-detail" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png" data-title="Tabellenzeile im Detail" data-desc-position="bottom"><img alt="Tabellenzeile im Detail" class="screenshot" src="../../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png"></a></p>
 <p>Beispiel aus dem Screenshot: Soll <strong>15k Speer / 15k Schwert</strong>, aktuell
