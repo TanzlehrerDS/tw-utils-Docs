@@ -844,6 +844,8 @@
       
         
       
+        
+      
     
     
     
@@ -891,6 +893,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../uebersicht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../mitglieder/" class="md-nav__link">
         
   
@@ -928,6 +958,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Truppen
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -944,6 +992,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#spalten-der-tabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spalten der Tabelle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-beiden-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die beiden Scopes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#truppen-hochladen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truppen hochladen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verknupfung-mit-dem-discordbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verknüpfung mit dem Discordbot
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1299,6 +1410,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#spalten-der-tabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spalten der Tabelle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-beiden-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die beiden Scopes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#truppen-hochladen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truppen hochladen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verknupfung-mit-dem-discordbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verknüpfung mit dem Discordbot
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1315,7 +1478,97 @@
 
 
 <h1 id="truppen">Truppen<a class="headerlink" href="#truppen" title="Permanent link">¶</a></h1>
-<p><em>Inhalt folgt.</em></p>
+<p>Der Tab <strong>„Truppen"</strong> verwaltet die Truppendaten-Uploads pro Stamm. Die
+hier hochgeladenen Daten sind die Grundlage für viele andere Funktionen
+— sowohl im Leader-View (z. B. Bunker-Info) als auch in den Modulen des
+tw-utils-Discordbots.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/04_leaderview_troops.png" data-title="Truppen-Übersicht" data-desc-position="bottom"><img alt="Truppen-Übersicht" class="screenshot" src="../../assets/leaderview/04_leaderview_troops.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Hinweis</p>
+<p>Die Truppendaten müssen für eine korrekte Verarbeitung in einem
+speziellen Format hochgeladen werden. Nutze hierzu bitte das
+<a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">Schnellleistenscript</a>.
+Über den Upload-Button kannst du <strong>„Truppen Insgesamt"</strong> und
+<strong>„Truppen im Dorf"</strong> hochladen. Die Truppendaten (Truppen im
+Dorf) werden <strong>automatisch mit dem tw-utils.net Discordbot
+synchronisiert</strong> und im Rahmen der folgenden Module genutzt:
+<strong>Bunker-Information-System</strong>, <strong>Off/Deff/Snob-Search-Systems</strong>.</p>
+</div>
+<h2 id="spalten-der-tabelle">Spalten der Tabelle<a class="headerlink" href="#spalten-der-tabelle" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>#</strong></td>
+<td>Laufende Nummer</td>
+</tr>
+<tr>
+<td><strong>Stamm</strong></td>
+<td>Stamm, zu dem die Daten gehören</td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>„Truppen im Dorf" oder „Truppen Insgesamt"</td>
+</tr>
+<tr>
+<td><strong>Dörfer</strong></td>
+<td>Anzahl der Dörfer im Datensatz</td>
+</tr>
+<tr>
+<td><strong>Hochgeladen am</strong></td>
+<td>Zeitstempel des letzten Uploads</td>
+</tr>
+<tr>
+<td><strong>Hochgeladen von</strong></td>
+<td>Discord-User, der den Upload ausgelöst hat</td>
+</tr>
+<tr>
+<td><strong>Aktion</strong></td>
+<td>Eintrag löschen (Mülltonnen-Icon)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="die-beiden-scopes">Die beiden Scopes<a class="headerlink" href="#die-beiden-scopes" title="Permanent link">¶</a></h2>
+<p>Beim Hochladen wählst du, welche Sicht der Truppen die Datei enthält.
+Beide Sichten lassen sich parallel pflegen.</p>
+<ul>
+<li><strong>Truppen im Dorf</strong> — nur die Truppen, die aktuell tatsächlich im
+  Dorf stehen (also keine unterwegs befindlichen oder gestützten
+  Truppen). Diese Sicht ist die Daten-Grundlage für das
+  <strong>Bunker-Information-System</strong> und die
+  <strong>Off/Deff/Snob-Search-Systems</strong> des Discordbots und wird automatisch
+  mit dem Bot synchronisiert.</li>
+<li><strong>Truppen Insgesamt</strong> — alle vorhandenen Truppen eines Dorfes (im
+  Dorf + unterwegs + gestützt). Sie dient als reine
+  Bestands-/Auswertungs-Sicht.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Automatische Synchronisation mit dem Discordbot</p>
+<p>Sobald du neue <strong>„Truppen im Dorf"</strong>-Daten hochlädst, stehen sie
+dem Discordbot ohne weiteren Schritt zur Verfügung. Bunker-Status,
+Off-/Deff-/Snob-Suchen und das Planning-System greifen jeweils auf
+den jüngsten Upload zu.</p>
+</div>
+<h2 id="truppen-hochladen">Truppen hochladen<a class="headerlink" href="#truppen-hochladen" title="Permanent link">¶</a></h2>
+<p>Über den Button <strong>„Upload Troops"</strong> (oben rechts) öffnest du den
+Upload-Dialog. Es wird dieselbe TXT-Datei erwartet, die auch im
+Off-Planungstool verwendet wird — Format und Erzeugung sind in
+<a href="../../off-planner/tab1-daten/">Tab 1: Daten &amp; Vorbereitung</a> beschrieben.</p>
+<h2 id="verknupfung-mit-dem-discordbot">Verknüpfung mit dem Discordbot<a class="headerlink" href="#verknupfung-mit-dem-discordbot" title="Permanent link">¶</a></h2>
+<p>Die hochgeladenen „Truppen im Dorf" werden direkt von folgenden Modulen
+verwendet:</p>
+<ul>
+<li><a href="../../discord-bot/bunker-info/">Bunker-Information-System</a> — prüft
+  den Soll-/Ist-Stand der Bunker.</li>
+<li><a href="../../discord-bot/search-system/">Off/Deff/Snob-Search-System</a> —
+  ermittelt Quelldörfer mit ausreichend Truppen für Off-, Deff- bzw.
+  AG-Anfragen.</li>
+</ul>
 
 
 

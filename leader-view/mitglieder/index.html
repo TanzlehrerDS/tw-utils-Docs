@@ -10,7 +10,7 @@
         <link rel="canonical" href="https://docs.tw-utils.net/leader-view/mitglieder/">
       
       
-        <link rel="prev" href="../../cleaner-fake-ut/anleitung/">
+        <link rel="prev" href="../uebersicht/">
       
       
         <link rel="next" href="../truppen/">
@@ -844,6 +844,8 @@
       
         
       
+        
+      
     
     
     
@@ -888,6 +890,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../uebersicht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -899,6 +929,24 @@
       
         
       
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mitglieder
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -916,6 +964,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#spalten-der-tabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spalten der Tabelle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suchen-verwalten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suchen &amp; Verwalten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wofur-wird-diese-ubersicht-verwendet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wofür wird diese Übersicht verwendet?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1299,6 +1399,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#spalten-der-tabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spalten der Tabelle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suchen-verwalten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suchen &amp; Verwalten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wofur-wird-diese-ubersicht-verwendet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wofür wird diese Übersicht verwendet?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1315,7 +1456,66 @@
 
 
 <h1 id="mitglieder">Mitglieder<a class="headerlink" href="#mitglieder" title="Permanent link">¶</a></h1>
-<p><em>Inhalt folgt.</em></p>
+<p>Der Tab <strong>„Mitglieder"</strong> zeigt alle Discord-User, die sich auf dieser
+Welt mit einem oder mehreren DS-Accounts verifiziert haben. Du siehst
+auf einen Blick, wer im Stamm überhaupt mit dem tw-utils-Bot verknüpft
+ist und wer welche Rolle besitzt.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/03_leaderview_members.png" data-title="Mitglieder-Übersicht" data-desc-position="bottom"><img alt="Mitglieder-Übersicht" class="screenshot" src="../../assets/leaderview/03_leaderview_members.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Voraussetzungen für den Leader-View</p>
+<p>Wer den Leader-View aufrufen darf und wie die Rolle „Leader"
+vergeben wird, ist in der <a href="../uebersicht/">Übersicht</a> beschrieben.</p>
+</div>
+<h2 id="spalten-der-tabelle">Spalten der Tabelle<a class="headerlink" href="#spalten-der-tabelle" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>#</strong></td>
+<td>Laufende Nummer</td>
+</tr>
+<tr>
+<td><strong>DS-Account</strong></td>
+<td>Verlinkter Spieler-Account ingame</td>
+</tr>
+<tr>
+<td><strong>Stamm</strong></td>
+<td>Stamm, in dem der Account aktuell spielt</td>
+</tr>
+<tr>
+<td><strong>Discord-User</strong></td>
+<td>Verknüpfter Discord-Account (+ ggf. <strong>„Leader"</strong>-Badge)</td>
+</tr>
+<tr>
+<td><strong>Aktion</strong></td>
+<td>Verknüpfung entfernen (Mülltonnen-Icon)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="suchen-verwalten">Suchen &amp; Verwalten<a class="headerlink" href="#suchen-verwalten" title="Permanent link">¶</a></h2>
+<ul>
+<li>Über das Suchfeld <strong>„Suche..."</strong> oben rechts filterst du die Liste
+  nach DS-Account, Stamm oder Discord-Namen.</li>
+<li>Über das rote Mülltonnen-Icon in der Spalte <strong>„Aktion"</strong> lässt sich
+  eine Verknüpfung zwischen einem Discord-User und einem DS-Account
+  entfernen. Der Discord-User kann sich danach erneut über den Bot
+  verifizieren.</li>
+</ul>
+<h2 id="wofur-wird-diese-ubersicht-verwendet">Wofür wird diese Übersicht verwendet?<a class="headerlink" href="#wofur-wird-diese-ubersicht-verwendet" title="Permanent link">¶</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Bedeutung für andere Module</p>
+<p>Damit ein Spieler über die Module <strong>Off/Deff/Snob-Search-System</strong>
+und <strong>Planning-System</strong> des Discordbots angeschrieben oder
+angesprochen werden kann, muss er hier mit seinem DS-Account
+auftauchen. Spieler, die sich nicht verifiziert haben, sind für den
+Bot „unsichtbar". Details zur Verifizierung findest du unter
+<a href="../../discord-bot/verifizierung/">Account-Verifizierung</a>.</p>
+</div>
 
 
 
