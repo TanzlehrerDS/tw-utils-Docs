@@ -29,13 +29,3 @@ ist und wer welche Rolle besitzt.
   eine Verknüpfung zwischen einem Discord-User und einem DS-Account
   entfernen. Der Discord-User kann sich danach erneut über den Bot
   verifizieren.
-
-## Wofür wird diese Übersicht verwendet?
-
-!!! info "Bedeutung für andere Module"
-    Damit ein Spieler über die Module **Off/Deff/Snob-Search-System**
-    und **Planning-System** des Discordbots angeschrieben oder
-    angesprochen werden kann, muss er hier mit seinem DS-Account
-    auftauchen. Spieler, die sich nicht verifiziert haben, sind für den
-    Bot „unsichtbar". Details zur Verifizierung findest du unter
-    [Account-Verifizierung](../discord-bot/verifizierung.md).

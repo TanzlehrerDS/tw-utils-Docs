@@ -19,12 +19,13 @@ Der Leader-View ist in vier Tabs gegliedert:
 Damit ein User den Leader-View sehen und nutzen kann, müssen **beide**
 folgenden Bedingungen erfüllt sein:
 
-1. **Der User muss mit mindestens einem Tribalwars-Account verknüpft sein.**
-   Die Verknüpfung erfolgt über den tw-utils-Discordbot — siehe
+1. **Der User muss auf dem Stammes-Discordserver mit mindestens einem
+   Tribalwars-Account verknüpft sein.** Die Verknüpfung erfolgt über
+   den tw-utils-Discordbot — siehe
    [Account-Verifizierung](../discord-bot/verifizierung.md).
-2. **Der User muss die Rolle „Leader" besitzen.**
-   Diese Rolle wird ausschließlich über den tw-utils-Discordbot
-   vergeben (siehe nächster Abschnitt).
+2. **Der User muss die Rolle „Leader" besitzen.** Diese Rolle wird
+   ausschließlich über den tw-utils-Discordbot vergeben (siehe
+   nächster Abschnitt).
 
 Sobald beide Voraussetzungen erfüllt sind, erscheint im Profil-Popup
 der jeweiligen Welt der Eintrag **„Leader-View"** sowie das gelbe

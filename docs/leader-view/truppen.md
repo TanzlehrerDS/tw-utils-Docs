@@ -35,35 +35,43 @@ Beim Hochladen wählst du, welche Sicht der Truppen die Datei enthält.
 Beide Sichten lassen sich parallel pflegen.
 
 - **Truppen im Dorf** — nur die Truppen, die aktuell tatsächlich im
-  Dorf stehen (also keine unterwegs befindlichen oder gestützten
-  Truppen). Diese Sicht ist die Daten-Grundlage für das
-  **Bunker-Information-System** und die
-  **Off/Deff/Snob-Search-Systems** des Discordbots und wird automatisch
-  mit dem Bot synchronisiert.
+  Dorf stehen (also keine unterwegs befindlichen Truppen).
 - **Truppen Insgesamt** — alle vorhandenen Truppen eines Dorfes (im
-  Dorf + unterwegs + gestützt). Sie dient als reine
-  Bestands-/Auswertungs-Sicht.
-
-!!! info "Automatische Synchronisation mit dem Discordbot"
-    Sobald du neue **„Truppen im Dorf"**-Daten hochlädst, stehen sie
-    dem Discordbot ohne weiteren Schritt zur Verfügung. Bunker-Status,
-    Off-/Deff-/Snob-Suchen und das Planning-System greifen jeweils auf
-    den jüngsten Upload zu.
+  Dorf + unterwegs). Reine Bestands-/Auswertungs-Sicht.
 
 ## Truppen hochladen
 
-Über den Button **„Upload Troops"** (oben rechts) öffnest du den
-Upload-Dialog. Es wird dieselbe TXT-Datei erwartet, die auch im
-Off-Planungstool verwendet wird — Format und Erzeugung sind in
-[Tab 1: Daten & Vorbereitung](../off-planner/tab1-daten.md) beschrieben.
+Über den Button **„Truppen hochladen"** (oben rechts) öffnet sich der
+Upload-Dialog:
 
-## Verknüpfung mit dem Discordbot
+![Truppen hochladen — Dialog](../assets/leaderview/38_leaderview_troops_upload.png){ .screenshot }
 
-Die hochgeladenen „Truppen im Dorf" werden direkt von folgenden Modulen
-verwendet:
+Felder im Dialog:
 
-- [Bunker-Information-System](../discord-bot/bunker-info.md) — prüft
-  den Soll-/Ist-Stand der Bunker.
-- [Off/Deff/Snob-Search-System](../discord-bot/search-system.md) —
-  ermittelt Quelldörfer mit ausreichend Truppen für Off-, Deff- bzw.
-  AG-Anfragen.
+- **Stammeskürzel** — Tag des Stammes, zu dem die Daten gehören
+  (z. B. `ABC`).
+- **Scope** — wähle entweder **„Truppen im Dorf"** oder
+  **„Truppen Insgesamt"** (siehe [Die beiden Scopes](#die-beiden-scopes)).
+- **Truppen-Datei (.txt)** — die mit dem
+  [Schnellleistenscript](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/)
+  erzeugte TXT-Datei.
+
+### Erwartetes Datei-Format
+
+Die TXT-Datei muss als erste Zeile eine Header-Zeile mit den
+Spaltennamen enthalten, gefolgt von einer Zeile pro Dorf:
+
+```
+Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
+483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
+543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
+467|559,Testuser A,3779,4836,100,4803,40,50,6309,1584,5,80,0,0
+465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
+468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
+```
+
+Spalten der Reihe nach:
+
+`Coords` (Koordinaten `X|Y`), `Player` (Spielername), gefolgt von den
+Truppenanzahlen für `spear`, `sword`, `axe`, `archer`, `spy`, `light`,
+`marcher`, `heavy`, `ram`, `catapult`, `knight`, `snob`.
