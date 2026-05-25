@@ -98,7 +98,7 @@ Den kopierten Text kannst du z. B. ins Stammesforum stellen.
 
 ![Tabellenzeile im Detail](../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png){ .screenshot }
 
-Beispiel aus dem Screenshot: Soll **15k Speer / 15k Schwert**, aktuell
+Beispiel aus dem Screenshot: Soll **17k Speer / 17k Schwert**, aktuell
 vorhanden nur je **100 Truppen**. Daraus errechnet das System
 **167 benötigte Refills**.
 
