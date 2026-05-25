@@ -38,23 +38,18 @@ Planungsmodus stehen folgende Algorithmen zur Verfügung:
   nicht durch bekannte Wachturm-Radien laufen."* Verfügbar nur auf
   Welten mit aktivem Wachturm. Bei Auswahl erscheint zusätzlich der
   Konfigurationsbereich (siehe [§2.1](#21-wachturm-konfiguration)).
-- **Moral-optimiert** — bevorzugt Quell-Dörfer mit hoher Moral
-  gegenüber dem jeweiligen Ziel-Spieler. Liefert auf Welten mit
-  aktiver Moral spürbar stärkere Offs.
-- **Kürzeste Laufzeit** — wählt pro Ziel das Quell-Dorf mit der
-  **kürzesten** Reisezeit. Maximiert die Reaktionszeit gegenüber
-  Late-Sends und gibt der gegnerischen Defensive wenig Zeit zum
-  Reagieren.
-- **Längste Laufzeit** — Gegenstück dazu: bevorzugt **lange**
-  Laufwege, etwa um den Ankunfts-Korridor zeitlich besser zu füllen
-  oder Versand-Zeitpunkte günstiger zu legen.
+- **Moral-optimiert** — bevorzugt aus dem Pool der möglichen
+  Quell-Dörfer diejenigen mit hoher Moral.
+- **Kürzeste Laufzeit** — wählt pro Ziel aus den möglichen Optionen
+  das Quell-Dorf mit der kürzesten Reisezeit.
+- **Längste Laufzeit** — wählt pro Ziel aus den möglichen Optionen
+  das Quell-Dorf mit der längsten Reisezeit.
 - **Zufällig** — wählt aus den möglichen Quellen zufällig aus.
   Nützlich, wenn keine spezifische Optimierung gewünscht ist oder der
   Plan möglichst unspezifisch wirken soll.
 - **Knappheit-optimiert (Verteilung)** — *nur im Modus Wellen-basiert
-  verfügbar.* Verteilt knappe Ressourcen (z. B. wenige Offs auf viele
-  Ziele) so, dass möglichst jedes Ziel zumindest die ersten Wellen
-  bekommt.
+  verfügbar.* Verplant zuerst diejenigen Quell-Dörfer, die es
+  laufzeittechnisch zu den wenigsten Zielen schaffen würden.
 
 Hat man eine Auswahl getroffen, startet man die Berechnung mit dem
 Button **"Berechnung starten"** rechts neben dem Dropdown.
