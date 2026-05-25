@@ -209,11 +209,14 @@ window and the distribution of accompanying fakes around the 1st nuke:
   nuke the fake period may end.
 - **Share of 1st/2nd/3rd third (%)** — the entire fake time window is
   internally divided into **three equal-sized time thirds**. Here you
-  define what percentage of the fakes falls into each third. An **even
-  distribution** (e.g. 33/34/33) spreads the fakes across the whole
-  window; an **uneven distribution** (e.g. 50/30/20) concentrates them
-  for example **before** the 1st nuke. The three values should add up
-  to 100 %.
+  define what percentage of the fakes falls into each third. This is
+  essentially how you control **where in the overall command sequence**
+  the accompanying fakes mainly appear — i.e. whether they arrive
+  **before** the real nukes, **mixed in with them**, or **after** them.
+  An **even distribution** (e.g. 33/34/33) spreads the fakes across the
+  whole window; an **uneven distribution** (e.g. 50/30/20) concentrates
+  them for example **before** the 1st nuke. The three values should add
+  up to 100 %.
 - **Fill up with fakes until** — the number of commands per target you
   want each target to **always carry** in this category. Useful when
   you want every target to end up with the **same number of incs**. If
@@ -226,6 +229,10 @@ window and the distribution of accompanying fakes around the 1st nuke:
 
 ![Distances between nukes and C-Splits](../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png){ .screenshot }
 
+In the **"Distance of C-Splits to last Nuke"** area you define how far
+the catapult-splits should arrive in time after the last nuke
+(**Min-Distance** / **Max-Distance** in minutes).
+
 In the **"Distance between Nukes (minutes)"** area you control how
 close or far apart consecutive nukes on a target should **arrive in
 time**. For each pair of consecutive nukes you enter a **min** and
@@ -235,15 +242,23 @@ time**. For each pair of consecutive nukes you enter a **min** and
 - **Nuke 2 → 3** — the distance of the **3rd nuke** to the **2nd nuke**.
 - and so on — same scheme for all further nukes.
 
-**Example:** with **Min = 1** and **Max = 5** for **Nuke 1 → 2**, the
-second nuke is planned to arrive between **one** and **five minutes**
-after the first nuke on the target. This avoids multiple nukes hitting
-at **exactly the same moment** while still giving the defence only
-**very little reaction time**.
+**Example 1 — Giving the defence little reaction time:** with
+**Min = 1** and **Max = 5** for **Nuke 1 → 2**, the second nuke is
+planned to arrive between **one** and **five minutes** after the first
+nuke on the target. This avoids multiple nukes hitting at **exactly
+the same moment** while still giving the defence only **very little
+reaction time**.
 
-In the **"Distance of C-Splits to last Nuke"** area you define how far
-the catapult-splits should arrive in time after the last nuke
-(**Min-Distance** / **Max-Distance** in minutes).
+**Example 2 — Accounting for late sending:** More generous nuke
+spacing is especially useful when you want to factor **late sending**
+of the incs into the planning itself. Imagine a **catapult action**:
+per target you plan **2 nukes** and **5 C-Splits**, and the
+**distance of the C-Splits to the last nuke** is set to **3 minutes**.
+If the distance between the **1st and 2nd nuke** is very small, a
+**late send** can cause the nukes to actually arrive **behind the
+C-Splits**. If you instead set **Nuke 1 → 2** to e.g. **10 minutes**,
+the 1st nuke would still arrive safely **before** the C-Splits even
+if **both nukes were sent 5 minutes late**.
 
 ## 11. Prioritizing Nuke-Categories
 
@@ -251,8 +266,8 @@ the catapult-splits should arrive in time after the last nuke
 
 In the **"Prioritizing Nuke-Categories"** area you define which source
 categories should preferably be used for planning nukes. Available
-categories include *Remaining villages*, *Villages >500 axe*, *>1000
-axe*, *>2000 axe*, …, *>6000 axe*. Move the desired categories into the
+categories include *Villages >500 axe*, *>1000 axe*, *>2000 axe*, …,
+*>6000 axe*. Move the desired categories into the
 right list **"Prioritized"** via the arrow buttons and sort them by
 priority.
 

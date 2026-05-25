@@ -215,10 +215,14 @@ und die Verteilung der Begleitfakes rund um die 1. Off:
   **„Anteil 3. Drittel (%)"** — das gesamte Fake-Zeitfenster wird
   intern in **drei gleich große Zeitdrittel** geteilt. Hier legst du
   fest, welcher Anteil der Fakes prozentual in welches Drittel fällt.
-  Eine **gleichmäßige Verteilung** (z. B. 33/34/33) streut die Fakes
-  über das gesamte Fenster; eine **ungleichmäßige Verteilung** (z. B.
-  50/30/20) konzentriert sie z. B. **vor** der 1. Off. Die drei Werte
-  sollten in Summe 100 % ergeben.
+  Damit steuerst du im Grunde, **an welcher Position innerhalb der
+  Befehlsabfolge** die Begleitfakes überwiegend auftauchen — also ob
+  sie eher **vor** den scharfen Offs eintreffen, sich **mit ihnen
+  vermischen** oder erst **danach** folgen. Eine **gleichmäßige
+  Verteilung** (z. B. 33/34/33) streut die Fakes über das gesamte
+  Fenster; eine **ungleichmäßige Verteilung** (z. B. 50/30/20)
+  konzentriert sie z. B. **vor** der 1. Off. Die drei Werte sollten in
+  Summe 100 % ergeben.
 - **„Mit Fakes auffüllen bis"** — die Anzahl an Befehlen, mit denen
   ein Ziel innerhalb dieser Kategorie möglichst **immer belegt** sein
   soll. Sinnvoll, wenn du möchtest, dass am Ende auf jedes Ziel
@@ -232,6 +236,11 @@ und die Verteilung der Begleitfakes rund um die 1. Off:
 
 ![Abstände der Offs und Kattasplits](../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png){ .screenshot }
 
+Im Bereich **„Abstand Kattasplits zur letzten Off"** legst du fest, wie
+weit die Kattasplits zeitlich von der letzten Off entfernt eintreffen
+sollen — mit den Feldern **„Min-Abstand (Min)"** und **„Max-Abstand
+(Min)"**.
+
 Im Bereich **„Abstände der Offs (Min.)"** steuerst du, wie eng oder
 weit aufeinanderfolgende Offs auf einem Ziel **zeitlich
 beieinanderliegen** sollen. Für jedes Paar aufeinanderfolgender Offs
@@ -241,16 +250,25 @@ gibst du jeweils einen **Min-** und **Max-Wert** in Minuten an:
 - **Off 2 → 3** — Abstand der **3. Off** zur **2. Off**.
 - usw. — entsprechend für alle weiteren Offs.
 
-**Beispiel:** Trägst du für **Off 1 → 2** **Min = 1** und **Max = 5**
-ein, plant das Tool die zweite Off so, dass sie zwischen **einer** und
-**fünf Minuten** nach der ersten Off auf dem Ziel eintrifft. So
-vermeidest du, dass mehrere Offs **exakt gleichzeitig** ankommen, und
-gibst der Verteidigung gleichzeitig nur **wenig Reaktionszeit**.
+**Beispiel 1 — Verteidigung wenig Reaktionszeit lassen:** Trägst du
+für **Off 1 → 2** **Min = 1** und **Max = 5** ein, plant das Tool die
+zweite Off so, dass sie zwischen **einer** und **fünf Minuten** nach
+der ersten Off auf dem Ziel eintrifft. So vermeidest du, dass mehrere
+Offs **exakt gleichzeitig** ankommen, und gibst der Verteidigung
+gleichzeitig nur **wenig Reaktionszeit**.
 
-Im Bereich **„Abstand Kattasplits zur letzten Off"** legst du fest, wie
-weit die Kattasplits zeitlich von der letzten Off entfernt eintreffen
-sollen — mit den Feldern **„Min-Abstand (Min)"** und **„Max-Abstand
-(Min)"**.
+**Beispiel 2 — Verspätungen beim Abschicken einplanen:** Großzügigere
+Off-Abstände sind insbesondere dann sinnvoll, wenn du
+**Nachlässigkeiten beim Abschicken** der Incs schon bei der Planung
+berücksichtigen willst. Angenommen, du planst eine **Katta-Aktion**:
+Pro Zieldorf sind **2 Offs** und **5 K-Splits** verplant, der
+**Abstand der K-Splits zur letzten Off** wurde auf **3 Minuten**
+gesetzt. Wenn nun der Abstand zwischen **1. und 2. Off** sehr gering
+ist, kann es durch **verspätetes Abschicken** passieren, dass die
+Offs **hinter den K-Splits** eintreffen. Setzt du den Abstand
+**Off 1 → 2** stattdessen auf z. B. **10 Minuten**, würde die 1. Off
+selbst bei **5 Minuten Verspätung beider Offs** noch sicher **vor**
+den K-Splits eintreffen.
 
 ## 11. Priorisierung Off-Kategorien
 
@@ -258,8 +276,8 @@ sollen — mit den Feldern **„Min-Abstand (Min)"** und **„Max-Abstand
 
 Im Bereich **„Priorisierung Off-Kategorien"** legst du fest, aus
 welchen Herkunfts-Kategorien die Offs bevorzugt verplant werden sollen.
-Verfügbare Kategorien sind z. B. *Verbleibende Dörfer*, *Dörfer >500
-Axt*, *>1000 Axt*, *>2000 Axt*, …, *>6000 Axt*. Verschiebe die
+Verfügbare Kategorien sind z. B. *Dörfer >500 Axt*, *>1000 Axt*,
+*>2000 Axt*, …, *>6000 Axt*. Verschiebe die
 gewünschten Kategorien über die Pfeil-Buttons in die rechte Liste
 **„Priorisiert"** und sortiere sie nach Priorität.
 
