@@ -1880,11 +1880,14 @@ window and the distribution of accompanying fakes around the 1st nuke:</p>
   nuke the fake period may end.</li>
 <li><strong>Share of 1st/2nd/3rd third (%)</strong> — the entire fake time window is
   internally divided into <strong>three equal-sized time thirds</strong>. Here you
-  define what percentage of the fakes falls into each third. An <strong>even
-  distribution</strong> (e.g. 33/34/33) spreads the fakes across the whole
-  window; an <strong>uneven distribution</strong> (e.g. 50/30/20) concentrates them
-  for example <strong>before</strong> the 1st nuke. The three values should add up
-  to 100 %.</li>
+  define what percentage of the fakes falls into each third. This is
+  essentially how you control <strong>where in the overall command sequence</strong>
+  the accompanying fakes mainly appear — i.e. whether they arrive
+  <strong>before</strong> the real nukes, <strong>mixed in with them</strong>, or <strong>after</strong> them.
+  An <strong>even distribution</strong> (e.g. 33/34/33) spreads the fakes across the
+  whole window; an <strong>uneven distribution</strong> (e.g. 50/30/20) concentrates
+  them for example <strong>before</strong> the 1st nuke. The three values should add
+  up to 100 %.</li>
 <li><strong>Fill up with fakes until</strong> — the number of commands per target you
   want each target to <strong>always carry</strong> in this category. Useful when
   you want every target to end up with the <strong>same number of incs</strong>. If
@@ -1895,6 +1898,9 @@ window and the distribution of accompanying fakes around the 1st nuke:</p>
 </ul>
 <h2 id="10-distances-between-nukes-and-c-splits">10. Distances between nukes and C-Splits<a class="headerlink" href="#10-distances-between-nukes-and-c-splits" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png" data-title="Distances between nukes and C-Splits" data-desc-position="bottom"><img alt="Distances between nukes and C-Splits" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png"></a></p>
+<p>In the <strong>"Distance of C-Splits to last Nuke"</strong> area you define how far
+the catapult-splits should arrive in time after the last nuke
+(<strong>Min-Distance</strong> / <strong>Max-Distance</strong> in minutes).</p>
 <p>In the <strong>"Distance between Nukes (minutes)"</strong> area you control how
 close or far apart consecutive nukes on a target should <strong>arrive in
 time</strong>. For each pair of consecutive nukes you enter a <strong>min</strong> and
@@ -1904,20 +1910,28 @@ time</strong>. For each pair of consecutive nukes you enter a <strong>min</stron
 <li><strong>Nuke 2 → 3</strong> — the distance of the <strong>3rd nuke</strong> to the <strong>2nd nuke</strong>.</li>
 <li>and so on — same scheme for all further nukes.</li>
 </ul>
-<p><strong>Example:</strong> with <strong>Min = 1</strong> and <strong>Max = 5</strong> for <strong>Nuke 1 → 2</strong>, the
-second nuke is planned to arrive between <strong>one</strong> and <strong>five minutes</strong>
-after the first nuke on the target. This avoids multiple nukes hitting
-at <strong>exactly the same moment</strong> while still giving the defence only
-<strong>very little reaction time</strong>.</p>
-<p>In the <strong>"Distance of C-Splits to last Nuke"</strong> area you define how far
-the catapult-splits should arrive in time after the last nuke
-(<strong>Min-Distance</strong> / <strong>Max-Distance</strong> in minutes).</p>
+<p><strong>Example 1 — Giving the defence little reaction time:</strong> with
+<strong>Min = 1</strong> and <strong>Max = 5</strong> for <strong>Nuke 1 → 2</strong>, the second nuke is
+planned to arrive between <strong>one</strong> and <strong>five minutes</strong> after the first
+nuke on the target. This avoids multiple nukes hitting at <strong>exactly
+the same moment</strong> while still giving the defence only <strong>very little
+reaction time</strong>.</p>
+<p><strong>Example 2 — Accounting for late sending:</strong> More generous nuke
+spacing is especially useful when you want to factor <strong>late sending</strong>
+of the incs into the planning itself. Imagine a <strong>catapult action</strong>:
+per target you plan <strong>2 nukes</strong> and <strong>5 C-Splits</strong>, and the
+<strong>distance of the C-Splits to the last nuke</strong> is set to <strong>3 minutes</strong>.
+If the distance between the <strong>1st and 2nd nuke</strong> is very small, a
+<strong>late send</strong> can cause the nukes to actually arrive <strong>behind the
+C-Splits</strong>. If you instead set <strong>Nuke 1 → 2</strong> to e.g. <strong>10 minutes</strong>,
+the 1st nuke would still arrive safely <strong>before</strong> the C-Splits even
+if <strong>both nukes were sent 5 minutes late</strong>.</p>
 <h2 id="11-prioritizing-nuke-categories">11. Prioritizing Nuke-Categories<a class="headerlink" href="#11-prioritizing-nuke-categories" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_12_prioritizing_nuke_categories.png" data-title="Prioritizing Nuke-Categories" data-desc-position="bottom"><img alt="Prioritizing Nuke-Categories" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_12_prioritizing_nuke_categories.png"></a></p>
 <p>In the <strong>"Prioritizing Nuke-Categories"</strong> area you define which source
 categories should preferably be used for planning nukes. Available
-categories include <em>Remaining villages</em>, <em>Villages &gt;500 axe</em>, <em>&gt;1000
-axe</em>, <em>&gt;2000 axe</em>, …, <em>&gt;6000 axe</em>. Move the desired categories into the
+categories include <em>Villages &gt;500 axe</em>, <em>&gt;1000 axe</em>, <em>&gt;2000 axe</em>, …,
+<em>&gt;6000 axe</em>. Move the desired categories into the
 right list <strong>"Prioritized"</strong> via the arrow buttons and sort them by
 priority.</p>
 <p>The checkbox <strong>"Strict prioritization (enforcing order)"</strong> controls how

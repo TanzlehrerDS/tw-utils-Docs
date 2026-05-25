@@ -1886,10 +1886,14 @@ und die Verteilung der Begleitfakes rund um die 1. Off:</p>
   <strong>„Anteil 3. Drittel (%)"</strong> — das gesamte Fake-Zeitfenster wird
   intern in <strong>drei gleich große Zeitdrittel</strong> geteilt. Hier legst du
   fest, welcher Anteil der Fakes prozentual in welches Drittel fällt.
-  Eine <strong>gleichmäßige Verteilung</strong> (z. B. 33/34/33) streut die Fakes
-  über das gesamte Fenster; eine <strong>ungleichmäßige Verteilung</strong> (z. B.
-  50/30/20) konzentriert sie z. B. <strong>vor</strong> der 1. Off. Die drei Werte
-  sollten in Summe 100 % ergeben.</li>
+  Damit steuerst du im Grunde, <strong>an welcher Position innerhalb der
+  Befehlsabfolge</strong> die Begleitfakes überwiegend auftauchen — also ob
+  sie eher <strong>vor</strong> den scharfen Offs eintreffen, sich <strong>mit ihnen
+  vermischen</strong> oder erst <strong>danach</strong> folgen. Eine <strong>gleichmäßige
+  Verteilung</strong> (z. B. 33/34/33) streut die Fakes über das gesamte
+  Fenster; eine <strong>ungleichmäßige Verteilung</strong> (z. B. 50/30/20)
+  konzentriert sie z. B. <strong>vor</strong> der 1. Off. Die drei Werte sollten in
+  Summe 100 % ergeben.</li>
 <li><strong>„Mit Fakes auffüllen bis"</strong> — die Anzahl an Befehlen, mit denen
   ein Ziel innerhalb dieser Kategorie möglichst <strong>immer belegt</strong> sein
   soll. Sinnvoll, wenn du möchtest, dass am Ende auf jedes Ziel
@@ -1901,6 +1905,10 @@ und die Verteilung der Begleitfakes rund um die 1. Off:</p>
 </ul>
 <h2 id="10-abstande-der-offs-und-kattasplits">10. Abstände der Offs und Kattasplits<a class="headerlink" href="#10-abstande-der-offs-und-kattasplits" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png" data-title="Abstände der Offs und Kattasplits" data-desc-position="bottom"><img alt="Abstände der Offs und Kattasplits" class="screenshot" src="../../assets/nuke-planning-tool/tab2_11_distance_between_for_nukes_or_c-splits.png"></a></p>
+<p>Im Bereich <strong>„Abstand Kattasplits zur letzten Off"</strong> legst du fest, wie
+weit die Kattasplits zeitlich von der letzten Off entfernt eintreffen
+sollen — mit den Feldern <strong>„Min-Abstand (Min)"</strong> und <strong>„Max-Abstand
+(Min)"</strong>.</p>
 <p>Im Bereich <strong>„Abstände der Offs (Min.)"</strong> steuerst du, wie eng oder
 weit aufeinanderfolgende Offs auf einem Ziel <strong>zeitlich
 beieinanderliegen</strong> sollen. Für jedes Paar aufeinanderfolgender Offs
@@ -1910,21 +1918,30 @@ gibst du jeweils einen <strong>Min-</strong> und <strong>Max-Wert</strong> in Mi
 <li><strong>Off 2 → 3</strong> — Abstand der <strong>3. Off</strong> zur <strong>2. Off</strong>.</li>
 <li>usw. — entsprechend für alle weiteren Offs.</li>
 </ul>
-<p><strong>Beispiel:</strong> Trägst du für <strong>Off 1 → 2</strong> <strong>Min = 1</strong> und <strong>Max = 5</strong>
-ein, plant das Tool die zweite Off so, dass sie zwischen <strong>einer</strong> und
-<strong>fünf Minuten</strong> nach der ersten Off auf dem Ziel eintrifft. So
-vermeidest du, dass mehrere Offs <strong>exakt gleichzeitig</strong> ankommen, und
-gibst der Verteidigung gleichzeitig nur <strong>wenig Reaktionszeit</strong>.</p>
-<p>Im Bereich <strong>„Abstand Kattasplits zur letzten Off"</strong> legst du fest, wie
-weit die Kattasplits zeitlich von der letzten Off entfernt eintreffen
-sollen — mit den Feldern <strong>„Min-Abstand (Min)"</strong> und <strong>„Max-Abstand
-(Min)"</strong>.</p>
+<p><strong>Beispiel 1 — Verteidigung wenig Reaktionszeit lassen:</strong> Trägst du
+für <strong>Off 1 → 2</strong> <strong>Min = 1</strong> und <strong>Max = 5</strong> ein, plant das Tool die
+zweite Off so, dass sie zwischen <strong>einer</strong> und <strong>fünf Minuten</strong> nach
+der ersten Off auf dem Ziel eintrifft. So vermeidest du, dass mehrere
+Offs <strong>exakt gleichzeitig</strong> ankommen, und gibst der Verteidigung
+gleichzeitig nur <strong>wenig Reaktionszeit</strong>.</p>
+<p><strong>Beispiel 2 — Verspätungen beim Abschicken einplanen:</strong> Großzügigere
+Off-Abstände sind insbesondere dann sinnvoll, wenn du
+<strong>Nachlässigkeiten beim Abschicken</strong> der Incs schon bei der Planung
+berücksichtigen willst. Angenommen, du planst eine <strong>Katta-Aktion</strong>:
+Pro Zieldorf sind <strong>2 Offs</strong> und <strong>5 K-Splits</strong> verplant, der
+<strong>Abstand der K-Splits zur letzten Off</strong> wurde auf <strong>3 Minuten</strong>
+gesetzt. Wenn nun der Abstand zwischen <strong>1. und 2. Off</strong> sehr gering
+ist, kann es durch <strong>verspätetes Abschicken</strong> passieren, dass die
+Offs <strong>hinter den K-Splits</strong> eintreffen. Setzt du den Abstand
+<strong>Off 1 → 2</strong> stattdessen auf z. B. <strong>10 Minuten</strong>, würde die 1. Off
+selbst bei <strong>5 Minuten Verspätung beider Offs</strong> noch sicher <strong>vor</strong>
+den K-Splits eintreffen.</p>
 <h2 id="11-priorisierung-off-kategorien">11. Priorisierung Off-Kategorien<a class="headerlink" href="#11-priorisierung-off-kategorien" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab2_12_prioritizing_nuke_categories.png" data-title="Priorisierung Off-Kategorien" data-desc-position="bottom"><img alt="Priorisierung Off-Kategorien" class="screenshot" src="../../assets/nuke-planning-tool/tab2_12_prioritizing_nuke_categories.png"></a></p>
 <p>Im Bereich <strong>„Priorisierung Off-Kategorien"</strong> legst du fest, aus
 welchen Herkunfts-Kategorien die Offs bevorzugt verplant werden sollen.
-Verfügbare Kategorien sind z. B. <em>Verbleibende Dörfer</em>, <em>Dörfer &gt;500
-Axt</em>, <em>&gt;1000 Axt</em>, <em>&gt;2000 Axt</em>, …, <em>&gt;6000 Axt</em>. Verschiebe die
+Verfügbare Kategorien sind z. B. <em>Dörfer &gt;500 Axt</em>, <em>&gt;1000 Axt</em>,
+<em>&gt;2000 Axt</em>, …, <em>&gt;6000 Axt</em>. Verschiebe die
 gewünschten Kategorien über die Pfeil-Buttons in die rechte Liste
 <strong>„Priorisiert"</strong> und sortiere sie nach Priorität.</p>
 <p>Die Checkbox <strong>„Strikte Priorisierung (Reihenfolge erzwingen)"</strong> legt
