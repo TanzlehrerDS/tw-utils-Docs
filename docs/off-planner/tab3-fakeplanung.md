@@ -1,10 +1,10 @@
 # Tab 3: Fakeplanung
 
 In Tab 3 planst du alle **reinen Fakeziele** — also Ziele, die
-ausschließlich Fakes erhalten und nicht mit scharfen Offs beschossen
+ausschließlich Fakes erhalten und nicht mit scharfen Offs angelaufen
 werden. Begleitfakes zu realen Zielen werden weiterhin in
 [Tab 2: Angriffsplanung](tab2-angriffsplanung.md) zusammen mit den
-dazugehörigen Offs/Kattern/Bunkern geplant.
+dazugehörigen Offs, K-Splits und Zwischencleanern geplant.
 
 ## 1. Zwei Wege der Zielauswahl
 
@@ -26,9 +26,9 @@ Modus (siehe [§3 Planungsmethode wählen](#3-planungsmethode-wahlen)).
 ![Ankunftszeiten-Korridor festlegen (Fakes)](../assets/nuke-planning-tool/tab3_01_arrival_times.png){ .screenshot }
 
 Im Bereich **"Ankunftszeiten-Korridor festlegen (Fakes)"** legst du den
-Zeitrahmen fest, in dem die Fakes ankommen sollen. Die Felder
-**Ankunftsdatum**, **Von (Uhrzeit)** und **Bis (Uhrzeit)** ausfüllen
-und mit **Übernehmen** bestätigen — Bedienung identisch zu
+Zeitrahmen fest, in dem die Fakes ankommen sollen. **Datum**,
+**Startzeit** und **Endzeit** eintragen und mit **Übernehmen**
+bestätigen — Bedienung identisch zu
 [Tab 2 §1](tab2-angriffsplanung.md#1-ankunftszeitkorridor).
 
 Rechts neben dem Übernehmen-Button findest du zusätzlich einen kleinen
@@ -81,7 +81,7 @@ Das Tool kennt im manuellen Modus zwei Ziel-Kategorien:
 - **Normal-Fakes**
 - **Bunker-Fakes**
 
-Jede Kategorie bekommt eine eigene Karte mit Buttons zum
+Jede Kategorie bekommt einen eigenen Eingabebereich mit Buttons zum
 Hinzufügen/Bearbeiten von Zielen, einer eigenen Befehlsplanung und
 einem eigenen Fake-Zeitraum.
 
@@ -89,12 +89,12 @@ einem eigenen Fake-Zeitraum.
     Die beiden Kategorien **Normal-Fakes** und **Bunker-Fakes** sind
     in ihren Einstellungen **strukturell identisch**. Die Namen
     spiegeln nur einen typischen Anwendungsfall wider, sind aber
-    nicht bindend — du kannst die beiden Karten genauso gut für
-    **zwei beliebige parallele Fake-Aktionen** verwenden.
+    nicht bindend — du kannst die beiden Eingabebereiche genauso gut
+    für **zwei beliebige parallele Fake-Aktionen** verwenden.
 
 ### 4.2 Ziele hinzufügen & bearbeiten
 
-In jeder Kategorie-Karte stehen dieselben drei Bedienelemente wie aus
+In jedem Kategorie-Eingabebereich stehen dieselben drei Bedienelemente wie aus
 Tab 2 zur Verfügung: **Ziele hinzufügen** (öffnet das Modal zum
 Eintragen), das **Stift-Icon** (öffnet die Liste der bereits
 eingetragenen Ziele) und das **Mülleimer-Icon** (löscht alle Ziele
@@ -114,6 +114,8 @@ Details siehe dort:
     tab-übergreifend mit Tab 2.
 
 ### 4.3 Befehlsplanung pro Kategorie
+
+![Befehlsplanung pro Kategorie (Normal-Fakes & Bunker-Fakes)](../assets/nuke-planning-tool/tab3_08_planning_method_manual_selection_command_planning.png){ .screenshot }
 
 Unter den Bedien-Buttons folgt pro Kategorie der Block
 **"Befehlsplanung"** mit drei Eingabefeldern:
@@ -140,11 +142,13 @@ geplanten Fake-Einschlag herum verteilt eintreffen.
 
 ### 4.4 Übersichtstabelle "Gewählte Ziele (Manuell)"
 
-Unter den beiden Kategorie-Karten zeigt die Tabelle **"Gewählte Ziele
-(Manuell)"** alle eingetragenen Ziele auf einen Blick — mit den
-Spalten **#**, **Koord.**, **Spieler**, **Stamm**, **Punkte**, **Typ**
-(Badge **Normal** oder **Bunker**) und **Aktion** (Löschen-Icon je
-Zeile).
+![Übersichtstabelle Gewählte Ziele (Manuell)](../assets/nuke-planning-tool/tab3_09_planning_method_manual_selection_choosen_targets.png){ .screenshot }
+
+Unter den beiden Kategorie-Eingabebereichen zeigt die Tabelle
+**"Gewählte Ziele (Manuell)"** alle eingetragenen Ziele auf einen
+Blick — mit den Spalten **#**, **Koord.**, **Spieler**, **Stamm**,
+**Punkte**, **Typ** (Badge **Normal** oder **Bunker**) und **Aktion**
+(Löschen-Icon je Zeile).
 
 Oben rechts findest du drei Zähler-Badges (**Alle: N**, **Normal: N**,
 **Bunker: N**) als schnelle Übersicht über die Anzahl Ziele pro
