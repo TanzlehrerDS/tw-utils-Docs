@@ -1,11 +1,11 @@
 # Mitglieder
 
+![Mitglieder-Übersicht](../assets/leaderview/03_leaderview_members.png){ .screenshot }
+
 Der Tab **„Mitglieder"** zeigt alle Discord-User, die sich auf dem
 Stammes-Discordserver mit einem oder mehreren DS-Accounts verifiziert
 haben. Du siehst auf einen Blick, wer im Stamm überhaupt mit dem
 tw-utils-Discordbot verknüpft ist und wer welche Rolle besitzt.
-
-![Mitglieder-Übersicht](../assets/leaderview/03_leaderview_members.png){ .screenshot }
 
 !!! info "Voraussetzungen für den Leader-View"
     Wer den Leader-View aufrufen darf und wie die Rolle „Leader"
