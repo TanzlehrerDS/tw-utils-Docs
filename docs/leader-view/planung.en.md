@@ -48,13 +48,18 @@ The table below lists every single entry:
 | **Count** | How many snobs the player has ready from this source village |
 | **Actions** | Edit entry (pencil) or delete (trash) |
 
-Actions above the table: **"Add"**, **"Export"**, **"Delete all"**.
+Above the table you have the following options: **"Add"**,
+**"Export"**, **"Delete all"**.
 
 #### Manual add
 
+By clicking the **"Add"** button above the table you open the input
+modal **"Add snob entry"**. Here you can enter one or more snob
+entries for a player.
+
 ![Add snob entry](../assets/leaderview/16_leaderview_planning_snobqueries_add.png){ .screenshot }
 
-The **"Add snob entry"** dialog contains two fields:
+The dialog contains two fields:
 
 - **Coordinates (text with coords)** — one or more source coordinates;
   surrounding text is ignored (e.g. `Snobs ready in 500|500 and
@@ -63,11 +68,14 @@ The **"Add snob entry"** dialog contains two fields:
   per source village. The entered value applies to **all**
   coordinates detected in step 1.
 
+After confirming, the snob entries are created and appear in the table
+immediately.
+
 ### Launch times
 
-Here you collect the individual launch windows of the players — i.e.
-the time windows in which the individual players are actually at the
-computer and can time attacks cleanly.
+Here you manage the individual launch windows of the players — i.e.
+the time windows in which the individual players actually have time to
+send commands.
 
 ![Launch times — overview](../assets/leaderview/17_leaderview_planning_launchtimes_overview.png){ .screenshot }
 
@@ -76,25 +84,33 @@ Table columns:
 | Column | Meaning |
 |---|---|
 | **#** | Running number |
-| **TW-Account** | Player available during this time window |
+| **TW-Account** | Account the entered time window applies to |
 | **Tribe** | Tribe of the player |
 | **Date** | Day on which the player can launch |
 | **Time range** | From and to time (Tribalwars server time) |
 | **Actions** | Edit or delete entry |
 
-Actions above the table: **"Add"**, **"Export"**, **"Delete all"**.
+Above the table you have the following options: **"Add"**,
+**"Export"**, **"Delete all"**.
 
 #### Manual add
 
+By clicking the **"Add"** button above the table you open the input
+modal **"Add launch time"**. Here you can enter a new launch window
+for a player.
+
 ![Add launch time](../assets/leaderview/18_leaderview_planning_launchtimes_add.png){ .screenshot }
 
-The **"Add launch time"** dialog contains the following fields:
+The dialog contains the following fields:
 
 - **Player name (TW-Account)** — with autocomplete via the verified
   accounts.
 - **Date** — day of the launch window.
 - **From** / **To** — start and end of the time window (Tribalwars
   server time).
+
+After confirming, the launch window is created and appears in the
+table immediately.
 
 ### Excluded Villages
 

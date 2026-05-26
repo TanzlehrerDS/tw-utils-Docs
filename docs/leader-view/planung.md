@@ -50,14 +50,18 @@ Die Tabelle darunter listet jede einzelne Meldung:
 | **Anzahl** | Wie viele AGs der Spieler aus diesem Herkunftsdorf fertig hat |
 | **Aktionen** | Eintrag bearbeiten (Stift) oder löschen (Mülltonne) |
 
-Aktionen oberhalb der Tabelle: **„Hinzufügen"**, **„Export"**,
-**„Alles löschen"**.
+Oberhalb der Tabelle hat man die folgenden Optionen:
+**„Hinzufügen"**, **„Export"**, **„Alles löschen"**.
 
 #### Manuelles Hinzufügen
 
+Über einen Klick auf den Button **„Hinzufügen"** oberhalb der Tabelle
+öffnest du das Eingabe-Modal **„AG-Meldung hinzufügen"**. Hier kannst
+du eine oder mehrere AG-Meldungen für einen Spieler eintragen.
+
 ![AG-Meldung hinzufügen](../assets/leaderview/16_leaderview_planning_snobqueries_add.png){ .screenshot }
 
-Der Dialog **„AG-Meldung hinzufügen"** enthält zwei Felder:
+Der Dialog enthält zwei Felder:
 
 - **Koordinaten (Text mit Koords)** — eine oder mehrere
   Herkunftskoordinaten; umgebender Text wird ignoriert (z. B.
@@ -66,11 +70,14 @@ Der Dialog **„AG-Meldung hinzufügen"** enthält zwei Felder:
   Herkunftsdorf fertig hat. Der eingegebene Wert gilt für **alle** in
   Schritt 1 erkannten Koordinaten.
 
+Nach dem Bestätigen werden die AG-Meldungen angelegt und erscheinen
+unmittelbar in der Tabelle.
+
 ### Abschickzeiten
 
-Hier sammelst du die individuellen Abschickfenster der Spieler — also
-die Zeitfenster, in denen die einzelnen Spieler tatsächlich am Rechner
-sitzen und Angriffe sauber timen können.
+Hier verwaltest du die individuellen Abschickfenster der Spieler —
+also die Zeitfenster, in denen die einzelnen Spieler tatsächlich Zeit
+haben, um Befehle abzuschicken.
 
 ![Abschickzeiten — Übersicht](../assets/leaderview/17_leaderview_planning_launchtimes_overview.png){ .screenshot }
 
@@ -79,26 +86,33 @@ Tabellenspalten:
 | Spalte | Bedeutung |
 |---|---|
 | **#** | Laufende Nummer |
-| **DS-Account** | Spieler, der zu diesem Zeitfenster verfügbar ist |
+| **DS-Account** | Account, für welchen das eingetragene Zeitfenster gilt |
 | **Stamm** | Stamm des Spielers |
 | **Datum** | Tag, an dem der Spieler abschicken kann |
 | **Zeitraum** | Von- und Bis-Uhrzeit (Tribalwars-Serverzeit) |
 | **Aktionen** | Eintrag bearbeiten oder löschen |
 
-Aktionen oberhalb der Tabelle: **„Hinzufügen"**, **„Export"**,
-**„Alles löschen"**.
+Oberhalb der Tabelle hat man die folgenden Optionen:
+**„Hinzufügen"**, **„Export"**, **„Alles löschen"**.
 
 #### Manuelles Hinzufügen
 
+Über einen Klick auf den Button **„Hinzufügen"** oberhalb der Tabelle
+öffnest du das Eingabe-Modal **„Abschickzeit hinzufügen"**. Hier kannst
+du ein neues Abschickfenster für einen Spieler eintragen.
+
 ![Abschickzeit hinzufügen](../assets/leaderview/18_leaderview_planning_launchtimes_add.png){ .screenshot }
 
-Der Dialog **„Abschickzeit hinzufügen"** enthält folgende Felder:
+Der Dialog enthält folgende Felder:
 
 - **Spielername (DS-Account)** — mit Autovervollständigung über die
   verifizierten Accounts.
 - **Datum** — Tag des Abschickfensters.
 - **Von** / **Bis** — Anfang und Ende des Zeitfensters (Tribalwars-
   Serverzeit).
+
+Nach dem Bestätigen wird das Abschickfenster angelegt und erscheint
+unmittelbar in der Tabelle.
 
 ### Ausgeplante Dörfer
 
