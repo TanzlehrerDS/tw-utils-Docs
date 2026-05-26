@@ -8,18 +8,18 @@ Bunker, identifizierst zusätzliche Flexbunker, dokumentierst
 feindliche Bunker und hast die Möglichkeit Dir die Bunker-Situation
 auf einer Karte visualisieren zu lassen.
 
-!!! info "Hinweis"
-    Für den vollen Funktionsumfang müssen aktuelle Truppendaten im Tab
-    [„Truppen"](truppen.md) hochgeladen sein. Ohne Truppendaten können
-    weder Soll-/Ist-Vergleiche bei genehmigten Bunkern noch die
-    Flexbunker-Kontrolle ausgewertet werden.
-
 Die Seite hat vier Unterreiter:
 
 - **Genehmigte Bunker**
 - **Flexbunker**
 - **Feindliche Bunker**
 - **Karte**
+
+!!! info "Hinweis"
+    Für den vollen Funktionsumfang müssen aktuelle Truppendaten im Tab
+    [„Truppen"](truppen.md) hochgeladen sein. Ohne Truppendaten können
+    weder Soll-/Ist-Vergleiche bei genehmigten Bunkern noch die
+    Flexbunker-Kontrolle ausgewertet werden.
 
 ## Genehmigte Bunker
 
@@ -29,8 +29,8 @@ Bunker-Dörfer des Stammes. Pro Dorf wird ein **Soll-Wert**
 dem aktuellen **Ist-Wert** aus den Truppendaten und zeigt fehlende
 Refills an.
 
-In der Liste tauchen sowohl manuell eingetragene Bunker als auch
-Bunker auf, die die Stammesmitglieder über das
+In der Liste tauchen sowohl manuell von Leadern eingetragene Bunker
+als auch Bunker auf, die die Stammesmitglieder über das
 [Bunker-Information-System](../discord-bot/bunker-info.md) des
 tw-utils-Discordbots beantragt haben und die von einem Leader genehmigt
 wurden.
@@ -49,14 +49,6 @@ Die Tabelle hat folgende Spalten:
 | **Ist (Truppen)** | Aktuell vorhandene Defensiv-Truppen |
 | **benötigte Refills** | Differenz Soll - Ist als Dual |
 | **Aktionen** | Aufstocken (`+`), Löschen (Mülltonne) |
-
-**Status-Ampel (Legende):**
-
-| Farbe | Label |
-|---|---|
-| 🟢 grün | OK |
-| 🟠 orange | Warnung |
-| 🔴 rot | Kritisch |
 
 ### Bunker manuell eintragen
 
@@ -98,19 +90,21 @@ Textblock, der über den **„Kopieren"**-Button in die Zwischenablage
 
 Den kopierten Text kannst du z. B. ins Stammesforum stellen.
 
+!!! warning "Berechnungsgrundlage der Refills"
+    Die benötigten Refills werden ausschließlich auf Basis der
+    **zuletzt hochgeladenen „Truppen im Dorf"** berechnet. Bereits
+    **laufende Unterstützungen** in Richtung des Bunker-Dorfs werden
+    dabei **nicht** berücksichtigt — sie tauchen erst dann im Ist-Wert
+    auf, wenn sie im Dorf angekommen und im nächsten Truppen-Upload
+    enthalten sind.
+
 ## Flexbunker
 
-Mit der **Flexbunker-Kontrolle** findest du Dörfer, die zwar hohe
+Mit der **Flexbunker-Kontrolle** identifizierst du Dörfer, die hohe
 Defensiv-Kapazitäten halten, aber nicht offiziell als Bunker
 eingetragen sind.
 
 ![Flexbunker — Übersicht](../assets/leaderview/10_leaderview_bunkerinfo_flexbunkers_overview.png){ .screenshot }
-
-> Mit der Flexbunker-Kontrolle kannst du Dörfer identifizieren, die
-> hohe Deff-Kapazitäten binden, aber nicht als genehmigte Bunker
-> eingetragen sind. Lege eine Dual-Stärke fest, oberhalb derer diese
-> Dörfer aufgelistet werden sollen. (Bereits genehmigte Bunker werden
-> nicht aufgelistet.)
 
 Ablauf:
 
@@ -121,13 +115,26 @@ Ablauf:
 
 ![Flexbunker — Ergebnis-Tabelle](../assets/leaderview/11_leaderview_bunkerinfo_flexbunkers_table.png){ .screenshot }
 
-Die Ergebnistabelle zeigt **Stamm / Spieler / Koordinate / Ist
-(Truppen)** für alle Dörfer, die den Schwellenwert übertreffen.
+Die Ergebnistabelle listet alle Dörfer auf, die den Schwellenwert
+übertreffen, mit folgenden Spalten:
+
+| Spalte | Bedeutung |
+|---|---|
+| **Stamm** | Stamm des Dorfs |
+| **Spieler** | Besitzer des Dorfs |
+| **Koordinate** | Koordinate des Dorfs |
+| **Ist (Truppen)** | Aktuell vorhandene Defensiv-Truppen |
 
 ## Feindliche Bunker
 
-In diesem Unterreiter dokumentierst du Bunker-Dörfer auf Feindseite,
-um sie bei Off-Planungen besser einschätzen zu können.
+In diesem Unterreiter werden alle bekannten Bunker-Dörfer auf
+Feindseite gesammelt, um sie bei Off-Planungen besser einschätzen zu
+können.
+
+In der Liste tauchen sowohl Einträge auf, die Stammesmitglieder über
+das [Bunker-Information-System](../discord-bot/bunker-info.md) des
+tw-utils-Discordbots gemeldet haben, als auch Bunker, die Leader
+direkt im Leader-View manuell eingetragen haben.
 
 ![Feindliche Bunker — Übersicht](../assets/leaderview/12_leaderview_bunkerinfo_enemybunkers_overview.png){ .screenshot }
 
@@ -138,7 +145,15 @@ Aktionen oben:
 - **„Export"** — alle Einträge exportieren.
 - **„Markierte löschen"** — Bulk-Löschen markierter Einträge.
 
-Spalten: **Stamm / Spieler / Koordinate / Ist (Truppen) / Info-Stand**.
+Die Tabelle hat folgende Spalten:
+
+| Spalte | Bedeutung |
+|---|---|
+| **Stamm** | Stamm des Bunker-Dorfs |
+| **Spieler** | Besitzer des Dorfs |
+| **Koordinate** | Koordinate des Bunker-Dorfs |
+| **Ist (Truppen)** | Zuletzt gemeldete Defensiv-Truppen |
+| **Info-Stand** | Zeitstempel der letzten Meldung |
 
 ### Feind-Bunker eintragen
 
