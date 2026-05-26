@@ -2248,74 +2248,56 @@ Angriffspläne. Ein <strong>Container</strong> bündelt eine Operation — z. B.
 Off-Welle, eine AG-Aktion oder einen Zwischencleaner — mit allen Plänen
 und Befehlen und steuert die Verteilung an die einzelnen Spieler.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/21_leaderview_planning_container_overview.png" data-title="Container — Übersicht" data-desc-position="bottom"><img alt="Container — Übersicht" class="screenshot" src="../../assets/leaderview/21_leaderview_planning_container_overview.png"></a></p>
-<p>Die Übersichtstabelle zeigt alle bestehenden Container des Stammes:</p>
-<table>
-<thead>
-<tr>
-<th>Spalte</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Name</strong></td>
-<td>Frei wählbarer Name der Operation (z. B. <code>Op. Phoenix</code>)</td>
-</tr>
-<tr>
-<td><strong>Verteilungsstatus</strong></td>
-<td><strong>„Aktiv"</strong> = Container ist veröffentlicht, Spieler können den Plan abrufen. <strong>„Inaktiv"</strong> = Container ist offline / in Vorbereitung.</td>
-</tr>
-<tr>
-<td><strong>Welt</strong></td>
-<td>DS-Welt, für die der Container gilt (Badge)</td>
-</tr>
-<tr>
-<td><strong>Zuletzt geändert</strong></td>
-<td>Wer hat den Container zuletzt bearbeitet, und wann (oder <strong>„Noch keine Änderung"</strong>, wenn frisch angelegt)</td>
-</tr>
-<tr>
-<td><strong>Öffnen</strong></td>
-<td>Öffnet den Container in der Detailansicht</td>
-</tr>
-</tbody>
-</table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/39_leaderview_container_open_button.png" data-title="OPEN-Icon" data-desc-position="bottom"><img alt="OPEN-Icon" class="screenshot" src="../../assets/leaderview/39_leaderview_container_open_button.png"></a></p>
-<p>Über das Ordner-Icon in der Spalte <strong>„Öffnen"</strong> wechselst du in die
-Container-Detailansicht.</p>
+<p>Hier kannst du deine bestehenden Container öffnen sowie neue Container
+anlegen. Mit Klick auf <strong>„Öffnen"</strong> wechselst du in die jeweilige
+Container-Übersicht.</p>
 <h3 id="neuen-container-anlegen">Neuen Container anlegen<a class="headerlink" href="#neuen-container-anlegen" title="Permanent link">¶</a></h3>
+<p>Über einen Klick auf den Button <strong>„Neuer Container"</strong> legst du einen
+neuen Container an. Es öffnet sich ein Modal, in welchem du einen
+<strong>Namen</strong> für den Container festlegen musst (max. 50 Zeichen, z. B.
+<code>Op. Phoenix</code>).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/22_leaderview_planning_container_containeradd.png" data-title="Container anlegen" data-desc-position="bottom"><img alt="Container anlegen" class="screenshot" src="../../assets/leaderview/22_leaderview_planning_container_containeradd.png"></a></p>
-<p>Über <strong>„Neuer Container"</strong> öffnet sich der Dialog <strong>„Neuer Container"</strong>
-mit dem Feld <strong>„Name"</strong> (max. 50 Zeichen, z. B. <code>Op. Phoenix</code>). Der
-Container wird automatisch der aktuellen Welt zugeordnet und startet im
-Status <strong>„Inaktiv"</strong>.</p>
+<p>Nach dem Bestätigen wird der Container automatisch der aktuellen Welt
+zugeordnet, startet im Status <strong>„Inaktiv"</strong> und erscheint unmittelbar
+in der Container-Übersicht.</p>
 <h3 id="aufbau-eines-containers">Aufbau eines Containers<a class="headerlink" href="#aufbau-eines-containers" title="Permanent link">¶</a></h3>
+<p>Direkt nach dem Anlegen ist ein Container noch komplett leer — es sind
+weder Pläne noch Befehle hinterlegt. Das Grundgerüst mit Kopfbereich,
+Action-Leiste und den beiden Reitern siehst du aber bereits:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/23_leaderview_planning_container_overview_empty_container.png" data-title="Leerer Container" data-desc-position="bottom"><img alt="Leerer Container" class="screenshot" src="../../assets/leaderview/23_leaderview_planning_container_overview_empty_container.png"></a></p>
-<p>Direkt nach dem Öffnen siehst du drei Bereiche:</p>
+<p><strong>Kopfbereich</strong></p>
+<p>Im Kopfbereich findest du auf der linken Seite den Container-Namen
+sowie das Welt-Badge der zugehörigen DS-Welt. Über den Link
+<strong>„Zurück zur Übersicht"</strong> gelangst du zurück zur Container-Übersicht
+des Stammes.</p>
+<p>Auf der rechten Seite sitzen die container-weiten Aktionen:</p>
 <ul>
-<li><strong>Kopfbereich</strong> — links Container-Name + Welt-Badge sowie der Link
-  <strong>„Zurück zur Übersicht"</strong>, rechts der <strong>Veröffentlichungs-Toggle</strong>
-  (siehe <a href="#veroffentlichung">Veröffentlichung</a>), der Button
-  <strong>„Changelog"</strong> sowie <strong>„Container löschen"</strong> (siehe
-  <a href="#sonstiges">Sonstiges</a>).</li>
-<li>
-<p><strong>Action-Leiste</strong> — hier importierst und synchronisierst du die
-  Inhalte:</p>
+<li>der <strong>Veröffentlichungs-Toggle</strong> zum Aktivieren / Deaktivieren des
+  Containers (siehe <a href="#veroffentlichung">Veröffentlichung</a>),</li>
+<li>der Button <strong>„Changelog"</strong> für die Änderungs-Historie (siehe
+  <a href="#sonstiges">Sonstiges</a>),</li>
+<li>der Button <strong>„Container löschen"</strong> zum vollständigen Entfernen des
+  Containers (siehe <a href="#sonstiges">Sonstiges</a>).</li>
+</ul>
+<p><strong>Action-Leiste</strong></p>
+<p>Direkt unter dem Kopfbereich liegt die Action-Leiste mit den
+Werkzeugen zum Befüllen und Synchronisieren des Containers:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/40_leaderview_container_import_plan.png" data-title="Action-Leiste — Buttons" data-desc-position="bottom"><img alt="Action-Leiste — Buttons" class="screenshot" src="../../assets/leaderview/40_leaderview_container_import_plan.png"></a></p>
 <ul>
 <li><strong>„Plan auswählen…"</strong> — Dropdown mit allen Plänen aus dem
-  Off-/AG-Planungstool, die in den Container importiert werden
-  können.</li>
+  Off-/AG-Planungstool, die in den Container importiert werden können.</li>
 <li><strong>„Hinzufügen"</strong> — fügt den im Dropdown gewählten Plan hinzu.</li>
 <li><strong>„Pläne leeren"</strong> — entfernt alle Befehle aus dem Container.</li>
-<li><strong>„Veraltete ausblenden"</strong> — versteckt Befehle, deren
-  Abschickzeit bereits in der Vergangenheit liegt.</li>
+<li><strong>„Veraltete ausblenden"</strong> — versteckt Befehle, deren Abschickzeit
+  bereits in der Vergangenheit liegt.</li>
 <li><strong>„DSU-Synchronisation"</strong> — überträgt die aktuellen Befehle nach
   DS-Ultimate (pro Spieler ein DSU-Plan + ein „Gesamtplan").</li>
-<li><strong>Reiter</strong> — darunter wechselst du zwischen <strong>„Pläne"</strong> (Sicht pro
-  Spieler) und <strong>„Befehle"</strong> (Sicht pro Einzelangriff).</li>
 </ul>
-</li>
-</ul>
+<p><strong>Reiter „Pläne" und „Befehle"</strong></p>
+<p>Im unteren Bereich des Containers stehen die beiden Reiter <strong>„Pläne"</strong>
+(Sicht pro Spieler) und <strong>„Befehle"</strong> (Sicht pro Einzelangriff) zur
+Verfügung. Die Details zu beiden Reitern findest du in den jeweils
+gleichnamigen Abschnitten weiter unten.</p>
 <h3 id="reiter-plane">Reiter „Pläne"<a class="headerlink" href="#reiter-plane" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/24_leaderview_planning_container_planstab.png" data-title="Reiter „Pläne&quot;" data-desc-position="bottom"><img alt="Reiter „Pläne&quot;" class="screenshot" src="../../assets/leaderview/24_leaderview_planning_container_planstab.png"></a></p>
 <p>Der Reiter <strong>„Pläne"</strong> ist die spieler-orientierte Sicht. Pro Spieler,
