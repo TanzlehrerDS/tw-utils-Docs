@@ -1322,17 +1322,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#bulk-aktionen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bulk-Aktionen
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1431,12 +1420,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -1520,6 +1503,93 @@
     
   
     Account-Verifizierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3">
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bot-Module
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bot-Module
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../discord-bot/modul-verwaltung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einrichtung
   
 
     
@@ -1640,6 +1710,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1964,17 +2042,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#bulk-aktionen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bulk-Aktionen
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2064,7 +2131,7 @@ gliedert sich in zwei Unterreiter:</p>
 <li><strong>Container</strong> — Angriffspläne sammeln, koordinieren und an die
   Spieler verteilen.</li>
 <li><strong>Abfragen</strong> — vorbereitende Daten sammeln (AG-Meldungen,
-  Abschickzeiten, ausgeplante Herkunftsdörfer).</li>
+  Abschickzeiten, ausgeplante Dörfer).</li>
 </ul>
 <h2 id="abfragen">Abfragen<a class="headerlink" href="#abfragen" title="Permanent link">¶</a></h2>
 <p>Unter dem Reiter <strong>„Abfragen"</strong> findest du drei Pill-Tabs:
@@ -2314,72 +2381,73 @@ Befehlen an. Details zu diesem Schritt findest du im Abschnitt
 und <strong>„Befehle"</strong> zur Verfügung. Die Details zu beiden Reitern findest
 du in den jeweils gleichnamigen Abschnitten weiter unten.</p>
 <h3 id="reiter-plane">Reiter „Pläne"<a class="headerlink" href="#reiter-plane" title="Permanent link">¶</a></h3>
+<p>Im Reiter <strong>„Pläne"</strong> verwaltest du die Angriffspläne der Spieler — pro
+Spieler, für den im Container Befehle existieren, gibt es eine Zeile.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/24_leaderview_planning_container_planstab.png" data-title="Reiter „Pläne&quot;" data-desc-position="bottom"><img alt="Reiter „Pläne&quot;" class="screenshot" src="../../assets/leaderview/24_leaderview_planning_container_planstab.png"></a></p>
-<p>Der Reiter <strong>„Pläne"</strong> ist die spieler-orientierte Sicht. Pro Spieler,
-für den im Container Befehle existieren, gibt es eine Zeile mit
-folgenden Spalten:</p>
-<table>
-<thead>
-<tr>
-<th>Spalte</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>#</strong></td>
-<td>Laufende Nummer</td>
-</tr>
-<tr>
-<td><strong>Spieler</strong></td>
-<td>Name des Spielers, dem die Befehle gehören</td>
-</tr>
-<tr>
-<td><strong>Befehle</strong></td>
-<td>Anzahl seiner Befehle im Container, plus Status (z. B. <strong>„Aktiv"</strong> = Befehle sind veröffentlicht / spielbar)</td>
-</tr>
-<tr>
-<td><strong>Discord</strong></td>
-<td>Verknüpfter Discord-Account; <strong>„nicht verknüpft"</strong>, wenn der Spieler sich noch nicht verifiziert hat</td>
-</tr>
-<tr>
-<td><strong>DSU-Plan</strong></td>
-<td>Links zum Spieler-DSU-Plan: <strong>„Bearbeiten"</strong> öffnet ihn in DS-Ultimate, <strong>„Anzeigen"</strong> zur reinen Ansicht. Erscheint erst nach DSU-Synchronisation.</td>
-</tr>
-<tr>
-<td><strong>Verteilungsstatus</strong></td>
-<td>Zeigt an, ob der Spieler den Plan bereits erhalten hat: 🔴 = noch nicht verteilt, 🟢 = verteilt (mit Zeitstempel). Das <strong>blaue Brief-Icon</strong> öffnet den Dialog zum Versenden der Ingame-Nachricht.</td>
-</tr>
-</tbody>
-</table>
+<p>Auf einen Blick erkennst du, ob der Spieler-Account mit einem
+Discord-Account verknüpft ist; daran siehst du sofort, ob der Spieler
+den Plan eigenständig über den tw-utils-Discordbot herunterladen kann
+oder ob du ihn per Ingame-Nachricht zukommen lassen musst. Außerdem
+siehst du den <strong>DSU-Plan</strong>-Link des jeweiligen Spielers — dieser
+erscheint allerdings erst, nachdem eine
+<a href="#dsu-synchronisation">DSU-Synchronisation</a> durchgeführt wurde. Der
+<strong>Verteilungsstatus</strong> schließlich wird grün, sobald der Plan per
+Ingame-Nachricht versendet wurde <strong>oder</strong> sobald ein verknüpfter
+Discord-User den Plan über den Discordbot heruntergeladen hat.</p>
+<p>Darüber hinaus stehen dir als Stammesführung mehrere Funktionen zur
+Verfügung, die in den folgenden Unterabschnitten beschrieben sind.</p>
 <h4 id="funktionen">Funktionen<a class="headerlink" href="#funktionen" title="Permanent link">¶</a></h4>
 <h5 id="dsu-synchronisation">DSU-Synchronisation<a class="headerlink" href="#dsu-synchronisation" title="Permanent link">¶</a></h5>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/26_leaderview_planning_container_planstab_after_dsusynchronization.png" data-title="Nach DSU-Synchronisation" data-desc-position="bottom"><img alt="Nach DSU-Synchronisation" class="screenshot" src="../../assets/leaderview/26_leaderview_planning_container_planstab_after_dsusynchronization.png"></a></p>
 <p>Nach Klick auf <strong>„DSU-Synchronisation"</strong> legt das Tool für jeden
 Spieler einen DSU-Plan auf DS-Ultimate an; in der Spalte <strong>„DSU-Plan"</strong>
 erscheinen die Links <strong>„Bearbeiten · Anzeigen"</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/42_leaderview_planning_dsulink_edit_view.png" data-title="DSU-Plan: Bearbeiten / Anzeigen" data-desc-position="bottom"><img alt="DSU-Plan: Bearbeiten / Anzeigen" class="screenshot" src="../../assets/leaderview/42_leaderview_planning_dsulink_edit_view.png"></a></p>
 <p>Zusätzlich erscheint ganz oben die hervorgehobene Zeile <strong>„Gesamtplan"</strong>
 mit dem gelben <strong>„Total Plan"</strong>-Badge — sie enthält alle Befehle aller
-Spieler in einem einzigen DSU-Plan und eignet sich z. B. für eine
-zentrale Co-Leader-Übersicht.</p>
+Spieler in einem einzigen DSU-Plan.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/41_leaderview_planning_pendingchanges.png" data-title="Pending changes" data-desc-position="bottom"><img alt="Pending changes" class="screenshot" src="../../assets/leaderview/41_leaderview_planning_pendingchanges.png"></a></p>
 <p>Oben rechts zeigt der Hinweis <strong>„Pending changes: +X / -Y / ±Z"</strong> an,
 wie viele Commands seit der letzten Synchronisation <strong>hinzugekommen
 (+)</strong>, <strong>entfernt (−)</strong> oder <strong>geändert (±)</strong> wurden. Solange der
 Zähler nicht 0/0/0 steht, sind die DSU-Pläne nicht auf dem aktuellen
 Stand.</p>
+<div class="admonition info">
+<p class="admonition-title">Was wird synchronisiert?</p>
+<p>In die DSU-Pläne werden ausschließlich Befehle übertragen, die im
+Container enthalten <strong>und</strong> nicht ausgeblendet sind. Ausgeblendete
+Befehle (per <strong>„Abgelaufene ausblenden"</strong> oder manuell) bleiben im
+Container, fließen aber nicht in die DSU-Synchronisation ein.</p>
+</div>
 <h5 id="planverteilung">Planverteilung<a class="headerlink" href="#planverteilung" title="Permanent link">¶</a></h5>
-<p>Die fertigen Pläne erreichen die Spieler auf zwei Wegen: per
-<strong>Ingame-Nachricht</strong> an einzelne Spieler oder per <strong>Export der
-DSU-Links</strong> für ein zentrales externes Posting (z. B. im Stammesforum).
-Gemeinsamer Ausgangspunkt für beide Wege ist das
-<strong>Nachrichten-Template</strong>.</p>
-<p><strong>Nachrichten-Template</strong></p>
+<p>Die fertigen Pläne lassen sich auf <strong>drei Wegen</strong> an die Spieler
+verteilen:</p>
+<ol>
+<li><strong>Über den Discordbot</strong> — Spieler mit abgeschlossener
+   Account-Verifizierung können den Plan eigenständig über den
+   Stammes-Discordserver herunterladen.</li>
+<li><strong>Per Ingame-Nachricht</strong> — der Leader versendet den Plan einzeln per
+   Ingame-Nachricht, optional mit dem von tw-utils bereitgestellten
+   Nachrichten-Template.</li>
+<li><strong>Sonstige Verteilung über Export</strong> — die DSU-Links lassen sich als
+   TXT-Datei exportieren und außerhalb des Spiels weiterverwenden
+   (z. B. Forum-Posting, Discord-DM, etc.).</li>
+</ol>
+<p><strong>Verteilung über den Discordbot</strong></p>
+<p>Spieler, die ihre Account-Verifizierung mit ihrem DS-Account
+abgeschlossen haben, können den Angriffsplan eigenständig über das
+<a href="../../discord-bot/planning-system/">Planning-System des tw-utils-Discordbots</a>
+herunterladen. Ein aktives Versenden durch den Leader ist hier nicht
+nötig. Welche Spieler über den Bot verifiziert sind, erkennst du an
+der Spalte <strong>Discord</strong> in der Übersicht.</p>
+<p><strong>Verteilung per Ingame-Nachricht</strong></p>
+<p>Sollen Spieler den Plan per Ingame-Nachricht erhalten, kommt das
+<strong>Nachrichten-Template</strong> ins Spiel — die Text-Vorlage, die beim
+Versenden für jeden Spieler individuell befüllt wird.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/25_leaderview_planning_container_planstab_messagetemplate.png" data-title="Nachrichten-Template bearbeiten" data-desc-position="bottom"><img alt="Nachrichten-Template bearbeiten" class="screenshot" src="../../assets/leaderview/25_leaderview_planning_container_planstab_messagetemplate.png"></a></p>
 <p>Über den Button <strong>„Nachrichten-Template"</strong> öffnest du den Editor
-<strong>„Nachrichten-Template bearbeiten"</strong>. Das Template ist die
-<strong>Text-Vorlage</strong>, die beim Senden einer Ingame-Nachricht für jeden
-Spieler benutzt wird. Die Platzhalter werden automatisch pro Spieler
-ersetzt:</p>
+<strong>„Nachrichten-Template bearbeiten"</strong>. Die Platzhalter werden
+automatisch pro Spieler ersetzt:</p>
 <table>
 <thead>
 <tr>
@@ -2398,26 +2466,32 @@ ersetzt:</p>
 </tr>
 <tr>
 <td><code>{wb_commands}</code></td>
-<td>Alle WB-Commands des Spielers im Spoiler-Block (für den Ingame-Bot „werewolf").</td>
+<td>Alle WB-Commands des Spielers im Spoiler-Block.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Ingame-Nachricht senden</strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/27_leaderview_planning_container_planstab_sendplan_ingame.png" data-title="Ingame-Nachricht senden" data-desc-position="bottom"><img alt="Ingame-Nachricht senden" class="screenshot" src="../../assets/leaderview/27_leaderview_planning_container_planstab_sendplan_ingame.png"></a></p>
-<p>Ein Klick auf das blaue <strong>Brief-Icon</strong> in der Spalte
-<strong>„Verteilungsstatus"</strong> öffnet den Dialog <strong>„Ingame-Nachricht senden"</strong>.
-Der Dialog zeigt die fertige Nachricht für den jeweiligen Empfänger
-(Template mit aufgelösten Platzhaltern, inkl. WB-Commands-Spoiler).</p>
-<p>Über <strong>„Send &amp; Copy"</strong> wird die Nachricht in die Zwischenablage kopiert
-und gleichzeitig die Ingame-Inbox in einem neuen Tab geöffnet — dort
-einfach mit <code>Strg+V</code> einfügen und versenden. Der Spieler wird
-automatisch als <strong>„verteilt"</strong> markiert.</p>
-<p><strong>Export Links (alternative Verteilung)</strong></p>
-<p>Sollen die Pläne nicht per Ingame-Nachricht, sondern zentral an einer
-externen Stelle (z. B. im Stammesforum) gepostet werden, lassen sich
-die DSU-Links der ausgewählten Spieler über die Bulk-Aktion
-<strong>„Export Links"</strong> ausgeben — siehe
-<a href="#status--link-management-bulk-aktionen">Status- &amp; Link-Management</a>.</p>
+<p>Wenn das Nachrichten-Template erstellt und gespeichert wurde, kannst
+du per Klick auf das blaue <strong>Brief-Icon</strong> in der Spalte
+<strong>„Verteilungsstatus"</strong> die Verteilung starten:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/43_leaderview_planning_send_ingame_message.png" data-title="Ingame-Nachricht senden" data-desc-position="bottom"><img alt="Ingame-Nachricht senden" class="screenshot" src="../../assets/leaderview/43_leaderview_planning_send_ingame_message.png"></a></p>
+<p>Es öffnet sich der Dialog <strong>„Ingame-Nachricht senden"</strong>, der die
+fertige Nachricht für den jeweiligen Empfänger zeigt (Template mit
+aufgelösten Platzhaltern, inkl. WB-Commands-Spoiler).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/45_leaderview_planning_send_ingame_message_dialog.png" data-title="Dialog „Ingame-Nachricht senden&quot;" data-desc-position="bottom"><img alt="Dialog „Ingame-Nachricht senden&quot;" class="screenshot" src="../../assets/leaderview/45_leaderview_planning_send_ingame_message_dialog.png"></a></p>
+<p>Über <strong>„Send &amp; Copy"</strong> wird die Nachricht in die Zwischenablage
+kopiert und gleichzeitig die Ingame-Nachricht in einem neuen Tab
+geöffnet — dort einfach mit <code>Strg+V</code> einfügen und versenden. Der
+Spieler wird automatisch als <strong>„verteilt"</strong> markiert.</p>
+<p><strong>Sonstige Verteilung über Export der DSU-Links</strong></p>
+<p>Soll die Verteilung außerhalb von Discord und Ingame stattfinden —
+z. B. zentral im Stammesforum — kannst du die DSU-Links der
+ausgewählten Spieler über die Bulk-Aktion <strong>„Export Links"</strong> als
+TXT-Datei herunterladen.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/44_leaderview_planning_bulk_bar_planstab.png" data-title="Bulk-Bar im Reiter „Pläne&quot;" data-desc-position="bottom"><img alt="Bulk-Bar im Reiter „Pläne&quot;" class="screenshot" src="../../assets/leaderview/44_leaderview_planning_bulk_bar_planstab.png"></a></p>
+<p>Markiere dazu in der Spieler-Tabelle die gewünschten Spieler; in der
+oben erscheinenden Action-Bar wählst du dann <strong>„Export Links"</strong>. Die
+TXT-Datei enthält pro markiertem Spieler einen DSU-Link und kann
+beliebig weiterverwendet werden.</p>
 <h5 id="status-link-management-bulk-aktionen">Status- &amp; Link-Management (Bulk-Aktionen)<a class="headerlink" href="#status-link-management-bulk-aktionen" title="Permanent link">¶</a></h5>
 <p>Damit ein Spieler den Plan erneut zugeschickt bekommen kann oder
 mehrere Spieler gleichzeitig nachverwaltet werden können, gibt es zwei
@@ -2431,150 +2505,115 @@ Werkzeuge: das <strong>Rückstell-Icon</strong> in jeder einzelnen Zeile und die
 zurücksetzen — z. B. wenn ein Spieler den Plan erneut zugeschickt
 bekommen soll.</p>
 <p><strong>Bulk-Aktionen für mehrere Spieler</strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/29_leaderview_planning_container_planstab_selectinplans_opens_action_bar.png" data-title="Action-Bar im Reiter „Pläne&quot;" data-desc-position="bottom"><img alt="Action-Bar im Reiter „Pläne&quot;" class="screenshot" src="../../assets/leaderview/29_leaderview_planning_container_planstab_selectinplans_opens_action_bar.png"></a></p>
 <p>Sobald du in der Spieler-Tabelle mindestens einen Eintrag anhakst,
-erscheint oben eine Action-Bar mit folgenden Aktionen:</p>
-<ul>
-<li><strong>„Abhol-Status zurücksetzen"</strong> — setzt den Verteilungsstatus aller
-  ausgewählten Spieler auf 🔴 zurück.</li>
-<li><strong>„Link erneuern"</strong> — generiert für die ausgewählten Spieler einen
-  neuen DSU-Link. <strong>Achtung:</strong> Der alte Link wird sofort ungültig — die
-  Spieler müssen den neuen Link aktiv abholen.</li>
-<li><strong>„Export Links"</strong> — exportiert die DSU-Links der ausgewählten
-  Spieler (z. B. für ein zentrales Forum-Posting; siehe
-  <a href="#planverteilung">Planverteilung</a>).</li>
-<li><strong>„Abbrechen"</strong> — Auswahl verwerfen.</li>
-</ul>
+erscheint oben eine Action-Bar mit Bulk-Aktionen. Über
+<strong>„Abhol-Status zurücksetzen"</strong> setzt du den Verteilungsstatus aller
+ausgewählten Spieler auf 🔴 zurück — nützlich, wenn die Pläne erneut
+verteilt werden sollen. Mit <strong>„Link erneuern"</strong> wird für die
+ausgewählten Spieler ein neuer DSU-Link generiert; der alte Link wird
+dabei sofort ungültig, sodass die betroffenen Spieler den neuen Link
+aktiv abholen müssen. Die Bulk-Aktion <strong>„Export Links"</strong> ist im
+Abschnitt <a href="#planverteilung">Planverteilung</a> beschrieben. Über
+<strong>„Abbrechen"</strong> verwirfst du die aktuelle Auswahl.</p>
 <h3 id="reiter-befehle">Reiter „Befehle"<a class="headerlink" href="#reiter-befehle" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/30_leaderview_planning_container_commandstab_overview.png" data-title="Reiter „Befehle&quot;" data-desc-position="bottom"><img alt="Reiter „Befehle&quot;" class="screenshot" src="../../assets/leaderview/30_leaderview_planning_container_commandstab_overview.png"></a></p>
-<p>Der Reiter <strong>„Befehle"</strong> ist die befehl-orientierte Sicht. Jede Zeile
-ist ein einzelner Angriffsbefehl im Container. Spalten:</p>
-<table>
-<thead>
-<tr>
-<th>Spalte</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Spieler</strong></td>
-<td>Angreifer (Besitzer des Quelldorfs)</td>
-</tr>
-<tr>
-<td><strong>Quelle</strong></td>
-<td>Quelldorf-Koordinate</td>
-</tr>
-<tr>
-<td><strong>Ziel</strong></td>
-<td>Zieldorf-Koordinate</td>
-</tr>
-<tr>
-<td><strong>Einheit</strong></td>
-<td>Schnellste Einheit im Befehl — bestimmt die Laufzeit</td>
-</tr>
-<tr>
-<td><strong>Icon</strong></td>
-<td>DS-Ultimate-Symbol des Befehls (z. B. Off-, AG-, Fake-Icon)</td>
-</tr>
-<tr>
-<td><strong>Abschickzeit</strong></td>
-<td>Wann der Angriff abgeschickt werden muss</td>
-</tr>
-<tr>
-<td><strong>Ankunftszeit</strong></td>
-<td>Wann der Angriff am Ziel ankommt</td>
-</tr>
-<tr>
-<td><strong>Distanz</strong></td>
-<td>Felderdistanz Quelle ↔ Ziel</td>
-</tr>
-<tr>
-<td><strong>Laufzeit</strong></td>
-<td>Berechnete Laufzeit auf Basis der Einheit</td>
-</tr>
-</tbody>
-</table>
-<p>Über das Häkchen <strong>„Ausgeblendete zeigen"</strong> lassen sich versteckte
-Befehle einblenden.</p>
-<p>Rechts oben stehen die Aktionen <strong>„UT-Boost"</strong> und
-<strong>„Ankunftszeiten anpassen"</strong> zur Verfügung.</p>
+<p>Im Reiter <strong>„Befehle"</strong> verwaltest du als Leader die im Container
+enthaltenen Befehle. Einzelne Befehle können hier bearbeitet,
+ausgeblendet oder gelöscht werden — ausgeblendete Befehle lassen
+sich über das Häkchen <strong>„Ausgeblendete zeigen"</strong> jederzeit wieder
+einblenden. Auch Bulk-Aktionen wie das Anpassen von Ankunftszeiten
+sowie das Anwenden von UT-Boosts auf Fake-UT-Befehle sind hier
+möglich. Die einzelnen Funktionen sind im Folgenden beschrieben.</p>
 <h4 id="funktionen_1">Funktionen<a class="headerlink" href="#funktionen_1" title="Permanent link">¶</a></h4>
 <h5 id="einzelnen-befehl-bearbeiten">Einzelnen Befehl bearbeiten<a class="headerlink" href="#einzelnen-befehl-bearbeiten" title="Permanent link">¶</a></h5>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/33_leaderview_planning_container_commandstab_editsinglecommand_modal.png" data-title="Einzelnen Befehl bearbeiten" data-desc-position="bottom"><img alt="Einzelnen Befehl bearbeiten" class="screenshot" src="../../assets/leaderview/33_leaderview_planning_container_commandstab_editsinglecommand_modal.png"></a></p>
 <p>Über das Bearbeiten-Icon eines Befehls öffnest du den Dialog
 <strong>„Befehl bearbeiten"</strong>. Hier kannst du einen einzelnen Befehl
-nachträglich justieren:</p>
-<ul>
-<li><strong>Quelldorf</strong> / <strong>Zieldorf</strong> — Koordinaten der beiden beteiligten
-  Dörfer; der Spielername wird automatisch unter dem Feld angezeigt.</li>
-<li><strong>Typ</strong> — Befehlstyp (z. B. <strong>„Snob"</strong>, <strong>„Off"</strong>, <strong>„Fake"</strong>).</li>
-<li><strong>Einheit</strong> — schnellste verwendete Einheit; bestimmt die Laufzeit.</li>
-<li><strong>Symbol</strong> — DS-Ultimate-Icon des Befehls.</li>
-<li><strong>Abschickzeit</strong> / <strong>Ankunftszeit</strong> — eines der beiden ist
-  einstellbar, das jeweils andere wird automatisch berechnet.</li>
-<li><strong>UT-Boost (0–20 %)</strong> — optional, nur für Fake-UT.</li>
-<li><strong>Truppen</strong> — Anzahl Truppen pro Einheitentyp im Befehl.</li>
-<li><strong>Vorschau</strong> — Live-Berechnung mit Typ, Quelle, Ziel, Einheit,
-  Abschickzeit, Ankunftszeit, Distanz und Laufzeit. Die Vorschau ist
-  informativ; die finalen Werte berechnet der Server beim Speichern.</li>
-</ul>
+nachträglich justieren.</p>
+<p>Im oberen Bereich des Dialogs stehen <strong>Quelldorf</strong> und <strong>Zieldorf</strong>
+mit ihren Koordinaten zur Bearbeitung bereit; der Spielername wird
+automatisch unter dem jeweiligen Feld angezeigt. Über die Felder
+<strong>„Typ"</strong> (z. B. <strong>„Snob"</strong>, <strong>„Off"</strong> oder <strong>„Fake"</strong>),
+<strong>„Einheit"</strong> (schnellste verwendete Einheit, sie bestimmt die
+Laufzeit) und <strong>„Symbol"</strong> (DS-Ultimate-Icon des Befehls) legst du
+die Eckdaten des Befehls fest. Bei den Zeiten ist jeweils einer der
+beiden Werte <strong>Abschickzeit</strong> und <strong>Ankunftszeit</strong> einstellbar — der
+jeweils andere wird automatisch berechnet. Der <strong>UT-Boost (0–20 %)</strong>
+ist optional und ausschließlich für Fake-UT-Befehle relevant. Unter
+<strong>„Truppen"</strong> trägst du die Anzahl Truppen pro Einheitentyp im
+Befehl ein.</p>
+<p>Die <strong>Vorschau</strong> am unteren Rand des Dialogs liefert eine
+Live-Vorschau des Befehls. Sie ist rein informativ — die finalen
+Werte berechnet der Server beim Speichern.</p>
 <h5 id="ankunftszeiten-anpassen">Ankunftszeiten anpassen<a class="headerlink" href="#ankunftszeiten-anpassen" title="Permanent link">¶</a></h5>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/32_leaderview_planning_container_commandstab_adjusttimes_modal.png" data-title="Ankunftszeiten anpassen" data-desc-position="bottom"><img alt="Ankunftszeiten anpassen" class="screenshot" src="../../assets/leaderview/32_leaderview_planning_container_commandstab_adjusttimes_modal.png"></a></p>
 <p>Der Dialog <strong>„Ankunftszeiten anpassen"</strong> verschiebt die Ankunftszeiten
-für bestimmte Befehlsgruppen — typischerweise weil sich der Off-Termin
-einer Welle geändert hat. Ablauf in zwei Schritten:</p>
-<ol>
-<li><strong>Kombinationen auswählen</strong> — markiere die
-   Plantyp/Einheit/Icon-Kombinationen, die angepasst werden sollen.
-   Die Spalte <strong>„Count"</strong> zeigt, wie viele Befehle im Container je
-   Kombination passen, <strong>„Total"</strong> summiert die Auswahl.</li>
-<li><strong>Datei hochladen</strong> — eine Textdatei im Format
-   <code>XXX|YYY,DD.MM.JJJJ,HH:MM:SS</code> (eine Zeile pro Zieldorf). Drag &amp;
-   Drop oder Klicken zum Auswählen.</li>
-</ol>
-<p>Die Anpassung gilt auch für ausgeblendete Befehle.</p>
+für bestimmte Befehlsgruppen. Häufig wird diese Funktion eingesetzt,
+um z. B. AG-Befehle zeitlich an die zuletzt laufende Off anzupassen.</p>
+<p>Im ersten Schritt wählst du gezielt aus, welche
+Plantyp/Einheit/Icon-Kombinationen angepasst werden sollen — so
+kannst du die Anpassung auf einzelne Befehlsgruppen einschränken und
+andere unberührt lassen. Die Spalte <strong>„Count"</strong> zeigt dir je Zeile,
+wie viele Befehle im Container unter die jeweilige Kombination
+fallen; die Spalte <strong>„Total"</strong> summiert die aktuell markierte
+Auswahl.</p>
+<p>Im zweiten Schritt lädst du eine Textdatei mit den neuen
+Ankunftszeiten hoch — eine Zeile pro Zieldorf im Format
+<code>XXX|YYY,DD.MM.JJJJ,HH:MM:SS</code>. Die Datei kannst du per Drag &amp; Drop
+ablegen oder per Klick auswählen.</p>
+<div class="admonition info">
+<p class="admonition-title">Anpassung schließt ausgeblendete Befehle ein</p>
+<p>Die Anpassung der Ankunftszeiten gilt auch für aktuell
+ausgeblendete Befehle der gewählten Kombination.</p>
+</div>
 <h5 id="ut-boost-anwenden">UT-Boost anwenden<a class="headerlink" href="#ut-boost-anwenden" title="Permanent link">¶</a></h5>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/31_leaderview_planning_container_commandstab_utboost_modal.png" data-title="UT-Boost-Modal" data-desc-position="bottom"><img alt="UT-Boost-Modal" class="screenshot" src="../../assets/leaderview/31_leaderview_planning_container_commandstab_utboost_modal.png"></a></p>
-<p>Im Dialog <strong>„UT-Boosts"</strong> vergibst du pro Zielspieler einen
-Boost-Prozentsatz (0–20 %). Damit kannst du gezielt einzelnen Spielern
-mehr Fake-UT-Befehle zuweisen, ohne die Container-Logik insgesamt zu
-verändern.</p>
-<p>Spalten der Tabelle im Modal:</p>
-<ul>
-<li><strong>Zielspieler</strong> — Empfänger des Boosts.</li>
-<li><strong>Betroffene Befehle</strong> — Anzahl Fake-UT-Befehle, auf die der Boost
-  wirkt.</li>
-<li><strong>UT-Boost (%)</strong> — Eingabefeld für den Prozentwert pro Spieler.</li>
-</ul>
+<p>Häufig aktivieren feindliche Spieler während einer offensiven Aktion
+den UT-Boost. Unterstützungs-Befehle wie z. B. Fake-UT haben dadurch
+eine geringere Laufzeit. In den ursprünglich erstellten
+Angriffsbefehlen ist das nicht berücksichtigt, weil zum
+Planungszeitpunkt nicht feststeht, ob ein gegnerischer Spieler den
+UT-Boost aktivieren wird.</p>
+<p>Sobald ein Spieler den UT-Boost aktiviert hat, kannst du über den
+Dialog <strong>„UT-Boosts"</strong> alle auf diesen Spieler laufenden
+Fake-UT-Befehle nachträglich an den aktivierten Boost anpassen. Dazu
+trägst du in der Tabelle pro Zielspieler den entsprechenden
+Boost-Prozentsatz (0–20 %) ein.</p>
 <div class="admonition info">
 <p class="admonition-title">Nur für Fake-UT-Befehle</p>
 <p>UT-Boosts wirken ausschließlich auf <strong>Fake-UT-Befehle</strong> und
 schließen dabei auch ausgeblendete Befehle mit ein.</p>
 </div>
 <ul>
-<li><strong>„Save only"</strong> — Werte speichern, aber noch nicht anwenden.</li>
+<li><strong>„Save only"</strong> — speichert die eingegebenen Boost-Werte, ohne die
+  betroffenen Fake-UT-Befehle bereits umzurechnen. Die tatsächliche
+  Anpassung der Befehle erfolgt erst beim späteren Klick auf
+  <strong>„Save &amp; Apply"</strong>.</li>
 <li><strong>„Save &amp; Apply"</strong> — Werte speichern und sofort auf alle betroffenen
   Befehle anwenden.</li>
 </ul>
-<h5 id="bulk-aktionen">Bulk-Aktionen<a class="headerlink" href="#bulk-aktionen" title="Permanent link">¶</a></h5>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/34_leaderview_planning_container_commandstab_selectingcommand_opens_action_bar.png" data-title="Action-Bar im Reiter „Befehle&quot;" data-desc-position="bottom"><img alt="Action-Bar im Reiter „Befehle&quot;" class="screenshot" src="../../assets/leaderview/34_leaderview_planning_container_commandstab_selectingcommand_opens_action_bar.png"></a></p>
-<p>Sobald du Befehle in der Liste auswählst, erscheint eine Action-Bar mit
-Bulk-Aktionen (z. B. UT-Boost, Ankunftszeiten anpassen, Befehle
-ausblenden bzw. löschen).</p>
 <h3 id="veroffentlichung">Veröffentlichung<a class="headerlink" href="#veroffentlichung" title="Permanent link">¶</a></h3>
-<p>Der <strong>Veröffentlichungs-Toggle</strong> oben rechts im Kopfbereich steuert, ob
-der Container nach außen aktiv ist.</p>
+<p>Über den <strong>Veröffentlichungs-Toggle</strong> oben rechts im Kopfbereich
+steuert der Leader, ob der Container nach außen aktiv ausgeliefert
+wird.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/35_leaderview_planning_container_publishing_active.png" data-title="Veröffentlichung aktiv" data-desc-position="bottom"><img alt="Veröffentlichung aktiv" class="screenshot" src="../../assets/leaderview/35_leaderview_planning_container_publishing_active.png"></a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/36_leaderview_planning_container_publishing_inactive.png" data-title="Veröffentlichung inaktiv" data-desc-position="bottom"><img alt="Veröffentlichung inaktiv" class="screenshot" src="../../assets/leaderview/36_leaderview_planning_container_publishing_inactive.png"></a></p>
-<ul>
-<li><strong>Veröffentlichung: Aktiv</strong> — DSU-Links sind erreichbar, der
-  Discordbot liefert Inhalte an die verknüpften Spieler aus.</li>
-<li><strong>Veröffentlichung: Inaktiv</strong> — der Container ist nur intern im
-  Leader-View sichtbar. Bestehende DSU-Links sind nicht erreichbar, die
-  Discord-Auslieferung pausiert. Ideal während der Vorbereitung einer
-  Operation.</li>
-</ul>
+<p>Steht der Toggle auf <strong>„Aktiv"</strong>, können die Spieler ihre Pläne
+eigenständig über den Discordbot (Planning-System) herunterladen und
+sehen die zugehörigen Befehle auf ihrer <strong>„Meine Befehle"</strong>-Seite bei
+tw-utils.net. Steht der Toggle auf <strong>„Inaktiv"</strong>, pausiert beides:
+weder der Discord-Download noch die Anzeige unter <strong>„Meine Befehle"</strong>
+ist dann verfügbar. Der Container bleibt in diesem Zustand nur intern
+im Leader-View sichtbar — ideal während der Vorbereitung einer
+Operation.</p>
+<div class="admonition info">
+<p class="admonition-title">Keine Auswirkung auf bereits verteilte DSU-Pläne</p>
+<p>Der Veröffentlichungs-Toggle beeinflusst ausschließlich den
+Discord-Download und die Anzeige unter <strong>„Meine Befehle"</strong>.
+Bereits an DS-Ultimate synchronisierte Pläne bleiben dort
+erhalten und sind weiterhin abrufbar, auch wenn der Container auf
+<strong>„Inaktiv"</strong> geschaltet wird.</p>
+</div>
 <h3 id="sonstiges">Sonstiges<a class="headerlink" href="#sonstiges" title="Permanent link">¶</a></h3>
 <h4 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h4>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/37_leaderview_planning_container_changelog.png" data-title="Changelog" data-desc-position="bottom"><img alt="Changelog" class="screenshot" src="../../assets/leaderview/37_leaderview_planning_container_changelog.png"></a></p>
@@ -2582,26 +2621,24 @@ der Container nach außen aktiv ist.</p>
 aller Änderungen am Container. Pro Eintrag siehst du <strong>Zeitpunkt</strong>,
 <strong>Geändert von</strong> (Leader bzw. Spieler) und die ausgeführte
 <strong>Container-Aktion</strong>.</p>
-<p>Typische Einträge:</p>
-<ul>
-<li><code>Container aktiviert</code> / <code>Container deaktiviert</code> — Verteilungsstatus
-  umgeschaltet.</li>
-<li><code>Plan "…" imported (X commands)</code> — ein Plan aus dem
-  Off-/AG-Planungstool wurde importiert.</li>
-<li><code>Container cleared (X commands removed)</code> — alle Befehle wurden
-  entfernt (<code>Pläne leeren</code>).</li>
-<li><code>DSU synchronized (X new, X removed, X changed)</code> — Synchronisation
-  nach DS-Ultimate.</li>
-<li><code>"…" manually marked as distributed</code> — Verteilungsstatus eines
-  Spielers wurde manuell auf 🟢 gesetzt.</li>
-</ul>
 <h4 id="container-loschen">Container löschen<a class="headerlink" href="#container-loschen" title="Permanent link">¶</a></h4>
 <p>Über den Button <strong>„Container löschen"</strong> im Kopfbereich (rechts neben
-<strong>„Changelog"</strong>) wird der gesamte Container inklusive aller importierten
-Pläne, Befehle und DSU-Verteilungen entfernt. Die Aktion ist
+<strong>„Changelog"</strong>) wird der gesamte Container inklusive aller
+importierten Pläne und Befehle entfernt. Die Aktion ist
 <strong>irreversibel</strong> — gelöschte Container können nicht wiederhergestellt
 werden. Vor dem Löschen erscheint ein Bestätigungsdialog, um
 versehentliche Löschungen zu vermeiden.</p>
+<div class="admonition info">
+<p class="admonition-title">Bereits verteilte DSU-Pläne bleiben erhalten</p>
+<p>Das Löschen des Containers hat keine Auswirkung auf bereits an
+DS-Ultimate synchronisierte Pläne — diese bleiben in DS-Ultimate
+bestehen. Sollen die DSU-Pläne vor dem Löschen ebenfalls geleert
+werden, empfiehlt sich folgender Ablauf: zunächst über
+<strong>„Pläne leeren"</strong> alle Befehle aus dem Container entfernen,
+anschließend über <strong>„DSU-Synchronisation"</strong> den geleerten Zustand
+nach DS-Ultimate übertragen — und erst danach den Container
+löschen.</p>
+</div>
 
 
 

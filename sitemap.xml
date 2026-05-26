@@ -71,6 +71,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/bunker-info/"/>
     </url>
     <url>
+        <loc>https://docs.tw-utils.net/discord-bot/modul-verwaltung/</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/modul-verwaltung/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/modul-verwaltung/"/>
+    </url>
+    <url>
         <loc>https://docs.tw-utils.net/discord-bot/planning-system/</loc>
         <lastmod>2026-05-26</lastmod>
         <changefreq>daily</changefreq>
@@ -244,6 +251,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/bunker-info/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/bunker-info/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/modul-verwaltung/</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/modul-verwaltung/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/modul-verwaltung/"/>
     </url>
     <url>
         <loc>https://docs.tw-utils.net/en/discord-bot/planning-system/</loc>
