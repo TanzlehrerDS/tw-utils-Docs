@@ -155,9 +155,9 @@ Tabs:
 
 ![Feind-Bunker eintragen](../assets/leaderview/13_leaderview_bunkerinfo_enemybunkers_add_enemybunker.png){ .screenshot }
 
-- **Manuell** — Koordinate (`XXX|YYY`), **Speer**, **Schwert**,
-  **Bogen**, **SKav** sowie der **Info-Stand** (Format
-  `TT.MM.JJJJ HH:MM:SS`).
+- **Manuell** — Koordinate (`XXX|YYY`), **Speerträger**,
+  **Schwertkämpfer**, **Bogenschütze**, **Schwere Kavallerie** sowie
+  der **Info-Stand** (Format `TT.MM.JJJJ HH:MM:SS`).
 - **Report-Link / Text** — entweder die Berichts-URL oder den
   Berichts-Text einfügen; das System parst die Truppen und den
   Zeitstempel automatisch.

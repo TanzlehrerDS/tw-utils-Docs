@@ -148,9 +148,9 @@ The **"Add enemy bunker"** dialog offers two input methods as tabs:
 
 ![Add enemy bunker](../assets/leaderview/13_leaderview_bunkerinfo_enemybunkers_add_enemybunker.png){ .screenshot }
 
-- **Manual** — coordinate (`XXX|YYY`), **Spear**, **Sword**,
-  **Archer**, **HC** plus the **last updated** timestamp (format
-  `DD.MM.YYYY HH:MM:SS`).
+- **Manual** — coordinate (`XXX|YYY`), **Spearman**, **Swordsman**,
+  **Archer**, **Heavy Cavalry** plus the **last updated** timestamp
+  (format `DD.MM.YYYY HH:MM:SS`).
 - **Report link / text** — either paste the report URL or the report
   text; the system parses the troops and the timestamp automatically.
 
