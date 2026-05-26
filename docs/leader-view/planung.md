@@ -135,11 +135,18 @@ Tabellenspalten:
 
 #### Manuelles Hinzufügen
 
+Über einen Klick auf den Button **„Hinzufügen"** oberhalb der Tabelle
+öffnest du das Eingabe-Modal **„Herkunftsdorf ausplanen"**. Hier kannst
+du ein oder mehrere Dörfer eines Spielers von der Off-Planung
+ausschließen.
+
 ![Herkunftsdorf ausplanen](../assets/leaderview/20_leaderview_planning_excludedvillages_add.png){ .screenshot }
 
-Im Dialog **„Herkunftsdorf ausplanen"** trägst du im Feld
-**„Koordinaten (Text mit Koords)"** eine oder mehrere Koordinaten ein
-(umgebender Text wird ignoriert).
+Im Feld **„Koordinaten (Text mit Koords)"** trägst du eine oder mehrere
+Koordinaten ein (umgebender Text wird ignoriert).
+
+Nach dem Bestätigen werden die Dörfer als ausgeplant markiert und
+erscheinen unmittelbar in der Tabelle.
 
 ## Container
 
