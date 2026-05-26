@@ -194,14 +194,24 @@ Werkzeugen zum Befüllen und Synchronisieren des Containers:
 
 ![Action-Leiste — Buttons](../assets/leaderview/40_leaderview_container_import_plan.png){ .screenshot }
 
-- **„Plan auswählen…"** — Dropdown mit allen Plänen aus dem
-  Off-/AG-Planungstool, die in den Container importiert werden können.
-- **„Hinzufügen"** — fügt den im Dropdown gewählten Plan hinzu.
-- **„Pläne leeren"** — entfernt alle Befehle aus dem Container.
-- **„Veraltete ausblenden"** — versteckt Befehle, deren Abschickzeit
-  bereits in der Vergangenheit liegt.
-- **„DSU-Synchronisation"** — überträgt die aktuellen Befehle nach
-  DS-Ultimate (pro Spieler ein DSU-Plan + ein „Gesamtplan").
+Über das Dropdown **„Plan auswählen…"** wählst du einen Plan aus dem
+Off-/AG-Planungstool aus und fügst ihn per Klick auf **„Hinzufügen"**
+dem Container hinzu. Nach dem Hinzufügen aktualisieren sich die Reiter
+**„Pläne"** und **„Befehle"** entsprechend — die importierten Spieler
+und Befehle erscheinen dort unmittelbar. Auf die gleiche Weise lassen
+sich nach und nach weitere Pläne einfügen.
+
+Soll der Container wieder komplett geleert werden, entfernt ein Klick
+auf **„Pläne leeren"** in einem Schritt alle bisher importierten
+Befehle. Der Schalter **„Veraltete ausblenden"** versteckt Befehle,
+deren Abschickzeit bereits in der Vergangenheit liegt — sie bleiben
+aber im Container erhalten und werden nur nicht mehr angezeigt.
+
+Sind alle gewünschten Pläne enthalten, überträgt ein Klick auf
+**„DSU-Synchronisation"** die aktuellen Befehle nach DS-Ultimate.
+Dabei legt das Tool pro Spieler einen eigenen DSU-Plan sowie einen
+„Gesamtplan" mit allen Befehlen an. Details zu diesem Schritt findest
+du im Abschnitt [DSU-Synchronisation](#dsu-synchronisation).
 
 **Reiter „Pläne" und „Befehle"**
 
