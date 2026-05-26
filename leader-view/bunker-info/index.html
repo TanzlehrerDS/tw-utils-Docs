@@ -1081,17 +1081,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#tabellenzeile-im-detail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tabellenzeile im Detail
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1528,17 +1517,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#tabellenzeile-im-detail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tabellenzeile im Detail
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1612,10 +1590,12 @@
 
 
 <h1 id="bunker-info">Bunker-Info<a class="headerlink" href="#bunker-info" title="Permanent link">¶</a></h1>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png" data-title="Bunker-Info — Übersicht" data-desc-position="bottom"><img alt="Bunker-Info — Übersicht" class="screenshot" src="../../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png"></a></p>
 <p>Der Tab <strong>„Bunker-Informationen"</strong> ist das zentrale Werkzeug für die
-Bunker-Verwaltung des Stammes. Du pflegst hier eigene <strong>genehmigte
-Bunker</strong>, identifizierst zusätzliche <strong>Flexbunker</strong>, dokumentierst
-<strong>feindliche Bunker</strong> und siehst alles auf einer Welt-Karte.</p>
+Bunker-Verwaltung des Stammes. Du verwaltest hier die genehmigten
+Bunker, identifizierst zusätzliche Flexbunker, dokumentierst
+feindliche Bunker und hast die Möglichkeit Dir die Bunker-Situation
+auf einer Karte visualisieren zu lassen.</p>
 <div class="admonition info">
 <p class="admonition-title">Hinweis</p>
 <p>Für den vollen Funktionsumfang müssen aktuelle Truppendaten im Tab
@@ -1631,16 +1611,17 @@ Flexbunker-Kontrolle ausgewertet werden.</p>
 <li><strong>Karte</strong></li>
 </ul>
 <h2 id="genehmigte-bunker">Genehmigte Bunker<a class="headerlink" href="#genehmigte-bunker" title="Permanent link">¶</a></h2>
-<p>In diesem Unterreiter pflegst du die offiziellen Bunker-Dörfer des
-Stammes. Pro Dorf wird ein <strong>Soll-Wert</strong> (Dual-Stärke) hinterlegt; das
-System vergleicht ihn fortlaufend mit dem aktuellen <strong>Ist-Wert</strong> aus
-den Truppendaten und zeigt fehlende Refills an.</p>
+<p>In diesem Unterreiter verwaltest du die offiziell genehmigten
+Bunker-Dörfer des Stammes. Pro Dorf wird ein <strong>Soll-Wert</strong>
+(Dual-Stärke) hinterlegt; das System vergleicht ihn fortlaufend mit
+dem aktuellen <strong>Ist-Wert</strong> aus den Truppendaten und zeigt fehlende
+Refills an.</p>
 <p>In der Liste tauchen sowohl manuell eingetragene Bunker als auch
 Bunker auf, die die Stammesmitglieder über das
 <a href="../../discord-bot/bunker-info/">Bunker-Information-System</a> des
 tw-utils-Discordbots beantragt haben und die von einem Leader genehmigt
 wurden.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png" data-title="Genehmigte Bunker — Übersicht" data-desc-position="bottom"><img alt="Genehmigte Bunker — Übersicht" class="screenshot" src="../../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png" data-title="Genehmigte Bunker — Tabelle" data-desc-position="bottom"><img alt="Genehmigte Bunker — Tabelle" class="screenshot" src="../../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png"></a></p>
 <p>Die Tabelle hat folgende Spalten:</p>
 <table>
 <thead>
@@ -1664,7 +1645,7 @@ wurden.</p>
 </tr>
 <tr>
 <td><strong>Koordinate</strong></td>
-<td>Bunker-Koordinaten</td>
+<td>Koordinaten des Bunkers</td>
 </tr>
 <tr>
 <td><strong>Soll (Dual)</strong></td>
@@ -1736,11 +1717,6 @@ Textblock, der über den <strong>„Kopieren"</strong>-Button in die Zwischenabl
 übernommen werden kann.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/08_leaderview_bunkerinfo_approvedbunkers_copy_refills.png" data-title="Refills anfordern" data-desc-position="bottom"><img alt="Refills anfordern" class="screenshot" src="../../assets/leaderview/08_leaderview_bunkerinfo_approvedbunkers_copy_refills.png"></a></p>
 <p>Den kopierten Text kannst du z. B. ins Stammesforum stellen.</p>
-<h3 id="tabellenzeile-im-detail">Tabellenzeile im Detail<a class="headerlink" href="#tabellenzeile-im-detail" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png" data-title="Tabellenzeile im Detail" data-desc-position="bottom"><img alt="Tabellenzeile im Detail" class="screenshot" src="../../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png"></a></p>
-<p>Beispiel aus dem Screenshot: Soll <strong>17k Speer / 17k Schwert</strong>, aktuell
-vorhanden nur je <strong>100 Truppen</strong>. Daraus errechnet das System
-<strong>167 benötigte Refills</strong>.</p>
 <h2 id="flexbunker">Flexbunker<a class="headerlink" href="#flexbunker" title="Permanent link">¶</a></h2>
 <p>Mit der <strong>Flexbunker-Kontrolle</strong> findest du Dörfer, die zwar hohe
 Defensiv-Kapazitäten halten, aber nicht offiziell als Bunker
