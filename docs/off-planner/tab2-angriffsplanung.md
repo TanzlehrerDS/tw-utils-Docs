@@ -41,7 +41,7 @@ Reihenfolge bestimmt, in welcher Abfolge die Kategorien verplant werden.
 
 !!! info "Reihenfolge ist bei knappen Ressourcen entscheidend"
     Bei knappen Off-Ressourcen werden die in der Planungsreihenfolge
-    **zuerst** stehenden Kategorien vollständig bedient. Die **zuletzt**
+    **zuerst** stehenden Kategorien zuerst bedient. Die **zuletzt**
     stehende Kategorie bekommt dadurch sehr wahrscheinlich nicht mehr
     alle erforderlichen Offs zugewiesen. Stelle die wichtigste Kategorie
     daher an die erste Position.

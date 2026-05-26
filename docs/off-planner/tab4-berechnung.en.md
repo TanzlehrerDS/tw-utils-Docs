@@ -22,8 +22,9 @@ two radio buttons, **how** the tool approaches the calculation:
   when the completeness of each individual target matters more than
   an even distribution across all targets.
 - **wave-based** — *"Distribute the attacks in waves across all
-  targets."* Instead of target-by-target, the 1st commands across all
-  targets are placed first, then all 2nd commands, and so on. Useful
+  targets."* Instead of target-by-target, the tool first tries to
+  assign at least one nuke to every target. In a 2nd wave it then
+  tries to assign the second nuke to every target, and so on. Useful
   when all targets should end up at a similar supply level — even if
   not every target ends up fully covered.
 
@@ -51,6 +52,31 @@ available:
 - **Scarcity optimized (Distribution)** — *only available in
   wave-based mode.* Plans first those source villages that could
   reach the fewest targets within travel time.
+
+!!! warning "Algorithm only works within the available pool"
+    Which source villages the algorithm has to choose from depends on
+    the settings made in the previous tabs — in particular on the
+    [Prioritization of nuke categories (Tab 2 §11)](tab2-angriffsplanung.md#11-prioritizing-nuke-categories)
+    and the option
+    **"Strict prioritization (enforcing order)"** set there. An
+    optimal algorithm can only ever deliver the **best result within
+    the permitted pool** — not necessarily the globally best one.
+
+    **Example — Morale optimized + strict prioritization:** You pick
+    the **Morale optimized** algorithm and have **strict
+    prioritization** enabled in Tab 2, with *Villages >2000 axe* as
+    the highest-priority nuke category. For a given target the tool
+    only finds an option with **80 % morale** in the *>2000 axe* pool
+    — and plans it. The fact that a village with **100 % morale**
+    might have existed in the lower-priority *>1000 axe* category
+    remains undetected: strict prioritization instructs the algorithm
+    to touch lower categories **only once** no valid options at all
+    remain in the higher category.
+
+    If you want to give the algorithm more leeway, disable strict
+    prioritization in Tab 2 — all selected categories are then merged
+    into a **single shared pool** from which the algorithm can
+    optimize freely.
 
 Once a choice has been made, you start the calculation with the
 button **"Start calculation"** to the right of the dropdown.

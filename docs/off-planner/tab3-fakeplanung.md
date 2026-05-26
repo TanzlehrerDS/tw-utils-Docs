@@ -56,14 +56,7 @@ zwei Radio-Buttons den gewünschten Auswahlmodus:
 
 !!! info "Modi schließen sich gegenseitig aus"
     Sobald in einem Modus Ziele oder Filter aktiv sind, sperrt das
-    Tool den jeweils anderen Modus mit einem gelben Hinweisbanner:
-
-    - Modus **Manuell aktiv** → Banner *"Automatische Auswahl
-      gesperrt, da manuelle Ziele existieren."* + Button **"Manuelle
-      Ziele löschen"**.
-    - Modus **Automatisch aktiv** → Banner *"Manuelle Auswahl
-      gesperrt, da automatische Filter aktiv sind."* + Button
-      **"Filter zurücksetzen"**.
+    Tool den jeweils anderen Modus mit einem gelben Hinweisbanner.
 
     Erst nach Zurücksetzen des blockierenden Modus kann in den anderen
     gewechselt werden. So lassen sich beide Wege nicht versehentlich

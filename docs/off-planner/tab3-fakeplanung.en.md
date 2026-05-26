@@ -56,14 +56,7 @@ desired selection mode at the top via two radio buttons:
 
 !!! info "Modes are mutually exclusive"
     As soon as targets or filters are active in one mode, the tool
-    blocks the other one with a yellow info banner:
-
-    - Mode **Manual active** → banner *"Automatic selection is
-      blocked because manual targets exist."* + button **"Delete
-      manual targets"**.
-    - Mode **Automatic active** → banner *"Manual selection is
-      locked because automatic filters are active."* + button
-      **"Reset filter"**.
+    blocks the other one with a yellow info banner.
 
     Only after resetting the blocking mode can you switch to the
     other one. This way both paths can't be accidentally mixed.

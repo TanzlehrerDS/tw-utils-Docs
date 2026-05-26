@@ -22,11 +22,12 @@ Radio-Buttons, **wie** das Tool die Berechnung angeht:
   die Vollständigkeit jedes einzelnen Ziels wichtiger ist als eine
   gleichmäßige Verteilung über alle Ziele hinweg.
 - **Wellen-basiert** — *"Verteilt die Angriffe in Wellen auf alle
-  Ziele."* Statt Ziel-für-Ziel werden zuerst die jeweils 1. Befehle
-  über alle Ziele verteilt, dann die jeweils 2. Befehle usw. Sinnvoll,
-  wenn alle Ziele auf einem ähnlichen Versorgungsniveau landen sollen —
-  auch wenn am Ende nicht zwingend jedes Ziel vollständig versorgt
-  ist.
+  Ziele."* Statt Ziel-für-Ziel wird zunächst versucht, jedem Ziel
+  mindestens eine Off zuzuweisen. Im Anschluss wird im Rahmen einer
+  2ten Welle versucht, jedem Ziel die zweite Off zuzuweisen, usw.
+  Sinnvoll, wenn alle Ziele auf einem ähnlichen Versorgungsniveau
+  landen sollen — auch wenn am Ende nicht zwingend jedes Ziel
+  vollständig versorgt ist.
 
 ## 2. Algorithmus
 
@@ -50,6 +51,33 @@ Planungsmodus stehen folgende Algorithmen zur Verfügung:
 - **Knappheit-optimiert (Verteilung)** — *nur im Modus Wellen-basiert
   verfügbar.* Verplant zuerst diejenigen Quell-Dörfer, die es
   laufzeittechnisch zu den wenigsten Zielen schaffen würden.
+
+!!! warning "Algorithmus arbeitet nur innerhalb des verfügbaren Pools"
+    Welche Quell-Dörfer der Algorithmus überhaupt zur Auswahl hat,
+    hängt von den Einstellungen aus den vorigen Tabs ab — insbesondere
+    von der
+    [Priorisierung der Off-Kategorien (Tab 2 §11)](tab2-angriffsplanung.md#11-priorisierung-off-kategorien)
+    und der dort gesetzten Option
+    **"Strikte Priorisierung (Reihenfolge erzwingen)"**. Ein optimaler
+    Algorithmus kann immer nur das **beste Ergebnis innerhalb des
+    erlaubten Pools** liefern — nicht zwingend das global beste.
+
+    **Beispiel — Moral-optimiert + strikte Priorisierung:** Du wählst
+    den Algorithmus **Moral-optimiert** und hast in Tab 2 die
+    **strikte Priorisierung** aktiviert, mit *>2000 Axt* als
+    höchstpriorisierter Off-Kategorie. Für ein bestimmtes Ziel findet
+    das Tool im Pool der *>2000-Axt-Dörfer* nur eine Option mit
+    **80 % Moral** — diese wird verplant. Dass es in der niedriger
+    priorisierten Kategorie *>1000 Axt* möglicherweise ein Dorf mit
+    **100 % Moral** gegeben hätte, bleibt unentdeckt: Die strikte
+    Priorisierung weist den Algorithmus an, niedrigere Kategorien
+    **erst dann** anzufassen, wenn in der höheren Kategorie gar keine
+    valide Option mehr verfügbar ist.
+
+    Wenn du dem Algorithmus mehr Spielraum geben möchtest,
+    deaktiviere in Tab 2 die strikte Priorisierung — alle ausgewählten
+    Kategorien werden dann zu einem **gemeinsamen Pool** zusammengefasst,
+    aus dem der Algorithmus frei optimieren kann.
 
 Hat man eine Auswahl getroffen, startet man die Berechnung mit dem
 Button **"Berechnung starten"** rechts neben dem Dropdown.

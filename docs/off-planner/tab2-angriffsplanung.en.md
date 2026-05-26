@@ -40,7 +40,7 @@ which the categories are planned.
 
 !!! info "Sequence matters when resources are tight"
     When nuke resources are tight, the categories at the **top** of the
-    planning sequence are served in full. The category at the **bottom**
+    planning sequence are served first. The category at the **bottom**
     will most likely not receive all the nukes it requires. Place your
     most important category at the top.
 
