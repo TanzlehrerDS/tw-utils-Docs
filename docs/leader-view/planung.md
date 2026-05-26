@@ -6,7 +6,7 @@ gliedert sich in zwei Unterreiter:
 - **Container** — Angriffspläne sammeln, koordinieren und an die
   Spieler verteilen.
 - **Abfragen** — vorbereitende Daten sammeln (AG-Meldungen,
-  Abschickzeiten, ausgeplante Herkunftsdörfer).
+  Abschickzeiten, ausgeplante Dörfer).
 
 ## Abfragen
 
