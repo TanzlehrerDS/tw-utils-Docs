@@ -1,22 +1,22 @@
 # Mitglieder
 
-Der Tab **„Mitglieder"** zeigt alle Discord-User, die sich auf dieser
-Welt mit einem oder mehreren DS-Accounts verifiziert haben. Du siehst
-auf einen Blick, wer im Stamm überhaupt mit dem tw-utils-Bot verknüpft
-ist und wer welche Rolle besitzt.
+Der Tab **„Mitglieder"** zeigt alle Discord-User, die sich auf dem
+Stammes-Discordserver mit einem oder mehreren DS-Accounts verifiziert
+haben. Du siehst auf einen Blick, wer im Stamm überhaupt mit dem
+tw-utils-Discordbot verknüpft ist und wer welche Rolle besitzt.
 
 ![Mitglieder-Übersicht](../assets/leaderview/03_leaderview_members.png){ .screenshot }
 
 !!! info "Voraussetzungen für den Leader-View"
     Wer den Leader-View aufrufen darf und wie die Rolle „Leader"
-    vergeben wird, ist in der [Übersicht](uebersicht.md) beschrieben.
+    vergeben wird, ist in der [Berechtigung](uebersicht.md) beschrieben.
 
 ## Spalten der Tabelle
 
 | Spalte | Bedeutung |
 |---|---|
 | **#** | Laufende Nummer |
-| **DS-Account** | Verlinkter Spieler-Account ingame |
+| **DS-Account** | Verifizierter DS-Account |
 | **Stamm** | Stamm, in dem der Account aktuell spielt |
 | **Discord-User** | Verknüpfter Discord-Account (+ ggf. **„Leader"**-Badge) |
 | **Aktion** | Verknüpfung entfernen (Mülltonnen-Icon) |
