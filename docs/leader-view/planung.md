@@ -156,7 +156,12 @@ Die Übersichtstabelle zeigt alle bestehenden Container des Stammes:
 | **Zuletzt geändert** | Wer hat den Container zuletzt bearbeitet, und wann (oder **„Noch keine Änderung"**, wenn frisch angelegt) |
 | **Öffnen** | Öffnet den Container in der Detailansicht |
 
-### Container anlegen
+![OPEN-Icon](../assets/leaderview/39_leaderview_container_open_button.png){ .screenshot }
+
+Über das Ordner-Icon in der Spalte **„Öffnen"** wechselst du in die
+Container-Detailansicht.
+
+### Neuen Container anlegen
 
 ![Container anlegen](../assets/leaderview/22_leaderview_planning_container_containeradd.png){ .screenshot }
 
@@ -165,7 +170,7 @@ mit dem Feld **„Name"** (max. 50 Zeichen, z. B. `Op. Phoenix`). Der
 Container wird automatisch der aktuellen Welt zugeordnet und startet im
 Status **„Inaktiv"**.
 
-### Leerer Container nach dem Öffnen
+### Aufbau eines Containers
 
 ![Leerer Container](../assets/leaderview/23_leaderview_planning_container_overview_empty_container.png){ .screenshot }
 
@@ -174,9 +179,13 @@ Direkt nach dem Öffnen siehst du drei Bereiche:
 - **Kopfbereich** — links Container-Name + Welt-Badge sowie der Link
   **„Zurück zur Übersicht"**, rechts der **Veröffentlichungs-Toggle**
   (siehe [Veröffentlichung](#veroffentlichung)), der Button
-  **„Changelog"** und **„Container löschen"**.
+  **„Changelog"** sowie **„Container löschen"** (siehe
+  [Sonstiges](#sonstiges)).
 - **Action-Leiste** — hier importierst und synchronisierst du die
   Inhalte:
+
+    ![Action-Leiste — Buttons](../assets/leaderview/40_leaderview_container_import_plan.png){ .screenshot }
+
     - **„Plan auswählen…"** — Dropdown mit allen Plänen aus dem
       Off-/AG-Planungstool, die in den Container importiert werden
       können.
@@ -206,22 +215,9 @@ folgenden Spalten:
 | **DSU-Plan** | Links zum Spieler-DSU-Plan: **„Bearbeiten"** öffnet ihn in DS-Ultimate, **„Anzeigen"** zur reinen Ansicht. Erscheint erst nach DSU-Synchronisation. |
 | **Verteilungsstatus** | Zeigt an, ob der Spieler den Plan bereits erhalten hat: 🔴 = noch nicht verteilt, 🟢 = verteilt (mit Zeitstempel). Das **blaue Brief-Icon** öffnet den Dialog zum Versenden der Ingame-Nachricht. |
 
-#### Nachrichten-Template
+#### Funktionen
 
-![Nachrichten-Template bearbeiten](../assets/leaderview/25_leaderview_planning_container_planstab_messagetemplate.png){ .screenshot }
-
-Über den Button **„Nachrichten-Template"** öffnest du den Editor
-**„Nachrichten-Template bearbeiten"**. Das Template ist der **Text-
-Vorlage**, die beim Senden einer Ingame-Nachricht für jeden Spieler
-benutzt wird. Die Platzhalter werden automatisch pro Spieler ersetzt:
-
-| Platzhalter | Wird ersetzt durch |
-|---|---|
-| `{player_name}` | Name des Spielers, an den die Nachricht geht |
-| `{dsu_link}` | Individueller Link zum DS-Ultimate-Plan dieses Spielers |
-| `{wb_commands}` | Alle WB-Commands des Spielers im Spoiler-Block (für den Ingame-Bot „werewolf"). |
-
-#### Nach DSU-Synchronisation
+##### DSU-Synchronisation
 
 ![Nach DSU-Synchronisation](../assets/leaderview/26_leaderview_planning_container_planstab_after_dsusynchronization.png){ .screenshot }
 
@@ -240,7 +236,31 @@ wie viele Commands seit der letzten Synchronisation **hinzugekommen
 Zähler nicht 0/0/0 steht, sind die DSU-Pläne nicht auf dem aktuellen
 Stand.
 
-#### Ingame-Nachricht senden
+##### Planverteilung
+
+Die fertigen Pläne erreichen die Spieler auf zwei Wegen: per
+**Ingame-Nachricht** an einzelne Spieler oder per **Export der
+DSU-Links** für ein zentrales externes Posting (z. B. im Stammesforum).
+Gemeinsamer Ausgangspunkt für beide Wege ist das
+**Nachrichten-Template**.
+
+**Nachrichten-Template**
+
+![Nachrichten-Template bearbeiten](../assets/leaderview/25_leaderview_planning_container_planstab_messagetemplate.png){ .screenshot }
+
+Über den Button **„Nachrichten-Template"** öffnest du den Editor
+**„Nachrichten-Template bearbeiten"**. Das Template ist die
+**Text-Vorlage**, die beim Senden einer Ingame-Nachricht für jeden
+Spieler benutzt wird. Die Platzhalter werden automatisch pro Spieler
+ersetzt:
+
+| Platzhalter | Wird ersetzt durch |
+|---|---|
+| `{player_name}` | Name des Spielers, an den die Nachricht geht |
+| `{dsu_link}` | Individueller Link zum DS-Ultimate-Plan dieses Spielers |
+| `{wb_commands}` | Alle WB-Commands des Spielers im Spoiler-Block (für den Ingame-Bot „werewolf"). |
+
+**Ingame-Nachricht senden**
 
 ![Ingame-Nachricht senden](../assets/leaderview/27_leaderview_planning_container_planstab_sendplan_ingame.png){ .screenshot }
 
@@ -254,22 +274,37 @@ und gleichzeitig die Ingame-Inbox in einem neuen Tab geöffnet — dort
 einfach mit `Strg+V` einfügen und versenden. Der Spieler wird
 automatisch als **„verteilt"** markiert.
 
-#### Verteilungsstatus ändern
+**Export Links (alternative Verteilung)**
+
+Sollen die Pläne nicht per Ingame-Nachricht, sondern zentral an einer
+externen Stelle (z. B. im Stammesforum) gepostet werden, lassen sich
+die DSU-Links der ausgewählten Spieler über die Bulk-Aktion
+**„Export Links"** ausgeben — siehe
+[Status- & Link-Management](#status--link-management-bulk-aktionen).
+
+##### Status- & Link-Management (Bulk-Aktionen)
+
+Damit ein Spieler den Plan erneut zugeschickt bekommen kann oder
+mehrere Spieler gleichzeitig nachverwaltet werden können, gibt es zwei
+Werkzeuge: das **Rückstell-Icon** in jeder einzelnen Zeile und die
+**Action-Bar mit Bulk-Aktionen** über die Spalten-Auswahl.
+
+**Verteilungsstatus einzeln zurücksetzen**
 
 ![Verteilungsstatus ändern](../assets/leaderview/28_leaderview_planning_container_planstab_distributionstatus_change.png){ .screenshot }
 
-Der **Verteilungsstatus** in der jeweiligen Zeile springt nach dem
-Senden auf **grün** und zeigt den Zeitstempel der Verteilung. Über das
-kleine **Rückstell-Icon** (Pfeil im Kreis) lässt sich der Status manuell
+Der **Verteilungsstatus** in jeder Zeile springt nach dem Senden auf
+**grün** und zeigt den Zeitstempel der Verteilung. Über das kleine
+**Rückstell-Icon** (Pfeil im Kreis) lässt sich der Status manuell
 zurücksetzen — z. B. wenn ein Spieler den Plan erneut zugeschickt
 bekommen soll.
 
-#### Action-Bar bei Auswahl
+**Bulk-Aktionen für mehrere Spieler**
 
 ![Action-Bar im Reiter „Pläne"](../assets/leaderview/29_leaderview_planning_container_planstab_selectinplans_opens_action_bar.png){ .screenshot }
 
 Sobald du in der Spieler-Tabelle mindestens einen Eintrag anhakst,
-erscheint oben eine Action-Bar mit Bulk-Aktionen:
+erscheint oben eine Action-Bar mit folgenden Aktionen:
 
 - **„Abhol-Status zurücksetzen"** — setzt den Verteilungsstatus aller
   ausgewählten Spieler auf 🔴 zurück.
@@ -277,7 +312,8 @@ erscheint oben eine Action-Bar mit Bulk-Aktionen:
   neuen DSU-Link. **Achtung:** Der alte Link wird sofort ungültig — die
   Spieler müssen den neuen Link aktiv abholen.
 - **„Export Links"** — exportiert die DSU-Links der ausgewählten
-  Spieler (z. B. für ein zentrales Forum-Posting).
+  Spieler (z. B. für ein zentrales Forum-Posting; siehe
+  [Planverteilung](#planverteilung)).
 - **„Abbrechen"** — Auswahl verwerfen.
 
 ### Reiter „Befehle"
@@ -305,7 +341,48 @@ Befehle einblenden.
 Rechts oben stehen die Aktionen **„UT-Boost"** und
 **„Ankunftszeiten anpassen"** zur Verfügung.
 
-#### UT-Boost-Modal
+#### Funktionen
+
+##### Einzelnen Befehl bearbeiten
+
+![Einzelnen Befehl bearbeiten](../assets/leaderview/33_leaderview_planning_container_commandstab_editsinglecommand_modal.png){ .screenshot }
+
+Über das Bearbeiten-Icon eines Befehls öffnest du den Dialog
+**„Befehl bearbeiten"**. Hier kannst du einen einzelnen Befehl
+nachträglich justieren:
+
+- **Quelldorf** / **Zieldorf** — Koordinaten der beiden beteiligten
+  Dörfer; der Spielername wird automatisch unter dem Feld angezeigt.
+- **Typ** — Befehlstyp (z. B. **„Snob"**, **„Off"**, **„Fake"**).
+- **Einheit** — schnellste verwendete Einheit; bestimmt die Laufzeit.
+- **Symbol** — DS-Ultimate-Icon des Befehls.
+- **Abschickzeit** / **Ankunftszeit** — eines der beiden ist
+  einstellbar, das jeweils andere wird automatisch berechnet.
+- **UT-Boost (0–20 %)** — optional, nur für Fake-UT.
+- **Truppen** — Anzahl Truppen pro Einheitentyp im Befehl.
+- **Vorschau** — Live-Berechnung mit Typ, Quelle, Ziel, Einheit,
+  Abschickzeit, Ankunftszeit, Distanz und Laufzeit. Die Vorschau ist
+  informativ; die finalen Werte berechnet der Server beim Speichern.
+
+##### Ankunftszeiten anpassen
+
+![Ankunftszeiten anpassen](../assets/leaderview/32_leaderview_planning_container_commandstab_adjusttimes_modal.png){ .screenshot }
+
+Der Dialog **„Ankunftszeiten anpassen"** verschiebt die Ankunftszeiten
+für bestimmte Befehlsgruppen — typischerweise weil sich der Off-Termin
+einer Welle geändert hat. Ablauf in zwei Schritten:
+
+1. **Kombinationen auswählen** — markiere die
+   Plantyp/Einheit/Icon-Kombinationen, die angepasst werden sollen.
+   Die Spalte **„Count"** zeigt, wie viele Befehle im Container je
+   Kombination passen, **„Total"** summiert die Auswahl.
+2. **Datei hochladen** — eine Textdatei im Format
+   `XXX|YYY,DD.MM.JJJJ,HH:MM:SS` (eine Zeile pro Zieldorf). Drag &
+   Drop oder Klicken zum Auswählen.
+
+Die Anpassung gilt auch für ausgeblendete Befehle.
+
+##### UT-Boost anwenden
 
 ![UT-Boost-Modal](../assets/leaderview/31_leaderview_planning_container_commandstab_utboost_modal.png){ .screenshot }
 
@@ -329,46 +406,7 @@ Spalten der Tabelle im Modal:
 - **„Save & Apply"** — Werte speichern und sofort auf alle betroffenen
   Befehle anwenden.
 
-#### Ankunftszeiten-Modal
-
-![Ankunftszeiten anpassen](../assets/leaderview/32_leaderview_planning_container_commandstab_adjusttimes_modal.png){ .screenshot }
-
-Der Dialog **„Ankunftszeiten anpassen"** verschiebt die Ankunftszeiten
-für bestimmte Befehlsgruppen — typischerweise weil sich der Off-Termin
-einer Welle geändert hat. Ablauf in zwei Schritten:
-
-1. **Kombinationen auswählen** — markiere die
-   Plantyp/Einheit/Icon-Kombinationen, die angepasst werden sollen.
-   Die Spalte **„Count"** zeigt, wie viele Befehle im Container je
-   Kombination passen, **„Total"** summiert die Auswahl.
-2. **Datei hochladen** — eine Textdatei im Format
-   `XXX|YYY,DD.MM.JJJJ,HH:MM:SS` (eine Zeile pro Zieldorf). Drag &
-   Drop oder Klicken zum Auswählen.
-
-Die Anpassung gilt auch für ausgeblendete Befehle.
-
-#### Einzelnen Befehl bearbeiten
-
-![Einzelnen Befehl bearbeiten](../assets/leaderview/33_leaderview_planning_container_commandstab_editsinglecommand_modal.png){ .screenshot }
-
-Über das Bearbeiten-Icon eines Befehls öffnest du den Dialog
-**„Befehl bearbeiten"**. Hier kannst du einen einzelnen Befehl
-nachträglich justieren:
-
-- **Quelldorf** / **Zieldorf** — Koordinaten der beiden beteiligten
-  Dörfer; der Spielername wird automatisch unter dem Feld angezeigt.
-- **Typ** — Befehlstyp (z. B. **„Snob"**, **„Off"**, **„Fake"**).
-- **Einheit** — schnellste verwendete Einheit; bestimmt die Laufzeit.
-- **Symbol** — DS-Ultimate-Icon des Befehls.
-- **Abschickzeit** / **Ankunftszeit** — eines der beiden ist
-  einstellbar, das jeweils andere wird automatisch berechnet.
-- **UT-Boost (0–20 %)** — optional, nur für Fake-UT.
-- **Truppen** — Anzahl Truppen pro Einheitentyp im Befehl.
-- **Vorschau** — Live-Berechnung mit Typ, Quelle, Ziel, Einheit,
-  Abschickzeit, Ankunftszeit, Distanz und Laufzeit. Die Vorschau ist
-  informativ; die finalen Werte berechnet der Server beim Speichern.
-
-#### Befehls-Action-Bar
+##### Bulk-Aktionen
 
 ![Action-Bar im Reiter „Befehle"](../assets/leaderview/34_leaderview_planning_container_commandstab_selectingcommand_opens_action_bar.png){ .screenshot }
 
@@ -392,7 +430,9 @@ der Container nach außen aktiv ist.
   Discord-Auslieferung pausiert. Ideal während der Vorbereitung einer
   Operation.
 
-### Changelog
+### Sonstiges
+
+#### Changelog
 
 ![Changelog](../assets/leaderview/37_leaderview_planning_container_changelog.png){ .screenshot }
 
@@ -413,3 +453,12 @@ Typische Einträge:
   nach DS-Ultimate.
 - `"…" manually marked as distributed` — Verteilungsstatus eines
   Spielers wurde manuell auf 🟢 gesetzt.
+
+#### Container löschen
+
+Über den Button **„Container löschen"** im Kopfbereich (rechts neben
+**„Changelog"**) wird der gesamte Container inklusive aller importierten
+Pläne, Befehle und DSU-Verteilungen entfernt. Die Aktion ist
+**irreversibel** — gelöschte Container können nicht wiederhergestellt
+werden. Vor dem Löschen erscheint ein Bestätigungsdialog, um
+versehentliche Löschungen zu vermeiden.
