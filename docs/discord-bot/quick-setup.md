@@ -94,4 +94,4 @@ Folgende Module stehen zur Verfügung:
 - 🪓 **[Planning-System](planning-system.md)** — Offensiv-Planungen organisieren
 
 !!! info "Setup abgeschlossen"
-    Das Grund-Setup ist damit fertig. Die Detail-Konfiguration der einzelnen Module findest du auf den jeweils verlinkten Seiten.
+    Das Grund-Setup ist damit fertig. Die Detail-Konfiguration der einzelnen Module findest du auf den jeweils verlinkten Seiten. Mehr zur Verwaltung der installierten Module (Update, Deinstallation, Sichtbarkeits-Rollen) findest du auf der Seite [Bot-Module – Einrichtung](modul-verwaltung.md).

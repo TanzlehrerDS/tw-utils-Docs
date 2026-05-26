@@ -81,6 +81,8 @@ plugins:
             Planung: Planning
             Quick-Setup-Guide: Quick-Setup-Guide
             Account-Verifizierung: Account-Verification
+            Bot-Module: Bot Modules
+            Einrichtung: Setup
             Benachrichtigungen: Notifications
 
 nav:
@@ -109,10 +111,12 @@ nav:
   - Discordbot:
       - Quick-Setup-Guide: discord-bot/quick-setup.md
       - Account-Verifizierung: discord-bot/verifizierung.md
-      - Account-Sitting-System: discord-bot/sitting-system.md
-      - Bunker-Information-System: discord-bot/bunker-info.md
-      - Off/Deff/Snob-Search-System: discord-bot/search-system.md
-      - Planning-System: discord-bot/planning-system.md
+      - Bot-Module:
+          - Einrichtung: discord-bot/modul-verwaltung.md
+          - Account-Sitting-System: discord-bot/sitting-system.md
+          - Bunker-Information-System: discord-bot/bunker-info.md
+          - Off/Deff/Snob-Search-System: discord-bot/search-system.md
+          - Planning-System: discord-bot/planning-system.md
       - Benachrichtigungen: discord-bot/benachrichtigungen.md
 
 markdown_extensions:
