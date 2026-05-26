@@ -146,57 +146,69 @@ und Befehlen und steuert die Verteilung an die einzelnen Spieler.
 
 ![Container — Übersicht](../assets/leaderview/21_leaderview_planning_container_overview.png){ .screenshot }
 
-Die Übersichtstabelle zeigt alle bestehenden Container des Stammes:
-
-| Spalte | Bedeutung |
-|---|---|
-| **Name** | Frei wählbarer Name der Operation (z. B. `Op. Phoenix`) |
-| **Verteilungsstatus** | **„Aktiv"** = Container ist veröffentlicht, Spieler können den Plan abrufen. **„Inaktiv"** = Container ist offline / in Vorbereitung. |
-| **Welt** | DS-Welt, für die der Container gilt (Badge) |
-| **Zuletzt geändert** | Wer hat den Container zuletzt bearbeitet, und wann (oder **„Noch keine Änderung"**, wenn frisch angelegt) |
-| **Öffnen** | Öffnet den Container in der Detailansicht |
-
-![OPEN-Icon](../assets/leaderview/39_leaderview_container_open_button.png){ .screenshot }
-
-Über das Ordner-Icon in der Spalte **„Öffnen"** wechselst du in die
-Container-Detailansicht.
+Hier kannst du deine bestehenden Container öffnen sowie neue Container
+anlegen. Mit Klick auf **„Öffnen"** wechselst du in die jeweilige
+Container-Übersicht.
 
 ### Neuen Container anlegen
 
+Über einen Klick auf den Button **„Neuer Container"** legst du einen
+neuen Container an. Es öffnet sich ein Modal, in welchem du einen
+**Namen** für den Container festlegen musst (max. 50 Zeichen, z. B.
+`Op. Phoenix`).
+
 ![Container anlegen](../assets/leaderview/22_leaderview_planning_container_containeradd.png){ .screenshot }
 
-Über **„Neuer Container"** öffnet sich der Dialog **„Neuer Container"**
-mit dem Feld **„Name"** (max. 50 Zeichen, z. B. `Op. Phoenix`). Der
-Container wird automatisch der aktuellen Welt zugeordnet und startet im
-Status **„Inaktiv"**.
+Nach dem Bestätigen wird der Container automatisch der aktuellen Welt
+zugeordnet, startet im Status **„Inaktiv"** und erscheint unmittelbar
+in der Container-Übersicht.
 
 ### Aufbau eines Containers
 
+Direkt nach dem Anlegen ist ein Container noch komplett leer — es sind
+weder Pläne noch Befehle hinterlegt. Das Grundgerüst mit Kopfbereich,
+Action-Leiste und den beiden Reitern siehst du aber bereits:
+
 ![Leerer Container](../assets/leaderview/23_leaderview_planning_container_overview_empty_container.png){ .screenshot }
 
-Direkt nach dem Öffnen siehst du drei Bereiche:
+**Kopfbereich**
 
-- **Kopfbereich** — links Container-Name + Welt-Badge sowie der Link
-  **„Zurück zur Übersicht"**, rechts der **Veröffentlichungs-Toggle**
-  (siehe [Veröffentlichung](#veroffentlichung)), der Button
-  **„Changelog"** sowie **„Container löschen"** (siehe
-  [Sonstiges](#sonstiges)).
-- **Action-Leiste** — hier importierst und synchronisierst du die
-  Inhalte:
+Im Kopfbereich findest du auf der linken Seite den Container-Namen
+sowie das Welt-Badge der zugehörigen DS-Welt. Über den Link
+**„Zurück zur Übersicht"** gelangst du zurück zur Container-Übersicht
+des Stammes.
 
-    ![Action-Leiste — Buttons](../assets/leaderview/40_leaderview_container_import_plan.png){ .screenshot }
+Auf der rechten Seite sitzen die container-weiten Aktionen:
 
-    - **„Plan auswählen…"** — Dropdown mit allen Plänen aus dem
-      Off-/AG-Planungstool, die in den Container importiert werden
-      können.
-    - **„Hinzufügen"** — fügt den im Dropdown gewählten Plan hinzu.
-    - **„Pläne leeren"** — entfernt alle Befehle aus dem Container.
-    - **„Veraltete ausblenden"** — versteckt Befehle, deren
-      Abschickzeit bereits in der Vergangenheit liegt.
-    - **„DSU-Synchronisation"** — überträgt die aktuellen Befehle nach
-      DS-Ultimate (pro Spieler ein DSU-Plan + ein „Gesamtplan").
-- **Reiter** — darunter wechselst du zwischen **„Pläne"** (Sicht pro
-  Spieler) und **„Befehle"** (Sicht pro Einzelangriff).
+- der **Veröffentlichungs-Toggle** zum Aktivieren / Deaktivieren des
+  Containers (siehe [Veröffentlichung](#veroffentlichung)),
+- der Button **„Changelog"** für die Änderungs-Historie (siehe
+  [Sonstiges](#sonstiges)),
+- der Button **„Container löschen"** zum vollständigen Entfernen des
+  Containers (siehe [Sonstiges](#sonstiges)).
+
+**Action-Leiste**
+
+Direkt unter dem Kopfbereich liegt die Action-Leiste mit den
+Werkzeugen zum Befüllen und Synchronisieren des Containers:
+
+![Action-Leiste — Buttons](../assets/leaderview/40_leaderview_container_import_plan.png){ .screenshot }
+
+- **„Plan auswählen…"** — Dropdown mit allen Plänen aus dem
+  Off-/AG-Planungstool, die in den Container importiert werden können.
+- **„Hinzufügen"** — fügt den im Dropdown gewählten Plan hinzu.
+- **„Pläne leeren"** — entfernt alle Befehle aus dem Container.
+- **„Veraltete ausblenden"** — versteckt Befehle, deren Abschickzeit
+  bereits in der Vergangenheit liegt.
+- **„DSU-Synchronisation"** — überträgt die aktuellen Befehle nach
+  DS-Ultimate (pro Spieler ein DSU-Plan + ein „Gesamtplan").
+
+**Reiter „Pläne" und „Befehle"**
+
+Im unteren Bereich des Containers stehen die beiden Reiter **„Pläne"**
+(Sicht pro Spieler) und **„Befehle"** (Sicht pro Einzelangriff) zur
+Verfügung. Die Details zu beiden Reitern findest du in den jeweils
+gleichnamigen Abschnitten weiter unten.
 
 ### Reiter „Pläne"
 
