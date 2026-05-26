@@ -32,10 +32,10 @@ the later snob planning.
 At the top you see a **metrics bar** summarizing all entries:
 
 - **Total Snobs** — sum of all reported snobs across all players.
-- **Trains** — number of targets with at least 4 snobs reported
-  (full-snob train).
-- **1-Snobs / 2-Snobs / 3-Snobs** — number of targets with exactly 1,
-  2 or 3 snobs reported.
+- **Trains** — number of source villages from which at least 4 snobs
+  are reported (full-snob train).
+- **1-Snobs / 2-Snobs / 3-Snobs** — number of source villages from
+  which exactly 1, 2 or 3 snobs are reported.
 
 The table below lists every single entry:
 

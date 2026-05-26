@@ -34,10 +34,10 @@ Oben siehst du eine **Kennzahlen-Leiste**, die alle Meldungen
 zusammenfasst:
 
 - **Gesamt AGs** — Summe aller gemeldeten AGs über alle Spieler.
-- **Trains** — Anzahl Ziele, auf die mindestens 4 AGs gemeldet sind
-  (Vollnobel-Train).
-- **1er-AGs / 2er-AGs / 3er-AGs** — Anzahl Ziele, auf die genau 1, 2
-  bzw. 3 AGs gemeldet sind.
+- **Trains** — Anzahl Herkunftsdörfer, aus denen mindestens 4 AGs
+  gemeldet sind (Vollnobel-Train).
+- **1er-AGs / 2er-AGs / 3er-AGs** — Anzahl Herkunftsdörfer, aus denen
+  genau 1, 2 bzw. 3 AGs gemeldet sind.
 
 Die Tabelle darunter listet jede einzelne Meldung:
 
