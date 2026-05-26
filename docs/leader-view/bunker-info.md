@@ -1,9 +1,12 @@
 # Bunker-Info
 
+![Bunker-Info — Übersicht](../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png){ .screenshot }
+
 Der Tab **„Bunker-Informationen"** ist das zentrale Werkzeug für die
-Bunker-Verwaltung des Stammes. Du pflegst hier eigene **genehmigte
-Bunker**, identifizierst zusätzliche **Flexbunker**, dokumentierst
-**feindliche Bunker** und siehst alles auf einer Welt-Karte.
+Bunker-Verwaltung des Stammes. Du verwaltest hier die genehmigten
+Bunker, identifizierst zusätzliche Flexbunker, dokumentierst
+feindliche Bunker und hast die Möglichkeit Dir die Bunker-Situation
+auf einer Karte visualisieren zu lassen.
 
 !!! info "Hinweis"
     Für den vollen Funktionsumfang müssen aktuelle Truppendaten im Tab
@@ -20,10 +23,11 @@ Die Seite hat vier Unterreiter:
 
 ## Genehmigte Bunker
 
-In diesem Unterreiter pflegst du die offiziellen Bunker-Dörfer des
-Stammes. Pro Dorf wird ein **Soll-Wert** (Dual-Stärke) hinterlegt; das
-System vergleicht ihn fortlaufend mit dem aktuellen **Ist-Wert** aus
-den Truppendaten und zeigt fehlende Refills an.
+In diesem Unterreiter verwaltest du die offiziell genehmigten
+Bunker-Dörfer des Stammes. Pro Dorf wird ein **Soll-Wert**
+(Dual-Stärke) hinterlegt; das System vergleicht ihn fortlaufend mit
+dem aktuellen **Ist-Wert** aus den Truppendaten und zeigt fehlende
+Refills an.
 
 In der Liste tauchen sowohl manuell eingetragene Bunker als auch
 Bunker auf, die die Stammesmitglieder über das
@@ -31,7 +35,7 @@ Bunker auf, die die Stammesmitglieder über das
 tw-utils-Discordbots beantragt haben und die von einem Leader genehmigt
 wurden.
 
-![Genehmigte Bunker — Übersicht](../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png){ .screenshot }
+![Genehmigte Bunker — Tabelle](../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png){ .screenshot }
 
 Die Tabelle hat folgende Spalten:
 
@@ -40,7 +44,7 @@ Die Tabelle hat folgende Spalten:
 | **Status** | Farbige Ampel (siehe Legende) |
 | **Stamm** | Stamm des Bunker-Dorfs |
 | **Spieler** | Besitzer des Dorfs |
-| **Koordinate** | Bunker-Koordinaten |
+| **Koordinate** | Koordinaten des Bunkers |
 | **Soll (Dual)** | Angestrebte Dual-Stärke |
 | **Ist (Truppen)** | Aktuell vorhandene Defensiv-Truppen |
 | **benötigte Refills** | Differenz Soll - Ist als Dual |
@@ -93,14 +97,6 @@ Textblock, der über den **„Kopieren"**-Button in die Zwischenablage
 ![Refills anfordern](../assets/leaderview/08_leaderview_bunkerinfo_approvedbunkers_copy_refills.png){ .screenshot }
 
 Den kopierten Text kannst du z. B. ins Stammesforum stellen.
-
-### Tabellenzeile im Detail
-
-![Tabellenzeile im Detail](../assets/leaderview/09_leaderview_bunkerinfo_approvedbunkers_table.png){ .screenshot }
-
-Beispiel aus dem Screenshot: Soll **17k Speer / 17k Schwert**, aktuell
-vorhanden nur je **100 Truppen**. Daraus errechnet das System
-**167 benötigte Refills**.
 
 ## Flexbunker
 
