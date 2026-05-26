@@ -53,26 +53,6 @@ Die Tabelle darunter listet jede einzelne Meldung:
 Oberhalb der Tabelle hat man die folgenden Optionen:
 **„Hinzufügen"**, **„Export"**, **„Alles löschen"**.
 
-#### Manuelles Hinzufügen
-
-Über einen Klick auf den Button **„Hinzufügen"** oberhalb der Tabelle
-öffnest du das Eingabe-Modal **„AG-Meldung hinzufügen"**. Hier kannst
-du eine oder mehrere AG-Meldungen für einen Spieler eintragen.
-
-![AG-Meldung hinzufügen](../assets/leaderview/16_leaderview_planning_snobqueries_add.png){ .screenshot }
-
-Der Dialog enthält zwei Felder:
-
-- **Koordinaten (Text mit Koords)** — eine oder mehrere
-  Herkunftskoordinaten; umgebender Text wird ignoriert (z. B.
-  `AGs fertig in 500|500 und 501|501…`).
-- **Anzahl AGs (pro Dorf)** — wie viele AGs der Spieler pro
-  Herkunftsdorf fertig hat. Der eingegebene Wert gilt für **alle** in
-  Schritt 1 erkannten Koordinaten.
-
-Nach dem Bestätigen werden die AG-Meldungen angelegt und erscheinen
-unmittelbar in der Tabelle.
-
 ### Abschickzeiten
 
 Hier verwaltest du die individuellen Abschickfenster der Spieler —
@@ -95,25 +75,6 @@ Tabellenspalten:
 Oberhalb der Tabelle hat man die folgenden Optionen:
 **„Hinzufügen"**, **„Export"**, **„Alles löschen"**.
 
-#### Manuelles Hinzufügen
-
-Über einen Klick auf den Button **„Hinzufügen"** oberhalb der Tabelle
-öffnest du das Eingabe-Modal **„Abschickzeit hinzufügen"**. Hier kannst
-du ein neues Abschickfenster für einen Spieler eintragen.
-
-![Abschickzeit hinzufügen](../assets/leaderview/18_leaderview_planning_launchtimes_add.png){ .screenshot }
-
-Der Dialog enthält folgende Felder:
-
-- **Spielername (DS-Account)** — mit Autovervollständigung über die
-  verifizierten Accounts.
-- **Datum** — Tag des Abschickfensters.
-- **Von** / **Bis** — Anfang und Ende des Zeitfensters (Tribalwars-
-  Serverzeit).
-
-Nach dem Bestätigen wird das Abschickfenster angelegt und erscheint
-unmittelbar in der Tabelle.
-
 ### Ausgeplante Dörfer
 
 Hier markierst du Dörfer, die in der Off-Planung **nicht als
@@ -133,20 +94,48 @@ Tabellenspalten:
 | **Koordinate** | Das ausgeplante Dorf |
 | **Aktionen** | Eintrag löschen |
 
-#### Manuelles Hinzufügen
+### Manuelles Hinzufügen
 
-Über einen Klick auf den Button **„Hinzufügen"** oberhalb der Tabelle
-öffnest du das Eingabe-Modal **„Herkunftsdorf ausplanen"**. Hier kannst
-du ein oder mehrere Dörfer eines Spielers von der Off-Planung
-ausschließen.
+Alle drei Listen in den **Abfragen** können nicht nur über den
+Discordbot, sondern auch direkt im Leader-View manuell befüllt werden.
+Über einen Klick auf den Button **„Hinzufügen"** oberhalb der
+jeweiligen Tabelle öffnest du das passende Eingabe-Modal. Nach dem
+Bestätigen erscheint der neue Eintrag unmittelbar in der
+entsprechenden Tabelle.
+
+Die drei Eingabe-Modals im Detail:
+
+#### AG-Meldung hinzufügen
+
+![AG-Meldung hinzufügen](../assets/leaderview/16_leaderview_planning_snobqueries_add.png){ .screenshot }
+
+Felder:
+
+- **Koordinaten (Text mit Koords)** — eine oder mehrere
+  Herkunftskoordinaten; umgebender Text wird ignoriert (z. B.
+  `AGs fertig in 500|500 und 501|501…`).
+- **Anzahl AGs (pro Dorf)** — wie viele AGs der Spieler pro
+  Herkunftsdorf fertig hat. Der eingegebene Wert gilt für **alle** in
+  Schritt 1 erkannten Koordinaten.
+
+#### Abschickzeit hinzufügen
+
+![Abschickzeit hinzufügen](../assets/leaderview/18_leaderview_planning_launchtimes_add.png){ .screenshot }
+
+Felder:
+
+- **Spielername (DS-Account)** — mit Autovervollständigung über die
+  verifizierten Accounts.
+- **Datum** — Tag des Abschickfensters.
+- **Von** / **Bis** — Anfang und Ende des Zeitfensters (Tribalwars-
+  Serverzeit).
+
+#### Herkunftsdorf ausplanen
 
 ![Herkunftsdorf ausplanen](../assets/leaderview/20_leaderview_planning_excludedvillages_add.png){ .screenshot }
 
 Im Feld **„Koordinaten (Text mit Koords)"** trägst du eine oder mehrere
 Koordinaten ein (umgebender Text wird ignoriert).
-
-Nach dem Bestätigen werden die Dörfer als ausgeplant markiert und
-erscheinen unmittelbar in der Tabelle.
 
 ## Container
 
