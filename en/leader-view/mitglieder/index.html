@@ -930,6 +930,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Members
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -946,6 +964,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#table-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table columns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-manage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search &amp; manage
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1329,6 +1388,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#table-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table columns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-manage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search &amp; manage
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1345,7 +1434,55 @@
 
 
 <h1 id="members">Members<a class="headerlink" href="#members" title="Permanent link">¶</a></h1>
-<p><em>Content coming soon.</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/03_leaderview_members.png" data-title="Members overview" data-desc-position="bottom"><img alt="Members overview" class="screenshot" src="../../../assets/leaderview/03_leaderview_members.png"></a></p>
+<p>The <strong>"Members"</strong> tab shows all Discord users who have verified one or
+more TW-Accounts on the tribe Discord server. At a glance you can see
+who in the tribe is even linked with the tw-utils Discord bot and
+which role they have.</p>
+<div class="admonition info">
+<p class="admonition-title">Requirements for the Leader-View</p>
+<p>Who is allowed to open the Leader-View and how the "Leader" role
+is granted is described in <a href="../uebersicht/">Permission</a>.</p>
+</div>
+<h2 id="table-columns">Table columns<a class="headerlink" href="#table-columns" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>#</strong></td>
+<td>Running number</td>
+</tr>
+<tr>
+<td><strong>TW-Account</strong></td>
+<td>Verified TW-Account</td>
+</tr>
+<tr>
+<td><strong>Tribe</strong></td>
+<td>Tribe the account currently plays in</td>
+</tr>
+<tr>
+<td><strong>Discord-User</strong></td>
+<td>Linked Discord account (+ optional <strong>"Leader"</strong> badge)</td>
+</tr>
+<tr>
+<td><strong>Actions</strong></td>
+<td>Remove link (trash icon)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search-manage">Search &amp; manage<a class="headerlink" href="#search-manage" title="Permanent link">¶</a></h2>
+<ul>
+<li>Via the <strong>"Search..."</strong> field at the top right you filter the list
+  by TW-Account, tribe or Discord name.</li>
+<li>Via the red trash icon in the <strong>"Actions"</strong> column you can remove
+  the link between a Discord user and a TW-Account. The Discord user
+  can then re-verify via the bot afterwards.</li>
+</ul>
 
 
 

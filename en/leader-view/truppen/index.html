@@ -958,6 +958,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troops
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -974,6 +992,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#table-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table columns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-two-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The two scopes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-troops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uploading troops
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uploading troops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expected-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected file format
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1329,6 +1416,64 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#table-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table columns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-two-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The two scopes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-troops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uploading troops
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uploading troops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expected-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected file format
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1345,7 +1490,87 @@
 
 
 <h1 id="troops">Troops<a class="headerlink" href="#troops" title="Permanent link">¶</a></h1>
-<p><em>Content coming soon.</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/04_leaderview_troops.png" data-title="Troops overview" data-desc-position="bottom"><img alt="Troops overview" class="screenshot" src="../../../assets/leaderview/04_leaderview_troops.png"></a></p>
+<p>The <strong>"Troops"</strong> tab manages the troop-data uploads per tribe. The
+data uploaded here is the basis for many other features — both in the
+Leader-View (e.g. Bunker-Info) and in the modules of the tw-utils
+Discord bot.</p>
+<div class="admonition info">
+<p class="admonition-title">Re-use by the Discord bot</p>
+<p>The uploaded <strong>"Troops in village"</strong> data is automatically synced
+with the tw-utils Discord bot and re-used there in the
+<strong>Bunker-Information-System</strong> and <strong>Nuke/Deff/Snob-Search-System</strong>
+modules.</p>
+</div>
+<h2 id="table-columns">Table columns<a class="headerlink" href="#table-columns" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>#</strong></td>
+<td>Running number</td>
+</tr>
+<tr>
+<td><strong>Tribe</strong></td>
+<td>Tribe the data belongs to</td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>"Troops in village" or "Total troops"</td>
+</tr>
+<tr>
+<td><strong>Villages</strong></td>
+<td>Number of villages in the dataset</td>
+</tr>
+<tr>
+<td><strong>Uploaded at</strong></td>
+<td>Timestamp of the last upload</td>
+</tr>
+<tr>
+<td><strong>Uploaded by</strong></td>
+<td>Discord user who triggered the upload</td>
+</tr>
+<tr>
+<td><strong>Actions</strong></td>
+<td>Delete entry (trash icon)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-two-scopes">The two scopes<a class="headerlink" href="#the-two-scopes" title="Permanent link">¶</a></h2>
+<p>When uploading you choose which view of the troops the file contains.
+Both views can be maintained in parallel.</p>
+<ul>
+<li><strong>Troops in village</strong> — only the troops currently actually standing
+  in the village (i.e. no troops in transit).</li>
+<li><strong>Total troops</strong> — all existing troops of a village (in village +
+  in transit). Pure inventory/analysis view.</li>
+</ul>
+<h2 id="uploading-troops">Uploading troops<a class="headerlink" href="#uploading-troops" title="Permanent link">¶</a></h2>
+<p>The button <strong>"Upload Troops"</strong> (top right) opens the upload dialog:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/38_leaderview_troops_upload.png" data-title="Upload Troops — dialog" data-desc-position="bottom"><img alt="Upload Troops — dialog" class="screenshot" src="../../../assets/leaderview/38_leaderview_troops_upload.png"></a></p>
+<p>Dialog fields:</p>
+<ul>
+<li><strong>Tribe tag</strong> — tag of the tribe the data belongs to (e.g. <code>ABC</code>).</li>
+<li><strong>Scope</strong> — choose either <strong>"Troops in village"</strong> or
+  <strong>"Total troops"</strong> (see <a href="#the-two-scopes">The two scopes</a>).</li>
+<li><strong>Troops file (.txt)</strong> — the TXT file produced by the
+  <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">quickbar script</a>.</li>
+</ul>
+<h3 id="expected-file-format">Expected file format<a class="headerlink" href="#expected-file-format" title="Permanent link">¶</a></h3>
+<p>The TXT file must contain a header line with the column names as its
+first line, followed by one line per village:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>467|559,Testuser A,3779,4836,100,4803,40,50,6309,1584,5,80,0,0
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
+</code></pre></div>
 
 
 
