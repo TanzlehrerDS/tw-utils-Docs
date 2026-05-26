@@ -1653,8 +1653,9 @@ two radio buttons, <strong>how</strong> the tool approaches the calculation:</p>
   when the completeness of each individual target matters more than
   an even distribution across all targets.</li>
 <li><strong>wave-based</strong> — <em>"Distribute the attacks in waves across all
-  targets."</em> Instead of target-by-target, the 1st commands across all
-  targets are placed first, then all 2nd commands, and so on. Useful
+  targets."</em> Instead of target-by-target, the tool first tries to
+  assign at least one nuke to every target. In a 2nd wave it then
+  tries to assign the second nuke to every target, and so on. Useful
   when all targets should end up at a similar supply level — even if
   not every target ends up fully covered.</li>
 </ul>
@@ -1682,6 +1683,30 @@ available:</p>
   wave-based mode.</em> Plans first those source villages that could
   reach the fewest targets within travel time.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Algorithm only works within the available pool</p>
+<p>Which source villages the algorithm has to choose from depends on
+the settings made in the previous tabs — in particular on the
+<a href="../tab2-angriffsplanung/#11-prioritizing-nuke-categories">Prioritization of nuke categories (Tab 2 §11)</a>
+and the option
+<strong>"Strict prioritization (enforcing order)"</strong> set there. An
+optimal algorithm can only ever deliver the <strong>best result within
+the permitted pool</strong> — not necessarily the globally best one.</p>
+<p><strong>Example — Morale optimized + strict prioritization:</strong> You pick
+the <strong>Morale optimized</strong> algorithm and have <strong>strict
+prioritization</strong> enabled in Tab 2, with <em>Villages &gt;2000 axe</em> as
+the highest-priority nuke category. For a given target the tool
+only finds an option with <strong>80 % morale</strong> in the <em>&gt;2000 axe</em> pool
+— and plans it. The fact that a village with <strong>100 % morale</strong>
+might have existed in the lower-priority <em>&gt;1000 axe</em> category
+remains undetected: strict prioritization instructs the algorithm
+to touch lower categories <strong>only once</strong> no valid options at all
+remain in the higher category.</p>
+<p>If you want to give the algorithm more leeway, disable strict
+prioritization in Tab 2 — all selected categories are then merged
+into a <strong>single shared pool</strong> from which the algorithm can
+optimize freely.</p>
+</div>
 <p>Once a choice has been made, you start the calculation with the
 button <strong>"Start calculation"</strong> to the right of the dropdown.</p>
 <div class="admonition info">

@@ -1653,11 +1653,12 @@ Radio-Buttons, <strong>wie</strong> das Tool die Berechnung angeht:</p>
   die Vollständigkeit jedes einzelnen Ziels wichtiger ist als eine
   gleichmäßige Verteilung über alle Ziele hinweg.</li>
 <li><strong>Wellen-basiert</strong> — <em>"Verteilt die Angriffe in Wellen auf alle
-  Ziele."</em> Statt Ziel-für-Ziel werden zuerst die jeweils 1. Befehle
-  über alle Ziele verteilt, dann die jeweils 2. Befehle usw. Sinnvoll,
-  wenn alle Ziele auf einem ähnlichen Versorgungsniveau landen sollen —
-  auch wenn am Ende nicht zwingend jedes Ziel vollständig versorgt
-  ist.</li>
+  Ziele."</em> Statt Ziel-für-Ziel wird zunächst versucht, jedem Ziel
+  mindestens eine Off zuzuweisen. Im Anschluss wird im Rahmen einer
+  2ten Welle versucht, jedem Ziel die zweite Off zuzuweisen, usw.
+  Sinnvoll, wenn alle Ziele auf einem ähnlichen Versorgungsniveau
+  landen sollen — auch wenn am Ende nicht zwingend jedes Ziel
+  vollständig versorgt ist.</li>
 </ul>
 <h2 id="2-algorithmus">2. Algorithmus<a class="headerlink" href="#2-algorithmus" title="Permanent link">¶</a></h2>
 <p>Über das Dropdown <strong>"Algorithmus"</strong> wählst du, <strong>nach welcher Strategie</strong>
@@ -1681,6 +1682,32 @@ Planungsmodus stehen folgende Algorithmen zur Verfügung:</p>
   verfügbar.</em> Verplant zuerst diejenigen Quell-Dörfer, die es
   laufzeittechnisch zu den wenigsten Zielen schaffen würden.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Algorithmus arbeitet nur innerhalb des verfügbaren Pools</p>
+<p>Welche Quell-Dörfer der Algorithmus überhaupt zur Auswahl hat,
+hängt von den Einstellungen aus den vorigen Tabs ab — insbesondere
+von der
+<a href="../tab2-angriffsplanung/#11-priorisierung-off-kategorien">Priorisierung der Off-Kategorien (Tab 2 §11)</a>
+und der dort gesetzten Option
+<strong>"Strikte Priorisierung (Reihenfolge erzwingen)"</strong>. Ein optimaler
+Algorithmus kann immer nur das <strong>beste Ergebnis innerhalb des
+erlaubten Pools</strong> liefern — nicht zwingend das global beste.</p>
+<p><strong>Beispiel — Moral-optimiert + strikte Priorisierung:</strong> Du wählst
+den Algorithmus <strong>Moral-optimiert</strong> und hast in Tab 2 die
+<strong>strikte Priorisierung</strong> aktiviert, mit <em>&gt;2000 Axt</em> als
+höchstpriorisierter Off-Kategorie. Für ein bestimmtes Ziel findet
+das Tool im Pool der <em>&gt;2000-Axt-Dörfer</em> nur eine Option mit
+<strong>80 % Moral</strong> — diese wird verplant. Dass es in der niedriger
+priorisierten Kategorie <em>&gt;1000 Axt</em> möglicherweise ein Dorf mit
+<strong>100 % Moral</strong> gegeben hätte, bleibt unentdeckt: Die strikte
+Priorisierung weist den Algorithmus an, niedrigere Kategorien
+<strong>erst dann</strong> anzufassen, wenn in der höheren Kategorie gar keine
+valide Option mehr verfügbar ist.</p>
+<p>Wenn du dem Algorithmus mehr Spielraum geben möchtest,
+deaktiviere in Tab 2 die strikte Priorisierung — alle ausgewählten
+Kategorien werden dann zu einem <strong>gemeinsamen Pool</strong> zusammengefasst,
+aus dem der Algorithmus frei optimieren kann.</p>
+</div>
 <p>Hat man eine Auswahl getroffen, startet man die Berechnung mit dem
 Button <strong>"Berechnung starten"</strong> rechts neben dem Dropdown.</p>
 <div class="admonition info">
