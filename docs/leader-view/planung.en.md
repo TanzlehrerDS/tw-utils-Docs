@@ -12,7 +12,8 @@ split into two sub-tabs:
 
 Under the **"Queries"** sub-tab you'll find three pill tabs:
 **Snob-Entries**, **Launch times** and **Excluded Villages**. They
-provide the three most important inputs for nuke planning.
+provide the three most important inputs for nuke planning and must be
+supplied by the tribe members.
 
 !!! info "Data usually comes from the Discord bot"
     Snob-Entries, launch times and excluded source villages are
@@ -23,9 +24,8 @@ provide the three most important inputs for nuke planning.
 
 ### Snob-Entries
 
-In this area you collect reports of how many snobs which player has
-ready on which target villages. The list is the basis for the later
-snob planning.
+In this area the snob entries are managed. The list is the basis for
+the later snob planning.
 
 ![Snob-Entries — overview](../assets/leaderview/15_leaderview_planning_snobqueries_overview.png){ .screenshot }
 
@@ -44,8 +44,8 @@ The table below lists every single entry:
 | **#** | Running number |
 | **TW-Account** | Player providing the snobs |
 | **Tribe** | Tribe of the player |
-| **Coordinate** | Target village of the entry |
-| **Count** | How many snobs the player has ready on this target village |
+| **Coordinate** | Source village of the entry |
+| **Count** | How many snobs the player has ready from this source village |
 | **Actions** | Edit entry (pencil) or delete (trash) |
 
 Actions above the table: **"Add"**, **"Export"**, **"Delete all"**.
@@ -56,11 +56,11 @@ Actions above the table: **"Add"**, **"Export"**, **"Delete all"**.
 
 The **"Add snob entry"** dialog contains two fields:
 
-- **Coordinates (text with coords)** — one or more target coordinates;
-  surrounding text is ignored (e.g. `Attack on 500|500 and
+- **Coordinates (text with coords)** — one or more source coordinates;
+  surrounding text is ignored (e.g. `Snobs ready in 500|500 and
   501|501…`).
 - **Snob count (per village)** — how many snobs the player has ready
-  per target village. The entered value applies to **all**
+  per source village. The entered value applies to **all**
   coordinates detected in step 1.
 
 ### Launch times

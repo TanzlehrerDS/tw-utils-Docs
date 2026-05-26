@@ -12,7 +12,8 @@ gliedert sich in zwei Unterreiter:
 
 Unter dem Reiter **„Abfragen"** findest du drei Pill-Tabs:
 **AG-Meldungen**, **Abschickzeiten** und **Ausgeplante Dörfer**. Sie
-liefern die drei wichtigsten Inputs für die Off-Planung.
+liefern die drei wichtigsten Inputs für die Off-Planung, welche von
+den Stammesmembern bereitgestellt werden müssen.
 
 !!! info "Daten kommen i. d. R. aus dem Discordbot"
     AG-Meldungen, Abschickzeiten und ausgeplante Herkunftsdörfer geben
@@ -24,9 +25,8 @@ liefern die drei wichtigsten Inputs für die Off-Planung.
 
 ### AG-Meldungen
 
-In diesem Bereich sammelst du Meldungen, wie viele AGs welcher Spieler
-auf welche Zieldörfer fertig hat. Die Liste ist die Basis für die
-spätere AG-Planung.
+In diesem Bereich werden die AG-Meldungen verwaltet. Die Liste ist die
+Basis für die spätere AG-Planung.
 
 ![AG-Meldungen — Übersicht](../assets/leaderview/15_leaderview_planning_snobqueries_overview.png){ .screenshot }
 
@@ -46,8 +46,8 @@ Die Tabelle darunter listet jede einzelne Meldung:
 | **#** | Laufende Nummer |
 | **DS-Account** | Spieler, der die AGs stellt |
 | **Stamm** | Stamm des Spielers |
-| **Koordinate** | Zieldorf der Meldung |
-| **Anzahl** | Wie viele AGs der Spieler auf dieses Zieldorf fertig hat |
+| **Koordinate** | Herkunftsdorf der Meldung |
+| **Anzahl** | Wie viele AGs der Spieler aus diesem Herkunftsdorf fertig hat |
 | **Aktionen** | Eintrag bearbeiten (Stift) oder löschen (Mülltonne) |
 
 Aktionen oberhalb der Tabelle: **„Hinzufügen"**, **„Export"**,
@@ -59,12 +59,12 @@ Aktionen oberhalb der Tabelle: **„Hinzufügen"**, **„Export"**,
 
 Der Dialog **„AG-Meldung hinzufügen"** enthält zwei Felder:
 
-- **Koordinaten (Text mit Koords)** — eine oder mehrere Zielkoordinaten;
-  umgebender Text wird ignoriert (z. B. `Angriff auf 500|500 und
-  501|501…`).
-- **Anzahl AGs (pro Dorf)** — wie viele AGs der Spieler pro Zieldorf
-  fertig hat. Der eingegebene Wert gilt für **alle** in Schritt 1
-  erkannten Koordinaten.
+- **Koordinaten (Text mit Koords)** — eine oder mehrere
+  Herkunftskoordinaten; umgebender Text wird ignoriert (z. B.
+  `AGs fertig in 500|500 und 501|501…`).
+- **Anzahl AGs (pro Dorf)** — wie viele AGs der Spieler pro
+  Herkunftsdorf fertig hat. Der eingegebene Wert gilt für **alle** in
+  Schritt 1 erkannten Koordinaten.
 
 ### Abschickzeiten
 
