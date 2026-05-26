@@ -1,21 +1,17 @@
 # Truppen
 
+![Truppen-Übersicht](../assets/leaderview/04_leaderview_troops.png){ .screenshot }
+
 Der Tab **„Truppen"** verwaltet die Truppendaten-Uploads pro Stamm. Die
 hier hochgeladenen Daten sind die Grundlage für viele andere Funktionen
 — sowohl im Leader-View (z. B. Bunker-Info) als auch in den Modulen des
 tw-utils-Discordbots.
 
-![Truppen-Übersicht](../assets/leaderview/04_leaderview_troops.png){ .screenshot }
-
-!!! info "Hinweis"
-    Die Truppendaten müssen für eine korrekte Verarbeitung in einem
-    speziellen Format hochgeladen werden. Nutze hierzu bitte das
-    [Schnellleistenscript](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/).
-    Über den Upload-Button kannst du **„Truppen Insgesamt"** und
-    **„Truppen im Dorf"** hochladen. Die Truppendaten (Truppen im
-    Dorf) werden **automatisch mit dem tw-utils.net Discordbot
-    synchronisiert** und im Rahmen der folgenden Module genutzt:
-    **Bunker-Information-System**, **Off/Deff/Snob-Search-Systems**.
+!!! info "Weiterverwendung durch den Discordbot"
+    Die hochgeladenen **„Truppen im Dorf"** werden automatisch mit dem
+    tw-utils-Discordbot synchronisiert und dort in den Modulen
+    **Bunker-Information-System** und **Off/Deff/Snob-Search-Systems**
+    weiterverwendet.
 
 ## Spalten der Tabelle
 
