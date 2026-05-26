@@ -230,20 +230,24 @@ du in den jeweils gleichnamigen Abschnitten weiter unten.
 
 ### Reiter „Pläne"
 
+Im Reiter **„Pläne"** verwaltest du die Angriffspläne der Spieler — pro
+Spieler, für den im Container Befehle existieren, gibt es eine Zeile.
+
 ![Reiter „Pläne"](../assets/leaderview/24_leaderview_planning_container_planstab.png){ .screenshot }
 
-Der Reiter **„Pläne"** ist die spieler-orientierte Sicht. Pro Spieler,
-für den im Container Befehle existieren, gibt es eine Zeile mit
-folgenden Spalten:
+Auf einen Blick erkennst du, ob der Spieler-Account mit einem
+Discord-Account verknüpft ist; daran siehst du sofort, ob der Spieler
+den Plan eigenständig über den tw-utils-Discordbot herunterladen kann
+oder ob du ihn per Ingame-Nachricht zukommen lassen musst. Außerdem
+siehst du den **DSU-Plan**-Link des jeweiligen Spielers — dieser
+erscheint allerdings erst, nachdem eine
+[DSU-Synchronisation](#dsu-synchronisation) durchgeführt wurde. Der
+**Verteilungsstatus** schließlich wird grün, sobald der Plan per
+Ingame-Nachricht versendet wurde **oder** sobald ein verknüpfter
+Discord-User den Plan über den Discordbot heruntergeladen hat.
 
-| Spalte | Bedeutung |
-|---|---|
-| **#** | Laufende Nummer |
-| **Spieler** | Name des Spielers, dem die Befehle gehören |
-| **Befehle** | Anzahl seiner Befehle im Container, plus Status (z. B. **„Aktiv"** = Befehle sind veröffentlicht / spielbar) |
-| **Discord** | Verknüpfter Discord-Account; **„nicht verknüpft"**, wenn der Spieler sich noch nicht verifiziert hat |
-| **DSU-Plan** | Links zum Spieler-DSU-Plan: **„Bearbeiten"** öffnet ihn in DS-Ultimate, **„Anzeigen"** zur reinen Ansicht. Erscheint erst nach DSU-Synchronisation. |
-| **Verteilungsstatus** | Zeigt an, ob der Spieler den Plan bereits erhalten hat: 🔴 = noch nicht verteilt, 🟢 = verteilt (mit Zeitstempel). Das **blaue Brief-Icon** öffnet den Dialog zum Versenden der Ingame-Nachricht. |
+Darüber hinaus stehen dir als Stammesführung mehrere Funktionen zur
+Verfügung, die in den folgenden Unterabschnitten beschrieben sind.
 
 #### Funktionen
 
@@ -268,29 +272,44 @@ Stand.
 
 ##### Planverteilung
 
-Die fertigen Pläne erreichen die Spieler auf zwei Wegen: per
-**Ingame-Nachricht** an einzelne Spieler oder per **Export der
-DSU-Links** für ein zentrales externes Posting (z. B. im Stammesforum).
-Gemeinsamer Ausgangspunkt für beide Wege ist das
-**Nachrichten-Template**.
+Die fertigen Pläne lassen sich auf **drei Wegen** an die Spieler
+verteilen:
 
-**Nachrichten-Template**
+1. **Über den Discordbot** — Spieler mit abgeschlossener
+   Discord-Account-Verifizierung können den Plan eigenständig
+   herunterladen.
+2. **Per Ingame-Nachricht** — der Leader versendet den Plan einzeln per
+   Ingame-Inbox, optional mit eigenem Nachrichten-Template.
+3. **Sonstige Verteilung über Export** — die DSU-Links lassen sich als
+   TXT-Datei exportieren und außerhalb des Spiels weiterverwenden
+   (z. B. Forum-Posting).
+
+**Verteilung über den Discordbot**
+
+Spieler, die ihre Discord-Account-Verifizierung mit ihrem DS-Account
+abgeschlossen haben, können den Angriffsplan eigenständig über das
+[Planning-System des tw-utils-Discordbots](../discord-bot/planning-system.md)
+herunterladen. Ein aktives Versenden durch den Leader ist hier nicht
+nötig. Welche Spieler über den Bot beziehbar sind, erkennst du an der
+Spalte **Discord** in der Übersicht.
+
+**Verteilung per Ingame-Nachricht**
+
+Sollen Spieler den Plan per Ingame-Inbox erhalten, kommt das
+**Nachrichten-Template** ins Spiel — die Text-Vorlage, die beim
+Versenden für jeden Spieler individuell befüllt wird.
 
 ![Nachrichten-Template bearbeiten](../assets/leaderview/25_leaderview_planning_container_planstab_messagetemplate.png){ .screenshot }
 
 Über den Button **„Nachrichten-Template"** öffnest du den Editor
-**„Nachrichten-Template bearbeiten"**. Das Template ist die
-**Text-Vorlage**, die beim Senden einer Ingame-Nachricht für jeden
-Spieler benutzt wird. Die Platzhalter werden automatisch pro Spieler
-ersetzt:
+**„Nachrichten-Template bearbeiten"**. Die Platzhalter werden
+automatisch pro Spieler ersetzt:
 
 | Platzhalter | Wird ersetzt durch |
 |---|---|
 | `{player_name}` | Name des Spielers, an den die Nachricht geht |
 | `{dsu_link}` | Individueller Link zum DS-Ultimate-Plan dieses Spielers |
-| `{wb_commands}` | Alle WB-Commands des Spielers im Spoiler-Block (für den Ingame-Bot „werewolf"). |
-
-**Ingame-Nachricht senden**
+| `{wb_commands}` | Alle WB-Commands des Spielers im Spoiler-Block (für den Ingame-Bot „werewolf") |
 
 ![Ingame-Nachricht senden](../assets/leaderview/27_leaderview_planning_container_planstab_sendplan_ingame.png){ .screenshot }
 
@@ -298,19 +317,20 @@ Ein Klick auf das blaue **Brief-Icon** in der Spalte
 **„Verteilungsstatus"** öffnet den Dialog **„Ingame-Nachricht senden"**.
 Der Dialog zeigt die fertige Nachricht für den jeweiligen Empfänger
 (Template mit aufgelösten Platzhaltern, inkl. WB-Commands-Spoiler).
-
 Über **„Send & Copy"** wird die Nachricht in die Zwischenablage kopiert
 und gleichzeitig die Ingame-Inbox in einem neuen Tab geöffnet — dort
 einfach mit `Strg+V` einfügen und versenden. Der Spieler wird
 automatisch als **„verteilt"** markiert.
 
-**Export Links (alternative Verteilung)**
+**Sonstige Verteilung über Export der DSU-Links**
 
-Sollen die Pläne nicht per Ingame-Nachricht, sondern zentral an einer
-externen Stelle (z. B. im Stammesforum) gepostet werden, lassen sich
-die DSU-Links der ausgewählten Spieler über die Bulk-Aktion
-**„Export Links"** ausgeben — siehe
-[Status- & Link-Management](#status--link-management-bulk-aktionen).
+Soll die Verteilung außerhalb von Discord und Ingame stattfinden —
+z. B. zentral im Stammesforum — kannst du die DSU-Links der
+ausgewählten Spieler über die Bulk-Aktion **„Export Links"** als
+TXT-Datei herunterladen. Markiere dazu in der Spieler-Tabelle die
+gewünschten Spieler; in der oben erscheinenden Action-Bar wählst du
+dann **„Export Links"**. Die TXT-Datei enthält pro markiertem Spieler
+einen DSU-Link und kann beliebig weiterverwendet werden.
 
 ##### Status- & Link-Management (Bulk-Aktionen)
 
@@ -334,17 +354,15 @@ bekommen soll.
 ![Action-Bar im Reiter „Pläne"](../assets/leaderview/29_leaderview_planning_container_planstab_selectinplans_opens_action_bar.png){ .screenshot }
 
 Sobald du in der Spieler-Tabelle mindestens einen Eintrag anhakst,
-erscheint oben eine Action-Bar mit folgenden Aktionen:
-
-- **„Abhol-Status zurücksetzen"** — setzt den Verteilungsstatus aller
-  ausgewählten Spieler auf 🔴 zurück.
-- **„Link erneuern"** — generiert für die ausgewählten Spieler einen
-  neuen DSU-Link. **Achtung:** Der alte Link wird sofort ungültig — die
-  Spieler müssen den neuen Link aktiv abholen.
-- **„Export Links"** — exportiert die DSU-Links der ausgewählten
-  Spieler (z. B. für ein zentrales Forum-Posting; siehe
-  [Planverteilung](#planverteilung)).
-- **„Abbrechen"** — Auswahl verwerfen.
+erscheint oben eine Action-Bar mit Bulk-Aktionen. Über
+**„Abhol-Status zurücksetzen"** setzt du den Verteilungsstatus aller
+ausgewählten Spieler auf 🔴 zurück — nützlich, wenn die Pläne erneut
+verteilt werden sollen. Mit **„Link erneuern"** wird für die
+ausgewählten Spieler ein neuer DSU-Link generiert; der alte Link wird
+dabei sofort ungültig, sodass die betroffenen Spieler den neuen Link
+aktiv abholen müssen. Die Bulk-Aktion **„Export Links"** ist im
+Abschnitt [Planverteilung](#planverteilung) beschrieben. Über
+**„Abbrechen"** verwirfst du die aktuelle Auswahl.
 
 ### Reiter „Befehle"
 
