@@ -259,10 +259,13 @@ Nach Klick auf **„DSU-Synchronisation"** legt das Tool für jeden
 Spieler einen DSU-Plan auf DS-Ultimate an; in der Spalte **„DSU-Plan"**
 erscheinen die Links **„Bearbeiten · Anzeigen"**.
 
+![DSU-Plan: Bearbeiten / Anzeigen](../assets/leaderview/42_leaderview_planning_dsulink_edit_view.png){ .screenshot }
+
 Zusätzlich erscheint ganz oben die hervorgehobene Zeile **„Gesamtplan"**
 mit dem gelben **„Total Plan"**-Badge — sie enthält alle Befehle aller
-Spieler in einem einzigen DSU-Plan und eignet sich z. B. für eine
-zentrale Co-Leader-Übersicht.
+Spieler in einem einzigen DSU-Plan.
+
+![Pending changes](../assets/leaderview/41_leaderview_planning_pendingchanges.png){ .screenshot }
 
 Oben rechts zeigt der Hinweis **„Pending changes: +X / -Y / ±Z"** an,
 wie viele Commands seit der letzten Synchronisation **hinzugekommen
@@ -270,32 +273,39 @@ wie viele Commands seit der letzten Synchronisation **hinzugekommen
 Zähler nicht 0/0/0 steht, sind die DSU-Pläne nicht auf dem aktuellen
 Stand.
 
+!!! info "Was wird synchronisiert?"
+    In die DSU-Pläne werden ausschließlich Befehle übertragen, die im
+    Container enthalten **und** nicht ausgeblendet sind. Ausgeblendete
+    Befehle (per **„Abgelaufene ausblenden"** oder manuell) bleiben im
+    Container, fließen aber nicht in die DSU-Synchronisation ein.
+
 ##### Planverteilung
 
 Die fertigen Pläne lassen sich auf **drei Wegen** an die Spieler
 verteilen:
 
 1. **Über den Discordbot** — Spieler mit abgeschlossener
-   Discord-Account-Verifizierung können den Plan eigenständig
-   herunterladen.
+   Account-Verifizierung können den Plan eigenständig über den
+   Stammes-Discordserver herunterladen.
 2. **Per Ingame-Nachricht** — der Leader versendet den Plan einzeln per
-   Ingame-Inbox, optional mit eigenem Nachrichten-Template.
+   Ingame-Nachricht, optional mit dem von tw-utils bereitgestellten
+   Nachrichten-Template.
 3. **Sonstige Verteilung über Export** — die DSU-Links lassen sich als
    TXT-Datei exportieren und außerhalb des Spiels weiterverwenden
-   (z. B. Forum-Posting).
+   (z. B. Forum-Posting, Discord-DM, etc.).
 
 **Verteilung über den Discordbot**
 
-Spieler, die ihre Discord-Account-Verifizierung mit ihrem DS-Account
+Spieler, die ihre Account-Verifizierung mit ihrem DS-Account
 abgeschlossen haben, können den Angriffsplan eigenständig über das
 [Planning-System des tw-utils-Discordbots](../discord-bot/planning-system.md)
 herunterladen. Ein aktives Versenden durch den Leader ist hier nicht
-nötig. Welche Spieler über den Bot beziehbar sind, erkennst du an der
-Spalte **Discord** in der Übersicht.
+nötig. Welche Spieler über den Bot verifiziert sind, erkennst du an
+der Spalte **Discord** in der Übersicht.
 
 **Verteilung per Ingame-Nachricht**
 
-Sollen Spieler den Plan per Ingame-Inbox erhalten, kommt das
+Sollen Spieler den Plan per Ingame-Nachricht erhalten, kommt das
 **Nachrichten-Template** ins Spiel — die Text-Vorlage, die beim
 Versenden für jeden Spieler individuell befüllt wird.
 
@@ -309,28 +319,38 @@ automatisch pro Spieler ersetzt:
 |---|---|
 | `{player_name}` | Name des Spielers, an den die Nachricht geht |
 | `{dsu_link}` | Individueller Link zum DS-Ultimate-Plan dieses Spielers |
-| `{wb_commands}` | Alle WB-Commands des Spielers im Spoiler-Block (für den Ingame-Bot „werewolf") |
+| `{wb_commands}` | Alle WB-Commands des Spielers im Spoiler-Block. |
 
-![Ingame-Nachricht senden](../assets/leaderview/27_leaderview_planning_container_planstab_sendplan_ingame.png){ .screenshot }
+Wenn das Nachrichten-Template erstellt und gespeichert wurde, kannst
+du per Klick auf das blaue **Brief-Icon** in der Spalte
+**„Verteilungsstatus"** die Verteilung starten:
 
-Ein Klick auf das blaue **Brief-Icon** in der Spalte
-**„Verteilungsstatus"** öffnet den Dialog **„Ingame-Nachricht senden"**.
-Der Dialog zeigt die fertige Nachricht für den jeweiligen Empfänger
-(Template mit aufgelösten Platzhaltern, inkl. WB-Commands-Spoiler).
-Über **„Send & Copy"** wird die Nachricht in die Zwischenablage kopiert
-und gleichzeitig die Ingame-Inbox in einem neuen Tab geöffnet — dort
-einfach mit `Strg+V` einfügen und versenden. Der Spieler wird
-automatisch als **„verteilt"** markiert.
+![Ingame-Nachricht senden](../assets/leaderview/43_leaderview_planning_send_ingame_message.png){ .screenshot }
+
+Es öffnet sich der Dialog **„Ingame-Nachricht senden"**, der die
+fertige Nachricht für den jeweiligen Empfänger zeigt (Template mit
+aufgelösten Platzhaltern, inkl. WB-Commands-Spoiler).
+
+![Dialog „Ingame-Nachricht senden"](../assets/leaderview/45_leaderview_planning_send_ingame_message_dialog.png){ .screenshot }
+
+Über **„Send & Copy"** wird die Nachricht in die Zwischenablage
+kopiert und gleichzeitig die Ingame-Nachricht in einem neuen Tab
+geöffnet — dort einfach mit `Strg+V` einfügen und versenden. Der
+Spieler wird automatisch als **„verteilt"** markiert.
 
 **Sonstige Verteilung über Export der DSU-Links**
 
 Soll die Verteilung außerhalb von Discord und Ingame stattfinden —
 z. B. zentral im Stammesforum — kannst du die DSU-Links der
 ausgewählten Spieler über die Bulk-Aktion **„Export Links"** als
-TXT-Datei herunterladen. Markiere dazu in der Spieler-Tabelle die
-gewünschten Spieler; in der oben erscheinenden Action-Bar wählst du
-dann **„Export Links"**. Die TXT-Datei enthält pro markiertem Spieler
-einen DSU-Link und kann beliebig weiterverwendet werden.
+TXT-Datei herunterladen.
+
+![Bulk-Bar im Reiter „Pläne"](../assets/leaderview/44_leaderview_planning_bulk_bar_planstab.png){ .screenshot }
+
+Markiere dazu in der Spieler-Tabelle die gewünschten Spieler; in der
+oben erscheinenden Action-Bar wählst du dann **„Export Links"**. Die
+TXT-Datei enthält pro markiertem Spieler einen DSU-Link und kann
+beliebig weiterverwendet werden.
 
 ##### Status- & Link-Management (Bulk-Aktionen)
 
@@ -351,8 +371,6 @@ bekommen soll.
 
 **Bulk-Aktionen für mehrere Spieler**
 
-![Action-Bar im Reiter „Pläne"](../assets/leaderview/29_leaderview_planning_container_planstab_selectinplans_opens_action_bar.png){ .screenshot }
-
 Sobald du in der Spieler-Tabelle mindestens einen Eintrag anhakst,
 erscheint oben eine Action-Bar mit Bulk-Aktionen. Über
 **„Abhol-Status zurücksetzen"** setzt du den Verteilungsstatus aller
@@ -368,26 +386,13 @@ Abschnitt [Planverteilung](#planverteilung) beschrieben. Über
 
 ![Reiter „Befehle"](../assets/leaderview/30_leaderview_planning_container_commandstab_overview.png){ .screenshot }
 
-Der Reiter **„Befehle"** ist die befehl-orientierte Sicht. Jede Zeile
-ist ein einzelner Angriffsbefehl im Container. Spalten:
-
-| Spalte | Bedeutung |
-|---|---|
-| **Spieler** | Angreifer (Besitzer des Quelldorfs) |
-| **Quelle** | Quelldorf-Koordinate |
-| **Ziel** | Zieldorf-Koordinate |
-| **Einheit** | Schnellste Einheit im Befehl — bestimmt die Laufzeit |
-| **Icon** | DS-Ultimate-Symbol des Befehls (z. B. Off-, AG-, Fake-Icon) |
-| **Abschickzeit** | Wann der Angriff abgeschickt werden muss |
-| **Ankunftszeit** | Wann der Angriff am Ziel ankommt |
-| **Distanz** | Felderdistanz Quelle ↔ Ziel |
-| **Laufzeit** | Berechnete Laufzeit auf Basis der Einheit |
-
-Über das Häkchen **„Ausgeblendete zeigen"** lassen sich versteckte
-Befehle einblenden.
-
-Rechts oben stehen die Aktionen **„UT-Boost"** und
-**„Ankunftszeiten anpassen"** zur Verfügung.
+Im Reiter **„Befehle"** verwaltest du als Leader die im Container
+enthaltenen Befehle. Einzelne Befehle können hier bearbeitet,
+ausgeblendet oder gelöscht werden — ausgeblendete Befehle lassen
+sich über das Häkchen **„Ausgeblendete zeigen"** jederzeit wieder
+einblenden. Auch Bulk-Aktionen wie das Anpassen von Ankunftszeiten
+sowie das Anwenden von UT-Boosts auf Fake-UT-Befehle sind hier
+möglich. Die einzelnen Funktionen sind im Folgenden beschrieben.
 
 #### Funktionen
 
@@ -397,86 +402,103 @@ Rechts oben stehen die Aktionen **„UT-Boost"** und
 
 Über das Bearbeiten-Icon eines Befehls öffnest du den Dialog
 **„Befehl bearbeiten"**. Hier kannst du einen einzelnen Befehl
-nachträglich justieren:
+nachträglich justieren.
 
-- **Quelldorf** / **Zieldorf** — Koordinaten der beiden beteiligten
-  Dörfer; der Spielername wird automatisch unter dem Feld angezeigt.
-- **Typ** — Befehlstyp (z. B. **„Snob"**, **„Off"**, **„Fake"**).
-- **Einheit** — schnellste verwendete Einheit; bestimmt die Laufzeit.
-- **Symbol** — DS-Ultimate-Icon des Befehls.
-- **Abschickzeit** / **Ankunftszeit** — eines der beiden ist
-  einstellbar, das jeweils andere wird automatisch berechnet.
-- **UT-Boost (0–20 %)** — optional, nur für Fake-UT.
-- **Truppen** — Anzahl Truppen pro Einheitentyp im Befehl.
-- **Vorschau** — Live-Berechnung mit Typ, Quelle, Ziel, Einheit,
-  Abschickzeit, Ankunftszeit, Distanz und Laufzeit. Die Vorschau ist
-  informativ; die finalen Werte berechnet der Server beim Speichern.
+Im oberen Bereich des Dialogs stehen **Quelldorf** und **Zieldorf**
+mit ihren Koordinaten zur Bearbeitung bereit; der Spielername wird
+automatisch unter dem jeweiligen Feld angezeigt. Über die Felder
+**„Typ"** (z. B. **„Snob"**, **„Off"** oder **„Fake"**),
+**„Einheit"** (schnellste verwendete Einheit, sie bestimmt die
+Laufzeit) und **„Symbol"** (DS-Ultimate-Icon des Befehls) legst du
+die Eckdaten des Befehls fest. Bei den Zeiten ist jeweils einer der
+beiden Werte **Abschickzeit** und **Ankunftszeit** einstellbar — der
+jeweils andere wird automatisch berechnet. Der **UT-Boost (0–20 %)**
+ist optional und ausschließlich für Fake-UT-Befehle relevant. Unter
+**„Truppen"** trägst du die Anzahl Truppen pro Einheitentyp im
+Befehl ein.
+
+Die **Vorschau** am unteren Rand des Dialogs liefert eine
+Live-Vorschau des Befehls. Sie ist rein informativ — die finalen
+Werte berechnet der Server beim Speichern.
 
 ##### Ankunftszeiten anpassen
 
 ![Ankunftszeiten anpassen](../assets/leaderview/32_leaderview_planning_container_commandstab_adjusttimes_modal.png){ .screenshot }
 
 Der Dialog **„Ankunftszeiten anpassen"** verschiebt die Ankunftszeiten
-für bestimmte Befehlsgruppen — typischerweise weil sich der Off-Termin
-einer Welle geändert hat. Ablauf in zwei Schritten:
+für bestimmte Befehlsgruppen. Häufig wird diese Funktion eingesetzt,
+um z. B. AG-Befehle zeitlich an die zuletzt laufende Off anzupassen.
 
-1. **Kombinationen auswählen** — markiere die
-   Plantyp/Einheit/Icon-Kombinationen, die angepasst werden sollen.
-   Die Spalte **„Count"** zeigt, wie viele Befehle im Container je
-   Kombination passen, **„Total"** summiert die Auswahl.
-2. **Datei hochladen** — eine Textdatei im Format
-   `XXX|YYY,DD.MM.JJJJ,HH:MM:SS` (eine Zeile pro Zieldorf). Drag &
-   Drop oder Klicken zum Auswählen.
+Im ersten Schritt wählst du gezielt aus, welche
+Plantyp/Einheit/Icon-Kombinationen angepasst werden sollen — so
+kannst du die Anpassung auf einzelne Befehlsgruppen einschränken und
+andere unberührt lassen. Die Spalte **„Count"** zeigt dir je Zeile,
+wie viele Befehle im Container unter die jeweilige Kombination
+fallen; die Spalte **„Total"** summiert die aktuell markierte
+Auswahl.
 
-Die Anpassung gilt auch für ausgeblendete Befehle.
+Im zweiten Schritt lädst du eine Textdatei mit den neuen
+Ankunftszeiten hoch — eine Zeile pro Zieldorf im Format
+`XXX|YYY,DD.MM.JJJJ,HH:MM:SS`. Die Datei kannst du per Drag & Drop
+ablegen oder per Klick auswählen.
+
+!!! info "Anpassung schließt ausgeblendete Befehle ein"
+    Die Anpassung der Ankunftszeiten gilt auch für aktuell
+    ausgeblendete Befehle der gewählten Kombination.
 
 ##### UT-Boost anwenden
 
 ![UT-Boost-Modal](../assets/leaderview/31_leaderview_planning_container_commandstab_utboost_modal.png){ .screenshot }
 
-Im Dialog **„UT-Boosts"** vergibst du pro Zielspieler einen
-Boost-Prozentsatz (0–20 %). Damit kannst du gezielt einzelnen Spielern
-mehr Fake-UT-Befehle zuweisen, ohne die Container-Logik insgesamt zu
-verändern.
+Häufig aktivieren feindliche Spieler während einer offensiven Aktion
+den UT-Boost. Unterstützungs-Befehle wie z. B. Fake-UT haben dadurch
+eine geringere Laufzeit. In den ursprünglich erstellten
+Angriffsbefehlen ist das nicht berücksichtigt, weil zum
+Planungszeitpunkt nicht feststeht, ob ein gegnerischer Spieler den
+UT-Boost aktivieren wird.
 
-Spalten der Tabelle im Modal:
-
-- **Zielspieler** — Empfänger des Boosts.
-- **Betroffene Befehle** — Anzahl Fake-UT-Befehle, auf die der Boost
-  wirkt.
-- **UT-Boost (%)** — Eingabefeld für den Prozentwert pro Spieler.
+Sobald ein Spieler den UT-Boost aktiviert hat, kannst du über den
+Dialog **„UT-Boosts"** alle auf diesen Spieler laufenden
+Fake-UT-Befehle nachträglich an den aktivierten Boost anpassen. Dazu
+trägst du in der Tabelle pro Zielspieler den entsprechenden
+Boost-Prozentsatz (0–20 %) ein.
 
 !!! info "Nur für Fake-UT-Befehle"
     UT-Boosts wirken ausschließlich auf **Fake-UT-Befehle** und
     schließen dabei auch ausgeblendete Befehle mit ein.
 
-- **„Save only"** — Werte speichern, aber noch nicht anwenden.
+- **„Save only"** — speichert die eingegebenen Boost-Werte, ohne die
+  betroffenen Fake-UT-Befehle bereits umzurechnen. Die tatsächliche
+  Anpassung der Befehle erfolgt erst beim späteren Klick auf
+  **„Save & Apply"**.
 - **„Save & Apply"** — Werte speichern und sofort auf alle betroffenen
   Befehle anwenden.
 
-##### Bulk-Aktionen
-
-![Action-Bar im Reiter „Befehle"](../assets/leaderview/34_leaderview_planning_container_commandstab_selectingcommand_opens_action_bar.png){ .screenshot }
-
-Sobald du Befehle in der Liste auswählst, erscheint eine Action-Bar mit
-Bulk-Aktionen (z. B. UT-Boost, Ankunftszeiten anpassen, Befehle
-ausblenden bzw. löschen).
-
 ### Veröffentlichung
 
-Der **Veröffentlichungs-Toggle** oben rechts im Kopfbereich steuert, ob
-der Container nach außen aktiv ist.
+Über den **Veröffentlichungs-Toggle** oben rechts im Kopfbereich
+steuert der Leader, ob der Container nach außen aktiv ausgeliefert
+wird.
 
 ![Veröffentlichung aktiv](../assets/leaderview/35_leaderview_planning_container_publishing_active.png){ .screenshot }
 
 ![Veröffentlichung inaktiv](../assets/leaderview/36_leaderview_planning_container_publishing_inactive.png){ .screenshot }
 
-- **Veröffentlichung: Aktiv** — DSU-Links sind erreichbar, der
-  Discordbot liefert Inhalte an die verknüpften Spieler aus.
-- **Veröffentlichung: Inaktiv** — der Container ist nur intern im
-  Leader-View sichtbar. Bestehende DSU-Links sind nicht erreichbar, die
-  Discord-Auslieferung pausiert. Ideal während der Vorbereitung einer
-  Operation.
+Steht der Toggle auf **„Aktiv"**, können die Spieler ihre Pläne
+eigenständig über den Discordbot (Planning-System) herunterladen und
+sehen die zugehörigen Befehle auf ihrer **„Meine Befehle"**-Seite bei
+tw-utils.net. Steht der Toggle auf **„Inaktiv"**, pausiert beides:
+weder der Discord-Download noch die Anzeige unter **„Meine Befehle"**
+ist dann verfügbar. Der Container bleibt in diesem Zustand nur intern
+im Leader-View sichtbar — ideal während der Vorbereitung einer
+Operation.
+
+!!! info "Keine Auswirkung auf bereits verteilte DSU-Pläne"
+    Der Veröffentlichungs-Toggle beeinflusst ausschließlich den
+    Discord-Download und die Anzeige unter **„Meine Befehle"**.
+    Bereits an DS-Ultimate synchronisierte Pläne bleiben dort
+    erhalten und sind weiterhin abrufbar, auch wenn der Container auf
+    **„Inaktiv"** geschaltet wird.
 
 ### Sonstiges
 
@@ -489,24 +511,21 @@ aller Änderungen am Container. Pro Eintrag siehst du **Zeitpunkt**,
 **Geändert von** (Leader bzw. Spieler) und die ausgeführte
 **Container-Aktion**.
 
-Typische Einträge:
-
-- `Container aktiviert` / `Container deaktiviert` — Verteilungsstatus
-  umgeschaltet.
-- `Plan "…" imported (X commands)` — ein Plan aus dem
-  Off-/AG-Planungstool wurde importiert.
-- `Container cleared (X commands removed)` — alle Befehle wurden
-  entfernt (`Pläne leeren`).
-- `DSU synchronized (X new, X removed, X changed)` — Synchronisation
-  nach DS-Ultimate.
-- `"…" manually marked as distributed` — Verteilungsstatus eines
-  Spielers wurde manuell auf 🟢 gesetzt.
-
 #### Container löschen
 
 Über den Button **„Container löschen"** im Kopfbereich (rechts neben
-**„Changelog"**) wird der gesamte Container inklusive aller importierten
-Pläne, Befehle und DSU-Verteilungen entfernt. Die Aktion ist
+**„Changelog"**) wird der gesamte Container inklusive aller
+importierten Pläne und Befehle entfernt. Die Aktion ist
 **irreversibel** — gelöschte Container können nicht wiederhergestellt
 werden. Vor dem Löschen erscheint ein Bestätigungsdialog, um
 versehentliche Löschungen zu vermeiden.
+
+!!! info "Bereits verteilte DSU-Pläne bleiben erhalten"
+    Das Löschen des Containers hat keine Auswirkung auf bereits an
+    DS-Ultimate synchronisierte Pläne — diese bleiben in DS-Ultimate
+    bestehen. Sollen die DSU-Pläne vor dem Löschen ebenfalls geleert
+    werden, empfiehlt sich folgender Ablauf: zunächst über
+    **„Pläne leeren"** alle Befehle aus dem Container entfernen,
+    anschließend über **„DSU-Synchronisation"** den geleerten Zustand
+    nach DS-Ultimate übertragen — und erst danach den Container
+    löschen.
