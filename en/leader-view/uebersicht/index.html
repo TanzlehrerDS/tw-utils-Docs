@@ -28,7 +28,7 @@
     
     
       
-        <title>Overview - tw-utils Docs</title>
+        <title>Permission - tw-utils Docs</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ubersicht" class="md-skip">
+        <a href="#berechtigung" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Permission
             
           </span>
         </div>
@@ -909,7 +909,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
+    Permission
   
 
     
@@ -927,7 +927,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
+    Permission
   
 
     
@@ -961,27 +961,33 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#leader-rolle-uber-den-discordbot-vergeben" class="md-nav__link">
+    <nav class="md-nav" aria-label="Voraussetzungen für den Zugriff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-verknupfung-des-discord-accounts-mit-einem-tribalwars-account" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Leader-Rolle über den Discordbot vergeben
+        1. Verknüpfung des Discord-Accounts mit einem Tribalwars-Account
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#aufruf-des-leader-views" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-vergabe-der-rolle-leader" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aufruf des Leader-Views
+        2. Vergabe der Rolle „Leader"
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1414,27 +1420,33 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#leader-rolle-uber-den-discordbot-vergeben" class="md-nav__link">
+    <nav class="md-nav" aria-label="Voraussetzungen für den Zugriff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-verknupfung-des-discord-accounts-mit-einem-tribalwars-account" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Leader-Rolle über den Discordbot vergeben
+        1. Verknüpfung des Discord-Accounts mit einem Tribalwars-Account
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#aufruf-des-leader-views" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-vergabe-der-rolle-leader" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aufruf des Leader-Views
+        2. Vergabe der Rolle „Leader"
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1455,7 +1467,8 @@
 
 
 
-<h1 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">¶</a></h1>
+<h1 id="berechtigung">Berechtigung<a class="headerlink" href="#berechtigung" title="Permanent link">¶</a></h1>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/02_leaderview_tabs.png" data-title="Leader-View Tab-Leiste" data-desc-position="bottom"><img alt="Leader-View Tab-Leiste" class="screenshot" src="../../../assets/leaderview/02_leaderview_tabs.png"></a></p>
 <p>Der <strong>Leader-View</strong> ist der Stammesführer-Bereich auf tw-utils.net. Er
 bündelt alle Werkzeuge, die du als Leader für die Steuerung deines
 Stammes brauchst — von der Mitgliederverwaltung über die Truppendaten
@@ -1467,49 +1480,51 @@ bis hin zur Bunker-Verwaltung und der Angriffsplanung.</p>
 <li><strong>Bunker-Info</strong></li>
 <li><strong>Planung</strong></li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/02_leaderview_tabs.png" data-title="Leader-View Tab-Leiste" data-desc-position="bottom"><img alt="Leader-View Tab-Leiste" class="screenshot" src="../../../assets/leaderview/02_leaderview_tabs.png"></a></p>
 <h2 id="voraussetzungen-fur-den-zugriff">Voraussetzungen für den Zugriff<a class="headerlink" href="#voraussetzungen-fur-den-zugriff" title="Permanent link">¶</a></h2>
 <p>Damit ein User den Leader-View sehen und nutzen kann, müssen <strong>beide</strong>
 folgenden Bedingungen erfüllt sein:</p>
+<h3 id="1-verknupfung-des-discord-accounts-mit-einem-tribalwars-account">1. Verknüpfung des Discord-Accounts mit einem Tribalwars-Account<a class="headerlink" href="#1-verknupfung-des-discord-accounts-mit-einem-tribalwars-account" title="Permanent link">¶</a></h3>
+<p>Der User muss auf dem <strong>Stammes-Discordserver</strong> mit mindestens einem
+seiner Tribalwars-Accounts verknüpft sein. Die Verknüpfung erfolgt über
+den tw-utils-Discordbot:</p>
 <ol>
-<li><strong>Der User muss auf dem Stammes-Discordserver mit mindestens einem
-   Tribalwars-Account verknüpft sein.</strong> Die Verknüpfung erfolgt über
-   den tw-utils-Discordbot — siehe
-   <a href="../../discord-bot/verifizierung/">Account-Verifizierung</a>.</li>
-<li><strong>Der User muss die Rolle „Leader" besitzen.</strong> Diese Rolle wird
-   ausschließlich über den tw-utils-Discordbot vergeben (siehe
-   nächster Abschnitt).</li>
+<li>Im Stammes-Discordserver in den Channel <strong><code>#⚫-bot-config</code></strong>
+   wechseln.</li>
+<li>Auf den Button <strong>„Account-Verifizierung"</strong> klicken und den dort
+   angezeigten Anweisungen folgen — der Bot führt durch die
+   Verknüpfung von Discord-Account und Tribalwars-Account.</li>
 </ol>
-<p>Sobald beide Voraussetzungen erfüllt sind, erscheint im Profil-Popup
-der jeweiligen Welt der Eintrag <strong>„Leader-View"</strong> sowie das gelbe
-<strong>„Leader"</strong>-Badge:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/01_leaderview_button.png" data-title="Leader-View Button im Profil-Popup" data-desc-position="bottom"><img alt="Leader-View Button im Profil-Popup" class="screenshot" src="../../../assets/leaderview/01_leaderview_button.png"></a></p>
-<h2 id="leader-rolle-uber-den-discordbot-vergeben">Leader-Rolle über den Discordbot vergeben<a class="headerlink" href="#leader-rolle-uber-den-discordbot-vergeben" title="Permanent link">¶</a></h2>
-<p>Die Vergabe der Leader-Rolle läuft komplett über den tw-utils-Discordbot
-und kann nur von <strong>Server-Admins</strong> durchgeführt werden.</p>
-<p>Ablauf:</p>
+<p>Die vollständige Schritt-für-Schritt-Anleitung mit allen Details findet
+sich unter <a href="../../discord-bot/verifizierung/">Account-Verifizierung</a>.</p>
+<h3 id="2-vergabe-der-rolle-leader">2. Vergabe der Rolle „Leader"<a class="headerlink" href="#2-vergabe-der-rolle-leader" title="Permanent link">¶</a></h3>
+<p>Der User muss die Rolle <strong>„Leader"</strong> besitzen. Diese Rolle wird
+ausschließlich über den tw-utils-Discordbot vergeben und kann nur von
+<strong>Admins des Stammes-Discordservers</strong> durchgeführt werden:</p>
 <ol>
-<li>Im Discord-Server in den Channel <strong><code>#⚫-bot-config</code></strong> wechseln.</li>
-<li>Auf den Button <code>'Manage Access to Leader-View'</code> klicken.</li>
-<li>Im daraufhin angezeigten (ephemeren) Embed auf <code>'Grant Access'</code>
+<li>Im Stammes-Discordserver in den Channel <strong><code>#⚫-bot-config</code></strong>
+   wechseln.</li>
+<li>Auf den Button <strong>„Manage Access to Leader-View"</strong> klicken.</li>
+<li>Im daraufhin angezeigten (ephemeren) Embed auf <strong>„Grant Access"</strong>
    klicken.</li>
-<li>Die Rolle auswählen — aktuell steht nur <code>Leader</code> zur Auswahl.</li>
+<li>Die Rolle auswählen — aktuell steht nur <strong>„Leader"</strong> zur Auswahl.</li>
 <li>Den Discord-User auswählen, der Leader-Zugriff erhalten soll.</li>
 </ol>
-<p>Über <code>'Terminate Access'</code> lässt sich der Zugriff einem User wieder
-entziehen. Mit <code>'List authorized Users'</code> werden alle aktuell
-berechtigten Leader des Servers aufgelistet.</p>
+<p>Über <strong>„Terminate Access"</strong> lässt sich der Zugriff einem User wieder
+entziehen. Mit <strong>„List authorized Users"</strong> werden alle aktuell
+berechtigten Leader des Stammes-Discordservers aufgelistet.</p>
 <div class="admonition info">
 <p class="admonition-title">Bot-Setup als Voraussetzung</p>
 <p>Damit der Channel <code>#⚫-bot-config</code> und seine Buttons überhaupt
 vorhanden sind, muss der tw-utils-Discordbot zunächst auf dem
-Server eingerichtet sein. Eine Schritt-für-Schritt-Anleitung dazu
-findest du unter <a href="../../discord-bot/quick-setup/">Quick-Setup-Guide</a>.</p>
+Stammes-Discordserver eingerichtet sein. Eine
+Schritt-für-Schritt-Anleitung dazu findest du unter
+<a href="../../discord-bot/quick-setup/">Quick-Setup-Guide</a>.</p>
 </div>
-<h2 id="aufruf-des-leader-views">Aufruf des Leader-Views<a class="headerlink" href="#aufruf-des-leader-views" title="Permanent link">¶</a></h2>
-<p>Nach Vergabe der Rolle taucht im Profil-Popup der entsprechenden Welt
-der Button <strong>„Leader-View"</strong> auf. Ein Klick darauf öffnet den
-Leader-View mit den vier Tabs.</p>
+<hr>
+<p>Sobald beide Voraussetzungen erfüllt sind, erscheint im Profil-Popup
+der jeweiligen Welt der Eintrag <strong>„Leader-View"</strong> sowie das gelbe
+<strong>„Leader"</strong>-Badge:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/01_leaderview_button.png" data-title="Leader-View Button im Profil-Popup" data-desc-position="bottom"><img alt="Leader-View Button im Profil-Popup" class="screenshot" src="../../../assets/leaderview/01_leaderview_button.png"></a></p>
 
 
 
