@@ -1991,7 +1991,8 @@ split into two sub-tabs:</p>
 <h2 id="queries">Queries<a class="headerlink" href="#queries" title="Permanent link">¶</a></h2>
 <p>Under the <strong>"Queries"</strong> sub-tab you'll find three pill tabs:
 <strong>Snob-Entries</strong>, <strong>Launch times</strong> and <strong>Excluded Villages</strong>. They
-provide the three most important inputs for nuke planning.</p>
+provide the three most important inputs for nuke planning and must be
+supplied by the tribe members.</p>
 <div class="admonition info">
 <p class="admonition-title">Data usually comes from the Discord bot</p>
 <p>Snob-Entries, launch times and excluded source villages are
@@ -2001,9 +2002,8 @@ The entries then appear automatically in these lists. Leaders can
 however always create, edit or delete entries manually.</p>
 </div>
 <h3 id="snob-entries">Snob-Entries<a class="headerlink" href="#snob-entries" title="Permanent link">¶</a></h3>
-<p>In this area you collect reports of how many snobs which player has
-ready on which target villages. The list is the basis for the later
-snob planning.</p>
+<p>In this area the snob entries are managed. The list is the basis for
+the later snob planning.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/15_leaderview_planning_snobqueries_overview.png" data-title="Snob-Entries — overview" data-desc-position="bottom"><img alt="Snob-Entries — overview" class="screenshot" src="../../../assets/leaderview/15_leaderview_planning_snobqueries_overview.png"></a></p>
 <p>At the top you see a <strong>metrics bar</strong> summarizing all entries:</p>
 <ul>
@@ -2036,11 +2036,11 @@ snob planning.</p>
 </tr>
 <tr>
 <td><strong>Coordinate</strong></td>
-<td>Target village of the entry</td>
+<td>Source village of the entry</td>
 </tr>
 <tr>
 <td><strong>Count</strong></td>
-<td>How many snobs the player has ready on this target village</td>
+<td>How many snobs the player has ready from this source village</td>
 </tr>
 <tr>
 <td><strong>Actions</strong></td>
@@ -2053,11 +2053,11 @@ snob planning.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/16_leaderview_planning_snobqueries_add.png" data-title="Add snob entry" data-desc-position="bottom"><img alt="Add snob entry" class="screenshot" src="../../../assets/leaderview/16_leaderview_planning_snobqueries_add.png"></a></p>
 <p>The <strong>"Add snob entry"</strong> dialog contains two fields:</p>
 <ul>
-<li><strong>Coordinates (text with coords)</strong> — one or more target coordinates;
-  surrounding text is ignored (e.g. <code>Attack on 500|500 and
+<li><strong>Coordinates (text with coords)</strong> — one or more source coordinates;
+  surrounding text is ignored (e.g. <code>Snobs ready in 500|500 and
   501|501…</code>).</li>
 <li><strong>Snob count (per village)</strong> — how many snobs the player has ready
-  per target village. The entered value applies to <strong>all</strong>
+  per source village. The entered value applies to <strong>all</strong>
   coordinates detected in step 1.</li>
 </ul>
 <h3 id="launch-times">Launch times<a class="headerlink" href="#launch-times" title="Permanent link">¶</a></h3>
