@@ -128,8 +128,8 @@ Die Ergebnistabelle listet alle Dörfer auf, die den Schwellenwert
 ## Feindliche Bunker
 
 In diesem Unterreiter werden alle bekannten Bunker-Dörfer auf
-Feindseite gesammelt, um sie bei Off-Planungen besser einschätzen zu
-können.
+Feindseite gesammelt, um sie bei Off-Planungen besser berücksichtigen
+zu können.
 
 In der Liste tauchen sowohl Einträge auf, die Stammesmitglieder über
 das [Bunker-Information-System](../discord-bot/bunker-info.md) des
@@ -137,13 +137,6 @@ tw-utils-Discordbots gemeldet haben, als auch Bunker, die Leader
 direkt im Leader-View manuell eingetragen haben.
 
 ![Feindliche Bunker — Übersicht](../assets/leaderview/12_leaderview_bunkerinfo_enemybunkers_overview.png){ .screenshot }
-
-Aktionen oben:
-
-- **„Bunker eintragen"** — eigener Dialog für Feind-Bunker (siehe
-  unten).
-- **„Export"** — alle Einträge exportieren.
-- **„Markierte löschen"** — Bulk-Löschen markierter Einträge.
 
 Die Tabelle hat folgende Spalten:
 
