@@ -194,31 +194,39 @@ Werkzeugen zum Befüllen und Synchronisieren des Containers:
 
 ![Action-Leiste — Buttons](../assets/leaderview/40_leaderview_container_import_plan.png){ .screenshot }
 
-Über das Dropdown **„Plan auswählen…"** wählst du einen Plan aus dem
-Off-/AG-Planungstool aus und fügst ihn per Klick auf **„Hinzufügen"**
-dem Container hinzu. Nach dem Hinzufügen aktualisieren sich die Reiter
-**„Pläne"** und **„Befehle"** entsprechend — die importierten Spieler
-und Befehle erscheinen dort unmittelbar. Auf die gleiche Weise lassen
-sich nach und nach weitere Pläne einfügen.
+Über das Dropdown **„Plan auswählen…"** wählst du einen Plan aus
+deinen gespeicherten Plänen aus und fügst ihn per Klick auf
+**„Hinzufügen"** dem Container hinzu. Nach dem Hinzufügen
+aktualisieren sich die Reiter **„Pläne"** und **„Befehle"**
+entsprechend — die importierten Spielerpläne und Befehle erscheinen
+dort unmittelbar. Auf die gleiche Weise lassen sich nach und nach
+weitere Pläne einfügen.
 
 Soll der Container wieder komplett geleert werden, entfernt ein Klick
 auf **„Pläne leeren"** in einem Schritt alle bisher importierten
-Befehle. Der Schalter **„Veraltete ausblenden"** versteckt Befehle,
+Befehle. Der Schalter **„Abgelaufene ausblenden"** versteckt Befehle,
 deren Abschickzeit bereits in der Vergangenheit liegt — sie bleiben
 aber im Container erhalten und werden nur nicht mehr angezeigt.
 
-Sind alle gewünschten Pläne enthalten, überträgt ein Klick auf
-**„DSU-Synchronisation"** die aktuellen Befehle nach DS-Ultimate.
-Dabei legt das Tool pro Spieler einen eigenen DSU-Plan sowie einen
-„Gesamtplan" mit allen Befehlen an. Details zu diesem Schritt findest
-du im Abschnitt [DSU-Synchronisation](#dsu-synchronisation).
+!!! info "DSU-Pläne bleiben nach „Pläne leeren" bestehen"
+    Wurde der Container zuvor bereits per **„DSU-Synchronisation"**
+    nach DS-Ultimate übertragen, bleiben die dort angelegten DSU-Pläne
+    (pro Spieler + Gesamtplan) auch nach **„Pläne leeren"** bestehen.
+    Die Befehle innerhalb dieser DSU-Pläne werden bei **„Pläne leeren"**
+    allerdings ebenfalls entfernt — übrig bleibt nur der leere
+    DSU-Plan.
+
+Ein Klick auf **„DSU-Synchronisation"** überträgt die aktuell im
+Container enthaltenen Befehle nach DS-Ultimate. Dabei legt das Tool
+pro Spieler einen eigenen DSU-Plan sowie einen „Gesamtplan" mit allen
+Befehlen an. Details zu diesem Schritt findest du im Abschnitt
+[DSU-Synchronisation](#dsu-synchronisation).
 
 **Reiter „Pläne" und „Befehle"**
 
 Im unteren Bereich des Containers stehen die beiden Reiter **„Pläne"**
-(Sicht pro Spieler) und **„Befehle"** (Sicht pro Einzelangriff) zur
-Verfügung. Die Details zu beiden Reitern findest du in den jeweils
-gleichnamigen Abschnitten weiter unten.
+und **„Befehle"** zur Verfügung. Die Details zu beiden Reitern findest
+du in den jeweils gleichnamigen Abschnitten weiter unten.
 
 ### Reiter „Pläne"
 
