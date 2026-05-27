@@ -65,26 +65,31 @@ Klick auf `Search Off` öffnet das Modal `Find Off Options`:
 
 - `Target Coordinate` — Koordinate des Zieldorfes im Format `XXX|YYY`.
 - `Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)` — gewünschte Ankunftszeit; nur `hh:mm:ss` reicht für „heute", `DD.MM.YYYY hh:mm:ss` für ein späteres Datum.
-- `Minimum Off Strength (Axe,Lcav)` (optional) — Mindeststärke des gesuchten Offs, angegeben als Axt- und LK-Anzahl (z. B. `7000,3000`). Nuken unter diesem Schwellwert werden ausgeblendet.
-- `Earliest Launch Time` (optional) — frühester erlaubter Abschickzeitpunkt; Befehle, die schon davor losgeschickt werden müssten, werden gefiltert.
-- `Fixed Runtime (Unit name)` (optional) — beschränkt die Suche auf eine bestimmte Einheitenlaufzeit (z. B. nur Axt-Laufzeit), wenn der Off mit einer fixen Einheit gerechnet werden soll.
+- `Minimum Off Strength (Axe,Lcav)` (optional) — Mindeststärke der gesuchten Offs, angegeben als Axt- und Leichte Kavalerie-Anzahl (z. B. `7000,3000`). Offs unter diesem Schwellwert werden nicht mit in der Trefferliste ausgegeben.
+- `Earliest Launch Time` (optional) — frühester erlaubter Abschickzeitpunkt; Befehle, die schon davor losgeschickt werden müssten, werden rausgefiltert.
+- `Fixed Runtime (Unit name)` (optional) — beschränkt die Suche auf eine bestimmte Einheitenlaufzeit (z. B. nur Axt-Laufzeit), wenn der Off-Befehl mit einer fixen Einheit laufen werden soll.
 
 Klick auf `Search Snob` öffnet das Modal `Find Snob Options`:
 
 ![Modal: Find Snob Options](../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png){ .screenshot }
 
-- `Target Coordinate` — Koordinate des Ziel-AG-Dorfs.
+- `Target Coordinate` — Koordinate des Ziel-Dorfs.
 - `Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)` — gewünschte Ankunftszeit des AGs.
-- `Earliest Launch Time (optional)` — frühester erlaubter Abschickzeitpunkt für den AG.
+- `Earliest Launch Time (optional)` — frühester erlaubter Abschickzeitpunkt für das AG.
 
-Klick auf `Search Deff` öffnet das Modal `Find Deff Options`. Die Felder entsprechen dem Off-Modal, zusätzlich:
+Klick auf `Search Deff` öffnet das Modal `Find Deff Options`:
 
 ![Modal: Find Deff Options](../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png){ .screenshot }
 
+- `Target Coordinate` — Koordinate des Ziel-Dorfs im Format `XXX|YYY`.
+- `Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)` — gewünschte Ankunftszeit der Deff.
+- `Minimum Off Strength (Axe,Lcav)` (optional) — Mindeststärke der einlaufenden Offs (Axt-/Leichte-Kavalerie-Anzahl), gegen die das Deff-Dorf rechnerisch standhalten soll.
+- `Earliest Launch Time` (optional) — frühester erlaubter Abschickzeitpunkt; Deff-Befehle, die schon davor losgeschickt werden müssten, werden rausgefiltert.
+- `Fixed Runtime (Unit name)` (optional) — beschränkt die Suche auf eine bestimmte Einheitenlaufzeit, wenn die Deff mit einer fixen Einheit laufen soll.
 - `Minimum Population` — Mindesteinwohnerzahl des Herkunftsdorfs; verhindert, dass kleine Dörfer in die Trefferliste fallen.
-- `UT-Boost (0-20%)` — pauschaler Bonus auf die Truppenstärke des Herkunftsdorfs (z. B. wegen Mauer/Forschung), den der Bot bei der Berechnung berücksichtigt.
+- `UT-Boost (0-20%)` — Möglichkeit zur Berücksichtigung eines UT-Boosts bei der Suchanfrage.
 
-## 4. Suchergebnis lesen und mit der Workbench arbeiten
+## 4. Das Suchergebnis
 
 Nach dem Abschicken eines Such-Modals antwortet der Bot mit einem **ephemeralen Embed**, das nur der Suchende selbst sieht. Es listet alle möglichen Befehle mit Dorf-Koordinate, Truppenzusammensetzung, Abschick- und Ankunftszeit auf.
 
@@ -94,7 +99,7 @@ Die möglichen Befehle werden übersichtlich in tabellarischer Form dargestellt:
 
 ![Detaillierte Such-Antwort in Tabellenform](../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png){ .screenshot }
 
-Unter dem Suchergebnis stehen bis zu zehn Buttons zur Verfügung — jeder dieser Buttons generiert den zum Befehl passenden Workbench-Befehl.
+Unter dem Suchergebnis stehen bis zu zehn Buttons zur Verfügung — jeder dieser Buttons generiert den jeweiligen WB-Befehl.
 
 ![Workbench-Buttons im Suchergebnis](../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png){ .screenshot }
 
@@ -103,11 +108,11 @@ Im Antwort-Embed steht zusätzlich ein `Rally Point`-Button: Per Klick wird man 
 ![Bot-Antwort nach Workbench-Aktion mit Rally-Point-Button](../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png){ .screenshot }
 
 !!! info "Ephemerale Antwort nur für den Suchenden"
-    Die Trefferliste ist eine ephemerale Discord-Nachricht: Nur der Suchende sieht sie und sie verschwindet beim nächsten Discord-Neuladen. Wer das Ergebnis dauerhaft sichtbar machen und mit dem Stamm diskutieren möchte, exportiert die Suche in einen eigenen Kanal — siehe [Abschnitt 5](#5-suche-in-einen-eigenen-kanal-exportieren).
+    Die Trefferliste ist eine ephemerale Discord-Nachricht: Nur der Suchende sieht sie und sie verschwindet beim nächsten Discord-Neuladen. Wer das Ergebnis dauerhaft sichtbar machen und dem Stamm sichtbar machen will, exportiert die Suche in einen eigenen Kanal — siehe [Abschnitt 5](#5-suche-in-einen-eigenen-kanal-exportieren).
 
 ## 5. Suche in einen eigenen Kanal exportieren
 
-Im ephemeralen Suchergebnis (siehe [Abschnitt 4](#4-suchergebnis-lesen-und-mit-der-workbench-arbeiten)) steht ein Export-Button, der die Anfrage in eine neue, persistente Suchanfrage verlagert.
+Im ephemeralen Suchergebnis (siehe [Abschnitt 4](#4-das-suchergebnis)) steht ein Export-Button, der die Anfrage in einen neuen, separaten Kanal auslagert.
 
 ![Export-Button im Suchergebnis](../assets/discordbot/ods-system/16_ods_system_search_result_view_ephemeral_exporttoseparatechannel_button.png){ .screenshot }
 
@@ -115,7 +120,7 @@ Der Bot legt daraufhin in der Kategorie `🔍 OFF/DEFF/SNOB-SEARCHER` einen neue
 
 ![Neue exportierte Suchanfrage in der Kategorie](../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png){ .screenshot }
 
-Im neuen Kanal postet der Bot das Such-Embed mit allen Details und den Verwaltungs-Buttons. Das Ergebnis ist nun für den ganzen Stamm sichtbar, andere Spieler können mitdiskutieren, der Suchende kann den Status pflegen, Notizen anfügen und Folge-Suchen direkt aus der exportierten Suchanfrage heraus starten — siehe [Abschnitt 6](#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen).
+Im neuen Kanal postet der Bot das Suchergebnis mit allen Details und den Verwaltungs-Buttons. Das Ergebnis ist nun für den ganzen Stamm sichtbar, andere Spieler können mitdiskutieren, der Suchende kann den Status pflegen, Notizen anfügen und Folge-Suchen direkt aus der exportierten Suchanfrage heraus starten — siehe [Abschnitt 6](#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen).
 
 ![Inhalt der neuen exportierten Suchanfrage](../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png){ .screenshot }
 
