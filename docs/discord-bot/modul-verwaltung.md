@@ -2,6 +2,9 @@
 
 Die zentrale Verwaltung aller Bot-Module läuft über den Button `Manage Bot-Modules` im Kanal `#⚫-bot-config`. Dort kannst du Module installieren, aktualisieren oder wieder entfernen — und für jedes Modul festlegen, welche Discord-Rollen die zugehörigen Kanäle sehen dürfen. Die Modul-spezifische Konfiguration findest du auf den jeweils verlinkten Unterseiten der einzelnen Module.
 
+!!! warning "Voraussetzung"
+    Die Modul-Verwaltung ist nur für Discord-User mit **Administrator-Rechten** oder der Rolle **TWU-Mod** zugänglich.
+
 ![Manage Bot-Modules Button](../assets/discordbot/bot-module-setup/01_Manage_bot_modules_button.png){ .screenshot }
 
 ## 1. Modul installieren
