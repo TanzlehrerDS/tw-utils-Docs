@@ -2,13 +2,11 @@
 
 The central management of all bot modules runs via the `Manage Bot-Modules` button in the `#⚫-bot-config` channel. From there you can install, update, or remove modules — and define for each module which Discord roles are allowed to see the corresponding channels. The module-specific configuration is documented on the respective linked subpages of each module.
 
-## 1. Install a module
-
-On your tribe Discord, switch to the `#⚫-bot-config` channel and click on the `Manage Bot-Modules` button. The module management menu opens.
-
 ![Manage Bot-Modules Button](../assets/discordbot/bot-module-setup/01_Manage_bot_modules_button.png){ .screenshot }
 
-Click on the `Install` button there to start the installation of a new module. In the dropdown that appears, select the desired module. The bot then installs the module automatically and creates the corresponding channels on your Discord server. Repeat the process for every additional module you want to use.
+## 1. Install a module
+
+On your tribe Discord, switch to the `#⚫-bot-config` channel and click on the `Manage Bot-Modules` button. The module management menu opens. Click on the `Install` button there to start the installation of a new module. In the dropdown that appears, select the desired module. The bot then installs the module automatically and creates the corresponding channels on your Discord server. Repeat the process for every additional module you want to use.
 
 ![Install Button](../assets/discordbot/bot-module-setup/02_install_button.png){ .screenshot }
 
