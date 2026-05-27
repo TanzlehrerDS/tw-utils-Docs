@@ -78,7 +78,7 @@ Falls die gesamte Anfrage hinfällig wird (z. B. weil das Sitting doch nicht nö
 
 ## 5. Übersicht im `#⚫-overview-account-sitting`
 
-Der Dashboard-Kanal `#⚫-overview-account-sitting` zeigt jederzeit den aktuellen Stand aller Sittings auf eurem Stamm — sowohl bereits übernommene Slots als auch noch offene Anfragen. Das Embed wird vom Bot automatisch aktualisiert, sobald sich etwas ändert.
+Der Dashboard-Kanal `#⚫-overview-account-sitting` zeigt jederzeit den aktuellen Stand aller Sittings in eurem Stamm — sowohl bereits übernommene Slots als auch noch offene Anfragen. Das Embed wird vom Bot automatisch aktualisiert, sobald sich etwas ändert.
 
 ![Overview-Account-Sitting Kanal](../assets/discordbot/account-sitting-system/13_overview-account-sitting_channel.png){ .screenshot }
 
@@ -89,14 +89,12 @@ Der Dashboard-Kanal `#⚫-overview-account-sitting` zeigt jederzeit den aktuelle
 - den zu vertretenden Tribalwars-Account
 - die Spielwelt
 - Start- und End-Zeit des übernommenen Slots
-- die optionalen Notizen des Anfragenden
 
 ![Erinnerungs-DM via Discord](../assets/discordbot/account-sitting-system/14_reminder_dm_via_discord.png){ .screenshot }
 
 !!! info "Erinnerungs-DM abschalten"
-    Wer keine Erinnerungs-DM vom Bot erhalten möchte, kann das jederzeit über den Button `Notifications` im Kanal `#⚫-bot-config` pro Discord-User deaktivieren. Wer einen Account auf [tw-utils.net](https://tw-utils.net) hat, kann die Benachrichtigung alternativ auch dort in den Account-Einstellungen steuern.
+    Wer keine Erinnerungs-DM vom Bot erhalten möchte, kann das jederzeit über den Button `Notifications` im Kanal `#⚫-bot-config` pro Discord-User deaktivieren. Wer einen Account auf [tw-utils.net](https://tw-utils.net) hat, kann die Benachrichtigung alternativ auch dort unter den Profileinstellungen steuern.
 
 ## 7. Automatisches Aufräumen nach 30 Minuten
 
-!!! info "Selbst-Cleanup"
-    Der zur Anfrage erstellte Kanal wird **30 Minuten nach dem Ende des angefragten Zeitraums automatisch gelöscht** — inklusive aller Nachrichten darin. Du musst nichts manuell aufräumen. Im Anfrage-Embed steht zusätzlich ein Hinweis, wann genau der Kanal entfernt wird.
+Der zur Anfrage erstellte Kanal wird **30 Minuten nach dem Ende des angefragten Zeitraums automatisch gelöscht** — inklusive aller Nachrichten darin. Du musst nichts manuell aufräumen. Im Anfrage-Embed steht zusätzlich ein Hinweis, wann genau der Kanal entfernt wird.
