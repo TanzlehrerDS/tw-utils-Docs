@@ -122,6 +122,14 @@ Der Button `Bunker Health` aktualisiert die Übersicht und vergleicht für jeden
 
 ![Bunker Health Button im Leader-View](../assets/discordbot/bunker-information-system/21_leaderview_bunker_channel_bunkerhealth_button.png){ .screenshot }
 
+!!! info "Bunker-Health-Ampel-Legende"
+    Die Health-Übersicht nutzt eine vierstufige Ampel pro Bunker:
+
+    - ⚪ keine Truppendaten — für diesen Bunker liegen keine Truppendaten vor
+    - 🟢 weniger als 10 % Abweichung von der Soll-Größe
+    - 🟠 10 % bis 25 % Abweichung
+    - 🔴 mehr als 25 % Abweichung
+
 Im zweiten Leader-View-Kanal `#⚫-leaderview-flexbunker` steht der Button `Flexbunker Control` zur Verfügung — er hilft, Dörfer zu identifizieren, die hohe defensive Kapazitäten binden, gleichzeitig aber keine genehmigten Bunker sind.
 
 ![Flexbunker Control Button](../assets/discordbot/bunker-information-system/22_leaderview_bunker_flexcontrol.png){ .screenshot }
@@ -133,14 +141,6 @@ Im Modal `Flexbunker Control` gibst du die Schwellwert-Dual-Stärke ein:
 Als Ergebnis bekommst du eine Tabelle aller Dörfer im Stamm, deren tatsächliche Dual-Stärke den Schwellwert erreicht — gruppiert nach Stamm und Spieler, absteigend nach Stärke sortiert. Genehmigte Bunker werden dabei ausgeblendet, sodass nur zusätzliche Flex-Bunker erscheinen.
 
 ![FlexControl-Ergebnis-Tabelle](../assets/discordbot/bunker-information-system/24_leaderview_bunker_flexcontrol_result_table.png){ .screenshot }
-
-!!! info "Bunker-Health-Ampel-Legende"
-    Die Health-Übersicht nutzt eine vierstufige Ampel pro Bunker:
-
-    - ⚪ keine Truppendaten — für diesen Bunker liegen keine Truppendaten vor
-    - 🟢 weniger als 10 % Abweichung von der Soll-Größe
-    - 🟠 10 % bis 25 % Abweichung
-    - 🔴 mehr als 25 % Abweichung
 
 !!! warning "Rate-Limit Bunker-Health & FlexControl"
     Sowohl `Bunker Health` als auch `Flexbunker Control` sind aus Performance-Gründen **auf eine Ausführung pro Minute pro Server** begrenzt. Wer den Button kurz hintereinander zweimal drückt, erhält beim zweiten Klick eine Hinweismeldung — einfach kurz warten und erneut klicken.
