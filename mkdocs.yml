@@ -80,6 +80,7 @@ plugins:
             Bunker-Info: Bunker-Info
             Planung: Planning
             Quick-Setup-Guide: Quick-Setup-Guide
+            Berechtigungskonzept: Permission Concept
             Account-Verifizierung: Account-Verification
             Bot-Module: Bot Modules
             Einrichtung: Setup
@@ -110,6 +111,7 @@ nav:
       - Planung: leader-view/planung.md
   - Discordbot:
       - Quick-Setup-Guide: discord-bot/quick-setup.md
+      - Berechtigungskonzept: discord-bot/berechtigungskonzept.md
       - Account-Verifizierung: discord-bot/verifizierung.md
       - Bot-Module:
           - Einrichtung: discord-bot/modul-verwaltung.md
