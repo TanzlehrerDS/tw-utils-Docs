@@ -64,6 +64,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/"/>
     </url>
     <url>
+        <loc>https://docs.tw-utils.net/discord-bot/berechtigungskonzept/</loc>
+        <lastmod>2026-05-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/berechtigungskonzept/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/berechtigungskonzept/"/>
+    </url>
+    <url>
         <loc>https://docs.tw-utils.net/discord-bot/bunker-info/</loc>
         <lastmod>2026-05-27</lastmod>
         <changefreq>daily</changefreq>
@@ -244,6 +251,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/benachrichtigungen/"/>
+    </url>
+    <url>
+        <loc>https://docs.tw-utils.net/en/discord-bot/berechtigungskonzept/</loc>
+        <lastmod>2026-05-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/berechtigungskonzept/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/berechtigungskonzept/"/>
     </url>
     <url>
         <loc>https://docs.tw-utils.net/en/discord-bot/bunker-info/</loc>
