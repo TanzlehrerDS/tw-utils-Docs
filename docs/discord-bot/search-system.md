@@ -14,9 +14,9 @@ Nach der [Installation](modul-verwaltung.md) legt der Bot die Kategorie `🔍 OF
 
 ![Kanal-Übersicht des ODS-Systems](../assets/discordbot/ods-system/01_ods_system_channels.png){ .screenshot }
 
-Sobald jemand ein Suchergebnis in einen eigenen Kanal exportiert (siehe [Abschnitt 5](#5-suche-in-einen-eigenen-kanal-exportieren)), legt der Bot zusätzlich **einen eigenen Kanal pro Anfrage** in derselben Kategorie an, nach dem Schema `❌-off-XXX-YYY-PLAYERNAME` bzw. `❌-deff-…` / `❌-ag-…`. Sobald die Anfrage abgearbeitet ist, wechselt das Präfix auf `✅` — siehe [Abschnitt 6](#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen).
+Sobald jemand ein Suchergebnis in einen eigenen Kanal exportiert (siehe [Abschnitt 5](#5-suchergebnis-exportieren)), legt der Bot zusätzlich **einen eigenen Kanal pro Anfrage** in derselben Kategorie an, nach dem Schema `❌-off-XXX-YYY-PLAYERNAME` bzw. `❌-deff-…` / `❌-ag-…`. Sobald die Anfrage abgearbeitet ist, wechselt das Präfix auf `✅` — siehe [Abschnitt 6](#6-funktionalitaten-in-der-suchanfrage).
 
-## 2. Truppendaten hochladen, anzeigen, löschen
+## 2. Truppendaten
 
 Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten der Stammesmitglieder im Bot hinterlegt sein. Im Such-Kanal `#⚫-ods-search` steht dafür das `ODS Panel`-Embed mit drei Admin-Buttons: `Upload Troops`, `Delete Troops`, `Show Troop Status` zur Verfügung.
 
@@ -53,7 +53,7 @@ So sieht man auf einen Blick, welche Stämme aktuelle Truppendaten hinterlegt ha
 !!! info "Wer darf Truppen hochladen?"
     Nur User mit der Rolle `TWU-Mod` oder Discord-Administrator-Rechten können die Buttons `Upload Troops` und `Delete Troops` ausführen und den Slash-Command `/admin troops_upload` benutzen. Den Button `Show Troop Status` können auch normale Mitglieder verwenden.
 
-## 3. Off-, Deff- oder Snob-Befehl suchen
+## 3. ODS-Suche
 
 Unterhalb des Admin-Panels stehen im Such-Kanal `#⚫-ods-search` die drei Such-Buttons `Search Off`, `Search Snob`, `Search Deff`, mit denen jeder Spieler eine Suche starten kann.
 
@@ -108,9 +108,9 @@ Im Antwort-Embed steht zusätzlich ein `Rally Point`-Button: Per Klick wird man 
 ![Bot-Antwort nach Workbench-Aktion mit Rally-Point-Button](../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png){ .screenshot }
 
 !!! info "Ephemerale Antwort nur für den Suchenden"
-    Die Trefferliste ist eine ephemerale Discord-Nachricht: Nur der Suchende sieht sie und sie verschwindet beim nächsten Discord-Neuladen. Wer das Ergebnis dauerhaft sichtbar machen und dem Stamm sichtbar machen will, exportiert die Suche in einen eigenen Kanal — siehe [Abschnitt 5](#5-suche-in-einen-eigenen-kanal-exportieren).
+    Die Trefferliste ist eine ephemerale Discord-Nachricht: Nur der Suchende sieht sie und sie verschwindet beim nächsten Discord-Neuladen. Wer das Ergebnis dauerhaft sichtbar machen und dem Stamm sichtbar machen will, exportiert die Suche in einen eigenen Kanal — siehe [Abschnitt 5](#5-suchergebnis-exportieren).
 
-## 5. Suche in einen eigenen Kanal exportieren
+## 5. Suchergebnis exportieren
 
 Im ephemeralen Suchergebnis (siehe [Abschnitt 4](#4-das-suchergebnis)) steht ein Export-Button, der die Anfrage in einen neuen, separaten Kanal auslagert.
 
@@ -120,11 +120,11 @@ Der Bot legt daraufhin in der Kategorie `🔍 OFF/DEFF/SNOB-SEARCHER` einen neue
 
 ![Neue exportierte Suchanfrage in der Kategorie](../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png){ .screenshot }
 
-Im neuen Kanal postet der Bot das Suchergebnis mit allen Details und den Verwaltungs-Buttons. Das Ergebnis ist nun für den ganzen Stamm sichtbar, andere Spieler können mitdiskutieren, der Suchende kann den Status pflegen, Notizen anfügen und Folge-Suchen direkt aus der exportierten Suchanfrage heraus starten — siehe [Abschnitt 6](#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen).
+Im neuen Kanal postet der Bot das Suchergebnis mit allen Details und den Verwaltungs-Buttons. Das Ergebnis ist nun für den ganzen Stamm sichtbar, andere Spieler können mitdiskutieren, der Suchende kann den Status pflegen, Notizen anfügen und Folge-Suchen direkt aus der exportierten Suchanfrage heraus starten — siehe [Abschnitt 6](#6-funktionalitaten-in-der-suchanfrage).
 
 ![Inhalt der neuen exportierten Suchanfrage](../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png){ .screenshot }
 
-## 6. In der exportierten Suchanfrage: Status, Notizen, Löschen, Folgesuchen
+## 6. Funktionalitäten in der Suchanfrage
 
 In der exportierten Suchanfrage stehen oberhalb des Such-Embeds die Verwaltungs-Buttons `Status: Done` / `Status: Not Done`, mit denen die Anfrage als erledigt markiert bzw. wieder auf offen gesetzt wird.
 
@@ -156,7 +156,7 @@ Sobald sich der Status ändert, benennt der Bot den Kanal automatisch um — Pr�
 !!! warning "Rate-Limit Status-Änderung"
     Der Status `Done` / `Not Done` kann pro exportierter Suchanfrage nur alle 10 Minuten gewechselt werden. Bei zu schnellem Hin- und Her-Klicken meldet der Bot eine Rate-Limit-Fehlermeldung mit Restwartezeit.
 
-## 7. Übersicht im `#⚫-ods-overview`
+## 7. Übersichts-Dashboard
 
 Der Dashboard-Kanal `#⚫-ods-overview` zeigt jederzeit den aktuellen Stand aller Such-Anfragen — gruppiert nach Status `✅ DONE` und `❌ NOT DONE`, je Eintrag mit Typ (Off/Deff/Snob), Koordinate, Suchendem und Anfrage-Zeitpunkt. Das Embed wird vom Bot automatisch aktualisiert, sobald eine Anfrage hinzukommt, ihren Status ändert oder gelöscht wird.
 
