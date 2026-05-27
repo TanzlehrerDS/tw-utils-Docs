@@ -1421,10 +1421,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-suchergebnis-lesen-und-mit-der-workbench-arbeiten" class="md-nav__link">
+  <a href="#4-das-suchergebnis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Suchergebnis lesen und mit der Workbench arbeiten
+        4. Das Suchergebnis
       
     </span>
   </a>
@@ -1604,10 +1604,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-suchergebnis-lesen-und-mit-der-workbench-arbeiten" class="md-nav__link">
+  <a href="#4-das-suchergebnis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Suchergebnis lesen und mit der Workbench arbeiten
+        4. Das Suchergebnis
       
     </span>
   </a>
@@ -1708,42 +1708,47 @@
 <ul>
 <li><code>Target Coordinate</code> — Koordinate des Zieldorfes im Format <code>XXX|YYY</code>.</li>
 <li><code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> — gewünschte Ankunftszeit; nur <code>hh:mm:ss</code> reicht für „heute", <code>DD.MM.YYYY hh:mm:ss</code> für ein späteres Datum.</li>
-<li><code>Minimum Off Strength (Axe,Lcav)</code> (optional) — Mindeststärke des gesuchten Offs, angegeben als Axt- und LK-Anzahl (z. B. <code>7000,3000</code>). Nuken unter diesem Schwellwert werden ausgeblendet.</li>
-<li><code>Earliest Launch Time</code> (optional) — frühester erlaubter Abschickzeitpunkt; Befehle, die schon davor losgeschickt werden müssten, werden gefiltert.</li>
-<li><code>Fixed Runtime (Unit name)</code> (optional) — beschränkt die Suche auf eine bestimmte Einheitenlaufzeit (z. B. nur Axt-Laufzeit), wenn der Off mit einer fixen Einheit gerechnet werden soll.</li>
+<li><code>Minimum Off Strength (Axe,Lcav)</code> (optional) — Mindeststärke der gesuchten Offs, angegeben als Axt- und Leichte Kavalerie-Anzahl (z. B. <code>7000,3000</code>). Offs unter diesem Schwellwert werden nicht mit in der Trefferliste ausgegeben.</li>
+<li><code>Earliest Launch Time</code> (optional) — frühester erlaubter Abschickzeitpunkt; Befehle, die schon davor losgeschickt werden müssten, werden rausgefiltert.</li>
+<li><code>Fixed Runtime (Unit name)</code> (optional) — beschränkt die Suche auf eine bestimmte Einheitenlaufzeit (z. B. nur Axt-Laufzeit), wenn der Off-Befehl mit einer fixen Einheit laufen werden soll.</li>
 </ul>
 <p>Klick auf <code>Search Snob</code> öffnet das Modal <code>Find Snob Options</code>:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png" data-title="Modal: Find Snob Options" data-desc-position="bottom"><img alt="Modal: Find Snob Options" class="screenshot" src="../../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png"></a></p>
 <ul>
-<li><code>Target Coordinate</code> — Koordinate des Ziel-AG-Dorfs.</li>
+<li><code>Target Coordinate</code> — Koordinate des Ziel-Dorfs.</li>
 <li><code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> — gewünschte Ankunftszeit des AGs.</li>
-<li><code>Earliest Launch Time (optional)</code> — frühester erlaubter Abschickzeitpunkt für den AG.</li>
+<li><code>Earliest Launch Time (optional)</code> — frühester erlaubter Abschickzeitpunkt für das AG.</li>
 </ul>
-<p>Klick auf <code>Search Deff</code> öffnet das Modal <code>Find Deff Options</code>. Die Felder entsprechen dem Off-Modal, zusätzlich:</p>
+<p>Klick auf <code>Search Deff</code> öffnet das Modal <code>Find Deff Options</code>:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png" data-title="Modal: Find Deff Options" data-desc-position="bottom"><img alt="Modal: Find Deff Options" class="screenshot" src="../../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png"></a></p>
 <ul>
+<li><code>Target Coordinate</code> — Koordinate des Ziel-Dorfs im Format <code>XXX|YYY</code>.</li>
+<li><code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> — gewünschte Ankunftszeit der Deff.</li>
+<li><code>Minimum Off Strength (Axe,Lcav)</code> (optional) — Mindeststärke der einlaufenden Offs (Axt-/Leichte-Kavalerie-Anzahl), gegen die das Deff-Dorf rechnerisch standhalten soll.</li>
+<li><code>Earliest Launch Time</code> (optional) — frühester erlaubter Abschickzeitpunkt; Deff-Befehle, die schon davor losgeschickt werden müssten, werden rausgefiltert.</li>
+<li><code>Fixed Runtime (Unit name)</code> (optional) — beschränkt die Suche auf eine bestimmte Einheitenlaufzeit, wenn die Deff mit einer fixen Einheit laufen soll.</li>
 <li><code>Minimum Population</code> — Mindesteinwohnerzahl des Herkunftsdorfs; verhindert, dass kleine Dörfer in die Trefferliste fallen.</li>
-<li><code>UT-Boost (0-20%)</code> — pauschaler Bonus auf die Truppenstärke des Herkunftsdorfs (z. B. wegen Mauer/Forschung), den der Bot bei der Berechnung berücksichtigt.</li>
+<li><code>UT-Boost (0-20%)</code> — Möglichkeit zur Berücksichtigung eines UT-Boosts bei der Suchanfrage.</li>
 </ul>
-<h2 id="4-suchergebnis-lesen-und-mit-der-workbench-arbeiten">4. Suchergebnis lesen und mit der Workbench arbeiten<a class="headerlink" href="#4-suchergebnis-lesen-und-mit-der-workbench-arbeiten" title="Permanent link">¶</a></h2>
+<h2 id="4-das-suchergebnis">4. Das Suchergebnis<a class="headerlink" href="#4-das-suchergebnis" title="Permanent link">¶</a></h2>
 <p>Nach dem Abschicken eines Such-Modals antwortet der Bot mit einem <strong>ephemeralen Embed</strong>, das nur der Suchende selbst sieht. Es listet alle möglichen Befehle mit Dorf-Koordinate, Truppenzusammensetzung, Abschick- und Ankunftszeit auf.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/12_ods_system_search_result_view_ephemeral.png" data-title="Ephemerale Such-Antwort" data-desc-position="bottom"><img alt="Ephemerale Such-Antwort" class="screenshot" src="../../assets/discordbot/ods-system/12_ods_system_search_result_view_ephemeral.png"></a></p>
 <p>Die möglichen Befehle werden übersichtlich in tabellarischer Form dargestellt:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png" data-title="Detaillierte Such-Antwort in Tabellenform" data-desc-position="bottom"><img alt="Detaillierte Such-Antwort in Tabellenform" class="screenshot" src="../../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png"></a></p>
-<p>Unter dem Suchergebnis stehen bis zu zehn Buttons zur Verfügung — jeder dieser Buttons generiert den zum Befehl passenden Workbench-Befehl.</p>
+<p>Unter dem Suchergebnis stehen bis zu zehn Buttons zur Verfügung — jeder dieser Buttons generiert den jeweiligen WB-Befehl.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png" data-title="Workbench-Buttons im Suchergebnis" data-desc-position="bottom"><img alt="Workbench-Buttons im Suchergebnis" class="screenshot" src="../../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png"></a></p>
 <p>Im Antwort-Embed steht zusätzlich ein <code>Rally Point</code>-Button: Per Klick wird man direkt zum Ingame-Versammlungsplatz des Herkunftsdorfs weitergeleitet, sodass der Befehl unmittelbar abgeschickt werden kann.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png" data-title="Bot-Antwort nach Workbench-Aktion mit Rally-Point-Button" data-desc-position="bottom"><img alt="Bot-Antwort nach Workbench-Aktion mit Rally-Point-Button" class="screenshot" src="../../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Ephemerale Antwort nur für den Suchenden</p>
-<p>Die Trefferliste ist eine ephemerale Discord-Nachricht: Nur der Suchende sieht sie und sie verschwindet beim nächsten Discord-Neuladen. Wer das Ergebnis dauerhaft sichtbar machen und mit dem Stamm diskutieren möchte, exportiert die Suche in einen eigenen Kanal — siehe <a href="#5-suche-in-einen-eigenen-kanal-exportieren">Abschnitt 5</a>.</p>
+<p>Die Trefferliste ist eine ephemerale Discord-Nachricht: Nur der Suchende sieht sie und sie verschwindet beim nächsten Discord-Neuladen. Wer das Ergebnis dauerhaft sichtbar machen und dem Stamm sichtbar machen will, exportiert die Suche in einen eigenen Kanal — siehe <a href="#5-suche-in-einen-eigenen-kanal-exportieren">Abschnitt 5</a>.</p>
 </div>
 <h2 id="5-suche-in-einen-eigenen-kanal-exportieren">5. Suche in einen eigenen Kanal exportieren<a class="headerlink" href="#5-suche-in-einen-eigenen-kanal-exportieren" title="Permanent link">¶</a></h2>
-<p>Im ephemeralen Suchergebnis (siehe <a href="#4-suchergebnis-lesen-und-mit-der-workbench-arbeiten">Abschnitt 4</a>) steht ein Export-Button, der die Anfrage in eine neue, persistente Suchanfrage verlagert.</p>
+<p>Im ephemeralen Suchergebnis (siehe <a href="#4-das-suchergebnis">Abschnitt 4</a>) steht ein Export-Button, der die Anfrage in einen neuen, separaten Kanal auslagert.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/16_ods_system_search_result_view_ephemeral_exporttoseparatechannel_button.png" data-title="Export-Button im Suchergebnis" data-desc-position="bottom"><img alt="Export-Button im Suchergebnis" class="screenshot" src="../../assets/discordbot/ods-system/16_ods_system_search_result_view_ephemeral_exporttoseparatechannel_button.png"></a></p>
 <p>Der Bot legt daraufhin in der Kategorie <code>🔍 OFF/DEFF/SNOB-SEARCHER</code> einen neuen Kanal <code>❌-&lt;typ&gt;-XXX-YYY-PLAYERNAME</code> an.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png" data-title="Neue exportierte Suchanfrage in der Kategorie" data-desc-position="bottom"><img alt="Neue exportierte Suchanfrage in der Kategorie" class="screenshot" src="../../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png"></a></p>
-<p>Im neuen Kanal postet der Bot das Such-Embed mit allen Details und den Verwaltungs-Buttons. Das Ergebnis ist nun für den ganzen Stamm sichtbar, andere Spieler können mitdiskutieren, der Suchende kann den Status pflegen, Notizen anfügen und Folge-Suchen direkt aus der exportierten Suchanfrage heraus starten — siehe <a href="#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen">Abschnitt 6</a>.</p>
+<p>Im neuen Kanal postet der Bot das Suchergebnis mit allen Details und den Verwaltungs-Buttons. Das Ergebnis ist nun für den ganzen Stamm sichtbar, andere Spieler können mitdiskutieren, der Suchende kann den Status pflegen, Notizen anfügen und Folge-Suchen direkt aus der exportierten Suchanfrage heraus starten — siehe <a href="#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen">Abschnitt 6</a>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png" data-title="Inhalt der neuen exportierten Suchanfrage" data-desc-position="bottom"><img alt="Inhalt der neuen exportierten Suchanfrage" class="screenshot" src="../../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png"></a></p>
 <h2 id="6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen">6. In der exportierten Suchanfrage: Status, Notizen, Löschen, Folgesuchen<a class="headerlink" href="#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen" title="Permanent link">¶</a></h2>
 <p>In der exportierten Suchanfrage stehen oberhalb des Such-Embeds die Verwaltungs-Buttons <code>Status: Done</code> / <code>Status: Not Done</code>, mit denen die Anfrage als erledigt markiert bzw. wieder auf offen gesetzt wird.</p>
