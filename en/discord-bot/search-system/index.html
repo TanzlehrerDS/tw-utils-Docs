@@ -1337,6 +1337,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Off/Deff/Snob-Search-System
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1353,6 +1371,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-module-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Module channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-upload-view-and-delete-troop-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Upload, view and delete troop data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-search-for-an-off-deff-or-snob-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Search for an Off, Deff or Snob command
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-search-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The search result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-export-a-search-into-a-separate-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Export a search into a separate channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-in-the-exported-search-request-status-notes-deletion-follow-up-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. In the exported search request: status, notes, deletion, follow-up searches
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-overview-in-ods-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Overview in #⚫-ods-overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1450,6 +1564,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-module-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Module channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-upload-view-and-delete-troop-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Upload, view and delete troop data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-search-for-an-off-deff-or-snob-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Search for an Off, Deff or Snob command
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-search-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The search result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-export-a-search-into-a-separate-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Export a search into a separate channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-in-the-exported-search-request-status-notes-deletion-follow-up-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. In the exported search request: status, notes, deletion, follow-up searches
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-overview-in-ods-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Overview in #⚫-ods-overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1466,7 +1665,115 @@
 
 
 <h1 id="offdeffsnob-search-system">Off/Deff/Snob-Search-System<a class="headerlink" href="#offdeffsnob-search-system" title="Permanent link">¶</a></h1>
-<p><em>Content coming soon.</em></p>
+<p>With the ODS system, players can search for Off, Deff or Snob commands targeting a specific coordinate. The ODS system is similar to the Single Village Snipe script — but while that one only considers the troops of a single player, the ODS system pulls villages from the <strong>entire tribe</strong> into the selection. The bot matches incoming search requests against the stored troop data and returns a list of players who can launch a matching Off, Deff or Snob command.</p>
+<div class="admonition info">
+<p class="admonition-title">Prerequisite: troop upload</p>
+<p>The bot can only report hits for players whose troop data is currently uploaded. If no data is available, the hit list stays empty. For meaningful results, the admins (TWU-Mod) should refresh the troop data regularly via <code>/admin troops_upload</code>.</p>
+</div>
+<h2 id="1-module-channels">1. Module channels<a class="headerlink" href="#1-module-channels" title="Permanent link">¶</a></h2>
+<p>After the <a href="../modul-verwaltung/">setup</a>, the bot creates the category <code>🔍 OFF/DEFF/SNOB-SEARCHER</code> with two base channels:</p>
+<ul>
+<li><code>#⚫-ods-search</code> — central search channel with the three search buttons and the admin panel</li>
+<li><code>#⚫-ods-overview</code> — dashboard channel listing all ongoing and completed search requests</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/01_ods_system_channels.png" data-title="Channel overview of the ODS system" data-desc-position="bottom"><img alt="Channel overview of the ODS system" class="screenshot" src="../../../assets/discordbot/ods-system/01_ods_system_channels.png"></a></p>
+<p>As soon as someone exports a search result into a separate channel (see <a href="#5-export-a-search-into-a-separate-channel">Section 5</a>), the bot additionally creates <strong>a dedicated channel per request</strong> in the same category, following the schema <code>❌-off-XXX-YYY-PLAYERNAME</code> or <code>❌-deff-…</code> / <code>❌-ag-…</code>. Once the request is taken care of, the prefix switches to <code>✅</code> — see <a href="#6-in-the-exported-search-request-status-notes-deletion-follow-up-searches">Section 6</a>.</p>
+<h2 id="2-upload-view-and-delete-troop-data">2. Upload, view and delete troop data<a class="headerlink" href="#2-upload-view-and-delete-troop-data" title="Permanent link">¶</a></h2>
+<p>For the bot to be able to answer any search requests at all, the tribe members' troop data must be stored in the bot. To do that, the search channel <code>#⚫-ods-search</code> provides the <code>ODS Panel</code> embed with three admin buttons: <code>Upload Troops</code>, <code>Delete Troops</code>, <code>Show Troop Status</code>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/02_ods_system_upload_troops.png" data-title="Admin buttons in the ODS Panel" data-desc-position="bottom"><img alt="Admin buttons in the ODS Panel" class="screenshot" src="../../../assets/discordbot/ods-system/02_ods_system_upload_troops.png"></a></p>
+<p><code>Upload Troops</code> leads to the slash command <code>/admin troops_upload</code>, which the TWU-Mod uses to read in the TW troop CSV file.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png" data-title="Slash command for troop upload" data-desc-position="bottom"><img alt="Slash command for troop upload" class="screenshot" src="../../../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png"></a></p>
+<p>The CSV file is most conveniently generated via the quickbar script <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">„Download Tribe Info"</a>. Expected file format:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
+</code></pre></div>
+<p>After a successful upload, the bot confirms with a short success message.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png" data-title="Success message after troop upload" data-desc-position="bottom"><img alt="Success message after troop upload" class="screenshot" src="../../../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png"></a></p>
+<p>Uploaded troop data can be removed again via the <code>Delete Troops</code> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png" data-title="Delete Troops button" data-desc-position="bottom"><img alt="Delete Troops button" class="screenshot" src="../../../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png"></a></p>
+<p><code>Show Troop Status</code> opens the <code>Troop Uploads Overview</code> embed listing all uploaded troop files per tribe along with their respective upload timestamp.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/06_ods_system_upload_troops_showtroopstatus_button.png" data-title="Show Troop Status button" data-desc-position="bottom"><img alt="Show Troop Status button" class="screenshot" src="../../../assets/discordbot/ods-system/06_ods_system_upload_troops_showtroopstatus_button.png"></a></p>
+<p>At a glance, this shows which tribes have up-to-date troop data and where the data is outdated.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png" data-title="Troop Uploads Overview" data-desc-position="bottom"><img alt="Troop Uploads Overview" class="screenshot" src="../../../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Who can upload troops?</p>
+<p>Only users with the role <code>TWU-Mod</code> or Discord administrator permissions can use the buttons <code>Upload Troops</code> and <code>Delete Troops</code> and run the slash command <code>/admin troops_upload</code>. The <code>Show Troop Status</code> button is also available to normal members.</p>
+</div>
+<h2 id="3-search-for-an-off-deff-or-snob-command">3. Search for an Off, Deff or Snob command<a class="headerlink" href="#3-search-for-an-off-deff-or-snob-command" title="Permanent link">¶</a></h2>
+<p>Below the admin panel, the search channel <code>#⚫-ods-search</code> offers the three search buttons <code>Search Off</code>, <code>Search Snob</code>, <code>Search Deff</code>, which any player can use to start a search.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/08_ods_system_search_buttons.png" data-title="Search buttons in the ODS system" data-desc-position="bottom"><img alt="Search buttons in the ODS system" class="screenshot" src="../../../assets/discordbot/ods-system/08_ods_system_search_buttons.png"></a></p>
+<p>Clicking <code>Search Off</code> opens the modal <code>Find Off Options</code>:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/09_ods_system_search_Off_modal.png" data-title="Modal: Find Off Options" data-desc-position="bottom"><img alt="Modal: Find Off Options" class="screenshot" src="../../../assets/discordbot/ods-system/09_ods_system_search_Off_modal.png"></a></p>
+<ul>
+<li><code>Target Coordinate</code> — coordinate of the target village in the format <code>XXX|YYY</code>.</li>
+<li><code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> — desired arrival time; just <code>hh:mm:ss</code> is enough for „today", <code>DD.MM.YYYY hh:mm:ss</code> for a later date.</li>
+<li><code>Minimum Off Strength (Axe,Lcav)</code> (optional) — minimum strength of the offs you are looking for, expressed as Axe and Light Cavalry counts (e. g. <code>7000,3000</code>). Offs below this threshold are not included in the hit list.</li>
+<li><code>Earliest Launch Time</code> (optional) — earliest allowed launch time; commands that would have to be launched before this time are filtered out.</li>
+<li><code>Fixed Runtime (Unit name)</code> (optional) — restricts the search to a specific unit runtime (e. g. axe runtime only), when the Off command should run with a fixed unit.</li>
+</ul>
+<p>Clicking <code>Search Snob</code> opens the modal <code>Find Snob Options</code>:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png" data-title="Modal: Find Snob Options" data-desc-position="bottom"><img alt="Modal: Find Snob Options" class="screenshot" src="../../../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png"></a></p>
+<ul>
+<li><code>Target Coordinate</code> — coordinate of the target village.</li>
+<li><code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> — desired arrival time of the snob.</li>
+<li><code>Earliest Launch Time (optional)</code> — earliest allowed launch time for the snob.</li>
+</ul>
+<p>Clicking <code>Search Deff</code> opens the modal <code>Find Deff Options</code>:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png" data-title="Modal: Find Deff Options" data-desc-position="bottom"><img alt="Modal: Find Deff Options" class="screenshot" src="../../../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png"></a></p>
+<ul>
+<li><code>Target Coordinate</code> — coordinate of the target village in the format <code>XXX|YYY</code>.</li>
+<li><code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> — desired arrival time of the deff.</li>
+<li><code>Minimum Off Strength (Axe,Lcav)</code> (optional) — minimum strength of the incoming offs (Axe / Light Cavalry counts) against which the deff village should be able to hold mathematically.</li>
+<li><code>Earliest Launch Time</code> (optional) — earliest allowed launch time; deff commands that would have to be launched before this time are filtered out.</li>
+<li><code>Fixed Runtime (Unit name)</code> (optional) — restricts the search to a specific unit runtime, when the deff should run with a fixed unit.</li>
+<li><code>Minimum Population</code> — minimum population of the source village; prevents small villages from appearing in the hit list.</li>
+<li><code>UT-Boost (0-20%)</code> — option to factor a UT boost into the search request.</li>
+</ul>
+<h2 id="4-the-search-result">4. The search result<a class="headerlink" href="#4-the-search-result" title="Permanent link">¶</a></h2>
+<p>After submitting a search modal, the bot replies with an <strong>ephemeral embed</strong> that only the searcher sees. It lists all possible commands with village coordinate, troop composition, launch and arrival time.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/12_ods_system_search_result_view_ephemeral.png" data-title="Ephemeral search response" data-desc-position="bottom"><img alt="Ephemeral search response" class="screenshot" src="../../../assets/discordbot/ods-system/12_ods_system_search_result_view_ephemeral.png"></a></p>
+<p>The possible commands are presented neatly in tabular form:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png" data-title="Detailed search response in tabular form" data-desc-position="bottom"><img alt="Detailed search response in tabular form" class="screenshot" src="../../../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png"></a></p>
+<p>Below the search result, up to ten buttons are available — each of these buttons generates the matching WB command.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png" data-title="Workbench buttons in the search result" data-desc-position="bottom"><img alt="Workbench buttons in the search result" class="screenshot" src="../../../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png"></a></p>
+<p>The reply embed also contains a <code>Rally Point</code> button: clicking it takes you straight to the in-game rally point of the source village, so the command can be launched immediately.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png" data-title="Bot reply after workbench action with Rally Point button" data-desc-position="bottom"><img alt="Bot reply after workbench action with Rally Point button" class="screenshot" src="../../../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Ephemeral response — only visible to the searcher</p>
+<p>The hit list is an ephemeral Discord message: only the searcher sees it and it disappears the next time Discord reloads. Anyone who wants to make the result permanently visible and share it with the tribe exports the search into a separate channel — see <a href="#5-export-a-search-into-a-separate-channel">Section 5</a>.</p>
+</div>
+<h2 id="5-export-a-search-into-a-separate-channel">5. Export a search into a separate channel<a class="headerlink" href="#5-export-a-search-into-a-separate-channel" title="Permanent link">¶</a></h2>
+<p>In the ephemeral search result (see <a href="#4-the-search-result">Section 4</a>) there is an export button that moves the request into a new, separate channel.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/16_ods_system_search_result_view_ephemeral_exporttoseparatechannel_button.png" data-title="Export button in the search result" data-desc-position="bottom"><img alt="Export button in the search result" class="screenshot" src="../../../assets/discordbot/ods-system/16_ods_system_search_result_view_ephemeral_exporttoseparatechannel_button.png"></a></p>
+<p>The bot then creates a new channel <code>❌-&lt;type&gt;-XXX-YYY-PLAYERNAME</code> in the category <code>🔍 OFF/DEFF/SNOB-SEARCHER</code>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png" data-title="New exported search request in the category" data-desc-position="bottom"><img alt="New exported search request in the category" class="screenshot" src="../../../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png"></a></p>
+<p>In the new channel the bot posts the search result with all details and the management buttons. The result is now visible to the entire tribe, other players can join the discussion, the searcher can maintain the status, attach notes and start follow-up searches directly from within the exported search request — see <a href="#6-in-the-exported-search-request-status-notes-deletion-follow-up-searches">Section 6</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png" data-title="Content of the new exported search request" data-desc-position="bottom"><img alt="Content of the new exported search request" class="screenshot" src="../../../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png"></a></p>
+<h2 id="6-in-the-exported-search-request-status-notes-deletion-follow-up-searches">6. In the exported search request: status, notes, deletion, follow-up searches<a class="headerlink" href="#6-in-the-exported-search-request-status-notes-deletion-follow-up-searches" title="Permanent link">¶</a></h2>
+<p>In the exported search request, the management buttons <code>Status: Done</code> / <code>Status: Not Done</code> sit above the search embed and let you mark the request as completed or reset it to open.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/19_ods_system_search_result_new_channel_statusdone_notdone_button.png" data-title="Status buttons in the exported search request" data-desc-position="bottom"><img alt="Status buttons in the exported search request" class="screenshot" src="../../../assets/discordbot/ods-system/19_ods_system_search_result_new_channel_statusdone_notdone_button.png"></a></p>
+<p>The <code>Add/Edit Note</code> button lets the requester or other users attach notes to the request.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/20_ods_system_search_result_new_channel_addnote_button.png" data-title="Add/Edit Note button" data-desc-position="bottom"><img alt="Add/Edit Note button" class="screenshot" src="../../../assets/discordbot/ods-system/20_ods_system_search_result_new_channel_addnote_button.png"></a></p>
+<p><code>Delete Request</code> deletes the request including its channel after confirming with <code>Yes, delete</code>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/21_ods_system_search_result_new_channel_deleterequest_button.png" data-title="Delete Request button" data-desc-position="bottom"><img alt="Delete Request button" class="screenshot" src="../../../assets/discordbot/ods-system/21_ods_system_search_result_new_channel_deleterequest_button.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Permission to delete</p>
+<p>The request can only be deleted by its creator or by a user with the role <code>TWU-Mod</code>.</p>
+</div>
+<p>In addition, the search buttons <code>Search Off</code>, <code>Search Snob</code>, <code>Search Deff</code> are available again inside the exported search request.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/22_ods_system_search_result_new_channel_searchbuttons.png" data-title="Search buttons in the exported search request" data-desc-position="bottom"><img alt="Search buttons in the exported search request" class="screenshot" src="../../../assets/discordbot/ods-system/22_ods_system_search_result_new_channel_searchbuttons.png"></a></p>
+<p>If you click <code>Search Snob</code> here, for instance, the search modal is already prefilled with the values from the original request (target coordinate, arrival time) — so a follow-up search to the same coord can be started directly, without having to retype the data.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/23_ods_system_search_result_new_modals_are_prefilled_in_extracted_channel.png" data-title="Prefilled modal in the exported search request" data-desc-position="bottom"><img alt="Prefilled modal in the exported search request" class="screenshot" src="../../../assets/discordbot/ods-system/23_ods_system_search_result_new_modals_are_prefilled_in_extracted_channel.png"></a></p>
+<p>As soon as the status changes, the bot automatically renames the channel — the <code>❌</code> prefix switches to <code>✅</code> and vice versa. At a glance you can see in the channel tree which requests are still open.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/24_ods_system_search_status_change_changes_Channel_name.png" data-title="Channel rename on status change" data-desc-position="bottom"><img alt="Channel rename on status change" class="screenshot" src="../../../assets/discordbot/ods-system/24_ods_system_search_status_change_changes_Channel_name.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Rate limit on status change</p>
+<p>The status <code>Done</code> / <code>Not Done</code> can only be switched once every 10 minutes per exported search request. If you click back and forth too fast, the bot replies with a rate-limit error and the remaining wait time.</p>
+</div>
+<h2 id="7-overview-in-ods-overview">7. Overview in <code>#⚫-ods-overview</code><a class="headerlink" href="#7-overview-in-ods-overview" title="Permanent link">¶</a></h2>
+<p>The dashboard channel <code>#⚫-ods-overview</code> shows the current state of all search requests at any time — grouped by status <code>✅ DONE</code> and <code>❌ NOT DONE</code>, each entry with type (Off/Deff/Snob), coordinate, searcher and request timestamp. The embed is updated automatically by the bot whenever a request is added, changes its status or is deleted.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/ods-system/25_ods_system_overviewdashboard.png" data-title="Overview dashboard of the ODS system" data-desc-position="bottom"><img alt="Overview dashboard of the ODS system" class="screenshot" src="../../../assets/discordbot/ods-system/25_ods_system_overviewdashboard.png"></a></p>
 
 
 
