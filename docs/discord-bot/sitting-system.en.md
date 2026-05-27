@@ -76,13 +76,13 @@ If the entire request is no longer needed (e. g. because the sitting is not nece
 
 ![Delete Request Button](../assets/discordbot/account-sitting-system/12_delete_request.png){ .screenshot }
 
-## 5. Overview in `#⚫-overview-account-sitting`
+## 5. Overview dashboard
 
 The dashboard channel `#⚫-overview-account-sitting` shows the current state of all sittings in your tribe at any time — both already covered slots and any open requests. The bot updates the embed automatically whenever something changes.
 
 ![Overview-Account-Sitting channel](../assets/discordbot/account-sitting-system/13_overview-account-sitting_channel.png){ .screenshot }
 
-## 6. Reminder DM 15 minutes before start
+## 6. Reminder DM
 
 15 minutes before a taken-over slot starts, the bot automatically sends the sitter a Discord direct message (`Account-Sitting Reminder!`). The DM contains:
 
@@ -95,6 +95,6 @@ The dashboard channel `#⚫-overview-account-sitting` shows the current state of
 !!! info "Disable reminder DM"
     Anyone who does not want to receive reminder DMs from the bot can disable them at any time per Discord user via the `Notifications` button in the `#⚫-bot-config` channel. If you have an account on [tw-utils.net](https://tw-utils.net), you can alternatively manage the notification there in your profile settings.
 
-## 7. Automatic cleanup after 30 minutes
+## 7. Automatic clean-up
 
 The channel created for the request is **automatically deleted 30 minutes after the end of the requested time slot** — including all messages in it. You don't have to clean up anything manually. The request embed additionally shows a note about exactly when the channel will be removed.

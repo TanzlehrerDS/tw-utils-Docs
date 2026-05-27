@@ -76,13 +76,13 @@ Falls die gesamte Anfrage hinfällig wird (z. B. weil das Sitting doch nicht nö
 
 ![Delete Request Button](../assets/discordbot/account-sitting-system/12_delete_request.png){ .screenshot }
 
-## 5. Übersicht im `#⚫-overview-account-sitting`
+## 5. Übersichts-Dashboard
 
 Der Dashboard-Kanal `#⚫-overview-account-sitting` zeigt jederzeit den aktuellen Stand aller Sittings in eurem Stamm — sowohl bereits übernommene Slots als auch noch offene Anfragen. Das Embed wird vom Bot automatisch aktualisiert, sobald sich etwas ändert.
 
 ![Overview-Account-Sitting Kanal](../assets/discordbot/account-sitting-system/13_overview-account-sitting_channel.png){ .screenshot }
 
-## 6. Erinnerungs-DM 15 Minuten vor Beginn
+## 6. Erinnerungs-DM
 
 15 Minuten vor Beginn eines übernommenen Slots schickt der Bot dem Urlaubsvertreter automatisch eine Discord-Direktnachricht (`Account-Sitting Reminder!`). Die DM enthält:
 
@@ -95,6 +95,6 @@ Der Dashboard-Kanal `#⚫-overview-account-sitting` zeigt jederzeit den aktuelle
 !!! info "Erinnerungs-DM abschalten"
     Wer keine Erinnerungs-DM vom Bot erhalten möchte, kann das jederzeit über den Button `Notifications` im Kanal `#⚫-bot-config` pro Discord-User deaktivieren. Wer einen Account auf [tw-utils.net](https://tw-utils.net) hat, kann die Benachrichtigung alternativ auch dort unter den Profileinstellungen steuern.
 
-## 7. Automatisches Aufräumen nach 30 Minuten
+## 7. Automatisches Clean-Up
 
 Der zur Anfrage erstellte Kanal wird **30 Minuten nach dem Ende des angefragten Zeitraums automatisch gelöscht** — inklusive aller Nachrichten darin. Du musst nichts manuell aufräumen. Im Anfrage-Embed steht zusätzlich ein Hinweis, wann genau der Kanal entfernt wird.
