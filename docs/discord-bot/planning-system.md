@@ -18,7 +18,7 @@ Nach der [Installation](modul-verwaltung.md) legt der Bot die Kategorie `🪓 PL
 
 ## 2. AG-Meldungen
 
-Im `#⚫-queries`-Kanal stehen das `Queries`-Embed und darunter drei farblich markierte Buttons zur Verfügung: `Snob Report`, `Launch Times` und `Off-Exclusion`.
+Im `#⚫-queries`-Kanal findest Du unterhalb des `Queries`-Embeds drei farblich markierte Buttons: `Snob Report`, `Launch Times` und `Off-Exclusion`.
 
 ![Queries-Kanal](../assets/discordbot/planning-system/02_planning_system_queries_channel.png){ .screenshot }
 
@@ -84,7 +84,7 @@ Anschließend öffnet sich das Off-Ausschluss-Modal, in dem Du die Herkunfts-Dö
 
 Unterhalb der Spieler-Buttons stehen im `#⚫-queries`-Kanal zwei zusätzliche Admin-Buttons zur Verfügung.
 
-Mit `Admin: Delete All` lassen sich **alle** AG-Meldungen, Abschickzeiten und Off-Ausschluss-Einträge auf dem gesamten Server löschen. Vor der Ausführung erscheint eine Bestätigungs-Abfrage mit den Buttons `Confirm` und `Cancel`, sodass nichts versehentlich gelöscht wird.
+Mit `Admin: Delete All` lassen sich **alle** AG-Meldungen, Abschickzeiten und Off-Ausschluss-Einträge auf dem gesamten Server löschen. Das ist vor allem dann sinnvoll, wenn die Stammes-Führung mit einer komplett neuen Planung starten und alle Alt-Daten der Spieler aus den drei Abfrage-Bereichen zurücksetzen möchte. Vor der Ausführung erscheint eine Bestätigungs-Abfrage mit den Buttons `Confirm` und `Cancel`, sodass nichts versehentlich gelöscht wird.
 
 ![Admin Delete All Button](../assets/discordbot/planning-system/16_planning_system_queries_admin_delete_all_button.png){ .screenshot }
 
@@ -92,12 +92,12 @@ Mit `Admin: Delete All` lassen sich **alle** AG-Meldungen, Abschickzeiten und Of
 
 ![Admin Export Button](../assets/discordbot/planning-system/17_planning_system_queries_admin_export_button.png){ .screenshot }
 
-!!! info "Wer darf Admin-Funktionen?"
+!!! info "Wer darf Admin-Funktionen nutzen?"
     Die Buttons `Admin: Delete All` und `Admin: Export` können nur User mit der Rolle `TWU-Mod` oder Discord-Administrator-Rechten ausführen. Für normale Mitglieder sind diese Buttons zwar sichtbar, aber ein Klick wird vom Bot mit einer Berechtigungs-Fehlermeldung abgelehnt.
 
 ## 6. Plan-Verteilung
 
-Der `#⚫-plan-distribution`-Kanal enthält das `Plan Distribution`-Embed und darunter den Button `Download`.
+Im `#⚫-plan-distribution`-Kanal findest Du unterhalb des `Plan Distribution`-Embeds den Button `Download`.
 
 ![Plan-Distribution-Kanal](../assets/discordbot/planning-system/18_planning_system_plandistribution_channel.png){ .screenshot }
 
@@ -112,7 +112,7 @@ Klick auf `Download`: Der Bot prüft die verknüpften TW-Accounts des Spielers u
 
 ## 7. Plan-Informationen
 
-Im `#⚫-leaderview-planinfo`-Kanal steht das `Plan Information`-Embed und darunter der Button `Retrieve Plan Information`.
+Im `#⚫-leaderview-planinfo`-Kanal findest Du unterhalb des `Plan Information`-Embeds den Button `Retrieve Plan Information`.
 
 ![Leaderview-PlanInfo-Kanal](../assets/discordbot/planning-system/21_planning_system_leaderview-planinfo_channel.png){ .screenshot }
 
@@ -133,17 +133,17 @@ Die detailliertere Ansicht zeigt zusätzlich die einzelnen Befehle mit Herkunfts
 !!! info "Sichtbarkeit Leaderview-PlanInfo"
     Der `#⚫-leaderview-planinfo`-Kanal ist standardmäßig **nur für User mit der Rolle `TWU-Mod` sichtbar**. Normale Mitglieder sehen den Kanal nicht — Plan-Informationen bleiben damit innerhalb der Stammes-Führung.
 
-## 8. Nuke-Ersatz
+## 8. Off-Ersatz
 
-Der `#⚫-nuke-replacement`-Kanal zeigt das `Nuke-Replacement`-Embed mit zwei Status-Listen (`NOT DONE` und `DONE`) und darunter fünf Buttons.
+Im `#⚫-nuke-replacement`-Kanal findest Du oben unter dem `Nuke-Replacement`-Embed fünf Verwaltungs-Buttons; darunter listen zwei Status-Embeds (`NOT DONE` und `DONE`) den aktuellen Stand aller Ersatz-Anfragen auf.
 
 ![Nuke-Replacement-Übersicht](../assets/discordbot/planning-system/26_planning_system_nuke_replacementsystem_overview.png){ .screenshot }
 
-Über den Button `Request Nuke-replacement` stellst Du eine neue Ersatz-Anfrage, wenn Du einen geplanten Nuke nicht selbst losschicken kannst und einen Stammeskollegen suchst, der das übernimmt.
+Über den Button `Request Nuke-replacement` stellst Du eine neue Ersatz-Anfrage, wenn Du einen geplanten Off nicht selbst losschicken kannst und einen Stammeskollegen suchst, der das übernimmt.
 
 ![Request-Nuke-replacement-Button](../assets/discordbot/planning-system/27_planning_system_nuke_replacementsystem_requestnukereplacement_button.png){ .screenshot }
 
-Per Klick öffnet sich das Anfrage-Modal mit Eingabefeldern für die Zielkoordinate, den gewünschten Abschickzeitpunkt und eine Notiz.
+Per Klick öffnet sich das Anfrage-Modal mit Eingabefeldern für die Zielkoordinate, den gewünschten Abschickzeitpunkt und die Off-Größe (Angabe als Axt- und LKav-Anzahl).
 
 ![Request-Nuke-replacement-Modal](../assets/discordbot/planning-system/32_planning_system_nuke_replacementsystem_requestnukereplacement_modal.png){ .screenshot }
 
@@ -159,7 +159,7 @@ Per Klick öffnet sich zunächst ein Dropdown, in dem Du die konkrete Anfrage au
 
 ![Auswahl der zu übernehmenden Anfrage](../assets/discordbot/planning-system/34_planning_system_nuke_replacementsystem_iwanttoreplaceanuke_selectarequesttotakeover.png){ .screenshot }
 
-Danach folgt ein zweites Dropdown, in dem Du den eigenen verifizierten Account auswählst, mit dem Du die Übernahme leistest.
+Danach folgt ein Eingabefeld, in dem Du den eigenen verifizierten Account einträgst, mit dem Du die Übernahme leistest.
 
 ![Auswahl des übernehmenden Accounts](../assets/discordbot/planning-system/35_planning_system_nuke_replacementsystem_iwanttoreplaceanuke_selecttheaccountwhotakesover.png){ .screenshot }
 
@@ -175,9 +175,9 @@ Nach erfolgreicher Übernahme wandert die Anfrage in den `DONE`-Bereich des Embe
 
 ![Delete-Request-Button](../assets/discordbot/planning-system/30_planning_system_nuke_replacementsystem_deleterequest_button.png){ .screenshot }
 
-Mit `Admin: Delete all requests` lassen sich schließlich alle Nuke-Ersatz-Anfragen auf einen Schlag löschen; vor dem Löschen erscheint eine Bestätigungs-Abfrage.
+Mit `Admin: Delete all requests` lassen sich schließlich alle Off-Ersatz-Anfragen auf einen Schlag löschen; vor dem Löschen erscheint eine Bestätigungs-Abfrage.
 
 ![Admin-Delete-all-requests-Button](../assets/discordbot/planning-system/31_planning_system_nuke_replacementsystem_admindeleteallrequests_button.png){ .screenshot }
 
-!!! info "Wer darf Nuke-Ersatz-Anfragen löschen?"
+!!! info "Wer darf Off-Ersatz-Anfragen löschen?"
     Eine einzelne Anfrage kann nur der Ersteller selbst oder ein User mit der Rolle `TWU-Mod` über `Delete Request` löschen. Der Button `Admin: Delete all requests` zum gesammelten Löschen aller Anfragen steht ausschließlich Usern mit der Rolle `TWU-Mod` oder Discord-Administrator-Rechten zur Verfügung.
