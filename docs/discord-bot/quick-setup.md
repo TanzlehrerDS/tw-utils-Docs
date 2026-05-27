@@ -89,7 +89,7 @@ Wähle im erscheinenden Dropdown das gewünschte Modul aus. Der Bot installiert 
 Folgende Module stehen zur Verfügung:
 
 - 🏖️ **[Account-Sitting-System](sitting-system.md)** — Urlaubsvertretung für Accounts
-- 🧱 **[Bunker-Information-System](bunker-info.md)** — Bunker anfragen und genehmigen
+- 🧱 **[Bunker-Information-System](bunker-info.md)** — Bunker beantragen und genehmigen
 - 🔍 **[Off/Deff/Snob-Search-System](search-system.md)** — Passende Off-, Deff- oder AG-Befehle finden
 - 🪓 **[Planning-System](planning-system.md)** — Offensiv-Planungen organisieren
 

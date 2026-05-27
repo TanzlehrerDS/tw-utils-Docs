@@ -15,7 +15,7 @@ Nach der [Installation](modul-verwaltung.md) legt der Bot die Kategorie `🧱 BU
 
 Sobald jemand eine Anfrage oder eine Aufstockung stellt, legt der Bot pro Koordinate **einen eigenen Kanal** in derselben Kategorie an (z. B. `❓-bunker-for-500-501-Spielername` bzw. `❓-top-up-500-501`). In diesem Per-Request-Kanal läuft der gesamte Genehmigungs-Workflow.
 
-## 2. Bunker anfragen
+## 2. Bunker beantragen
 
 Wechsle in den Kanal `#⚫-request-bunker`.
 
@@ -44,7 +44,7 @@ Im neuen Kanal postet der Bot ein Anfrage-Embed mit Spieler, Koordinate, gewüns
 !!! info "Mehrere Koordinaten pro Anfrage"
     In einer einzelnen Anfrage könnt ihr beliebig viele Koordinaten eintragen — komma- oder leerzeichengetrennt. Der Bot legt **pro Koordinate einen eigenen Anfrage-Kanal** an. Jeder Kanal wird einzeln genehmigt, abgelehnt oder zurückgezogen.
 
-## 3. Workflow: Genehmigen, Ablehnen, Zurückziehen
+## 3. Bunker genehmigen/ablehnen
 
 Im Per-Request-Kanal sehen TWU-Mods den Button `Admin: Approve`.
 
@@ -72,7 +72,7 @@ Der Anfragende selbst — oder ein TWU-Mod — kann die Anfrage über `Withdraw 
 !!! info "SD-Befehl aus Approval-DM kopieren"
     Die `Bunker Approved`-DM enthält am Ende einen fertig formatierten SD-Befehl-String (`{coord} {units}"{Spieler}"request tw-utils.net""`). Diesen Block kannst du direkt ins Stammesforum einfügen, ohne ihn manuell zusammenzubauen.
 
-## 4. Aufstockung anfragen
+## 4. Aufstockung beantragen
 
 Für bereits genehmigte Bunker, deren Stärke nicht (mehr) ausreicht, kannst du im Kanal `#⚫-request-bunker` über den Button `Request Top-Up` eine Aufstockung beantragen.
 
@@ -112,7 +112,7 @@ Im Modal `Dissolve Bunker` gibst du die aufzulösenden Koordinaten ein — das F
 
 ![Modal: Dissolve Bunker](../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png){ .screenshot }
 
-## 6. Leader-View: Bunker-Health & FlexControl
+## 6. Bunker-Health & Flexbunker-Kontrolle
 
 Im Kanal `#⚫-leaderview-bunker` sehen TWU-Mods alle genehmigten Bunker im Überblick.
 

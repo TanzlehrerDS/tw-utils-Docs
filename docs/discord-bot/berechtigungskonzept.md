@@ -6,7 +6,7 @@ Der tw-utils Discord-Bot kennt zwei Berechtigungsstufen: **normale Mitglieder** 
 
 Jeder Discord-User auf eurem Stammes-Discord ist aus Sicht des tw-utils Discordbot standardmäßig ein normales Mitglied. Normale Mitglieder können die interaktiven Funktionen der installierten Module nutzen:
 
-- Bunker anfragen im Kanal `#⚫-request-bunker` stellen
+- Bunker-Anträge im Kanal `#⚫-request-bunker` stellen
 - Account-Sitting-Anfragen im Kanal `#⚫-request-account-sitting` stellen
 - Off-, Deff- oder AG-Befehle über das ODS-System suchen
 - AG-Meldungen und Abschick-Zeiten im Planning-System eingeben
