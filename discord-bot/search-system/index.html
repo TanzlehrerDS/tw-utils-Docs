@@ -1443,10 +1443,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-per-anfrage-kanal-status-notizen-loschen-folgesuchen" class="md-nav__link">
+  <a href="#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Per-Anfrage-Kanal: Status, Notizen, Löschen, Folgesuchen
+        6. In der exportierten Suchanfrage: Status, Notizen, Löschen, Folgesuchen
       
     </span>
   </a>
@@ -1626,10 +1626,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-per-anfrage-kanal-status-notizen-loschen-folgesuchen" class="md-nav__link">
+  <a href="#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Per-Anfrage-Kanal: Status, Notizen, Löschen, Folgesuchen
+        6. In der exportierten Suchanfrage: Status, Notizen, Löschen, Folgesuchen
       
     </span>
   </a>
@@ -1665,81 +1665,106 @@
 
 
 <h1 id="offdeffsnob-search-system">Off/Deff/Snob-Search-System<a class="headerlink" href="#offdeffsnob-search-system" title="Permanent link">¶</a></h1>
-<p>Mit dem ODS-System suchen Spieler im Stamm Off-, Deff- oder Snob-Befehle für eine bestimmte Zielkoordinate. Voraussetzung dafür: Die Truppendaten der Stammesmitglieder sind hochgeladen. Der Bot gleicht ankommende Such-Anfragen mit den hinterlegten Truppendaten ab und liefert eine Liste der Spieler, die einen passenden Off-, Deff- oder Snob-Befehl abschicken können.</p>
-<h2 id="1-kanale-des-moduls">1. Kanäle des Moduls<a class="headerlink" href="#1-kanale-des-moduls" title="Permanent link">¶</a></h2>
-<p>Nach der <a href="../modul-verwaltung/">Installation</a> legt der Bot die Kategorie <code>🔍 OFF/DEFF/SNOB-SEARCHER</code> mit zwei Basis-Kanälen an:</p>
-<ul>
-<li><code>#⚫-ods-search</code> — zentraler Such-Kanal mit den drei Such-Buttons und dem Admin-Panel (Truppen-Upload, -Anzeige, -Löschung)</li>
-<li><code>#⚫-ods-overview</code> — Dashboard-Kanal mit der Liste aller laufenden und erledigten Such-Anfragen</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/01_ods_system_channels.png" data-title="Kanal-Übersicht des ODS-Systems" data-desc-position="bottom"><img alt="Kanal-Übersicht des ODS-Systems" class="screenshot" src="../../assets/discordbot/ods-system/01_ods_system_channels.png"></a></p>
-<p>Sobald jemand ein Suchergebnis in einen eigenen Kanal exportiert (siehe Abschnitt 5), legt der Bot zusätzlich <strong>einen eigenen Kanal pro Anfrage</strong> in derselben Kategorie an, nach dem Schema <code>❌-off-XXX-YYY-PLAYERNAME</code> bzw. <code>❌-deff-…</code> / <code>❌-ag-…</code>. Sobald die Anfrage abgearbeitet ist, wechselt das Präfix auf <code>✅</code> — siehe Abschnitt 6.</p>
-<h2 id="2-truppendaten-hochladen-anzeigen-loschen">2. Truppendaten hochladen, anzeigen, löschen<a class="headerlink" href="#2-truppendaten-hochladen-anzeigen-loschen" title="Permanent link">¶</a></h2>
-<p>Damit der Bot überhaupt Treffer melden kann, müssen die Truppendaten der Stammesmitglieder im Bot hinterlegt sein. Im Such-Kanal <code>#⚫-ods-search</code> steht dafür das <code>ODS Panel</code>-Embed mit drei Admin-Buttons: <code>Upload Troops</code>, <code>Delete Troops</code>, <code>Show Troop Status</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/02_ods_system_upload_troops.png" data-title="Admin-Buttons im ODS Panel" data-desc-position="bottom"><img alt="Admin-Buttons im ODS Panel" class="screenshot" src="../../assets/discordbot/ods-system/02_ods_system_upload_troops.png"></a></p>
-<p><code>Upload Troops</code> führt zur Slash-Command <code>/admin troops_upload</code>, über die der TWU-Mod die TW-Truppen-CSV-Datei einliest.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png" data-title="Slash-Command zum Truppen-Upload" data-desc-position="bottom"><img alt="Slash-Command zum Truppen-Upload" class="screenshot" src="../../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png"></a></p>
-<p>Nach erfolgreichem Upload bestätigt der Bot mit einer kurzen Erfolgs-Nachricht inklusive Statistik (Spieler, Dörfer, Truppen-Datensätze).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png" data-title="Erfolgs-Meldung nach Truppen-Upload" data-desc-position="bottom"><img alt="Erfolgs-Meldung nach Truppen-Upload" class="screenshot" src="../../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png"></a></p>
-<p><code>Delete Troops</code> entfernt hochgeladene Truppendaten wieder; vor dem Löschen kommt eine Sicherheitsabfrage mit <code>Confirm</code> und <code>Cancel</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png" data-title="Delete-Troops-Button" data-desc-position="bottom"><img alt="Delete-Troops-Button" class="screenshot" src="../../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png"></a></p>
-<p><code>Show Troop Status</code> öffnet das <code>Troop Uploads Overview</code>-Embed mit allen Stammesmitgliedern und ihrem jeweiligen Upload-Zeitstempel.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/06_ods_system_upload_troops_showtroopstatus_button.png" data-title="Show-Troop-Status-Button" data-desc-position="bottom"><img alt="Show-Troop-Status-Button" class="screenshot" src="../../assets/discordbot/ods-system/06_ods_system_upload_troops_showtroopstatus_button.png"></a></p>
-<p>So sieht man auf einen Blick, wer aktuelle Truppendaten hinterlegt hat und wessen Daten veraltet sind.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png" data-title="Troop Uploads Overview" data-desc-position="bottom"><img alt="Troop Uploads Overview" class="screenshot" src="../../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png"></a></p>
-<div class="admonition info">
-<p class="admonition-title">Wer darf Truppen hochladen?</p>
-<p>Nur User mit der Rolle <code>TWU-Mod</code> oder Discord-Administrator-Rechten sehen die drei Admin-Buttons (<code>Upload Troops</code>, <code>Delete Troops</code>, <code>Show Troop Status</code>) und können die Slash-Command <code>/admin troops_upload</code> ausführen. Normale Mitglieder sehen das <code>ODS Panel</code>-Embed ohne diese Buttons. Siehe auch <a href="../berechtigungskonzept/">Berechtigungskonzept</a>.</p>
-</div>
-<h2 id="3-off-deff-oder-snob-befehl-suchen">3. Off-, Deff- oder Snob-Befehl suchen<a class="headerlink" href="#3-off-deff-oder-snob-befehl-suchen" title="Permanent link">¶</a></h2>
-<p>Unterhalb des Admin-Panels stehen im Such-Kanal <code>#⚫-ods-search</code> die drei Such-Buttons <code>Search Off</code>, <code>Search Snob</code>, <code>Search Deff</code>, mit denen jeder Spieler eine Suche starten kann.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/08_ods_system_search_buttons.png" data-title="Such-Buttons im ODS-System" data-desc-position="bottom"><img alt="Such-Buttons im ODS-System" class="screenshot" src="../../assets/discordbot/ods-system/08_ods_system_search_buttons.png"></a></p>
-<p>Klick auf <code>Search Off</code> öffnet das Modal <code>Find Off Options</code> mit den Feldern <code>Target Coordinate</code>, <code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code>, <code>Minimum Off Strength (Axe,Lcav)</code> (optional), <code>Earliest Launch Time</code> (optional) und <code>Fixed Runtime (Unit name)</code> (optional).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/09_ods_system_search_Off_modal.png" data-title="Modal: Find Off Options" data-desc-position="bottom"><img alt="Modal: Find Off Options" class="screenshot" src="../../assets/discordbot/ods-system/09_ods_system_search_Off_modal.png"></a></p>
-<p>Klick auf <code>Search Snob</code> öffnet das Modal <code>Find Snob Options</code> mit den Feldern <code>Target Coordinate</code>, <code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> und <code>Earliest Launch Time (optional)</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png" data-title="Modal: Find Snob Options" data-desc-position="bottom"><img alt="Modal: Find Snob Options" class="screenshot" src="../../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png"></a></p>
-<p>Klick auf <code>Search Deff</code> öffnet das Modal <code>Find Deff Options</code>. Die Felder sind analog zum Off-Modal, zusätzlich gibt es <code>Minimum Population</code> und <code>UT-Boost (0-20%)</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png" data-title="Modal: Find Deff Options" data-desc-position="bottom"><img alt="Modal: Find Deff Options" class="screenshot" src="../../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png"></a></p>
+<p>Mit dem ODS-System suchen Spieler im Stamm Off-, Deff- oder Snob-Befehle für eine bestimmte Zielkoordinate. Das ODS-System ist die erweiterte Variante des Single Village Snipe — während dort nur die Truppen eines einzelnen Spielers verplant werden, fließen hier die Dörfer des <strong>gesamten Stammes</strong> in die Auswahl ein. Der Bot gleicht ankommende Suchanfragen mit den hinterlegten Truppendaten ab und liefert eine Liste der Spieler, die einen passenden Off-, Deff- oder Snob-Befehl abschicken können.</p>
 <div class="admonition info">
 <p class="admonition-title">Voraussetzung Truppen-Upload</p>
 <p>Der Bot kann nur Treffer melden für Spieler, deren Truppendaten aktuell hochgeladen sind. Liegen keine Daten vor, bleibt die Trefferliste leer. Für aussagekräftige Ergebnisse sollten Stammesmitglieder ihre Truppendaten regelmäßig per <code>/admin troops_upload</code> aktualisieren.</p>
 </div>
+<h2 id="1-kanale-des-moduls">1. Kanäle des Moduls<a class="headerlink" href="#1-kanale-des-moduls" title="Permanent link">¶</a></h2>
+<p>Nach der <a href="../modul-verwaltung/">Installation</a> legt der Bot die Kategorie <code>🔍 OFF/DEFF/SNOB-SEARCHER</code> mit zwei Basis-Kanälen an:</p>
+<ul>
+<li><code>#⚫-ods-search</code> — zentraler Such-Kanal mit den drei Such-Buttons und dem Admin-Panel</li>
+<li><code>#⚫-ods-overview</code> — Dashboard-Kanal mit der Liste aller laufenden und erledigten Suchanfragen</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/01_ods_system_channels.png" data-title="Kanal-Übersicht des ODS-Systems" data-desc-position="bottom"><img alt="Kanal-Übersicht des ODS-Systems" class="screenshot" src="../../assets/discordbot/ods-system/01_ods_system_channels.png"></a></p>
+<p>Sobald jemand ein Suchergebnis in einen eigenen Kanal exportiert (siehe <a href="#5-suche-in-einen-eigenen-kanal-exportieren">Abschnitt 5</a>), legt der Bot zusätzlich <strong>einen eigenen Kanal pro Anfrage</strong> in derselben Kategorie an, nach dem Schema <code>❌-off-XXX-YYY-PLAYERNAME</code> bzw. <code>❌-deff-…</code> / <code>❌-ag-…</code>. Sobald die Anfrage abgearbeitet ist, wechselt das Präfix auf <code>✅</code> — siehe <a href="#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen">Abschnitt 6</a>.</p>
+<h2 id="2-truppendaten-hochladen-anzeigen-loschen">2. Truppendaten hochladen, anzeigen, löschen<a class="headerlink" href="#2-truppendaten-hochladen-anzeigen-loschen" title="Permanent link">¶</a></h2>
+<p>Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten der Stammesmitglieder im Bot hinterlegt sein. Im Such-Kanal <code>#⚫-ods-search</code> steht dafür das <code>ODS Panel</code>-Embed mit drei Admin-Buttons: <code>Upload Troops</code>, <code>Delete Troops</code>, <code>Show Troop Status</code>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/02_ods_system_upload_troops.png" data-title="Admin-Buttons im ODS Panel" data-desc-position="bottom"><img alt="Admin-Buttons im ODS Panel" class="screenshot" src="../../assets/discordbot/ods-system/02_ods_system_upload_troops.png"></a></p>
+<p><code>Upload Troops</code> führt zum Slash-Command <code>/admin troops_upload</code>, über die der TWU-Mod die TW-Truppen-CSV-Datei einliest.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png" data-title="Slash-Command zum Truppen-Upload" data-desc-position="bottom"><img alt="Slash-Command zum Truppen-Upload" class="screenshot" src="../../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png"></a></p>
+<p>Die CSV-Datei erzeugst du am bequemsten über das Schnellleisten-Script <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">„Download Tribe Info"</a>, das ein Stammesleiter im Spiel ausführen kann. Erwartetes Dateiformat:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
+</code></pre></div>
+<p>Nach erfolgreichem Upload bestätigt der Bot mit einer kurzen Erfolgs-Nachricht inklusive Statistik (Spieler, Dörfer, Truppen-Datensätze).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png" data-title="Erfolgs-Meldung nach Truppen-Upload" data-desc-position="bottom"><img alt="Erfolgs-Meldung nach Truppen-Upload" class="screenshot" src="../../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png"></a></p>
+<p><code>Delete Troops</code> entfernt hochgeladene Truppendaten wieder; vor dem Löschen kommt eine Sicherheitsabfrage mit <code>Confirm</code> und <code>Cancel</code>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png" data-title="Delete-Troops-Button" data-desc-position="bottom"><img alt="Delete-Troops-Button" class="screenshot" src="../../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png"></a></p>
+<p><code>Show Troop Status</code> öffnet das <code>Troop Uploads Overview</code>-Embed mit allen hochgeladenen Truppendateien je Stamm und ihrem jeweiligen Upload-Zeitstempel.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/06_ods_system_upload_troops_showtroopstatus_button.png" data-title="Show-Troop-Status-Button" data-desc-position="bottom"><img alt="Show-Troop-Status-Button" class="screenshot" src="../../assets/discordbot/ods-system/06_ods_system_upload_troops_showtroopstatus_button.png"></a></p>
+<p>So sieht man auf einen Blick, welche Stämme aktuelle Truppendaten hinterlegt haben und wo die Daten veraltet sind.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png" data-title="Troop Uploads Overview" data-desc-position="bottom"><img alt="Troop Uploads Overview" class="screenshot" src="../../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Wer darf Truppen hochladen?</p>
+<p>Nur User mit der Rolle <code>TWU-Mod</code> oder Discord-Administrator-Rechten können die drei Admin-Buttons (<code>Upload Troops</code>, <code>Delete Troops</code>, <code>Show Troop Status</code>) ausführen und den Slash-Command <code>/admin troops_upload</code> benutzen.</p>
+</div>
+<h2 id="3-off-deff-oder-snob-befehl-suchen">3. Off-, Deff- oder Snob-Befehl suchen<a class="headerlink" href="#3-off-deff-oder-snob-befehl-suchen" title="Permanent link">¶</a></h2>
+<p>Unterhalb des Admin-Panels stehen im Such-Kanal <code>#⚫-ods-search</code> die drei Such-Buttons <code>Search Off</code>, <code>Search Snob</code>, <code>Search Deff</code>, mit denen jeder Spieler eine Suche starten kann.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/08_ods_system_search_buttons.png" data-title="Such-Buttons im ODS-System" data-desc-position="bottom"><img alt="Such-Buttons im ODS-System" class="screenshot" src="../../assets/discordbot/ods-system/08_ods_system_search_buttons.png"></a></p>
+<p>Klick auf <code>Search Off</code> öffnet das Modal <code>Find Off Options</code>:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/09_ods_system_search_Off_modal.png" data-title="Modal: Find Off Options" data-desc-position="bottom"><img alt="Modal: Find Off Options" class="screenshot" src="../../assets/discordbot/ods-system/09_ods_system_search_Off_modal.png"></a></p>
+<ul>
+<li><code>Target Coordinate</code> — Koordinate des Zieldorfes im Format <code>XXX|YYY</code>.</li>
+<li><code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> — gewünschte Ankunftszeit; nur <code>hh:mm:ss</code> reicht für „heute", <code>DD.MM.YYYY hh:mm:ss</code> für ein späteres Datum.</li>
+<li><code>Minimum Off Strength (Axe,Lcav)</code> (optional) — Mindeststärke des gesuchten Offs, angegeben als Axt- und LK-Anzahl (z. B. <code>7000,3000</code>). Nuken unter diesem Schwellwert werden ausgeblendet.</li>
+<li><code>Earliest Launch Time</code> (optional) — frühester erlaubter Abschickzeitpunkt; Befehle, die schon davor losgeschickt werden müssten, werden gefiltert.</li>
+<li><code>Fixed Runtime (Unit name)</code> (optional) — beschränkt die Suche auf eine bestimmte Einheitenlaufzeit (z. B. nur Axt-Laufzeit), wenn der Off mit einer fixen Einheit gerechnet werden soll.</li>
+</ul>
+<p>Klick auf <code>Search Snob</code> öffnet das Modal <code>Find Snob Options</code>:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png" data-title="Modal: Find Snob Options" data-desc-position="bottom"><img alt="Modal: Find Snob Options" class="screenshot" src="../../assets/discordbot/ods-system/10_ods_system_search_snob_modal.png"></a></p>
+<ul>
+<li><code>Target Coordinate</code> — Koordinate des Ziel-AG-Dorfs.</li>
+<li><code>Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)</code> — gewünschte Ankunftszeit des AGs.</li>
+<li><code>Earliest Launch Time (optional)</code> — frühester erlaubter Abschickzeitpunkt für den AG.</li>
+</ul>
+<p>Klick auf <code>Search Deff</code> öffnet das Modal <code>Find Deff Options</code>. Die Felder entsprechen dem Off-Modal, zusätzlich:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png" data-title="Modal: Find Deff Options" data-desc-position="bottom"><img alt="Modal: Find Deff Options" class="screenshot" src="../../assets/discordbot/ods-system/11_ods_system_search_deff_modal.png"></a></p>
+<ul>
+<li><code>Minimum Population</code> — Mindesteinwohnerzahl des Herkunftsdorfs; verhindert, dass kleine Dörfer in die Trefferliste fallen.</li>
+<li><code>UT-Boost (0-20%)</code> — pauschaler Bonus auf die Truppenstärke des Herkunftsdorfs (z. B. wegen Mauer/Forschung), den der Bot bei der Berechnung berücksichtigt.</li>
+</ul>
 <h2 id="4-suchergebnis-lesen-und-mit-der-workbench-arbeiten">4. Suchergebnis lesen und mit der Workbench arbeiten<a class="headerlink" href="#4-suchergebnis-lesen-und-mit-der-workbench-arbeiten" title="Permanent link">¶</a></h2>
-<p>Nach dem Abschicken eines Such-Modals antwortet der Bot mit einem <strong>ephemeralen Embed</strong>, das nur der Suchende selbst sieht. Es listet alle passenden Spieler mit Dorf-Koordinate, Truppenzusammensetzung, Abschick- und Ankunftszeit.</p>
+<p>Nach dem Abschicken eines Such-Modals antwortet der Bot mit einem <strong>ephemeralen Embed</strong>, das nur der Suchende selbst sieht. Es listet alle möglichen Befehle mit Dorf-Koordinate, Truppenzusammensetzung, Abschick- und Ankunftszeit auf.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/12_ods_system_search_result_view_ephemeral.png" data-title="Ephemerale Such-Antwort" data-desc-position="bottom"><img alt="Ephemerale Such-Antwort" class="screenshot" src="../../assets/discordbot/ods-system/12_ods_system_search_result_view_ephemeral.png"></a></p>
-<p>In der detaillierten Ansicht zeigt das Embed zusätzlich fertige Befehl-Strings, die direkt ins Spiel kopiert werden können.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png" data-title="Detaillierte Such-Antwort mit Befehl-Strings" data-desc-position="bottom"><img alt="Detaillierte Such-Antwort mit Befehl-Strings" class="screenshot" src="../../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png"></a></p>
-<p>Unter dem Suchergebnis stehen Workbench-Buttons — pro Treffer kann der Suchende den jeweiligen Spieler anpingen oder anschreiben, ohne den Discord-Kanal zu verlassen.</p>
+<p>Die möglichen Befehle werden übersichtlich in tabellarischer Form dargestellt:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png" data-title="Detaillierte Such-Antwort in Tabellenform" data-desc-position="bottom"><img alt="Detaillierte Such-Antwort in Tabellenform" class="screenshot" src="../../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png"></a></p>
+<p>Unter dem Suchergebnis stehen bis zu zehn Buttons zur Verfügung — jeder dieser Buttons generiert den zum Befehl passenden Workbench-Befehl.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png" data-title="Workbench-Buttons im Suchergebnis" data-desc-position="bottom"><img alt="Workbench-Buttons im Suchergebnis" class="screenshot" src="../../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png"></a></p>
-<p>Nach einer Workbench-Aktion bestätigt der Bot mit einer kurzen ephemeralen Antwort.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png" data-title="Bot-Antwort nach Workbench-Aktion" data-desc-position="bottom"><img alt="Bot-Antwort nach Workbench-Aktion" class="screenshot" src="../../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png"></a></p>
+<p>Im Antwort-Embed steht zusätzlich ein <code>Rally Point</code>-Button: Per Klick wird man direkt zum Ingame-Versammlungsplatz des Herkunftsdorfs weitergeleitet, sodass der Befehl unmittelbar abgeschickt werden kann.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png" data-title="Bot-Antwort nach Workbench-Aktion mit Rally-Point-Button" data-desc-position="bottom"><img alt="Bot-Antwort nach Workbench-Aktion mit Rally-Point-Button" class="screenshot" src="../../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Ephemerale Antwort nur für den Suchenden</p>
-<p>Die Trefferliste ist eine ephemerale Discord-Nachricht: Nur der Suchende sieht sie und sie verschwindet beim nächsten Discord-Neuladen. Wer das Ergebnis dauerhaft sichtbar machen und mit dem Stamm diskutieren möchte, exportiert die Suche in einen eigenen Kanal — siehe Abschnitt 5.</p>
+<p>Die Trefferliste ist eine ephemerale Discord-Nachricht: Nur der Suchende sieht sie und sie verschwindet beim nächsten Discord-Neuladen. Wer das Ergebnis dauerhaft sichtbar machen und mit dem Stamm diskutieren möchte, exportiert die Suche in einen eigenen Kanal — siehe <a href="#5-suche-in-einen-eigenen-kanal-exportieren">Abschnitt 5</a>.</p>
 </div>
 <h2 id="5-suche-in-einen-eigenen-kanal-exportieren">5. Suche in einen eigenen Kanal exportieren<a class="headerlink" href="#5-suche-in-einen-eigenen-kanal-exportieren" title="Permanent link">¶</a></h2>
-<p>Im ephemeralen Suchergebnis (siehe Abschnitt 4) steht ein Export-Button, der die Anfrage in einen neuen, persistenten Per-Anfrage-Kanal verlagert.</p>
+<p>Im ephemeralen Suchergebnis (siehe <a href="#4-suchergebnis-lesen-und-mit-der-workbench-arbeiten">Abschnitt 4</a>) steht ein Export-Button, der die Anfrage in eine neue, persistente Suchanfrage verlagert.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/16_ods_system_search_result_view_ephemeral_exporttoseparatechannel_button.png" data-title="Export-Button im Suchergebnis" data-desc-position="bottom"><img alt="Export-Button im Suchergebnis" class="screenshot" src="../../assets/discordbot/ods-system/16_ods_system_search_result_view_ephemeral_exporttoseparatechannel_button.png"></a></p>
 <p>Der Bot legt daraufhin in der Kategorie <code>🔍 OFF/DEFF/SNOB-SEARCHER</code> einen neuen Kanal <code>❌-&lt;typ&gt;-XXX-YYY-PLAYERNAME</code> an.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png" data-title="Neuer Per-Anfrage-Kanal in der Kategorie" data-desc-position="bottom"><img alt="Neuer Per-Anfrage-Kanal in der Kategorie" class="screenshot" src="../../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png"></a></p>
-<p>Im neuen Kanal postet der Bot das Such-Embed mit allen Details und den Verwaltungs-Buttons. Das Ergebnis ist nun für den ganzen Stamm sichtbar, andere Spieler können mitdiskutieren, der Suchende kann den Status pflegen, Notizen anfügen und Folge-Suchen direkt aus dem Kanal heraus starten — siehe Abschnitt 6.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png" data-title="Inhalt des neuen Per-Anfrage-Kanals" data-desc-position="bottom"><img alt="Inhalt des neuen Per-Anfrage-Kanals" class="screenshot" src="../../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png"></a></p>
-<h2 id="6-per-anfrage-kanal-status-notizen-loschen-folgesuchen">6. Per-Anfrage-Kanal: Status, Notizen, Löschen, Folgesuchen<a class="headerlink" href="#6-per-anfrage-kanal-status-notizen-loschen-folgesuchen" title="Permanent link">¶</a></h2>
-<p>Im Per-Anfrage-Kanal stehen oberhalb des Such-Embeds die Verwaltungs-Buttons <code>Status: Done</code> / <code>Status: Not Done</code>, mit denen die Anfrage als erledigt markiert bzw. wieder auf offen gesetzt wird.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/19_ods_system_search_result_new_channel_statusdone_notdone_button.png" data-title="Status-Buttons im Per-Anfrage-Kanal" data-desc-position="bottom"><img alt="Status-Buttons im Per-Anfrage-Kanal" class="screenshot" src="../../assets/discordbot/ods-system/19_ods_system_search_result_new_channel_statusdone_notdone_button.png"></a></p>
-<p><code>Add/Edit Note</code> öffnet das Modal <code>Add/Edit Note</code> mit dem optionalen Feld <code>Your Note (leave empty to delete)</code>. Die Notiz wird im Anfrage-Embed unter <code>Notes</code> angezeigt — z. B. „Spieler X hat zugesagt" oder „Wartet auf Truppen-Refresh".</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png" data-title="Neue exportierte Suchanfrage in der Kategorie" data-desc-position="bottom"><img alt="Neue exportierte Suchanfrage in der Kategorie" class="screenshot" src="../../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png"></a></p>
+<p>Im neuen Kanal postet der Bot das Such-Embed mit allen Details und den Verwaltungs-Buttons. Das Ergebnis ist nun für den ganzen Stamm sichtbar, andere Spieler können mitdiskutieren, der Suchende kann den Status pflegen, Notizen anfügen und Folge-Suchen direkt aus der exportierten Suchanfrage heraus starten — siehe <a href="#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen">Abschnitt 6</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png" data-title="Inhalt der neuen exportierten Suchanfrage" data-desc-position="bottom"><img alt="Inhalt der neuen exportierten Suchanfrage" class="screenshot" src="../../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png"></a></p>
+<h2 id="6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen">6. In der exportierten Suchanfrage: Status, Notizen, Löschen, Folgesuchen<a class="headerlink" href="#6-in-der-exportierten-suchanfrage-status-notizen-loschen-folgesuchen" title="Permanent link">¶</a></h2>
+<p>In der exportierten Suchanfrage stehen oberhalb des Such-Embeds die Verwaltungs-Buttons <code>Status: Done</code> / <code>Status: Not Done</code>, mit denen die Anfrage als erledigt markiert bzw. wieder auf offen gesetzt wird.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/19_ods_system_search_result_new_channel_statusdone_notdone_button.png" data-title="Status-Buttons in der exportierten Suchanfrage" data-desc-position="bottom"><img alt="Status-Buttons in der exportierten Suchanfrage" class="screenshot" src="../../assets/discordbot/ods-system/19_ods_system_search_result_new_channel_statusdone_notdone_button.png"></a></p>
+<p>Über den Button <code>Add/Edit Note</code> können der Anfragesteller oder andere User Notizen zur Anfrage hinterlegen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/20_ods_system_search_result_new_channel_addnote_button.png" data-title="Add/Edit-Note-Button" data-desc-position="bottom"><img alt="Add/Edit-Note-Button" class="screenshot" src="../../assets/discordbot/ods-system/20_ods_system_search_result_new_channel_addnote_button.png"></a></p>
-<p><code>Delete Request</code> löscht die Anfrage inklusive Kanal nach Bestätigung mit <code>Yes, delete</code>. Voraussetzung: Ersteller der Anfrage oder TWU-Mod.</p>
+<p><code>Delete Request</code> löscht die Anfrage inklusive Kanal nach Bestätigung mit <code>Yes, delete</code>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/21_ods_system_search_result_new_channel_deleterequest_button.png" data-title="Delete-Request-Button" data-desc-position="bottom"><img alt="Delete-Request-Button" class="screenshot" src="../../assets/discordbot/ods-system/21_ods_system_search_result_new_channel_deleterequest_button.png"></a></p>
-<p>Zusätzlich stehen im Per-Anfrage-Kanal die Such-Buttons <code>Search Off</code>, <code>Search Snob</code>, <code>Search Deff</code> erneut zur Verfügung.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/22_ods_system_search_result_new_channel_searchbuttons.png" data-title="Such-Buttons im Per-Anfrage-Kanal" data-desc-position="bottom"><img alt="Such-Buttons im Per-Anfrage-Kanal" class="screenshot" src="../../assets/discordbot/ods-system/22_ods_system_search_result_new_channel_searchbuttons.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Voraussetzung Löschen</p>
+<p>Die Anfrage kann nur vom Ersteller selbst oder von einem User mit der Rolle <code>TWU-Mod</code> gelöscht werden.</p>
+</div>
+<p>Zusätzlich stehen in der exportierten Suchanfrage die Such-Buttons <code>Search Off</code>, <code>Search Snob</code>, <code>Search Deff</code> erneut zur Verfügung.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/22_ods_system_search_result_new_channel_searchbuttons.png" data-title="Such-Buttons in der exportierten Suchanfrage" data-desc-position="bottom"><img alt="Such-Buttons in der exportierten Suchanfrage" class="screenshot" src="../../assets/discordbot/ods-system/22_ods_system_search_result_new_channel_searchbuttons.png"></a></p>
 <p>Klickst du dort z. B. auf <code>Search Snob</code>, ist das Such-Modal bereits mit den Werten der ursprünglichen Anfrage (Zielkoordinate, Ankunftszeit) vorausgefüllt — so kann ohne erneutes Eintippen direkt eine Folge-Suche zur gleichen Koord gestartet werden.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/23_ods_system_search_result_new_modals_are_prefilled_in_extracted_channel.png" data-title="Vorausgefülltes Modal im Per-Anfrage-Kanal" data-desc-position="bottom"><img alt="Vorausgefülltes Modal im Per-Anfrage-Kanal" class="screenshot" src="../../assets/discordbot/ods-system/23_ods_system_search_result_new_modals_are_prefilled_in_extracted_channel.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/23_ods_system_search_result_new_modals_are_prefilled_in_extracted_channel.png" data-title="Vorausgefülltes Modal in der exportierten Suchanfrage" data-desc-position="bottom"><img alt="Vorausgefülltes Modal in der exportierten Suchanfrage" class="screenshot" src="../../assets/discordbot/ods-system/23_ods_system_search_result_new_modals_are_prefilled_in_extracted_channel.png"></a></p>
 <p>Sobald sich der Status ändert, benennt der Bot den Kanal automatisch um — Präfix <code>❌</code> wechselt auf <code>✅</code> und umgekehrt. So ist im Kanal-Tree auf einen Blick sichtbar, welche Anfragen noch offen sind.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/24_ods_system_search_status_change_changes_Channel_name.png" data-title="Kanal-Umbenennung bei Status-Wechsel" data-desc-position="bottom"><img alt="Kanal-Umbenennung bei Status-Wechsel" class="screenshot" src="../../assets/discordbot/ods-system/24_ods_system_search_status_change_changes_Channel_name.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Rate-Limit Status-Änderung</p>
-<p>Der Status <code>Done</code> / <code>Not Done</code> kann pro Per-Anfrage-Kanal nur alle 10 Minuten gewechselt werden. Bei zu schnellem Hin- und Her-Klicken meldet der Bot eine Rate-Limit-Fehlermeldung mit Restwartezeit.</p>
+<p>Der Status <code>Done</code> / <code>Not Done</code> kann pro exportierter Suchanfrage nur alle 10 Minuten gewechselt werden. Bei zu schnellem Hin- und Her-Klicken meldet der Bot eine Rate-Limit-Fehlermeldung mit Restwartezeit.</p>
 </div>
 <h2 id="7-ubersicht-im-ods-overview">7. Übersicht im <code>#⚫-ods-overview</code><a class="headerlink" href="#7-ubersicht-im-ods-overview" title="Permanent link">¶</a></h2>
 <p>Der Dashboard-Kanal <code>#⚫-ods-overview</code> zeigt jederzeit den aktuellen Stand aller Such-Anfragen — gruppiert nach Status <code>✅ DONE</code> und <code>❌ NOT DONE</code>, je Eintrag mit Typ (Off/Deff/Snob), Koordinate, Suchendem und Anfrage-Zeitpunkt. Das Embed wird vom Bot automatisch aktualisiert, sobald eine Anfrage hinzukommt, ihren Status ändert oder gelöscht wird.</p>
