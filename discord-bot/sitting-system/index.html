@@ -1665,14 +1665,14 @@
 
 
 <h1 id="account-sitting-system">Account-Sitting-System<a class="headerlink" href="#account-sitting-system" title="Permanent link">¶</a></h1>
-<p>Das Account-Sitting-System organisiert Urlaubsvertretungen für Accounts auf eurem Stamm. Spieler können tageweise Sitting-Anfragen stellen, andere Spieler übernehmen einzelne oder mehrere Zeit-Slots, und der Bot räumt nach Ende des Sittings automatisch wieder auf. Anfragen sind ohne Genehmigung sofort sichtbar — jedes normale Mitglied kann offene Slots übernehmen.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/account-sitting-system/01_channel_overview.png" data-title="Kanal-Übersicht des Account-Sitting-Systems" data-desc-position="bottom"><img alt="Kanal-Übersicht des Account-Sitting-Systems" class="screenshot" src="../../assets/discordbot/account-sitting-system/01_channel_overview.png"></a></p>
+<p>Das Account-Sitting-System verwaltet und organisiert Urlaubsvertretungen. Spieler können tageweise Sitting-Anfragen stellen, andere Spieler übernehmen einzelne oder mehrere Zeit-Slots, und der Bot räumt nach Ende des Sittings automatisch wieder auf. Anfragen sind ohne Genehmigung sofort sichtbar — jedes normale Mitglied kann offene Slots übernehmen.</p>
 <h2 id="1-kanale-des-moduls">1. Kanäle des Moduls<a class="headerlink" href="#1-kanale-des-moduls" title="Permanent link">¶</a></h2>
-<p>Nach der Installation legt der Bot die Kategorie <code>🏖️ ACCOUNT-SITTING-SYSTEM</code> mit zwei Basis-Kanälen an:</p>
+<p>Nach der <a href="../modul-verwaltung/">Installation</a> legt der Bot die Kategorie <code>🏖️ ACCOUNT-SITTING-SYSTEM</code> mit zwei Basis-Kanälen an:</p>
 <ul>
 <li><code>#⚫-request-account-sitting</code> — zentraler Anfrage-Kanal mit dem Button zum Erstellen einer neuen Anfrage</li>
 <li><code>#⚫-overview-account-sitting</code> — Dashboard mit allen aktuell laufenden bzw. übernommenen Sittings sowie allen noch offenen Slots</li>
 </ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/account-sitting-system/01_channel_overview.png" data-title="Kanal-Übersicht des Account-Sitting-Systems" data-desc-position="bottom"><img alt="Kanal-Übersicht des Account-Sitting-Systems" class="screenshot" src="../../assets/discordbot/account-sitting-system/01_channel_overview.png"></a></p>
 <p>Sobald jemand eine Anfrage stellt, legt der Bot zusätzlich <strong>einen eigenen Kanal pro Anfrage</strong> in derselben Kategorie an. In diesem Per-Request-Kanal läuft der gesamte Übernahme-Workflow (übernehmen, zurückziehen, löschen). Nach Ende der Sitting-Zeit räumt sich dieser Kanal automatisch wieder auf — siehe Abschnitt 7.</p>
 <h2 id="2-sitting-anfrage-stellen">2. Sitting-Anfrage stellen<a class="headerlink" href="#2-sitting-anfrage-stellen" title="Permanent link">¶</a></h2>
 <p>Wechsle in den Kanal <code>#⚫-request-account-sitting</code> und klicke auf den Button <code>Request Account-Sitting</code>.</p>
@@ -1682,13 +1682,17 @@
 <li><code>Tribalwars Account</code> — Name des Accounts, für den die Vertretung gesucht wird</li>
 <li><code>Date (DD.MM.YYYY)</code> — der Tag, an dem das Sitting laufen soll</li>
 <li><code>Start Time (HH:MM)</code> — Start-Uhrzeit der Vertretung</li>
-<li><code>End Time (HH:MM)</code> — End-Uhrzeit der Vertretung (liegt sie vor der Start-Zeit, gilt sie als am Folgetag)</li>
-<li><code>Additional Notes (optional)</code> — freier Hinweis-Text an den Vertreter (z. B. „bitte alle Off-Truppen vor 20 Uhr zurückrufen")</li>
+<li><code>End Time (HH:MM)</code> — End-Uhrzeit der Vertretung</li>
+<li><code>Additional Notes (optional)</code> — freier Hinweis-Text an den Vertreter</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/account-sitting-system/03_create_sitting_request_modal.png" data-title="Modal: Create Sitting-Request" data-desc-position="bottom"><img alt="Modal: Create Sitting-Request" class="screenshot" src="../../assets/discordbot/account-sitting-system/03_create_sitting_request_modal.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Tageweise Anfragen</p>
 <p>Jede Anfrage gilt für <strong>genau einen Tag</strong>. Wenn du mehrere Tage abdecken möchtest (z. B. ein langes Wochenende oder eine ganze Urlaubswoche), erstelle pro Tag eine eigene Anfrage.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Zeitangaben in Welt-Zeit</p>
+<p>Alle Zeitangaben in den Sitting-Anfragen und im Dashboard beziehen sich auf die Zeit der <strong>Spielwelt</strong> — nicht auf eure lokale Zeitzone. Gerade bei internationalen Welten kann das von eurer Realzeit abweichen.</p>
 </div>
 <p>Nach dem Absenden legt der Bot einen neuen Kanal in der Kategorie an und postet darin den Anfrage-Embed mit allen Details und den Übernahme-Buttons.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/account-sitting-system/04_new_channel_created.png" data-title="Neuer Kanal in der Kategorie nach Anfrage" data-desc-position="bottom"><img alt="Neuer Kanal in der Kategorie nach Anfrage" class="screenshot" src="../../assets/discordbot/account-sitting-system/04_new_channel_created.png"></a></p>
@@ -1725,7 +1729,10 @@
 <li>die optionalen Notizen des Anfragenden</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/account-sitting-system/14_reminder_dm_via_discord.png" data-title="Erinnerungs-DM via Discord" data-desc-position="bottom"><img alt="Erinnerungs-DM via Discord" class="screenshot" src="../../assets/discordbot/account-sitting-system/14_reminder_dm_via_discord.png"></a></p>
-<p>Wer keine Erinnerungs-DM vom Bot erhalten möchte, kann das jederzeit über den Button <code>Notifications</code> im Kanal <code>#⚫-bot-config</code> pro Discord-User deaktivieren.</p>
+<div class="admonition info">
+<p class="admonition-title">Erinnerungs-DM abschalten</p>
+<p>Wer keine Erinnerungs-DM vom Bot erhalten möchte, kann das jederzeit über den Button <code>Notifications</code> im Kanal <code>#⚫-bot-config</code> pro Discord-User deaktivieren. Wer einen Account auf <a href="https://tw-utils.net">tw-utils.net</a> hat, kann die Benachrichtigung alternativ auch dort in den Account-Einstellungen steuern.</p>
+</div>
 <h2 id="7-automatisches-aufraumen-nach-30-minuten">7. Automatisches Aufräumen nach 30 Minuten<a class="headerlink" href="#7-automatisches-aufraumen-nach-30-minuten" title="Permanent link">¶</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Selbst-Cleanup</p>
