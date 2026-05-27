@@ -14,9 +14,9 @@ After the [setup](modul-verwaltung.md), the bot creates the category `🔍 OFF/D
 
 ![Channel overview of the ODS system](../assets/discordbot/ods-system/01_ods_system_channels.png){ .screenshot }
 
-As soon as someone exports a search result into a separate channel (see [Section 5](#5-export-a-search-into-a-separate-channel)), the bot additionally creates **a dedicated channel per request** in the same category, following the schema `❌-off-XXX-YYY-PLAYERNAME` or `❌-deff-…` / `❌-ag-…`. Once the request is taken care of, the prefix switches to `✅` — see [Section 6](#6-in-the-exported-search-request-status-notes-deletion-follow-up-searches).
+As soon as someone exports a search result into a separate channel (see [Section 5](#5-export-the-search-result)), the bot additionally creates **a dedicated channel per request** in the same category, following the schema `❌-off-XXX-YYY-PLAYERNAME` or `❌-deff-…` / `❌-ag-…`. Once the request is taken care of, the prefix switches to `✅` — see [Section 6](#6-features-in-the-search-request).
 
-## 2. Upload, view and delete troop data
+## 2. Troop data
 
 For the bot to be able to answer any search requests at all, the tribe members' troop data must be stored in the bot. To do that, the search channel `#⚫-ods-search` provides the `ODS Panel` embed with three admin buttons: `Upload Troops`, `Delete Troops`, `Show Troop Status`.
 
@@ -53,7 +53,7 @@ At a glance, this shows which tribes have up-to-date troop data and where the da
 !!! info "Who can upload troops?"
     Only users with the role `TWU-Mod` or Discord administrator permissions can use the buttons `Upload Troops` and `Delete Troops` and run the slash command `/admin troops_upload`. The `Show Troop Status` button is also available to normal members.
 
-## 3. Search for an Off, Deff or Snob command
+## 3. ODS search
 
 Below the admin panel, the search channel `#⚫-ods-search` offers the three search buttons `Search Off`, `Search Snob`, `Search Deff`, which any player can use to start a search.
 
@@ -108,9 +108,9 @@ The reply embed also contains a `Rally Point` button: clicking it takes you stra
 ![Bot reply after workbench action with Rally Point button](../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png){ .screenshot }
 
 !!! info "Ephemeral response — only visible to the searcher"
-    The hit list is an ephemeral Discord message: only the searcher sees it and it disappears the next time Discord reloads. Anyone who wants to make the result permanently visible and share it with the tribe exports the search into a separate channel — see [Section 5](#5-export-a-search-into-a-separate-channel).
+    The hit list is an ephemeral Discord message: only the searcher sees it and it disappears the next time Discord reloads. Anyone who wants to make the result permanently visible and share it with the tribe exports the search into a separate channel — see [Section 5](#5-export-the-search-result).
 
-## 5. Export a search into a separate channel
+## 5. Export the search result
 
 In the ephemeral search result (see [Section 4](#4-the-search-result)) there is an export button that moves the request into a new, separate channel.
 
@@ -120,11 +120,11 @@ The bot then creates a new channel `❌-<type>-XXX-YYY-PLAYERNAME` in the catego
 
 ![New exported search request in the category](../assets/discordbot/ods-system/17_ods_system_search_result_view_new_channel_created.png){ .screenshot }
 
-In the new channel the bot posts the search result with all details and the management buttons. The result is now visible to the entire tribe, other players can join the discussion, the searcher can maintain the status, attach notes and start follow-up searches directly from within the exported search request — see [Section 6](#6-in-the-exported-search-request-status-notes-deletion-follow-up-searches).
+In the new channel the bot posts the search result with all details and the management buttons. The result is now visible to the entire tribe, other players can join the discussion, the searcher can maintain the status, attach notes and start follow-up searches directly from within the exported search request — see [Section 6](#6-features-in-the-search-request).
 
 ![Content of the new exported search request](../assets/discordbot/ods-system/18_ods_system_search_result_new_channel_content.png){ .screenshot }
 
-## 6. In the exported search request: status, notes, deletion, follow-up searches
+## 6. Features in the search request
 
 In the exported search request, the management buttons `Status: Done` / `Status: Not Done` sit above the search embed and let you mark the request as completed or reset it to open.
 
@@ -156,7 +156,7 @@ As soon as the status changes, the bot automatically renames the channel — the
 !!! warning "Rate limit on status change"
     The status `Done` / `Not Done` can only be switched once every 10 minutes per exported search request. If you click back and forth too fast, the bot replies with a rate-limit error and the remaining wait time.
 
-## 7. Overview in `#⚫-ods-overview`
+## 7. Overview dashboard
 
 The dashboard channel `#⚫-ods-overview` shows the current state of all search requests at any time — grouped by status `✅ DONE` and `❌ NOT DONE`, each entry with type (Off/Deff/Snob), coordinate, searcher and request timestamp. The embed is updated automatically by the bot whenever a request is added, changes its status or is deleted.
 
