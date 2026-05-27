@@ -1571,24 +1571,27 @@
 <h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">¶</a></h1>
 <p>The central management of all bot modules runs via the <code>Manage Bot-Modules</code> button in the <code>#⚫-bot-config</code> channel. From there you can install, update, or remove modules — and define for each module which Discord roles are allowed to see the corresponding channels. The module-specific configuration is documented on the respective linked subpages of each module.</p>
 <h2 id="1-install-a-module">1. Install a module<a class="headerlink" href="#1-install-a-module" title="Permanent link">¶</a></h2>
-<p>On your tribe Discord, switch to the <code>#⚫-bot-config</code> channel and click on the <code>Manage Bot-Modules</code> button. The module management menu opens. Click on the <code>Install</code> button there to start the installation of a new module. In the dropdown that appears, select the desired module. The bot then installs the module automatically and creates the corresponding channels on your Discord server. Repeat the process for every additional module you want to use.</p>
-<!-- Screenshots to follow: Manage-Bot-Modules menu, Install button, module dropdown -->
-
+<p>On your tribe Discord, switch to the <code>#⚫-bot-config</code> channel and click on the <code>Manage Bot-Modules</code> button. The module management menu opens.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bot-module-setup/01_Manage_bot_modules_button.png" data-title="Manage Bot-Modules Button" data-desc-position="bottom"><img alt="Manage Bot-Modules Button" class="screenshot" src="../../../assets/discordbot/bot-module-setup/01_Manage_bot_modules_button.png"></a></p>
+<p>Click on the <code>Install</code> button there to start the installation of a new module. In the dropdown that appears, select the desired module. The bot then installs the module automatically and creates the corresponding channels on your Discord server. Repeat the process for every additional module you want to use.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bot-module-setup/02_install_button.png" data-title="Install Button" data-desc-position="bottom"><img alt="Install Button" class="screenshot" src="../../../assets/discordbot/bot-module-setup/02_install_button.png"></a></p>
 <h2 id="2-update-a-module">2. Update a module<a class="headerlink" href="#2-update-a-module" title="Permanent link">¶</a></h2>
 <p>In the module management menu, click on the <code>Update</code> button to update an installed module to the current version. Select the desired module in the dropdown that appears. Existing data and configurations are preserved.</p>
-<!-- Screenshots to follow: Update button, module dropdown -->
-
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bot-module-setup/03_update_button.png" data-title="Update Button" data-desc-position="bottom"><img alt="Update Button" class="screenshot" src="../../../assets/discordbot/bot-module-setup/03_update_button.png"></a></p>
 <h2 id="3-uninstall-a-module">3. Uninstall a module<a class="headerlink" href="#3-uninstall-a-module" title="Permanent link">¶</a></h2>
 <p>In the module management menu, click on the <code>Delete</code> button to remove an installed module. Select the module to be uninstalled in the dropdown that appears.</p>
-<!-- Screenshots to follow: Delete button, module dropdown -->
-
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bot-module-setup/04_delete_button.png" data-title="Delete Button" data-desc-position="bottom"><img alt="Delete Button" class="screenshot" src="../../../assets/discordbot/bot-module-setup/04_delete_button.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning: Data will be lost</p>
 <p>When a module is uninstalled, the corresponding channels are deleted along with all their contents (requests, planning, lists, etc.) — this cannot be undone.</p>
 </div>
 <h2 id="4-define-visibility-roles">4. Define visibility roles<a class="headerlink" href="#4-define-visibility-roles" title="Permanent link">¶</a></h2>
 <p>For each installed module, you can define which Discord roles are allowed to see the corresponding module channels. To do this, click on the <code>Set Roles</code> button in the module management menu. Then select the module for which the roles should be set, followed by the desired Discord roles.</p>
-<!-- Screenshots to follow: Set-Roles button, module selection, role selection -->
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bot-module-setup/05_set_roles_button.png" data-title="Set Roles Button" data-desc-position="bottom"><img alt="Set Roles Button" class="screenshot" src="../../../assets/discordbot/bot-module-setup/05_set_roles_button.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Public by default</p>
+<p>Without an explicit role assignment, the module channels are visible to <strong>all members</strong> on your Discord server. If you want to restrict access, you have to assign specific roles via <code>Set Roles</code>.</p>
+</div>
 
 
 
