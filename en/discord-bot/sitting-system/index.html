@@ -1281,6 +1281,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account-Sitting-System
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1297,6 +1315,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-module-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Module channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-a-sitting-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create a sitting request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-take-over-a-sitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Take over a sitting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cancel-a-takeover-or-delete-a-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cancel a takeover or delete a request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-overview-in-overview-account-sitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Overview in #⚫-overview-account-sitting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reminder-dm-15-minutes-before-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Reminder DM 15 minutes before start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-automatic-cleanup-after-30-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Automatic cleanup after 30 minutes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1450,6 +1564,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-module-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Module channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-a-sitting-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create a sitting request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-take-over-a-sitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Take over a sitting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cancel-a-takeover-or-delete-a-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cancel a takeover or delete a request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-overview-in-overview-account-sitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Overview in #⚫-overview-account-sitting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reminder-dm-15-minutes-before-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Reminder DM 15 minutes before start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-automatic-cleanup-after-30-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Automatic cleanup after 30 minutes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1466,7 +1665,75 @@
 
 
 <h1 id="account-sitting-system">Account-Sitting-System<a class="headerlink" href="#account-sitting-system" title="Permanent link">¶</a></h1>
-<p><em>Content coming soon.</em></p>
+<p>The Account-Sitting-System manages and organizes vacation replacements. Players can submit sitting requests on a per-day basis, other players take over individual or multiple time slots, and the bot automatically cleans up after the sitting ends. Requests are visible immediately without approval — every normal member can take over open slots.</p>
+<h2 id="1-module-channels">1. Module channels<a class="headerlink" href="#1-module-channels" title="Permanent link">¶</a></h2>
+<p>After the <a href="../modul-verwaltung/">setup</a>, the bot creates the category <code>🏖️ ACCOUNT-SITTING-SYSTEM</code> with two base channels:</p>
+<ul>
+<li><code>#⚫-request-account-sitting</code> — central request channel with the button to create a new request</li>
+<li><code>#⚫-overview-account-sitting</code> — dashboard showing all currently running or taken-over sittings as well as any open slots</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/01_channel_overview.png" data-title="Channel overview of the Account-Sitting-System" data-desc-position="bottom"><img alt="Channel overview of the Account-Sitting-System" class="screenshot" src="../../../assets/discordbot/account-sitting-system/01_channel_overview.png"></a></p>
+<p>As soon as someone submits a request, the bot additionally creates <strong>a dedicated channel per request</strong> in the same category. The entire takeover workflow (take over, cancel, delete) happens in this per-request channel. After the sitting ends, this channel cleans itself up — see section 7.</p>
+<h2 id="2-create-a-sitting-request">2. Create a sitting request<a class="headerlink" href="#2-create-a-sitting-request" title="Permanent link">¶</a></h2>
+<p>Switch to the <code>#⚫-request-account-sitting</code> channel and click the <code>Request Account-Sitting</code> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/02_request_account_sitting_button.png" data-title="Request Account-Sitting Button" data-desc-position="bottom"><img alt="Request Account-Sitting Button" class="screenshot" src="../../../assets/discordbot/account-sitting-system/02_request_account_sitting_button.png"></a></p>
+<p>The <code>Create Sitting-Request</code> modal opens with five input fields:</p>
+<ul>
+<li><code>Tribalwars Account</code> — name of the account that needs cover</li>
+<li><code>Date (DD.MM.YYYY)</code> — the day the sitting will run on</li>
+<li><code>Start Time (HH:MM)</code> — start time of the replacement</li>
+<li><code>End Time (HH:MM)</code> — end time of the replacement</li>
+<li><code>Additional Notes (optional)</code> — free-form note to the sitter</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/03_create_sitting_request_modal.png" data-title="Modal: Create Sitting-Request" data-desc-position="bottom"><img alt="Modal: Create Sitting-Request" class="screenshot" src="../../../assets/discordbot/account-sitting-system/03_create_sitting_request_modal.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Single-day requests</p>
+<p>Each request covers <strong>exactly one day</strong>. If you want to cover multiple days (e. g. a long weekend or an entire vacation week), create a separate request for each day.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Times in world time</p>
+<p>All times in sitting requests and on the dashboard refer to the <strong>game world's time</strong> — not your local time zone. Especially for international worlds this can differ from your real-world time.</p>
+</div>
+<p>After submitting, the bot creates a new channel in the category and posts the request embed with all details and the takeover buttons.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/04_new_channel_created.png" data-title="New channel in the category after a request" data-desc-position="bottom"><img alt="New channel in the category after a request" class="screenshot" src="../../../assets/discordbot/account-sitting-system/04_new_channel_created.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/05_content_of_the_new_channel.png" data-title="Content of the new request channel" data-desc-position="bottom"><img alt="Content of the new request channel" class="screenshot" src="../../../assets/discordbot/account-sitting-system/05_content_of_the_new_channel.png"></a></p>
+<h2 id="3-take-over-a-sitting">3. Take over a sitting<a class="headerlink" href="#3-take-over-a-sitting" title="Permanent link">¶</a></h2>
+<p>In the request channel, every player sees the <code>Take Over Sitting</code> button. With it, any normal server user can take over a slot (or part of it).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/06_takeover_sitting.png" data-title="Take Over Sitting Button" data-desc-position="bottom"><img alt="Take Over Sitting Button" class="screenshot" src="../../../assets/discordbot/account-sitting-system/06_takeover_sitting.png"></a></p>
+<p>In the <code>Take Over Sitting</code> modal, specify the time range you want to cover:</p>
+<ul>
+<li><code>From (HH:MM)</code> — from when you take over the sitting</li>
+<li><code>Until (HH:MM)</code> — until when you take over the sitting</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/07_takeover_sitting_modal.png" data-title="Modal: Take Over Sitting" data-desc-position="bottom"><img alt="Modal: Take Over Sitting" class="screenshot" src="../../../assets/discordbot/account-sitting-system/07_takeover_sitting_modal.png"></a></p>
+<p>This also allows partial takeovers — e. g. player A covers the first four hours, player B the rest. After a successful takeover, a confirmation is posted in the channel.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/08_success_message_for_takeover.png" data-title="Successful takeover" data-desc-position="bottom"><img alt="Successful takeover" class="screenshot" src="../../../assets/discordbot/account-sitting-system/08_success_message_for_takeover.png"></a></p>
+<p>The request embed updates automatically — covered time slots are shown as „covered", the rest stays visible as „open time slots".</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/09_change_in_covered_and_open_time_slots_after_takeover.png" data-title="Covered and open time slots after a takeover" data-desc-position="bottom"><img alt="Covered and open time slots after a takeover" class="screenshot" src="../../../assets/discordbot/account-sitting-system/09_change_in_covered_and_open_time_slots_after_takeover.png"></a></p>
+<h2 id="4-cancel-a-takeover-or-delete-a-request">4. Cancel a takeover or delete a request<a class="headerlink" href="#4-cancel-a-takeover-or-delete-a-request" title="Permanent link">¶</a></h2>
+<p>If you have taken over a slot but can no longer cover it, click <code>Cancel Takeover</code> in the request channel.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/10_cancel_Takeover_button.png" data-title="Cancel Takeover Button" data-desc-position="bottom"><img alt="Cancel Takeover Button" class="screenshot" src="../../../assets/discordbot/account-sitting-system/10_cancel_Takeover_button.png"></a></p>
+<p>In the dropdown that appears, pick the takeover you want to cancel. The freed-up time slot is marked as „open" in the embed again.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/11_picking_takeover_to_delete.png" data-title="Picking the takeover to cancel" data-desc-position="bottom"><img alt="Picking the takeover to cancel" class="screenshot" src="../../../assets/discordbot/account-sitting-system/11_picking_takeover_to_delete.png"></a></p>
+<p>If the entire request is no longer needed (e. g. because the sitting is not necessary anymore), the creator — or a user with the TWU-Mod role — can remove the request completely via the <code>Delete Request</code> button. The associated channel is deleted along with it.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/12_delete_request.png" data-title="Delete Request Button" data-desc-position="bottom"><img alt="Delete Request Button" class="screenshot" src="../../../assets/discordbot/account-sitting-system/12_delete_request.png"></a></p>
+<h2 id="5-overview-in-overview-account-sitting">5. Overview in <code>#⚫-overview-account-sitting</code><a class="headerlink" href="#5-overview-in-overview-account-sitting" title="Permanent link">¶</a></h2>
+<p>The dashboard channel <code>#⚫-overview-account-sitting</code> shows the current state of all sittings in your tribe at any time — both already covered slots and any open requests. The bot updates the embed automatically whenever something changes.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/13_overview-account-sitting_channel.png" data-title="Overview-Account-Sitting channel" data-desc-position="bottom"><img alt="Overview-Account-Sitting channel" class="screenshot" src="../../../assets/discordbot/account-sitting-system/13_overview-account-sitting_channel.png"></a></p>
+<h2 id="6-reminder-dm-15-minutes-before-start">6. Reminder DM 15 minutes before start<a class="headerlink" href="#6-reminder-dm-15-minutes-before-start" title="Permanent link">¶</a></h2>
+<p>15 minutes before a taken-over slot starts, the bot automatically sends the sitter a Discord direct message (<code>Account-Sitting Reminder!</code>). The DM contains:</p>
+<ul>
+<li>the Tribalwars account that needs covering</li>
+<li>the game world</li>
+<li>start and end time of the taken-over slot</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/account-sitting-system/14_reminder_dm_via_discord.png" data-title="Reminder DM via Discord" data-desc-position="bottom"><img alt="Reminder DM via Discord" class="screenshot" src="../../../assets/discordbot/account-sitting-system/14_reminder_dm_via_discord.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Disable reminder DM</p>
+<p>Anyone who does not want to receive reminder DMs from the bot can disable them at any time per Discord user via the <code>Notifications</code> button in the <code>#⚫-bot-config</code> channel. If you have an account on <a href="https://tw-utils.net">tw-utils.net</a>, you can alternatively manage the notification there in your profile settings.</p>
+</div>
+<h2 id="7-automatic-cleanup-after-30-minutes">7. Automatic cleanup after 30 minutes<a class="headerlink" href="#7-automatic-cleanup-after-30-minutes" title="Permanent link">¶</a></h2>
+<p>The channel created for the request is <strong>automatically deleted 30 minutes after the end of the requested time slot</strong> — including all messages in it. You don't have to clean up anything manually. The request embed additionally shows a note about exactly when the channel will be removed.</p>
 
 
 

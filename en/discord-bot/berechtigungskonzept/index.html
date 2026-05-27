@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#berechtigungskonzept" class="md-skip">
+        <a href="#permission-concept" class="md-skip">
           Skip to content
         </a>
       
@@ -1187,10 +1187,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#1-normale-mitglieder" class="md-nav__link">
+  <a href="#1-normal-members" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Normale Mitglieder
+        1. Normal members
       
     </span>
   </a>
@@ -1209,10 +1209,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-abgrenzung-zum-leader-status-auf-tw-utilsnet" class="md-nav__link">
+  <a href="#3-distinction-from-leader-status-on-tw-utilsnet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Abgrenzung zum Leader-Status auf tw-utils.net
+        3. Distinction from Leader status on tw-utils.net
       
     </span>
   </a>
@@ -1525,10 +1525,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#1-normale-mitglieder" class="md-nav__link">
+  <a href="#1-normal-members" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Normale Mitglieder
+        1. Normal members
       
     </span>
   </a>
@@ -1547,10 +1547,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-abgrenzung-zum-leader-status-auf-tw-utilsnet" class="md-nav__link">
+  <a href="#3-distinction-from-leader-status-on-tw-utilsnet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Abgrenzung zum Leader-Status auf tw-utils.net
+        3. Distinction from Leader status on tw-utils.net
       
     </span>
   </a>
@@ -1574,33 +1574,33 @@
 
 
 
-<h1 id="berechtigungskonzept">Berechtigungskonzept<a class="headerlink" href="#berechtigungskonzept" title="Permanent link">¶</a></h1>
-<p>Der tw-utils Discord-Bot kennt zwei Berechtigungsstufen: <strong>normale Mitglieder</strong> und Discord-User mit der Rolle <strong>TWU-Mod</strong>. Diese Unterscheidung steuert, welche Buttons und Aktionen einem User auf eurem Stammes-Discord zur Verfügung stehen.</p>
-<h2 id="1-normale-mitglieder">1. Normale Mitglieder<a class="headerlink" href="#1-normale-mitglieder" title="Permanent link">¶</a></h2>
-<p>Jeder Discord-User auf eurem Stammes-Discord ist aus Sicht des tw-utils Discordbot standardmäßig ein normales Mitglied. Normale Mitglieder können die interaktiven Funktionen der installierten Module nutzen:</p>
+<h1 id="permission-concept">Permission Concept<a class="headerlink" href="#permission-concept" title="Permanent link">¶</a></h1>
+<p>The tw-utils Discord bot uses two permission levels: <strong>normal members</strong> and Discord users with the <strong>TWU-Mod</strong> role. This distinction controls which buttons and actions are available to a user on your tribe Discord.</p>
+<h2 id="1-normal-members">1. Normal members<a class="headerlink" href="#1-normal-members" title="Permanent link">¶</a></h2>
+<p>By default, every Discord user on your tribe Discord is a normal member from the tw-utils Discord bot's point of view. Normal members can use the interactive features of the installed modules:</p>
 <ul>
-<li>Bunker anfragen im Kanal <code>#⚫-request-bunker</code> stellen</li>
-<li>Account-Sitting-Anfragen im Kanal <code>#⚫-request-account-sitting</code> stellen</li>
-<li>Off-, Deff- oder AG-Befehle über das ODS-System suchen</li>
-<li>AG-Meldungen und Abschick-Zeiten im Planning-System eingeben</li>
-<li>usw.</li>
+<li>Submit bunker requests in the <code>#⚫-request-bunker</code> channel</li>
+<li>Submit account-sitting requests in the <code>#⚫-request-account-sitting</code> channel</li>
+<li>Search for off, deff or snob commands via the ODS system</li>
+<li>Enter snob entries and launch times in the planning system</li>
+<li>etc.</li>
 </ul>
 <h2 id="2-twu-mod">2. TWU-Mod<a class="headerlink" href="#2-twu-mod" title="Permanent link">¶</a></h2>
-<p>Die Rolle <strong>TWU-Mod</strong> ist die Verwaltungs-Rolle des Bots auf eurem Discord-Server. User mit dieser Rolle (oder mit Discord-Administrator-Rechten) haben Zugriff auf <strong>alle</strong> Verwaltungs-Funktionen — zusätzlich zu allem, was normale Mitglieder dürfen:</p>
+<p>The role <strong>TWU-Mod</strong> is the bot's management role on your Discord server. Users with this role (or Discord administrator permissions) have access to <strong>all</strong> management functions — in addition to everything normal members can do:</p>
 <ul>
-<li>Bot-Konfiguration im Kanal <code>#⚫-bot-config</code> (Spielwelt setzen, Module installieren/aktualisieren/deinstallieren, Sichtbarkeits-Rollen vergeben)</li>
-<li>Zugriff auf den Leader-View vergeben</li>
-<li>Bunkeranfragen genehmigen oder ablehnen</li>
-<li>Truppendaten hochladen</li>
+<li>Bot configuration in the <code>#⚫-bot-config</code> channel (set world, install/update/uninstall modules, assign visibility roles)</li>
+<li>Grant Leader-View access</li>
+<li>Approve or reject bunker requests</li>
+<li>Upload troop data</li>
 </ul>
-<p>TWU-Mod-User haben außerdem standardmäßig Zugriff auf die Leader-View-Kanäle (<code>#⚫-leaderview-bunker</code>, <code>#⚫-leaderview-planinfo</code>, usw.).</p>
-<p>Die Rolle wird wie jede andere Discord-Rolle auf dem Server vergeben — entweder direkt über die Discord-Server-Einstellungen oder über euer eigenes Rechte-Management.</p>
+<p>TWU-Mod users also have access by default to the Leader-View channels (<code>#⚫-leaderview-bunker</code>, <code>#⚫-leaderview-planinfo</code>, etc.).</p>
+<p>The role is assigned like any other Discord role on the server — either directly via the Discord server settings or via your own permission management.</p>
 <div class="admonition info">
-<p class="admonition-title">Voraussetzung für die Erst-Einrichtung</p>
-<p>Für die initiale Einrichtung des Bots (Bot einladen, Welt setzen, erste Module installieren) werden <strong>Discord-Administrator-Rechte</strong> benötigt. Nach dem Setup reicht für die laufende Verwaltung die Rolle <strong>TWU-Mod</strong>.</p>
+<p class="admonition-title">Prerequisite for initial setup</p>
+<p>The initial setup of the bot (invite the bot, set the world, install the first modules) requires <strong>Discord administrator permissions</strong>. After setup, the <strong>TWU-Mod</strong> role is sufficient for ongoing management.</p>
 </div>
-<h2 id="3-abgrenzung-zum-leader-status-auf-tw-utilsnet">3. Abgrenzung zum Leader-Status auf tw-utils.net<a class="headerlink" href="#3-abgrenzung-zum-leader-status-auf-tw-utilsnet" title="Permanent link">¶</a></h2>
-<p>Der Zugriff auf den <a href="../../leader-view/uebersicht/">Leader-View</a> auf <code>tw-utils.net</code> wird <strong>separat</strong> über den Button <code>Manage Access to Leader-View</code> im Kanal <code>#⚫-bot-config</code> vergeben. Da TWU-Mod sich selber Leader-Status geben können, ist ein TWU-Mod in der Berechtigungshierarchie höher anzusehen.</p>
+<h2 id="3-distinction-from-leader-status-on-tw-utilsnet">3. Distinction from Leader status on tw-utils.net<a class="headerlink" href="#3-distinction-from-leader-status-on-tw-utilsnet" title="Permanent link">¶</a></h2>
+<p>Access to the <a href="../../leader-view/uebersicht/">Leader-View</a> on <code>tw-utils.net</code> is granted <strong>separately</strong> via the <code>Manage Access to Leader-View</code> button in the <code>#⚫-bot-config</code> channel. Since TWU-Mods can grant themselves Leader status, a TWU-Mod is to be considered higher in the permission hierarchy.</p>
 
 
 
