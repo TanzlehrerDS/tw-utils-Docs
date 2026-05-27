@@ -1393,10 +1393,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-top-up-anfragen" class="md-nav__link">
+  <a href="#4-aufstockung-anfragen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Top-Up anfragen
+        4. Aufstockung anfragen
       
     </span>
   </a>
@@ -1604,10 +1604,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-top-up-anfragen" class="md-nav__link">
+  <a href="#4-aufstockung-anfragen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Top-Up anfragen
+        4. Aufstockung anfragen
       
     </span>
   </a>
@@ -1665,17 +1665,17 @@
 
 
 <h1 id="bunker-information-system">Bunker-Information-System<a class="headerlink" href="#bunker-information-system" title="Permanent link">¶</a></h1>
-<p>Das Bunker-Information-System verwaltet eure defensiven Bunker im Stamm: Spieler stellen Bunker-Anfragen für ihre Dörfer, TWU-Mods genehmigen oder lehnen sie ab, später kann pro Bunker aufgestockt (Top-Up) oder der Bunker aufgelöst werden. Daneben bietet das Modul einen Leader-View mit Bunker-Health-Ampel und FlexControl-Suche sowie einen eigenen Kanal, um feindliche Bunker zu melden und zu verwalten.</p>
+<p>Im Bunker-Information-System verwaltet Ihr eure Bunker. Stammesmember stellen Bunker-Anfragen, TWU-Mods genehmigen oder lehnen sie ab. Genauso können auch Aufstockungen (Top-Up) beantragt und genehmigt oder Bunker aufgelöst werden. Daneben bietet das Modul für die Leader einen schnellen Bunker-Health-Check sowie eine Möglichkeit zur Kontrolle und Identifizierung von Flexbunkern.</p>
 <h2 id="1-kanale-des-moduls">1. Kanäle des Moduls<a class="headerlink" href="#1-kanale-des-moduls" title="Permanent link">¶</a></h2>
 <p>Nach der <a href="../modul-verwaltung/">Installation</a> legt der Bot die Kategorie <code>🧱 BUNKER-INFORMATION-SYSTEM</code> mit vier Kanälen an:</p>
 <ul>
-<li><code>#⚫-request-bunker</code> — zentraler Anfrage-Kanal mit den Buttons zum Anfragen, Top-Up, Anzeigen und Auflösen eigener Bunker</li>
+<li><code>#⚫-request-bunker</code> — zentraler Anfrage-Kanal mit den Buttons zum Anfragen, Aufstocken, Anzeigen und Auflösen eigener Bunker</li>
 <li><code>#⚫-leaderview-bunker</code> — Leader-View mit Bunker-Health-Übersicht aller genehmigten Bunker</li>
-<li><code>#⚫-leaderview-flexbunker</code> — Leader-View mit der FlexControl-Suche nach potenziellen Flex-Bunkern</li>
+<li><code>#⚫-leaderview-flexbunker</code> — Leader-View mit der Flexbunker-Kontrolle</li>
 <li><code>#⚫-report-bunker</code> — Kanal zum Melden und Verwalten feindlicher Bunker</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/01_channel_overview.png" data-title="Kanal-Übersicht des Bunker-Information-Systems" data-desc-position="bottom"><img alt="Kanal-Übersicht des Bunker-Information-Systems" class="screenshot" src="../../assets/discordbot/bunker-information-system/01_channel_overview.png"></a></p>
-<p>Sobald jemand eine Anfrage oder ein Top-Up stellt, legt der Bot pro Koordinate <strong>einen eigenen Kanal</strong> in derselben Kategorie an (z. B. <code>❓-bunker-for-500-501-Spielername</code> bzw. <code>❓-top-up-500-501</code>). In diesem Per-Request-Kanal läuft der gesamte Genehmigungs-Workflow.</p>
+<p>Sobald jemand eine Anfrage oder eine Aufstockung stellt, legt der Bot pro Koordinate <strong>einen eigenen Kanal</strong> in derselben Kategorie an (z. B. <code>❓-bunker-for-500-501-Spielername</code> bzw. <code>❓-top-up-500-501</code>). In diesem Per-Request-Kanal läuft der gesamte Genehmigungs-Workflow.</p>
 <h2 id="2-bunker-anfragen">2. Bunker anfragen<a class="headerlink" href="#2-bunker-anfragen" title="Permanent link">¶</a></h2>
 <p>Wechsle in den Kanal <code>#⚫-request-bunker</code>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/02_request_bunker_channel.png" data-title="#⚫-request-bunker Kanal" data-desc-position="bottom"><img alt="#⚫-request-bunker Kanal" class="screenshot" src="../../assets/discordbot/bunker-information-system/02_request_bunker_channel.png"></a></p>
@@ -1701,53 +1701,53 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/07_approve_bunker.png" data-title="Admin: Approve Button" data-desc-position="bottom"><img alt="Admin: Approve Button" class="screenshot" src="../../assets/discordbot/bunker-information-system/07_approve_bunker.png"></a></p>
 <p>Ein Klick öffnet das Approval-Modal — der Mod kann die endgültig genehmigte Größe eintragen oder die ursprünglich angefragte Größe übernehmen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/08_approve_bunker_modal.png" data-title="Approval-Modal" data-desc-position="bottom"><img alt="Approval-Modal" class="screenshot" src="../../assets/discordbot/bunker-information-system/08_approve_bunker_modal.png"></a></p>
-<p>Nach erfolgreicher Genehmigung erhält der Anfragende eine Discord-Direktnachricht mit dem Titel <code>Bunker Approved</code> (bzw. <code>Top-Up Approved</code>). Die DM enthält alle Eckdaten plus einen fertigen SD-Befehl-String zur direkten Übernahme auf tw-utils.net. Der Anfrage-Kanal wird im Anschluss automatisch gelöscht.</p>
+<p>Nach erfolgreicher Genehmigung erhält der Anfragende sowie derjenige, der die Anfrage genehmigt hat, eine Discord-Direktnachricht mit dem Titel <code>Bunker Approved</code> (bzw. <code>Top-Up Approved</code>). Die DM enthält alle Eckdaten plus einen fertigen Text-String zur direkten Übernahme ins Stammesforum. Der Anfrage-Kanal wird im Anschluss an die Genehmigung automatisch gelöscht.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/09_approve_bunker_summary_as_discord_dm.png" data-title="Genehmigungs-DM" data-desc-position="bottom"><img alt="Genehmigungs-DM" class="screenshot" src="../../assets/discordbot/bunker-information-system/09_approve_bunker_summary_as_discord_dm.png"></a></p>
-<p>Statt zu genehmigen, können TWU-Mods die Anfrage mit <code>Admin: Reject</code> ablehnen. Auch hier wird der Anfrage-Kanal nach dem Klick gelöscht.</p>
+<p>Statt zu genehmigen, können TWU-Mods die Anfrage mit <code>Admin: Reject</code> ablehnen. Sowohl der Anfragende als auch der ablehnende TWU-Mod erhalten anschließend eine Discord-Direktnachricht zur Ablehnung; der Anfrage-Kanal wird ebenfalls automatisch gelöscht.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/14_leader_reject_button.png" data-title="Admin: Reject Button" data-desc-position="bottom"><img alt="Admin: Reject Button" class="screenshot" src="../../assets/discordbot/bunker-information-system/14_leader_reject_button.png"></a></p>
 <p>Der Anfragende selbst — oder ein TWU-Mod — kann die Anfrage über <code>Withdraw (Delete)</code> jederzeit zurückziehen. Der Per-Request-Kanal wird dabei mit gelöscht.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/15_withdraw_delete_button.png" data-title="Withdraw (Delete) Button" data-desc-position="bottom"><img alt="Withdraw (Delete) Button" class="screenshot" src="../../assets/discordbot/bunker-information-system/15_withdraw_delete_button.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Genehmigung mit Größen-Override</p>
-<p>Im Approval-Modal kann der TWU-Mod eine <strong>abweichende Größe</strong> vergeben — etwa weil das Dorf eine andere Stärke aufbauen soll als ursprünglich angefragt. Diese Größe wird zur verbindlichen Soll-Größe und ist Basis für die Bunker-Health-Ampel im Leader-View.</p>
+<p>Im Approval-Modal kann der TWU-Mod eine abweichende Größe vergeben — etwa weil das Dorf eine andere Stärke haben soll als ursprünglich angefragt. Diese Größe wird zur verbindlichen Soll-Größe und ist Basis für die Bunker-Health-Ampel im Leader-View.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">SD-Befehl aus Approval-DM kopieren</p>
-<p>Die <code>Bunker Approved</code>-DM enthält am Ende einen fertig formatierten SD-Befehl-String (<code>{coord} {units}"{Spieler}"request tw-utils.net""</code>). Diesen Block kannst du <strong>direkt</strong> in den SD-Import auf tw-utils.net einfügen, ohne ihn manuell zusammenzubauen.</p>
+<p>Die <code>Bunker Approved</code>-DM enthält am Ende einen fertig formatierten SD-Befehl-String (<code>{coord} {units}"{Spieler}"request tw-utils.net""</code>). Diesen Block kannst du direkt ins Stammesforum einfügen, ohne ihn manuell zusammenzubauen.</p>
 </div>
-<h2 id="4-top-up-anfragen">4. Top-Up anfragen<a class="headerlink" href="#4-top-up-anfragen" title="Permanent link">¶</a></h2>
+<h2 id="4-aufstockung-anfragen">4. Aufstockung anfragen<a class="headerlink" href="#4-aufstockung-anfragen" title="Permanent link">¶</a></h2>
 <p>Für bereits genehmigte Bunker, deren Stärke nicht (mehr) ausreicht, kannst du im Kanal <code>#⚫-request-bunker</code> über den Button <code>Request Top-Up</code> eine Aufstockung beantragen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/10_request_topup_button.png" data-title="Request Top-Up Button" data-desc-position="bottom"><img alt="Request Top-Up Button" class="screenshot" src="../../assets/discordbot/bunker-information-system/10_request_topup_button.png"></a></p>
 <p>Im Modal <code>Request Top-Up</code> gibst du an:</p>
 <ul>
 <li><code>Coordinates</code> — Koordinate(n) der bereits genehmigten Bunker</li>
 <li><code>Additional Size (Dual-Strength)</code> — <strong>nur</strong> die zusätzliche Dual-Stärke (z. B. <code>+5000</code>)</li>
-<li><code>Reason</code> — Grund für das Top-Up</li>
+<li><code>Reason</code> — Grund für die Aufstockung</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/11_request_topup_modal.png" data-title="Modal: Request Top-Up" data-desc-position="bottom"><img alt="Modal: Request Top-Up" class="screenshot" src="../../assets/discordbot/bunker-information-system/11_request_topup_modal.png"></a></p>
 <p>Der Bot legt analog zur Bunker-Anfrage pro Koordinate einen eigenen Kanal <code>❓-top-up-XXX-YYY</code> an.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/12_request_topup_new_channel_created.png" data-title="Neuer Top-Up-Kanal in der Kategorie" data-desc-position="bottom"><img alt="Neuer Top-Up-Kanal in der Kategorie" class="screenshot" src="../../assets/discordbot/bunker-information-system/12_request_topup_new_channel_created.png"></a></p>
-<p>Im Kanal postet der Bot eine Top-Up-Zusammenfassung. Der Genehmigungs-Workflow ist identisch zu Abschnitt 3 — bei Genehmigung erhält der Anfragende eine DM mit dem Titel <code>Top-Up Approved</code>, und die zusätzliche Stärke wird auf die bestehende Soll-Größe addiert.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/13_request_topup_new_channel_request_sumamry.png" data-title="Top-Up-Zusammenfassung im Kanal" data-desc-position="bottom"><img alt="Top-Up-Zusammenfassung im Kanal" class="screenshot" src="../../assets/discordbot/bunker-information-system/13_request_topup_new_channel_request_sumamry.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/12_request_topup_new_channel_created.png" data-title="Neuer Aufstockungs-Kanal in der Kategorie" data-desc-position="bottom"><img alt="Neuer Aufstockungs-Kanal in der Kategorie" class="screenshot" src="../../assets/discordbot/bunker-information-system/12_request_topup_new_channel_created.png"></a></p>
+<p>Im Kanal postet der Bot eine Aufstockungs-Zusammenfassung. Der Genehmigungs-Workflow ist identisch zu Abschnitt 3 — bei Genehmigung erhält der Anfragende eine DM mit dem Titel <code>Top-Up Approved</code>, und die zusätzliche Stärke wird auf die bestehende Soll-Größe addiert.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/13_request_topup_new_channel_request_sumamry.png" data-title="Aufstockungs-Zusammenfassung im Kanal" data-desc-position="bottom"><img alt="Aufstockungs-Zusammenfassung im Kanal" class="screenshot" src="../../assets/discordbot/bunker-information-system/13_request_topup_new_channel_request_sumamry.png"></a></p>
 <h2 id="5-eigene-bunker-anzeigen-und-auflosen">5. Eigene Bunker anzeigen und auflösen<a class="headerlink" href="#5-eigene-bunker-anzeigen-und-auflosen" title="Permanent link">¶</a></h2>
 <p>Im Kanal <code>#⚫-request-bunker</code> kann jeder Spieler über <code>Show My Bunkers</code> jederzeit eine Übersicht seiner genehmigten Bunker abrufen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/16_show_my_bunkers_button.png" data-title="Show My Bunkers Button" data-desc-position="bottom"><img alt="Show My Bunkers Button" class="screenshot" src="../../assets/discordbot/bunker-information-system/16_show_my_bunkers_button.png"></a></p>
 <p>Der Bot postet eine ephemerale Liste (nur für dich sichtbar), gruppiert nach deinem verknüpften Tribalwars-Account, mit Koord-Link und genehmigter Größe pro Bunker. Voraussetzung ist eine abgeschlossene Account-Verifizierung.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/17_show_my_bunkers_bunkerlist.png" data-title="Liste eigener Bunker" data-desc-position="bottom"><img alt="Liste eigener Bunker" class="screenshot" src="../../assets/discordbot/bunker-information-system/17_show_my_bunkers_bunkerlist.png"></a></p>
-<p>Wenn ein Bunker nicht mehr betrieben werden soll (z. B. weil das Dorf verloren ging), lösen Spieler ihre eigenen Bunker über den Button <code>Dissolve Bunker</code> auf.</p>
+<p>Wenn ein Bunker nicht mehr notwendig ist (z. B. weil das Dorf im Savegebiet liegt), lösen Spieler ihre eigenen Bunker über den Button <code>Dissolve Bunker</code> auf.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png" data-title="Dissolve Bunker Button" data-desc-position="bottom"><img alt="Dissolve Bunker Button" class="screenshot" src="../../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png"></a></p>
-<p>Im Modal <code>Dissolve Bunker</code> gibst du die aufzulösenden Koordinaten ein — das Feld <code>Coordinate(s) / Text</code> akzeptiert auch mehrere Koordinaten oder Text mit eingebetteten Koordinaten. Nach einer Bestätigung entfernt der Bot die betroffenen Bunker aus der Datenbank und aktualisiert das Leader-View. TWU-Mods können fremde Bunker auf dem gleichen Weg auflösen.</p>
+<p>Im Modal <code>Dissolve Bunker</code> gibst du die aufzulösenden Koordinaten ein — das Feld <code>Coordinate(s) / Text</code> akzeptiert auch mehrere Koordinaten oder Text mit eingebetteten Koordinaten. Nach einer Bestätigung entfernt der Bot die betroffenen Bunker aus der Datenbank und aktualisiert den Leader-View. TWU-Mods können fremde Bunker auf dem gleichen Weg auflösen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png" data-title="Modal: Dissolve Bunker" data-desc-position="bottom"><img alt="Modal: Dissolve Bunker" class="screenshot" src="../../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png"></a></p>
 <h2 id="6-leader-view-bunker-health-flexcontrol">6. Leader-View: Bunker-Health &amp; FlexControl<a class="headerlink" href="#6-leader-view-bunker-health-flexcontrol" title="Permanent link">¶</a></h2>
 <p>Im Kanal <code>#⚫-leaderview-bunker</code> sehen TWU-Mods alle genehmigten Bunker im Überblick.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png" data-title="#⚫-leaderview-bunker Kanal-Übersicht" data-desc-position="bottom"><img alt="#⚫-leaderview-bunker Kanal-Übersicht" class="screenshot" src="../../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png"></a></p>
 <p>Der Button <code>Bunker Health</code> aktualisiert die Übersicht und vergleicht für jeden Bunker die genehmigte Soll-Größe mit den aktuell hochgeladenen Truppendaten. Das Ergebnis wird als Ampel pro Bunker angezeigt.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/21_leaderview_bunker_channel_bunkerhealth_button.png" data-title="Bunker Health Button im Leader-View" data-desc-position="bottom"><img alt="Bunker Health Button im Leader-View" class="screenshot" src="../../assets/discordbot/bunker-information-system/21_leaderview_bunker_channel_bunkerhealth_button.png"></a></p>
-<p>Im zweiten Leader-View-Kanal <code>#⚫-leaderview-flexbunker</code> steht der Button <code>Flexbunker Control</code> zur Verfügung — er hilft, <strong>versteckte Defensiv-Stärke</strong> in eurem Stamm zu finden, also Dörfer, die laut Truppendaten genug Stärke haben, aber noch nicht als offizieller Bunker gemeldet sind.</p>
+<p>Im zweiten Leader-View-Kanal <code>#⚫-leaderview-flexbunker</code> steht der Button <code>Flexbunker Control</code> zur Verfügung — er hilft, Dörfer zu identifizieren, die hohe defensive Kapazitäten binden, gleichzeitig aber keine genehmigten Bunker sind.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/22_leaderview_bunker_flexcontrol.png" data-title="Flexbunker Control Button" data-desc-position="bottom"><img alt="Flexbunker Control Button" class="screenshot" src="../../assets/discordbot/bunker-information-system/22_leaderview_bunker_flexcontrol.png"></a></p>
 <p>Im Modal <code>Flexbunker Control</code> gibst du die Schwellwert-Dual-Stärke ein:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/23_leaderview_bunker_flexcontrol_modal.png" data-title="Modal: Flexbunker Control" data-desc-position="bottom"><img alt="Modal: Flexbunker Control" class="screenshot" src="../../assets/discordbot/bunker-information-system/23_leaderview_bunker_flexcontrol_modal.png"></a></p>
-<p>Als Ergebnis bekommst du eine Tabelle aller Dörfer im Stamm, deren tatsächliche Dual-Stärke den Schwellwert erreicht — gruppiert nach Stamm und Spieler, absteigend nach Stärke sortiert. Genehmigte Bunker werden dabei ausgeblendet, sodass nur <strong>zusätzliche</strong> Flex-Kandidaten erscheinen.</p>
+<p>Als Ergebnis bekommst du eine Tabelle aller Dörfer im Stamm, deren tatsächliche Dual-Stärke den Schwellwert erreicht — gruppiert nach Stamm und Spieler, absteigend nach Stärke sortiert. Genehmigte Bunker werden dabei ausgeblendet, sodass nur zusätzliche Flex-Bunker erscheinen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/24_leaderview_bunker_flexcontrol_result_table.png" data-title="FlexControl-Ergebnis-Tabelle" data-desc-position="bottom"><img alt="FlexControl-Ergebnis-Tabelle" class="screenshot" src="../../assets/discordbot/bunker-information-system/24_leaderview_bunker_flexcontrol_result_table.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Bunker-Health-Ampel-Legende</p>
@@ -1764,14 +1764,9 @@
 <p>Sowohl <code>Bunker Health</code> als auch <code>Flexbunker Control</code> sind aus Performance-Gründen <strong>auf eine Ausführung pro Minute pro Server</strong> begrenzt. Wer den Button kurz hintereinander zweimal drückt, erhält beim zweiten Klick eine Hinweismeldung — einfach kurz warten und erneut klicken.</p>
 </div>
 <h2 id="7-feindliche-bunker-melden">7. Feindliche Bunker melden<a class="headerlink" href="#7-feindliche-bunker-melden" title="Permanent link">¶</a></h2>
-<p>Im Kanal <code>#⚫-report-bunker</code> werden bekannte feindliche Bunker gesammelt. Der Bot stellt dort vier Buttons bereit:</p>
+<p>Im Kanal <code>#⚫-report-bunker</code> werden bekannte feindliche Bunker gesammelt. Der Bot stellt dort vier Buttons bereit.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/25_report_bunker_channel_buttons.png" data-title="Report-Bunker-Kanal mit Buttons" data-desc-position="bottom"><img alt="Report-Bunker-Kanal mit Buttons" class="screenshot" src="../../assets/discordbot/bunker-information-system/25_report_bunker_channel_buttons.png"></a></p>
-<ul>
-<li><code>Report-Link / Copy &amp; Paste</code> — Eintrag über TW-Berichts-Link, <code>[report]</code>-Tag oder kopierten Berichtstext</li>
-<li><code>Manual Entry</code> — manuelle Eingabe von Koordinate, Truppen und Info-Zeitpunkt</li>
-<li><code>Admin: Remove Bunker</code> — Entfernen eines Feindbunker-Eintrags (nur TWU-Mod)</li>
-<li><code>Export</code> — TSV-Export aller Feindbunker für Excel &amp; Co.</li>
-</ul>
+<p>Über <code>Report-Link / Copy &amp; Paste</code> lassen sich Feindbunker direkt aus einem Bericht heraus eintragen — per TW-Berichts-Link, <code>[report]</code>-Tag oder kopiertem Berichtstext. <code>Manual Entry</code> ermöglicht die manuelle Eingabe von Koordinate, Truppen und Info-Zeitpunkt, falls kein Bericht vorliegt. Mit <code>Admin: Remove Bunker</code> können TWU-Mods einzelne Feindbunker-Einträge wieder entfernen, und <code>Export</code> liefert die komplette Liste als TSV-Datei für Excel &amp; Co.</p>
 <p>Über <code>Report-Link / Copy &amp; Paste</code> öffnet sich ein Modal, das einen Berichts-Link, <code>[report]</code>-Tag oder kopierten Bericht-Text entgegennimmt. Der Bot parst Truppen, Koordinate und Info-Zeitpunkt automatisch aus dem Bericht.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/26_report_bunker_report_modal.png" data-title="Modal: Report-Link / Copy &amp; Paste" data-desc-position="bottom"><img alt="Modal: Report-Link / Copy &amp; Paste" class="screenshot" src="../../assets/discordbot/bunker-information-system/26_report_bunker_report_modal.png"></a></p>
 <p>Liegt kein Bericht vor, hilft <code>Manual Entry</code> mit dem Modal <code>Report Enemy Bunker (Manual)</code> und drei Feldern: <code>Coordinate (XXX|YYY)</code>, <code>Units (...)</code> mit allen Einheiten der jeweiligen Welt und <code>Info Date (DD.MM.YYYY HH:MM:SS)</code>.</p>
@@ -1780,7 +1775,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/28_report_bunker_manualentry_confirmation_message.png" data-title="Bestätigung des Feindbunker-Eintrags" data-desc-position="bottom"><img alt="Bestätigung des Feindbunker-Eintrags" class="screenshot" src="../../assets/discordbot/bunker-information-system/28_report_bunker_manualentry_confirmation_message.png"></a></p>
 <p>Nach <code>Confirm</code> wird der Eintrag gespeichert und der Bot bestätigt den erfolgreichen Vorgang.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/29_report_bunker_manualentry_success_message.png" data-title="Erfolgsmeldung nach Feindbunker-Eintrag" data-desc-position="bottom"><img alt="Erfolgsmeldung nach Feindbunker-Eintrag" class="screenshot" src="../../assets/discordbot/bunker-information-system/29_report_bunker_manualentry_success_message.png"></a></p>
-<p>Anschließend taucht der Eintrag in der Feindbunker-Übersicht im Kanal auf — gruppiert nach gegnerischem Stamm, dann nach Spieler, mit Koordinate, Truppenanzahl und Info-Zeitpunkt. Über <code>Admin: Remove Bunker</code> können TWU-Mods Einträge wieder löschen; <code>Export</code> liefert die komplette Liste als TSV.</p>
+<p>Anschließend taucht der Eintrag in der Feindbunker-Übersicht im Kanal auf — gruppiert nach gegnerischem Stamm, dann nach Spieler, mit Koordinate, Truppenanzahl und Info-Zeitpunkt.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png" data-title="Feindbunker-Übersicht im Kanal" data-desc-position="bottom"><img alt="Feindbunker-Übersicht im Kanal" class="screenshot" src="../../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png"></a></p>
 
 
