@@ -1309,6 +1309,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bunker-Information-System
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1325,6 +1343,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-module-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Module channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-request-a-bunker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Request a bunker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-approve-or-reject-a-bunker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Approve or reject a bunker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-request-a-top-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Request a top-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-view-and-dissolve-your-own-bunkers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. View and dissolve your own bunkers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bunker-health-flex-bunker-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Bunker-Health &amp; flex-bunker control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-report-enemy-bunkers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Report enemy bunkers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1450,6 +1564,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-module-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Module channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-request-a-bunker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Request a bunker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-approve-or-reject-a-bunker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Approve or reject a bunker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-request-a-top-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Request a top-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-view-and-dissolve-your-own-bunkers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. View and dissolve your own bunkers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bunker-health-flex-bunker-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Bunker-Health &amp; flex-bunker control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-report-enemy-bunkers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Report enemy bunkers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1466,7 +1665,118 @@
 
 
 <h1 id="bunker-information-system">Bunker-Information-System<a class="headerlink" href="#bunker-information-system" title="Permanent link">¶</a></h1>
-<p><em>Content coming soon.</em></p>
+<p>The Bunker-Information-System is where you manage your bunkers. Tribe members submit bunker requests, TWU-Mods approve or reject them. Top-ups can be requested and approved the same way, and bunkers can be dissolved. The module also gives leaders a quick Bunker-Health check and a way to identify and control flex bunkers.</p>
+<h2 id="1-module-channels">1. Module channels<a class="headerlink" href="#1-module-channels" title="Permanent link">¶</a></h2>
+<p>After the <a href="../modul-verwaltung/">setup</a>, the bot creates the category <code>🧱 BUNKER-INFORMATION-SYSTEM</code> with four channels:</p>
+<ul>
+<li><code>#⚫-request-bunker</code> — central request channel with the buttons to request, top up, view and dissolve your own bunkers</li>
+<li><code>#⚫-leaderview-bunker</code> — leader view with the Bunker-Health overview of all approved bunkers</li>
+<li><code>#⚫-leaderview-flexbunker</code> — leader view with the flex-bunker control</li>
+<li><code>#⚫-report-bunker</code> — channel for reporting and managing enemy bunkers</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/01_channel_overview.png" data-title="Channel overview of the Bunker-Information-System" data-desc-position="bottom"><img alt="Channel overview of the Bunker-Information-System" class="screenshot" src="../../../assets/discordbot/bunker-information-system/01_channel_overview.png"></a></p>
+<p>As soon as someone submits a request or a top-up, the bot creates <strong>a dedicated channel per coordinate</strong> in the same category (e. g. <code>❓-bunker-for-500-501-Playername</code> or <code>❓-top-up-500-501</code>). The entire approval workflow runs inside this per-request channel.</p>
+<h2 id="2-request-a-bunker">2. Request a bunker<a class="headerlink" href="#2-request-a-bunker" title="Permanent link">¶</a></h2>
+<p>Switch to the <code>#⚫-request-bunker</code> channel.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/02_request_bunker_channel.png" data-title="#⚫-request-bunker channel" data-desc-position="bottom"><img alt="#⚫-request-bunker channel" class="screenshot" src="../../../assets/discordbot/bunker-information-system/02_request_bunker_channel.png"></a></p>
+<p>Click the <code>Request Bunker</code> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/03_request_bunker_button.png" data-title="Request Bunker button" data-desc-position="bottom"><img alt="Request Bunker button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/03_request_bunker_button.png"></a></p>
+<p>The <code>Request Bunker</code> modal opens with three input fields:</p>
+<ul>
+<li><code>Coordinates</code> — one or more coordinates (e. g. <code>500|501, 503|502, 540|589</code>)</li>
+<li><code>Bunker Size (Dual-Strength)</code> — desired dual strength of the bunker (e. g. <code>20000</code>)</li>
+<li><code>Reason</code> — reason why this bunker is needed</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/04_request_bunker_modal.png" data-title="Modal: Request Bunker" data-desc-position="bottom"><img alt="Modal: Request Bunker" class="screenshot" src="../../../assets/discordbot/bunker-information-system/04_request_bunker_modal.png"></a></p>
+<p>After submitting, the bot creates a dedicated channel <code>❓-bunker-for-XXX-YYY-Playername</code> per coordinate in the category.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/05_request_bunker_new_channel_created.png" data-title="New request channel in the category" data-desc-position="bottom"><img alt="New request channel in the category" class="screenshot" src="../../../assets/discordbot/bunker-information-system/05_request_bunker_new_channel_created.png"></a></p>
+<p>In the new channel the bot posts a request embed with player, coordinate, desired size and reason, plus the approval buttons for TWU-Mods.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/06_request_bunker_new_channel_request_summary.png" data-title="Request summary in the new channel" data-desc-position="bottom"><img alt="Request summary in the new channel" class="screenshot" src="../../../assets/discordbot/bunker-information-system/06_request_bunker_new_channel_request_summary.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Multiple coordinates per request</p>
+<p>In a single request you can enter as many coordinates as you like — separated by commas or spaces. The bot creates <strong>a dedicated request channel per coordinate</strong>. Each channel is approved, rejected or withdrawn individually.</p>
+</div>
+<h2 id="3-approve-or-reject-a-bunker">3. Approve or reject a bunker<a class="headerlink" href="#3-approve-or-reject-a-bunker" title="Permanent link">¶</a></h2>
+<p>In the per-request channel, TWU-Mods see the <code>Admin: Approve</code> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/07_approve_bunker.png" data-title="Admin: Approve button" data-desc-position="bottom"><img alt="Admin: Approve button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/07_approve_bunker.png"></a></p>
+<p>A click opens the approval modal — the mod can enter the finally approved size or accept the originally requested size.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/08_approve_bunker_modal.png" data-title="Approval modal" data-desc-position="bottom"><img alt="Approval modal" class="screenshot" src="../../../assets/discordbot/bunker-information-system/08_approve_bunker_modal.png"></a></p>
+<p>After a successful approval, both the requester and the user who approved the request receive a Discord direct message titled <code>Bunker Approved</code> (or <code>Top-Up Approved</code>). The DM contains all key information plus a ready-made text string to drop straight into the tribe forum. The request channel is automatically deleted after the approval.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/09_approve_bunker_summary_as_discord_dm.png" data-title="Approval DM" data-desc-position="bottom"><img alt="Approval DM" class="screenshot" src="../../../assets/discordbot/bunker-information-system/09_approve_bunker_summary_as_discord_dm.png"></a></p>
+<p>Instead of approving, TWU-Mods can also reject a request with <code>Admin: Reject</code>. Both the requester and the rejecting TWU-Mod then receive a Discord direct message about the rejection; the request channel is likewise deleted automatically.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/14_leader_reject_button.png" data-title="Admin: Reject button" data-desc-position="bottom"><img alt="Admin: Reject button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/14_leader_reject_button.png"></a></p>
+<p>The requester — or a TWU-Mod — can withdraw the request at any time via <code>Withdraw (Delete)</code>. The per-request channel is deleted along with it.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/15_withdraw_delete_button.png" data-title="Withdraw (Delete) button" data-desc-position="bottom"><img alt="Withdraw (Delete) button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/15_withdraw_delete_button.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Approval with size override</p>
+<p>In the approval modal the TWU-Mod can assign a different size — for example because the village should have a different strength than originally requested. This size becomes the binding target size and is the basis for the Bunker-Health traffic light in the leader view.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Copy the SD command from the approval DM</p>
+<p>The <code>Bunker Approved</code> DM ends with a ready-made SD command string (<code>{coord} {units}"{Player}"request tw-utils.net""</code>). You can paste this block straight into the tribe forum without building it manually.</p>
+</div>
+<h2 id="4-request-a-top-up">4. Request a top-up<a class="headerlink" href="#4-request-a-top-up" title="Permanent link">¶</a></h2>
+<p>For already approved bunkers whose strength is no longer sufficient, you can request a top-up in the <code>#⚫-request-bunker</code> channel via the <code>Request Top-Up</code> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/10_request_topup_button.png" data-title="Request Top-Up button" data-desc-position="bottom"><img alt="Request Top-Up button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/10_request_topup_button.png"></a></p>
+<p>In the <code>Request Top-Up</code> modal you specify:</p>
+<ul>
+<li><code>Coordinates</code> — coordinate(s) of the already approved bunkers</li>
+<li><code>Additional Size (Dual-Strength)</code> — <strong>only</strong> the additional dual strength (e. g. <code>+5000</code>)</li>
+<li><code>Reason</code> — reason for the top-up</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/11_request_topup_modal.png" data-title="Modal: Request Top-Up" data-desc-position="bottom"><img alt="Modal: Request Top-Up" class="screenshot" src="../../../assets/discordbot/bunker-information-system/11_request_topup_modal.png"></a></p>
+<p>Analogous to the bunker request, the bot creates a dedicated channel <code>❓-top-up-XXX-YYY</code> per coordinate.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/12_request_topup_new_channel_created.png" data-title="New top-up channel in the category" data-desc-position="bottom"><img alt="New top-up channel in the category" class="screenshot" src="../../../assets/discordbot/bunker-information-system/12_request_topup_new_channel_created.png"></a></p>
+<p>In the channel the bot posts a top-up summary. The approval workflow is identical to Section 3 — on approval the requester receives a DM titled <code>Top-Up Approved</code>, and the additional strength is added on top of the existing target size.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/13_request_topup_new_channel_request_sumamry.png" data-title="Top-up summary in the channel" data-desc-position="bottom"><img alt="Top-up summary in the channel" class="screenshot" src="../../../assets/discordbot/bunker-information-system/13_request_topup_new_channel_request_sumamry.png"></a></p>
+<h2 id="5-view-and-dissolve-your-own-bunkers">5. View and dissolve your own bunkers<a class="headerlink" href="#5-view-and-dissolve-your-own-bunkers" title="Permanent link">¶</a></h2>
+<p>In the <code>#⚫-request-bunker</code> channel every player can use <code>Show My Bunkers</code> to bring up an overview of their approved bunkers at any time.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/16_show_my_bunkers_button.png" data-title="Show My Bunkers button" data-desc-position="bottom"><img alt="Show My Bunkers button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/16_show_my_bunkers_button.png"></a></p>
+<p>The bot posts an ephemeral list (only visible to you), grouped by your linked Tribalwars account, with a coord link and approved size per bunker. A completed account verification is the prerequisite.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/17_show_my_bunkers_bunkerlist.png" data-title="List of your own bunkers" data-desc-position="bottom"><img alt="List of your own bunkers" class="screenshot" src="../../../assets/discordbot/bunker-information-system/17_show_my_bunkers_bunkerlist.png"></a></p>
+<p>When a bunker is no longer needed (e. g. because the village is in the safe zone), players dissolve their own bunkers via the <code>Dissolve Bunker</code> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png" data-title="Dissolve Bunker button" data-desc-position="bottom"><img alt="Dissolve Bunker button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png"></a></p>
+<p>In the <code>Dissolve Bunker</code> modal you enter the coordinates to be dissolved — the <code>Coordinate(s) / Text</code> field also accepts several coordinates or text with embedded coordinates. After a confirmation the bot removes the affected bunkers from the database and updates the leader view. TWU-Mods can dissolve other players' bunkers the same way.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png" data-title="Modal: Dissolve Bunker" data-desc-position="bottom"><img alt="Modal: Dissolve Bunker" class="screenshot" src="../../../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png"></a></p>
+<h2 id="6-bunker-health-flex-bunker-control">6. Bunker-Health &amp; flex-bunker control<a class="headerlink" href="#6-bunker-health-flex-bunker-control" title="Permanent link">¶</a></h2>
+<p>In the <code>#⚫-leaderview-bunker</code> channel, TWU-Mods see all approved bunkers at a glance.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png" data-title="#⚫-leaderview-bunker channel overview" data-desc-position="bottom"><img alt="#⚫-leaderview-bunker channel overview" class="screenshot" src="../../../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png"></a></p>
+<p>The <code>Bunker Health</code> button refreshes the overview and compares the approved target size against the currently uploaded troop data for each bunker. The result is shown as a traffic light per bunker.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/21_leaderview_bunker_channel_bunkerhealth_button.png" data-title="Bunker Health button in the leader view" data-desc-position="bottom"><img alt="Bunker Health button in the leader view" class="screenshot" src="../../../assets/discordbot/bunker-information-system/21_leaderview_bunker_channel_bunkerhealth_button.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Bunker-Health traffic-light legend</p>
+<p>The Health overview uses a four-step traffic light per bunker:</p>
+<ul>
+<li>⚪ no troop data — no troop data is available for this bunker</li>
+<li>🟢 less than 10 % deviation from the target size</li>
+<li>🟠 10 % to 25 % deviation</li>
+<li>🔴 more than 25 % deviation</li>
+</ul>
+</div>
+<p>In the second leader-view channel <code>#⚫-leaderview-flexbunker</code>, the <code>Flexbunker Control</code> button is available — it helps to identify villages that tie up high defensive capacity but are not approved bunkers themselves.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/22_leaderview_bunker_flexcontrol.png" data-title="Flexbunker Control button" data-desc-position="bottom"><img alt="Flexbunker Control button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/22_leaderview_bunker_flexcontrol.png"></a></p>
+<p>In the <code>Flexbunker Control</code> modal you enter the threshold dual strength:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/23_leaderview_bunker_flexcontrol_modal.png" data-title="Modal: Flexbunker Control" data-desc-position="bottom"><img alt="Modal: Flexbunker Control" class="screenshot" src="../../../assets/discordbot/bunker-information-system/23_leaderview_bunker_flexcontrol_modal.png"></a></p>
+<p>As a result you get a table of all villages in the tribe whose actual dual strength reaches the threshold — grouped by tribe and player, sorted by strength in descending order. Approved bunkers are hidden so that only additional flex bunkers appear.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/24_leaderview_bunker_flexcontrol_result_table.png" data-title="FlexControl result table" data-desc-position="bottom"><img alt="FlexControl result table" class="screenshot" src="../../../assets/discordbot/bunker-information-system/24_leaderview_bunker_flexcontrol_result_table.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Rate limit on Bunker-Health &amp; FlexControl</p>
+<p>Both <code>Bunker Health</code> and <code>Flexbunker Control</code> are limited for performance reasons to <strong>one execution per minute per server</strong>. If you press the button twice in quick succession, the second click returns a notice — just wait a moment and click again.</p>
+</div>
+<h2 id="7-report-enemy-bunkers">7. Report enemy bunkers<a class="headerlink" href="#7-report-enemy-bunkers" title="Permanent link">¶</a></h2>
+<p>In the <code>#⚫-report-bunker</code> channel, known enemy bunkers are collected. The bot provides four buttons there.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/25_report_bunker_channel_buttons.png" data-title="Report-bunker channel with buttons" data-desc-position="bottom"><img alt="Report-bunker channel with buttons" class="screenshot" src="../../../assets/discordbot/bunker-information-system/25_report_bunker_channel_buttons.png"></a></p>
+<p><code>Report-Link / Copy &amp; Paste</code> lets you add enemy bunkers directly from a report — via TW report link, <code>[report]</code> tag or pasted report text. <code>Manual Entry</code> allows manual entry of coordinate, units and info time when no report is available. With <code>Admin: Remove Bunker</code>, TWU-Mods can remove individual enemy-bunker entries again, and <code>Export</code> returns the full list as a TSV file for Excel &amp; co.</p>
+<p><code>Report-Link / Copy &amp; Paste</code> opens a modal that accepts a report link, <code>[report]</code> tag or pasted report text. The bot parses the units, coordinate and info time automatically from the report.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/26_report_bunker_report_modal.png" data-title="Modal: Report-Link / Copy &amp; Paste" data-desc-position="bottom"><img alt="Modal: Report-Link / Copy &amp; Paste" class="screenshot" src="../../../assets/discordbot/bunker-information-system/26_report_bunker_report_modal.png"></a></p>
+<p>If no report is available, <code>Manual Entry</code> helps with the <code>Report Enemy Bunker (Manual)</code> modal and three fields: <code>Coordinate (XXX|YYY)</code>, <code>Units (...)</code> with all units of the respective world, and <code>Info Date (DD.MM.YYYY HH:MM:SS)</code>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/27_report_bunker_manualentry_modal.png" data-title="Modal: Manual Entry" data-desc-position="bottom"><img alt="Modal: Manual Entry" class="screenshot" src="../../../assets/discordbot/bunker-information-system/27_report_bunker_manualentry_modal.png"></a></p>
+<p>No matter which path was chosen — the bot shows a preview and asks for confirmation with the <code>Confirm</code> / <code>Cancel</code> buttons before the entry is saved.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/28_report_bunker_manualentry_confirmation_message.png" data-title="Confirmation of the enemy-bunker entry" data-desc-position="bottom"><img alt="Confirmation of the enemy-bunker entry" class="screenshot" src="../../../assets/discordbot/bunker-information-system/28_report_bunker_manualentry_confirmation_message.png"></a></p>
+<p>After <code>Confirm</code>, the entry is saved and the bot confirms the successful operation.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/29_report_bunker_manualentry_success_message.png" data-title="Success message after enemy-bunker entry" data-desc-position="bottom"><img alt="Success message after enemy-bunker entry" class="screenshot" src="../../../assets/discordbot/bunker-information-system/29_report_bunker_manualentry_success_message.png"></a></p>
+<p>The entry then shows up in the enemy-bunker overview in the channel — grouped by enemy tribe, then by player, with coordinate, unit counts and info time.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png" data-title="Enemy-bunker overview in the channel" data-desc-position="bottom"><img alt="Enemy-bunker overview in the channel" class="screenshot" src="../../../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png"></a></p>
 
 
 
