@@ -1,9 +1,9 @@
 # Off/Deff/Snob-Search-System
 
-Mit dem ODS-System suchen Spieler im Stamm Off-, Deff- oder Snob-Befehle für eine bestimmte Zielkoordinate. Das ODS-System ist die erweiterte Variante des Single Village Snipe — während dort nur die Truppen eines einzelnen Spielers verplant werden, fließen hier die Dörfer des **gesamten Stammes** in die Auswahl ein. Der Bot gleicht ankommende Suchanfragen mit den hinterlegten Truppendaten ab und liefert eine Liste der Spieler, die einen passenden Off-, Deff- oder Snob-Befehl abschicken können.
+Mit dem ODS-System können Spieler Off-, Deff- oder Snob-Befehle für eine bestimmte Zielkoordinate suchen. Das ODS-System besitzt Ähnlichkeit zum Single Village Snipe-Skript — während dort nur die Truppen eines einzelnen Spielers berücksichtigt werden, fließen im ODS-System die Dörfer des **gesamten Stammes** in die Auswahl ein. Der Bot gleicht ankommende Suchanfragen mit den hinterlegten Truppendaten ab und liefert eine Liste der Spieler, die einen passenden Off-, Deff- oder Snob-Befehl abschicken können.
 
 !!! info "Voraussetzung Truppen-Upload"
-    Der Bot kann nur Treffer melden für Spieler, deren Truppendaten aktuell hochgeladen sind. Liegen keine Daten vor, bleibt die Trefferliste leer. Für aussagekräftige Ergebnisse sollten Stammesmitglieder ihre Truppendaten regelmäßig per `/admin troops_upload` aktualisieren.
+    Der Bot kann nur Treffer melden für Spieler, deren Truppendaten aktuell hochgeladen sind. Liegen keine Daten vor, bleibt die Trefferliste leer. Für aussagekräftige Ergebnisse sollten die Admins (TWU-Mod) die Truppendaten regelmäßig per `/admin troops_upload` aktualisieren.
 
 ## 1. Kanäle des Moduls
 
@@ -18,7 +18,7 @@ Sobald jemand ein Suchergebnis in einen eigenen Kanal exportiert (siehe [Abschni
 
 ## 2. Truppendaten hochladen, anzeigen, löschen
 
-Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten der Stammesmitglieder im Bot hinterlegt sein. Im Such-Kanal `#⚫-ods-search` steht dafür das `ODS Panel`-Embed mit drei Admin-Buttons: `Upload Troops`, `Delete Troops`, `Show Troop Status`.
+Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten der Stammesmitglieder im Bot hinterlegt sein. Im Such-Kanal `#⚫-ods-search` steht dafür das `ODS Panel`-Embed mit drei Admin-Buttons: `Upload Troops`, `Delete Troops`, `Show Troop Status` zur Verfügung.
 
 ![Admin-Buttons im ODS Panel](../assets/discordbot/ods-system/02_ods_system_upload_troops.png){ .screenshot }
 
@@ -26,7 +26,7 @@ Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten
 
 ![Slash-Command zum Truppen-Upload](../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png){ .screenshot }
 
-Die CSV-Datei erzeugst du am bequemsten über das Schnellleisten-Script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/), das ein Stammesleiter im Spiel ausführen kann. Erwartetes Dateiformat:
+Die CSV-Datei erzeugst du am bequemsten über das Schnellleisten-Script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). Erwartetes Dateiformat:
 
 ```
 Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
@@ -34,11 +34,11 @@ Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight
 543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
 ```
 
-Nach erfolgreichem Upload bestätigt der Bot mit einer kurzen Erfolgs-Nachricht inklusive Statistik (Spieler, Dörfer, Truppen-Datensätze).
+Nach erfolgreichem Upload bestätigt der Bot mit einer kurzen Erfolgs-Nachricht.
 
 ![Erfolgs-Meldung nach Truppen-Upload](../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png){ .screenshot }
 
-`Delete Troops` entfernt hochgeladene Truppendaten wieder; vor dem Löschen kommt eine Sicherheitsabfrage mit `Confirm` und `Cancel`.
+Über den Button `Delete Troops` können hochgeladene Truppendaten wieder entfernt werden.
 
 ![Delete-Troops-Button](../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png){ .screenshot }
 
@@ -51,7 +51,7 @@ So sieht man auf einen Blick, welche Stämme aktuelle Truppendaten hinterlegt ha
 ![Troop Uploads Overview](../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png){ .screenshot }
 
 !!! info "Wer darf Truppen hochladen?"
-    Nur User mit der Rolle `TWU-Mod` oder Discord-Administrator-Rechten können die drei Admin-Buttons (`Upload Troops`, `Delete Troops`, `Show Troop Status`) ausführen und den Slash-Command `/admin troops_upload` benutzen.
+    Nur User mit der Rolle `TWU-Mod` oder Discord-Administrator-Rechten können die Buttons `Upload Troops` und `Delete Troops` ausführen und den Slash-Command `/admin troops_upload` benutzen. Den Button `Show Troop Status` können auch normale Mitglieder verwenden.
 
 ## 3. Off-, Deff- oder Snob-Befehl suchen
 
