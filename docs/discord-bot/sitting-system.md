@@ -1,15 +1,15 @@
 # Account-Sitting-System
 
-Das Account-Sitting-System organisiert Urlaubsvertretungen für Accounts auf eurem Stamm. Spieler können tageweise Sitting-Anfragen stellen, andere Spieler übernehmen einzelne oder mehrere Zeit-Slots, und der Bot räumt nach Ende des Sittings automatisch wieder auf. Anfragen sind ohne Genehmigung sofort sichtbar — jedes normale Mitglied kann offene Slots übernehmen.
-
-![Kanal-Übersicht des Account-Sitting-Systems](../assets/discordbot/account-sitting-system/01_channel_overview.png){ .screenshot }
+Das Account-Sitting-System verwaltet und organisiert Urlaubsvertretungen. Spieler können tageweise Sitting-Anfragen stellen, andere Spieler übernehmen einzelne oder mehrere Zeit-Slots, und der Bot räumt nach Ende des Sittings automatisch wieder auf. Anfragen sind ohne Genehmigung sofort sichtbar — jedes normale Mitglied kann offene Slots übernehmen.
 
 ## 1. Kanäle des Moduls
 
-Nach der Installation legt der Bot die Kategorie `🏖️ ACCOUNT-SITTING-SYSTEM` mit zwei Basis-Kanälen an:
+Nach der [Installation](modul-verwaltung.md) legt der Bot die Kategorie `🏖️ ACCOUNT-SITTING-SYSTEM` mit zwei Basis-Kanälen an:
 
 - `#⚫-request-account-sitting` — zentraler Anfrage-Kanal mit dem Button zum Erstellen einer neuen Anfrage
 - `#⚫-overview-account-sitting` — Dashboard mit allen aktuell laufenden bzw. übernommenen Sittings sowie allen noch offenen Slots
+
+![Kanal-Übersicht des Account-Sitting-Systems](../assets/discordbot/account-sitting-system/01_channel_overview.png){ .screenshot }
 
 Sobald jemand eine Anfrage stellt, legt der Bot zusätzlich **einen eigenen Kanal pro Anfrage** in derselben Kategorie an. In diesem Per-Request-Kanal läuft der gesamte Übernahme-Workflow (übernehmen, zurückziehen, löschen). Nach Ende der Sitting-Zeit räumt sich dieser Kanal automatisch wieder auf — siehe Abschnitt 7.
 
@@ -24,13 +24,16 @@ Es öffnet sich das Modal `Create Sitting-Request` mit fünf Eingabefeldern:
 - `Tribalwars Account` — Name des Accounts, für den die Vertretung gesucht wird
 - `Date (DD.MM.YYYY)` — der Tag, an dem das Sitting laufen soll
 - `Start Time (HH:MM)` — Start-Uhrzeit der Vertretung
-- `End Time (HH:MM)` — End-Uhrzeit der Vertretung (liegt sie vor der Start-Zeit, gilt sie als am Folgetag)
-- `Additional Notes (optional)` — freier Hinweis-Text an den Vertreter (z. B. „bitte alle Off-Truppen vor 20 Uhr zurückrufen")
+- `End Time (HH:MM)` — End-Uhrzeit der Vertretung
+- `Additional Notes (optional)` — freier Hinweis-Text an den Vertreter
 
 ![Modal: Create Sitting-Request](../assets/discordbot/account-sitting-system/03_create_sitting_request_modal.png){ .screenshot }
 
 !!! info "Tageweise Anfragen"
     Jede Anfrage gilt für **genau einen Tag**. Wenn du mehrere Tage abdecken möchtest (z. B. ein langes Wochenende oder eine ganze Urlaubswoche), erstelle pro Tag eine eigene Anfrage.
+
+!!! info "Zeitangaben in Welt-Zeit"
+    Alle Zeitangaben in den Sitting-Anfragen und im Dashboard beziehen sich auf die Zeit der **Spielwelt** — nicht auf eure lokale Zeitzone. Gerade bei internationalen Welten kann das von eurer Realzeit abweichen.
 
 Nach dem Absenden legt der Bot einen neuen Kanal in der Kategorie an und postet darin den Anfrage-Embed mit allen Details und den Übernahme-Buttons.
 
@@ -90,7 +93,8 @@ Der Dashboard-Kanal `#⚫-overview-account-sitting` zeigt jederzeit den aktuelle
 
 ![Erinnerungs-DM via Discord](../assets/discordbot/account-sitting-system/14_reminder_dm_via_discord.png){ .screenshot }
 
-Wer keine Erinnerungs-DM vom Bot erhalten möchte, kann das jederzeit über den Button `Notifications` im Kanal `#⚫-bot-config` pro Discord-User deaktivieren.
+!!! info "Erinnerungs-DM abschalten"
+    Wer keine Erinnerungs-DM vom Bot erhalten möchte, kann das jederzeit über den Button `Notifications` im Kanal `#⚫-bot-config` pro Discord-User deaktivieren. Wer einen Account auf [tw-utils.net](https://tw-utils.net) hat, kann die Benachrichtigung alternativ auch dort in den Account-Einstellungen steuern.
 
 ## 7. Automatisches Aufräumen nach 30 Minuten
 
