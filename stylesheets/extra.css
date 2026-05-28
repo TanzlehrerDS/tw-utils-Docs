@@ -353,8 +353,8 @@
 .home-card {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 14px 18px;
+  gap: 12px;
+  padding: 10px 14px;
   background: #ffffff;
   border: 1px solid #d0d7de;
   border-radius: 10px;
@@ -378,10 +378,9 @@
 }
 
 .home-card__icon {
-  flex: 0 0 48px;
-  width: 48px;
-  height: 48px;
-  margin-top: 2px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -395,12 +394,12 @@
   display: block;
 }
 .home-card__icon--community {
-  background: #0969da;
-  color: #ffffff;
+  background: transparent;
+  color: var(--md-default-fg-color);
 }
 .home-card__icon--community svg {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   fill: currentColor;
 }
 
@@ -447,13 +446,13 @@
 
 @media (max-width: 480px) {
   .home-card {
-    gap: 12px;
-    padding: 12px;
+    gap: 10px;
+    padding: 10px;
   }
   .home-card__icon {
-    flex: 0 0 40px;
-    width: 40px;
-    height: 40px;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
   }
   .home-card__icon--community svg {
     width: 22px;

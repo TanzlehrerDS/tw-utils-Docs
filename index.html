@@ -1600,12 +1600,14 @@
 </details>
 <details class="question">
 <summary>Wie melde ich Adelsgeschlechter, Abschickzeiten und wie plane ich Offs aus?</summary>
-<p>Dafür gibt es zwei Tools auf <a href="https://tw-utils.net">tw-utils.net</a>:</p>
+<p>Über den tw-utils Discordbot im Kanal <code>#⚫-queries</code> deines Stammes-Discords. Dort gibt es drei Buttons:</p>
 <ul>
-<li><strong>AG-Planungstool</strong> — für die Planung von Adelsgeschlechter-Angriffen. AGs werden gemeldet (über den Discord-Bot oder manuell), Zieldörfer hinzugefügt, und das Tool berechnet die Abschickzeiten.</li>
-<li><strong>Off-Planungstool</strong> — für die Planung von Off-Angriffen. Truppendaten importieren, Abschickzeiten definieren, das Tool generiert die Befehle mit korrekten Laufzeiten.</li>
+<li><code>Snob Report</code> — Adelsgeschlechter melden</li>
+<li><code>Launch Times</code> — eigene Abschickzeitfenster eintragen</li>
+<li><code>Off-Exclusion</code> — Herkunftsdörfer ausschließen, die der Off-Planer nicht nutzen soll</li>
 </ul>
-<p>→ <a href="ag-planner/tab1-ag-meldungen/">AG-Planungstool</a> · <a href="off-planner/tab1-daten/">Off-Planungstool</a></p>
+<p>Jeder Button hat ein Sub-Menü mit <code>Add</code> / <code>Show</code> / <code>Delete</code>.</p>
+<p>→ <a href="discord-bot/planning-system/">Planning-System</a></p>
 </details>
 <details class="question">
 <summary>Wie beantrage ich einen Bunker?</summary>
@@ -1619,17 +1621,17 @@
 </details>
 <details class="question">
 <summary>Wie erhalte ich als Stammesführung Zugriff auf den Leader-View?</summary>
-<p>In zwei Schritten: (1) Verknüpfe deinen Tribalwars-Account im <code>#⚫-bot-config</code>-Kanal über <code>Account-Verification</code>. (2) Ein Discord-Admin vergibt dir Leader-Rechte über den Button <code>Manage Access to Leader-View</code> → <code>Grant Access</code>. Danach erscheint der Leader-View im Spieler-Popup ingame.</p>
+<p>In zwei Schritten: (1) Verknüpfe deinen Tribalwars-Account im <code>#⚫-bot-config</code>-Kanal über <code>Account-Verification</code>. (2) Ein Discord-Admin vergibt dir Leader-Rechte über den Button <code>Manage Access to Leader-View</code> → <code>Grant Access</code>. Danach hast du auf <a href="https://tw-utils.net">tw-utils.net</a> Zugriff auf den Leader-View.</p>
 <p>→ <a href="leader-view/uebersicht/">Leader-View — Berechtigung</a></p>
 </details>
 <details class="question">
 <summary>Wieso kann ich einige Buttons des tw-utils Discordbots nicht benutzen, obwohl ich Administrator-Rechte auf dem Discordserver habe?</summary>
-<p>Discord-Administrator-Rechte sind nur für die initiale Bot-Einrichtung relevant. Für die laufende Verwaltung (Module aktivieren, Bunker-Anträge bearbeiten, Truppendaten hochladen) braucht es die Rolle <strong>TWU-Mod</strong> — eine separate Rolle, die der Bot beim Setup anlegt. Normale Mitglieder können ihrerseits eigenständig Bunker anfordern, Abschickzeiten melden usw.</p>
+<p>Discord-Administrator-Rechte sind nur für die initiale Bot-Einrichtung relevant. Für die laufende Verwaltung (Module aktivieren, Bunker-Anträge bearbeiten, Truppendaten hochladen) braucht es die Rolle <strong>TWU-Mod</strong> — eine separate Discord-Rolle, die euer Server-Admin manuell vergibt.</p>
 <p>→ <a href="discord-bot/berechtigungskonzept/">Berechtigungskonzept</a></p>
 </details>
 <details class="question">
 <summary>Welches Format muss die hochgeladene Truppendatei haben?</summary>
-<p>Eine <strong>TXT- oder CSV-Datei</strong> mit kommagetrennten Werten. Sie wird am einfachsten über das Ingame-Schnellleisten-Skript „Download Tribe Info" erzeugt. Erwartet wird eine Header-Zeile (<code>Coords,Player,spear,sword,axe,…,snob</code>), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.</p>
+<p>Eine <strong>TXT- oder CSV-Datei</strong> mit kommagetrennten Werten. Sie wird am einfachsten über das Ingame-Schnellleisten-Skript <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">„Download Tribe Info"</a> erzeugt. Erwartet wird eine Header-Zeile (<code>Coords,Player,spear,sword,axe,…,snob</code>), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.</p>
 <p>→ <a href="leader-view/truppen/">Leader-View — Truppen</a></p>
 </details>
 
