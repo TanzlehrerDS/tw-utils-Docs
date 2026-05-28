@@ -5,7 +5,7 @@ Willkommen zur Dokumentation von **tw-utils**.
 <div class="home-cards" markdown>
 
 <div class="home-card" markdown>
-<div class="home-card__icon"><img src="assets/logo.png" alt="tw-utils Logo"></div>
+<div class="home-card__icon"><img src="/assets/logo.png" alt="tw-utils Logo"></div>
 <div class="home-card__body" markdown>
 ### tw-utils Discordbot
 Nützliche Tools für euren Stammes-Discord.

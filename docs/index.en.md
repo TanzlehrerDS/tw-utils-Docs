@@ -5,7 +5,7 @@ Welcome to the documentation of **tw-utils**.
 <div class="home-cards" markdown>
 
 <div class="home-card" markdown>
-<div class="home-card__icon"><img src="assets/logo.png" alt="tw-utils Logo"></div>
+<div class="home-card__icon"><img src="/assets/logo.png" alt="tw-utils Logo"></div>
 <div class="home-card__body" markdown>
 ### tw-utils Discord Bot
 Useful tools for your tribe Discord.
@@ -31,4 +31,43 @@ Questions, feedback and chat around tw-utils.
 
 ## FAQ
 
-Frequently asked questions about tw-utils will follow here.
+??? question "How do I link my Tribal Wars account?"
+    In your tribe Discord, switch to the `#⚫-bot-config` channel and click `Account-Verification`. The bot walks you through the wizard: enter your player name, paste the generated code into your in-game profile, confirm with the `Verify` button.
+
+    → [Account-Verification](discord-bot/verifizierung.md)
+
+??? question "How do I report snobs, launch times, and exclude villages from nuke planning?"
+    Via the tw-utils Discord bot in the `#⚫-queries` channel of your tribe Discord. Three buttons are available:
+
+    - `Snob Report` — report snobs
+    - `Launch Times` — enter your own launch time windows
+    - `Off-Exclusion` — exclude source villages that the nuke planner should not use
+
+    Each button opens a sub-menu with `Add` / `Show` / `Delete`.
+
+    → [Planning-System](discord-bot/planning-system.md)
+
+??? question "How do I request a bunker?"
+    Switch to the `#⚫-request-bunker` channel and click the `Request Bunker` button. Enter the coordinate(s), the desired dual strength, and a justification. The bot creates a per-coordinate request channel where a TWU-Mod approves or rejects.
+
+    → [Bunker-Information-System](discord-bot/bunker-info.md)
+
+??? question "How do I request a top-up for a bunker?"
+    In the same `#⚫-request-bunker` channel there is a separate `Request Top-Up` button. Enter the coordinate(s) of the existing bunker and the **additional** dual strength. The bot creates a per-coordinate top-up request channel where TWU-Mods approve the top-up.
+
+    → [Bunker-Information-System](discord-bot/bunker-info.md)
+
+??? question "How do I get Leader-View access as tribe leadership?"
+    In two steps: (1) Link your Tribal Wars account in the `#⚫-bot-config` channel via `Account-Verification`. (2) A Discord admin grants you Leader rights via the `Manage Access to Leader-View` button → `Grant Access`. Afterwards you have access to the Leader-View on [tw-utils.net](https://tw-utils.net).
+
+    → [Leader-View — Permission](leader-view/uebersicht.md)
+
+??? question "Why can't I use some buttons of the tw-utils Discord bot even though I have administrator rights on the Discord server?"
+    Discord administrator rights are only relevant for the initial bot setup. For ongoing management (activating modules, processing bunker requests, uploading troop data), you need the **TWU-Mod** role — a separate Discord role that your server admin assigns manually.
+
+    → [Permission Concept](discord-bot/berechtigungskonzept.md)
+
+??? question "What format does the uploaded troops file need to have?"
+    A **TXT or CSV file** with comma-separated values. It is most easily generated via the in-game quickbar script ["Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). The file must start with a header row (`Coords,Player,spear,sword,axe,…,snob`), followed by one row per village with coordinates and troop counts.
+
+    → [Leader-View — Troops](leader-view/truppen.md)
