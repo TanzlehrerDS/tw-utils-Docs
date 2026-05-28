@@ -333,61 +333,130 @@
   outline-offset: 3px;
 }
 
-.md-typeset p:has(> .cta-discord),
-.md-typeset p:has(> .cta-bot) {
+.md-typeset p:has(> .cta-discord) {
   text-align: center;
 }
 
-/* When both CTAs share a paragraph, tighten the margins so they sit
-   side-by-side with breathing room (and wrap cleanly on narrow screens). */
-.md-typeset p:has(> .cta-discord):has(> .cta-bot) > a {
-  margin: 1.25rem 0.4rem;
-}
-
 /* =========================================================
-   Bot CTA button — sibling of .cta-discord, theme-accent blue
-   Use via:  [Bot einladen](url){ .cta-bot target=_blank }
+   Home cards — compact, dual-action call-to-actions
+   Used on the start page via raw HTML inside Markdown.
    ========================================================= */
 
-.md-typeset .cta-bot {
-  display: inline-flex;
+.home-cards {
+  max-width: 720px;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.home-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: #a8b3bd;
+}
+
+[data-md-color-scheme="slate"] .home-card {
+  background: #161b22;
+  border-color: #30363d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+[data-md-color-scheme="slate"] .home-card:hover {
+  border-color: #5a6470;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.home-card__icon {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.9rem 2.2rem;
-  margin: 1.75rem auto;
-  background: #0969da;
+  overflow: hidden;
+}
+.home-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.home-card__icon--discord {
+  background: #5865f2;
   color: #ffffff;
-  font-size: 1.1rem;
+}
+.home-card__icon--discord svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+.home-card__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.md-typeset .home-card__body h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+.md-typeset .home-card__body p {
+  margin: 0 0 8px 0;
+  font-size: 0.92rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+}
+.md-typeset .home-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 0;
+}
+.md-typeset .home-card__actions a {
+  font-size: 0.92rem;
+  font-weight: 600;
   text-decoration: none;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(9, 105, 218, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  color: var(--md-accent-fg-color);
+}
+.md-typeset .home-card__actions a::before {
+  content: "› ";
+  display: inline-block;
+  margin-right: 2px;
+  transition: transform 0.15s ease;
+}
+.md-typeset .home-card__actions a:hover {
+  text-decoration: underline;
+}
+.md-typeset .home-card__actions a:hover::before {
+  transform: translateX(2px);
 }
 
-.md-typeset .cta-bot::before {
-  content: "";
-  width: 1.4em;
-  height: 1.4em;
-  margin-right: 0.6rem;
-  background-color: #ffffff;
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2M7.5,13A2.5,2.5 0 0,0 5,15.5A2.5,2.5 0 0,0 7.5,18A2.5,2.5 0 0,0 10,15.5A2.5,2.5 0 0,0 7.5,13M16.5,13A2.5,2.5 0 0,0 14,15.5A2.5,2.5 0 0,0 16.5,18A2.5,2.5 0 0,0 19,15.5A2.5,2.5 0 0,0 16.5,13Z'/></svg>") no-repeat center / contain;
-          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2M7.5,13A2.5,2.5 0 0,0 5,15.5A2.5,2.5 0 0,0 7.5,18A2.5,2.5 0 0,0 10,15.5A2.5,2.5 0 0,0 7.5,13M16.5,13A2.5,2.5 0 0,0 14,15.5A2.5,2.5 0 0,0 16.5,18A2.5,2.5 0 0,0 19,15.5A2.5,2.5 0 0,0 16.5,13Z'/></svg>") no-repeat center / contain;
-  flex-shrink: 0;
-}
-
-.md-typeset .cta-bot:hover,
-.md-typeset .cta-bot:focus-visible {
-  background: #0a58ca;
-  box-shadow: 0 6px 20px rgba(9, 105, 218, 0.5);
-  transform: translateY(-2px);
-  color: #ffffff;
-  outline: none;
-}
-
-.md-typeset .cta-bot:focus-visible {
-  outline: 3px solid rgba(9, 105, 218, 0.45);
-  outline-offset: 3px;
+@media (max-width: 480px) {
+  .home-card {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+  }
+  .home-card__icon {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+  .home-card__icon--discord svg {
+    width: 24px;
+    height: 24px;
+  }
 }
