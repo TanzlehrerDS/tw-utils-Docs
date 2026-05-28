@@ -1593,7 +1593,45 @@
 </div>
 </div>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">¶</a></h2>
-<p>Häufige Fragen zu tw-utils folgen hier.</p>
+<details class="question">
+<summary>Wie verknüpfe ich meinen DS-Account?</summary>
+<p>Wechsle in eurem Stammes-Discord in den Kanal <code>#⚫-bot-config</code> und klicke auf <code>Account-Verification</code>. Der Bot führt dich durch den Wizard: Spielername eingeben, Code in dein Ingame-Profil eintragen, mit dem <code>Verify</code>-Button bestätigen.</p>
+<p>→ <a href="discord-bot/verifizierung/">Account-Verifizierung</a></p>
+</details>
+<details class="question">
+<summary>Wie melde ich Adelsgeschlechter, Abschickzeiten und wie plane ich Offs aus?</summary>
+<p>Dafür gibt es zwei Tools auf <a href="https://tw-utils.net">tw-utils.net</a>:</p>
+<ul>
+<li><strong>AG-Planungstool</strong> — für die Planung von Adelsgeschlechter-Angriffen. AGs werden gemeldet (über den Discord-Bot oder manuell), Zieldörfer hinzugefügt, und das Tool berechnet die Abschickzeiten.</li>
+<li><strong>Off-Planungstool</strong> — für die Planung von Off-Angriffen. Truppendaten importieren, Abschickzeiten definieren, das Tool generiert die Befehle mit korrekten Laufzeiten.</li>
+</ul>
+<p>→ <a href="ag-planner/tab1-ag-meldungen/">AG-Planungstool</a> · <a href="off-planner/tab1-daten/">Off-Planungstool</a></p>
+</details>
+<details class="question">
+<summary>Wie beantrage ich einen Bunker?</summary>
+<p>Wechsle in den Kanal <code>#⚫-request-bunker</code> und klicke auf den Button <code>Request Bunker</code>. Trage Koordinate(n), gewünschte Dual-Stärke und eine Begründung ein. Der Bot legt pro Koordinate einen Anfrage-Kanal an, in dem ein TWU-Mod genehmigt oder ablehnt.</p>
+<p>→ <a href="discord-bot/bunker-info/">Bunker-Information-System</a></p>
+</details>
+<details class="question">
+<summary>Wie beantrage ich eine Aufstockung für einen Bunker?</summary>
+<p>Im selben Kanal <code>#⚫-request-bunker</code> gibt es einen separaten Button <code>Request Top-Up</code>. Trage die Koordinate(n) des bereits bestehenden Bunkers und die <strong>zusätzliche</strong> Dual-Stärke ein. Der Bot erstellt einen Top-Up-Anfrage-Kanal pro Koordinate, in dem TWU-Mods die Aufstockung freigeben.</p>
+<p>→ <a href="discord-bot/bunker-info/">Bunker-Information-System</a></p>
+</details>
+<details class="question">
+<summary>Wie erhalte ich als Stammesführung Zugriff auf den Leader-View?</summary>
+<p>In zwei Schritten: (1) Verknüpfe deinen Tribalwars-Account im <code>#⚫-bot-config</code>-Kanal über <code>Account-Verification</code>. (2) Ein Discord-Admin vergibt dir Leader-Rechte über den Button <code>Manage Access to Leader-View</code> → <code>Grant Access</code>. Danach erscheint der Leader-View im Spieler-Popup ingame.</p>
+<p>→ <a href="leader-view/uebersicht/">Leader-View — Berechtigung</a></p>
+</details>
+<details class="question">
+<summary>Wieso kann ich einige Buttons des tw-utils Discordbots nicht benutzen, obwohl ich Administrator-Rechte auf dem Discordserver habe?</summary>
+<p>Discord-Administrator-Rechte sind nur für die initiale Bot-Einrichtung relevant. Für die laufende Verwaltung (Module aktivieren, Bunker-Anträge bearbeiten, Truppendaten hochladen) braucht es die Rolle <strong>TWU-Mod</strong> — eine separate Rolle, die der Bot beim Setup anlegt. Normale Mitglieder können ihrerseits eigenständig Bunker anfordern, Abschickzeiten melden usw.</p>
+<p>→ <a href="discord-bot/berechtigungskonzept/">Berechtigungskonzept</a></p>
+</details>
+<details class="question">
+<summary>Welches Format muss die hochgeladene Truppendatei haben?</summary>
+<p>Eine <strong>TXT- oder CSV-Datei</strong> mit kommagetrennten Werten. Sie wird am einfachsten über das Ingame-Schnellleisten-Skript „Download Tribe Info" erzeugt. Erwartet wird eine Header-Zeile (<code>Coords,Player,spear,sword,axe,…,snob</code>), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.</p>
+<p>→ <a href="leader-view/truppen/">Leader-View — Truppen</a></p>
+</details>
 
 
 
