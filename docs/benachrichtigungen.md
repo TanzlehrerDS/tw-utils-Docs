@@ -21,11 +21,11 @@ Sobald die Verknüpfung steht, sind alle Einstellungen aus den folgenden Abschni
 
 Klicke oben rechts auf deinen Benutzer-Namen und wähle im Dropdown den Eintrag `Benachrichtigungen`.
 
-![Benutzer-Dropdown mit Eintrag Benachrichtigungen](../assets/notifications/01_website_profile-notification.png){ .screenshot }
+![Benutzer-Dropdown mit Eintrag Benachrichtigungen](assets/notifications/01_website_profile-notification.png){ .screenshot }
 
 Du landest auf der Seite `Benachrichtigungen` mit zwei Karten: `Globale Einstellungen` und `Server-Übersicht`.
 
-![Notifications-Seite mit Globale Einstellungen und Server-Übersicht](../assets/notifications/02_website_profile-notification_settingsbutton.png){ .screenshot }
+![Notifications-Seite mit Globale Einstellungen und Server-Übersicht](assets/notifications/02_website_profile-notification_settingsbutton.png){ .screenshot }
 
 ### 2.2 Globale Einstellungen
 
@@ -37,7 +37,7 @@ Die Karte `Globale Einstellungen` steuert pro Reminder-Typ, ob du diese Art von 
 
 Sobald du den Toggle aktivierst, klappen zwei Zusatzfelder auf, mit denen du den Reminder feinjustieren kannst.
 
-![Abschick-Reminder mit Vorlaufzeit und Cooldown](../assets/notifications/03_website_profile-notification_launchtimereminder.png){ .screenshot }
+![Abschick-Reminder mit Vorlaufzeit und Cooldown](assets/notifications/03_website_profile-notification_launchtimereminder.png){ .screenshot }
 
 - **`Vorlaufzeit (Min)`** — Definiert wie viele Minuten vor der Abschickzeit eines Befehls die Erinnerung an dich gesendet wird.
     *Wertebereich: 1–15 Minuten. Default: 5 Minuten.*
@@ -51,23 +51,23 @@ Sobald du den Toggle aktivierst, klappen zwei Zusatzfelder auf, mit denen du den
 
 > *Discord-DM 15 Minuten vor Beginn deines Sitting-Slots.*
 
-![UV-Slot-Reminder Toggle](../assets/notifications/04_website_profile-notification_sittingslotreminder.png){ .screenshot }
+![UV-Slot-Reminder Toggle](assets/notifications/04_website_profile-notification_sittingslotreminder.png){ .screenshot }
 
-Diese Erinnerung gehört zum [Account-Sitting-System](sitting-system.md) und feuert 15 Minuten vor Beginn eines Sitting-Slots, den du übernommen hast. Die Vorlaufzeit ist fix und nicht einstellbar.
+Diese Erinnerung gehört zum [Account-Sitting-System](discord-bot/sitting-system.md) und feuert 15 Minuten vor Beginn eines Sitting-Slots, den du übernommen hast. Die Vorlaufzeit ist fix und nicht einstellbar.
 
 #### Bunker-Info-System
 
 > *Discord-DM bei Annahme/Ablehnung deiner Bunker-Anträge (für Antragsteller und Admins).*
 
-![Bunker-Info-System Toggle](../assets/notifications/05_website_profile-notification_bunkerinforeminder.png){ .screenshot }
+![Bunker-Info-System Toggle](assets/notifications/05_website_profile-notification_bunkerinforeminder.png){ .screenshot }
 
-Diese Erinnerung gehört zum [Bunker-Information-System](bunker-info.md). Du bekommst eine DM, sobald ein Admin deinen Bunker- oder Top-Up-Antrag annimmt oder ablehnt. Auch Admins können die DM für ihre eigenen bearbeiteten Anträge aktivieren.
+Diese Erinnerung gehört zum [Bunker-Information-System](discord-bot/bunker-info.md). Du bekommst eine DM, sobald ein Admin deinen Bunker- oder Top-Up-Antrag annimmt oder ablehnt. Auch Admins können die DM für ihre eigenen bearbeiteten Anträge aktivieren.
 
 ### 2.3 Server-Übersicht
 
 Die Karte `Server-Übersicht` listet alle Discord-Server, in denen du in einer für tw-utils relevanten Guild Mitglied bist. Pro Server kannst du DMs aus diesem Server komplett unterdrücken — unabhängig davon, welche der drei Reminder-Typen oben aktiv sind.
 
-![Server-Übersicht mit Aktiv- und Stumm-Pills](../assets/notifications/06_website_profile-notification_discordservermute.png){ .screenshot }
+![Server-Übersicht mit Aktiv- und Stumm-Pills](assets/notifications/06_website_profile-notification_discordservermute.png){ .screenshot }
 
 - **`Aktiv`** (grüne Pill, Toggle an) — DMs aus diesem Server werden zugestellt.
 - **`Stumm`** (rote Pill, Toggle aus) — DMs aus diesem Server werden komplett unterdrückt.
@@ -86,19 +86,16 @@ Wer keinen Account auf tw-utils.net hat, kann pro Discord-Server trotzdem grob s
 
 Im `bot-config`-Channel (oder dem Channel, in dem die Bot-Setup-Buttons liegen) gibt es eine Schalter-Leiste. Dort findest du den Button `Notifications`.
 
-![Notifications-Button im bot-config-Channel](../assets/notifications/07_discordbot_notifications_button.png){ .screenshot }
+![Notifications-Button im bot-config-Channel](assets/notifications/07_discordbot_notifications_button.png){ .screenshot }
 
 ### 3.2 Notifications: ON / OFF
 
 Ein Klick auf `Notifications` postet ein Embed mit zwei farbigen Buttons.
 
-![Notifications-Embed mit ON- und OFF-Button](../assets/notifications/08_discordbot_notifications_button_menu.png){ .screenshot }
+![Notifications-Embed mit ON- und OFF-Button](assets/notifications/08_discordbot_notifications_button_menu.png){ .screenshot }
 
 - **`Notifications: ON`** (grün) — aktiviert DMs für diesen Discord-Server. Beim allerersten Klick werden zusätzlich die drei Reminder-Typen (`Abschick-Reminder`, `UV-Slot-Reminder`, `Bunker-Info-System`) mit ihren Default-Werten aktiviert, damit überhaupt etwas verschickt wird. Hattest du die Typen vorher schon individuell auf der Website konfiguriert, bleiben deine Werte erhalten.
 - **`Notifications: OFF`** (rot) — schaltet diesen Server auf stumm. Die globalen Reminder-Typ-Einstellungen werden dabei nicht angefasst, du bekommst aus diesem Server schlicht keine DMs mehr.
-
-!!! info "Bot-Embed ist auf Englisch"
-    Die Texte des Notifications-Embeds (`Use the two buttons below to enable or disable notifications from this Discord server.`) sowie die Button-Beschriftungen `Notifications: ON` und `Notifications: OFF` sind im Bot-Code fest auf Englisch hinterlegt und werden nicht übersetzt.
 
 !!! info "Mehr Kontrolle? Account auf tw-utils.net anlegen"
     Wer einzelne Reminder-Typen abschalten oder die Vorlaufzeit/den Cooldown des Abschick-Reminders anpassen möchte, legt sich am besten einen Account auf [tw-utils.net](https://tw-utils.net) an und verknüpft seinen Discord. Der Discord-Button bleibt dann weiterhin funktional und steuert dieselbe Server-Einstellung.

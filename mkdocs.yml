@@ -119,7 +119,7 @@ nav:
           - Bunker-Information-System: discord-bot/bunker-info.md
           - Off/Deff/Snob-Search-System: discord-bot/search-system.md
           - Planning-System: discord-bot/planning-system.md
-      - Benachrichtigungen: discord-bot/benachrichtigungen.md
+  - Benachrichtigungen: benachrichtigungen.md
 
 markdown_extensions:
   - admonition
