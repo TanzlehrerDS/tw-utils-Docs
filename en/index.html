@@ -1571,7 +1571,7 @@
 <p>Welcome to the documentation of <strong>tw-utils</strong>.</p>
 <div class="home-cards">
 <div class="home-card">
-<div class="home-card__icon"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/logo.png" data-title="tw-utils Logo" data-desc-position="bottom"><img src="assets/logo.png" alt="tw-utils Logo"></a></div>
+<div class="home-card__icon"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/assets/logo.png" data-title="tw-utils Logo" data-desc-position="bottom"><img src="/assets/logo.png" alt="tw-utils Logo"></a></div>
 <div class="home-card__body">
 <h3 id="tw-utils-discord-bot">tw-utils Discord Bot<a class="headerlink" href="#tw-utils-discord-bot" title="Permanent link">¶</a></h3>
 <p>Useful tools for your tribe Discord.</p>
@@ -1593,7 +1593,47 @@
 </div>
 </div>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">¶</a></h2>
-<p>Frequently asked questions about tw-utils will follow here.</p>
+<details class="question">
+<summary>How do I link my Tribal Wars account?</summary>
+<p>In your tribe Discord, switch to the <code>#⚫-bot-config</code> channel and click <code>Account-Verification</code>. The bot walks you through the wizard: enter your player name, paste the generated code into your in-game profile, confirm with the <code>Verify</code> button.</p>
+<p>→ <a href="discord-bot/verifizierung/">Account-Verification</a></p>
+</details>
+<details class="question">
+<summary>How do I report snobs, launch times, and exclude villages from nuke planning?</summary>
+<p>Via the tw-utils Discord bot in the <code>#⚫-queries</code> channel of your tribe Discord. Three buttons are available:</p>
+<ul>
+<li><code>Snob Report</code> — report snobs</li>
+<li><code>Launch Times</code> — enter your own launch time windows</li>
+<li><code>Off-Exclusion</code> — exclude source villages that the nuke planner should not use</li>
+</ul>
+<p>Each button opens a sub-menu with <code>Add</code> / <code>Show</code> / <code>Delete</code>.</p>
+<p>→ <a href="discord-bot/planning-system/">Planning-System</a></p>
+</details>
+<details class="question">
+<summary>How do I request a bunker?</summary>
+<p>Switch to the <code>#⚫-request-bunker</code> channel and click the <code>Request Bunker</code> button. Enter the coordinate(s), the desired dual strength, and a justification. The bot creates a per-coordinate request channel where a TWU-Mod approves or rejects.</p>
+<p>→ <a href="discord-bot/bunker-info/">Bunker-Information-System</a></p>
+</details>
+<details class="question">
+<summary>How do I request a top-up for a bunker?</summary>
+<p>In the same <code>#⚫-request-bunker</code> channel there is a separate <code>Request Top-Up</code> button. Enter the coordinate(s) of the existing bunker and the <strong>additional</strong> dual strength. The bot creates a per-coordinate top-up request channel where TWU-Mods approve the top-up.</p>
+<p>→ <a href="discord-bot/bunker-info/">Bunker-Information-System</a></p>
+</details>
+<details class="question">
+<summary>How do I get Leader-View access as tribe leadership?</summary>
+<p>In two steps: (1) Link your Tribal Wars account in the <code>#⚫-bot-config</code> channel via <code>Account-Verification</code>. (2) A Discord admin grants you Leader rights via the <code>Manage Access to Leader-View</code> button → <code>Grant Access</code>. Afterwards you have access to the Leader-View on <a href="https://tw-utils.net">tw-utils.net</a>.</p>
+<p>→ <a href="leader-view/uebersicht/">Leader-View — Permission</a></p>
+</details>
+<details class="question">
+<summary>Why can't I use some buttons of the tw-utils Discord bot even though I have administrator rights on the Discord server?</summary>
+<p>Discord administrator rights are only relevant for the initial bot setup. For ongoing management (activating modules, processing bunker requests, uploading troop data), you need the <strong>TWU-Mod</strong> role — a separate Discord role that your server admin assigns manually.</p>
+<p>→ <a href="discord-bot/berechtigungskonzept/">Permission Concept</a></p>
+</details>
+<details class="question">
+<summary>What format does the uploaded troops file need to have?</summary>
+<p>A <strong>TXT or CSV file</strong> with comma-separated values. It is most easily generated via the in-game quickbar script <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">"Download Tribe Info"</a>. The file must start with a header row (<code>Coords,Player,spear,sword,axe,…,snob</code>), followed by one row per village with coordinates and troop counts.</p>
+<p>→ <a href="leader-view/truppen/">Leader-View — Troops</a></p>
+</details>
 
 
 
