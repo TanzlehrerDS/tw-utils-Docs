@@ -394,11 +394,11 @@
   object-fit: cover;
   display: block;
 }
-.home-card__icon--discord {
-  background: #5865f2;
+.home-card__icon--community {
+  background: #0969da;
   color: #ffffff;
 }
-.home-card__icon--discord svg {
+.home-card__icon--community svg {
   width: 30px;
   height: 30px;
   fill: currentColor;
@@ -455,7 +455,7 @@
     width: 40px;
     height: 40px;
   }
-  .home-card__icon--discord svg {
+  .home-card__icon--community svg {
     width: 22px;
     height: 22px;
   }
