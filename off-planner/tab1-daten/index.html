@@ -526,10 +526,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#typ-2-spielerindividuelle-abschickfenster" class="md-nav__link">
+  <a href="#typ-2-aus-discord-server-importieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Typ 2: Spielerindividuelle Abschickfenster
+        Typ 2: Aus Discord-Server importieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typ-3-spielerindividuelle-abschickfenster-per-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typ 3: Spielerindividuelle Abschickfenster (per Upload)
       
     </span>
   </a>
@@ -1690,10 +1701,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#typ-2-spielerindividuelle-abschickfenster" class="md-nav__link">
+  <a href="#typ-2-aus-discord-server-importieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Typ 2: Spielerindividuelle Abschickfenster
+        Typ 2: Aus Discord-Server importieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typ-3-spielerindividuelle-abschickfenster-per-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typ 3: Spielerindividuelle Abschickfenster (per Upload)
       
     </span>
   </a>
@@ -1809,17 +1831,50 @@ ausgeschlossen.</p>
 <h2 id="3-abschickzeiten-festlegen">3. Abschickzeiten festlegen<a class="headerlink" href="#3-abschickzeiten-festlegen" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_03_launch_times.png" data-title="Abschickzeiten" data-desc-position="bottom"><img alt="Abschickzeiten" class="screenshot" src="../../assets/nuke-planning-tool/tab1_03_launch_times.png"></a></p>
 <p>Im Bereich <strong>„Abschickzeiten"</strong> legst du fest, in welchen Zeitfenstern die
-Befehle abgeschickt werden sollen. Es gibt zwei Arten von Abschickzeiten.</p>
+Befehle abgeschickt werden sollen. Es gibt drei Wege, Abschickzeiten zu
+definieren.</p>
 <h3 id="typ-1-standard-abschickfenster">Typ 1: Standard-Abschickfenster<a class="headerlink" href="#typ-1-standard-abschickfenster" title="Permanent link">¶</a></h3>
 <p>Im Bereich <strong>„Standard-Abschickfenster"</strong> gibst du Datum, Startzeit und
 Endzeit ein und fügst das Fenster über <strong>„Hinzufügen"</strong> hinzu. Du kannst
 mehrere Fenster nacheinander anlegen. Diese Standard-Fenster gelten für
 alle Spieler, für die keine individuellen Zeiten hinterlegt sind.</p>
-<h3 id="typ-2-spielerindividuelle-abschickfenster">Typ 2: Spielerindividuelle Abschickfenster<a class="headerlink" href="#typ-2-spielerindividuelle-abschickfenster" title="Permanent link">¶</a></h3>
-<p>Im Bereich <strong>„Spielerindividuelle Abschickzeiten (per Upload)"</strong> kannst du
-individuelle Abschickzeiten pro Spieler hochladen. Die Spieler geben dir
-dazu ihre persönlichen Zeiten, die du anschließend als strukturierte Datei
-(.csv oder .txt) in das Tool lädst.</p>
+<h3 id="typ-2-aus-discord-server-importieren">Typ 2: Aus Discord-Server importieren<a class="headerlink" href="#typ-2-aus-discord-server-importieren" title="Permanent link">¶</a></h3>
+<p>Im Bereich <strong>„Aus Discord-Server importieren"</strong> kannst du die von deinen
+Stammesmitgliedern bereits auf dem tw-utils-Discordbot gemeldeten
+Abschickzeiten direkt in den Off-Planner übernehmen — ohne Umweg über
+Export-Dateien.</p>
+<p><strong>Voraussetzung:</strong> Du musst auf mindestens einem Discord-Server die Rolle
+<code>Leader</code> besitzen, und dieser Server muss auf die aktuell in tw-utils
+ausgewählte Welt konfiguriert sein. Ist das nicht der Fall, ist der
+Bereich zwar sichtbar, zeigt aber den Hinweis „Du hast keinen
+Discord-Server mit Leader-Status für diese Welt." und der Button bleibt
+deaktiviert.</p>
+<p><strong>Bedienung:</strong> Über die Checkbox-Liste wählst du einen oder mehrere
+deiner Leader-Server aus. Per Klick auf <strong>„Importieren"</strong> zieht der
+Off-Planner alle dort gemeldeten zukünftigen Zeitfenster und ordnet sie
+den jeweiligen Spielern zu. Bereits hinterlegte individuelle Zeiten für
+betroffene Spieler — egal ob aus früherem TXT-Upload oder vorigem
+Discord-Import — werden dabei pro Spieler komplett überschrieben.
+Spieler, für die in keinem der ausgewählten Server eine Meldung
+vorliegt, behalten ihre bisherigen Zeiten.</p>
+<p>Wie deine Stammesmitglieder ihre Abschickzeiten über den Discord-Bot
+melden, ist hier beschrieben:
+<a href="../../discord-bot/planning-system/#3-abschickzeiten">Discord-Bot · Planning-System · Abschickzeiten</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Wenn ein Spieler in mehreren Discord-Servern gemeldet hat</p>
+<p>Sollte ein Spieler in mehreren ausgewählten Servern gleichzeitig
+Zeiten gemeldet haben, gewinnt pro Spieler die Guild mit der
+<strong>jüngsten</strong> Meldung — von dort werden dann alle seine Fenster
+übernommen, Meldungen aus den anderen Servern für denselben Spieler
+werden verworfen. In der Praxis ist dieser Konfliktfall selten,
+weil Spieler typischerweise nur in einer Guild aktiv ihre Zeiten
+pflegen.</p>
+</div>
+<h3 id="typ-3-spielerindividuelle-abschickfenster-per-upload">Typ 3: Spielerindividuelle Abschickfenster (per Upload)<a class="headerlink" href="#typ-3-spielerindividuelle-abschickfenster-per-upload" title="Permanent link">¶</a></h3>
+<p>Im Bereich <strong>„Individuelle Zeiten (Upload)"</strong> kannst du individuelle
+Abschickzeiten pro Spieler hochladen. Die Spieler geben dir dazu ihre
+persönlichen Zeiten, die du anschließend als strukturierte Datei (.csv
+oder .txt) in das Tool lädst.</p>
 <p>Erwartetes Format der Datei:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Testuser A,10.05.2026,10:00:00,10.05.2026,10:07:00
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Testuser A,10.05.2026,12:00:00,10.05.2026,12:15:00
@@ -1831,18 +1886,20 @@ dazu ihre persönlichen Zeiten, die du anschließend als strukturierte Datei
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Testuser C,10.05.2026,21:00:00,10.05.2026,21:15:00
 </code></pre></div>
 <div class="admonition info">
-<p class="admonition-title">Spielerindividuelle Zeiten über den tw-utils-Discordbot sammeln</p>
-<p>Das Sammeln der spielerindividuellen Abschickzeiten kann auch
-komfortabel über den tw-utils-Discordbot erfolgen. Die abgegebenen
-Zeiten lassen sich anschließend exportieren und direkt in das Tool
-hochladen.</p>
-</div>
-<div class="admonition info">
 <p class="admonition-title">Standard- vs. individuelle Abschickfenster</p>
 <p>Standard-Abschickfenster und individuelle Abschickfenster schließen
 sich gegenseitig aus. Sind für einen Spieler individuelle Zeiten
-hinterlegt, werden ausschließlich diese verwendet — die
-Standard-Fenster gelten für diesen Spieler dann nicht.</p>
+hinterlegt — egal ob über Discord-Import oder TXT-Upload — werden
+ausschließlich diese verwendet. Die Standard-Fenster gelten für
+diesen Spieler dann nicht.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Alle individuellen Zeiten löschen</p>
+<p>Am Ende des Bereichs <strong>„Abschickzeiten"</strong> findest du den Button
+<strong>„Alle individuellen Zeiten löschen"</strong>. Über ihn entfernst du in
+einem Schritt alle individuellen Zeitfenster, unabhängig davon, ob
+sie aus einem TXT-Upload oder einem Discord-Import stammen. Die
+Standard-Abschickfenster bleiben dabei unberührt.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Liste ansehen</p>

@@ -526,10 +526,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#type-2-player-individual-launch-time-windows" class="md-nav__link">
+  <a href="#type-2-import-from-a-discord-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Type 2: Player-individual launch time windows
+        Type 2: Import from a Discord server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-3-player-individual-launch-time-windows-via-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type 3: Player-individual launch time windows (via upload)
       
     </span>
   </a>
@@ -1690,10 +1701,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#type-2-player-individual-launch-time-windows" class="md-nav__link">
+  <a href="#type-2-import-from-a-discord-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Type 2: Player-individual launch time windows
+        Type 2: Import from a Discord server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-3-player-individual-launch-time-windows-via-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type 3: Player-individual launch time windows (via upload)
       
     </span>
   </a>
@@ -1808,17 +1830,47 @@ these villages are completely excluded from the planning.</p>
 <h2 id="3-set-launch-times">3. Set launch times<a class="headerlink" href="#3-set-launch-times" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab1_03_launch_times.png" data-title="Launch times" data-desc-position="bottom"><img alt="Launch times" class="screenshot" src="../../../assets/nuke-planning-tool/tab1_03_launch_times.png"></a></p>
 <p>In the <strong>"Launch times"</strong> section you define the time windows in which
-commands should be launched. There are two types of launch times.</p>
+commands should be launched. There are three ways to define launch times.</p>
 <h3 id="type-1-standard-launch-time-windows">Type 1: Standard launch time windows<a class="headerlink" href="#type-1-standard-launch-time-windows" title="Permanent link">¶</a></h3>
 <p>In the <strong>"Standard launch time windows"</strong> area you enter date, start time
 and end time and add the window via <strong>"Add"</strong>. You can create several
 windows in a row. These standard windows apply to all players for whom no
 individual times are defined.</p>
-<h3 id="type-2-player-individual-launch-time-windows">Type 2: Player-individual launch time windows<a class="headerlink" href="#type-2-player-individual-launch-time-windows" title="Permanent link">¶</a></h3>
-<p>In the <strong>"Player-individual launch times (via Upload)"</strong> area you can
-upload individual launch times per player. The players provide you with
-their personal times, which you then load into the tool as a structured
-file (.csv or .txt).</p>
+<h3 id="type-2-import-from-a-discord-server">Type 2: Import from a Discord server<a class="headerlink" href="#type-2-import-from-a-discord-server" title="Permanent link">¶</a></h3>
+<p>In the <strong>"Import from Discord server"</strong> area you can pull the launch
+times that members of your tribe have already submitted via the tw-utils
+Discord bot directly into the Off-Planner — without the detour through
+export files.</p>
+<p><strong>Prerequisite:</strong> You must have the <code>Leader</code> role on at least one Discord
+server, and that server must be configured for the world currently
+selected in tw-utils. If that is not the case, the area remains visible
+but shows the hint "You have no Discord server with Leader status for
+this world." and the button stays disabled.</p>
+<p><strong>Usage:</strong> From the checkbox list select one or more of your Leader
+servers. Clicking <strong>"Import"</strong> makes the Off-Planner pull all
+future-dated launch time windows reported there and assign them to the
+respective players. Any existing individual times for the affected
+players — regardless of whether they originated from a previous TXT
+upload or a previous Discord import — are overwritten completely on a
+per-player basis. Players for whom none of the selected servers contains
+a report keep their existing times.</p>
+<p>How your tribe members submit their launch times via the Discord bot is
+described here:
+<a href="../../discord-bot/planning-system/#3-launch-times">Discord bot · Planning System · Launch times</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">When a player has reported on multiple Discord servers</p>
+<p>If a player has submitted times on more than one of the selected
+servers, the guild with the <strong>most recent</strong> report wins for that
+player — all of their windows from that guild are imported, while
+reports from the other servers for the same player are discarded.
+In practice this conflict case is rare, since players usually
+maintain their times on a single guild only.</p>
+</div>
+<h3 id="type-3-player-individual-launch-time-windows-via-upload">Type 3: Player-individual launch time windows (via upload)<a class="headerlink" href="#type-3-player-individual-launch-time-windows-via-upload" title="Permanent link">¶</a></h3>
+<p>In the <strong>"Individual times (upload)"</strong> area you can upload individual
+launch times per player. The players provide you with their personal
+times, which you then load into the tool as a structured file (.csv or
+.txt).</p>
 <p>Expected file format:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Testuser A,10.05.2026,10:00:00,10.05.2026,10:07:00
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Testuser A,10.05.2026,12:00:00,10.05.2026,12:15:00
@@ -1830,17 +1882,19 @@ file (.csv or .txt).</p>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Testuser C,10.05.2026,21:00:00,10.05.2026,21:15:00
 </code></pre></div>
 <div class="admonition info">
-<p class="admonition-title">Collect player-individual times via the tw-utils Discord bot</p>
-<p>Collecting the player-individual launch times can also be done
-conveniently via the tw-utils Discord bot. The submitted times can
-then be exported and uploaded directly into the tool.</p>
-</div>
-<div class="admonition info">
 <p class="admonition-title">Standard vs. individual launch windows</p>
 <p>Standard launch windows and individual launch windows are mutually
-exclusive. If individual times are defined for a player, only those
-times are used — the standard windows then do not apply to that
-player.</p>
+exclusive. If individual times are defined for a player — whether
+from a Discord import or from a TXT upload — only those times are
+used. The standard windows then do not apply to that player.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Delete all individual times</p>
+<p>At the end of the <strong>"Launch times"</strong> section you find the button
+<strong>"Delete all individual times"</strong>. It removes all individual time
+windows in one step, regardless of whether they originated from a
+TXT upload or from a Discord import. The standard launch windows
+remain untouched.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">View entries</p>
