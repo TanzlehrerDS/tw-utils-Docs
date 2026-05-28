@@ -7,7 +7,7 @@ Es gibt zwei Wege, diese Einstellungen zu pflegen:
 1. **Mit Account auf [tw-utils.net](https://tw-utils.net)** — granular pro Reminder-Typ und pro Server, inklusive Vorlaufzeit und Cooldown.
 2. **Ohne Website-Account** — einfacher Komplett-Schalter `Notifications: ON / OFF` pro Server direkt über den Discord-Bot.
 
-## 1. Voraussetzung: Discord-Account verknüpft
+## 1. Voraussetzung
 
 Benachrichtigungen werden ausschließlich als Discord-Direktnachricht zugestellt. Wer keinen Discord-Account mit seinem tw-utils-Profil verknüpft hat, sieht auf der Notifications-Seite den Hinweis:
 
@@ -15,9 +15,7 @@ Benachrichtigungen werden ausschließlich als Discord-Direktnachricht zugestellt
 
 Sobald die Verknüpfung steht, sind alle Einstellungen aus den folgenden Abschnitten verfügbar.
 
-## 2. Einstellungen für User mit Website-Account
-
-### 2.1 Wo finde ich die Einstellungen?
+## 2. Einstellungen über Website-Account
 
 Klicke oben rechts auf deinen Benutzer-Namen und wähle im Dropdown den Eintrag `Benachrichtigungen`.
 
@@ -27,7 +25,7 @@ Du landest auf der Seite `Benachrichtigungen` mit zwei Karten: `Globale Einstell
 
 ![Notifications-Seite mit Globale Einstellungen und Server-Übersicht](assets/notifications/02_website_profile-notification_settingsbutton.png){ .screenshot }
 
-### 2.2 Globale Einstellungen
+### 2.1 Globale Einstellungen
 
 Die Karte `Globale Einstellungen` steuert pro Reminder-Typ, ob du diese Art von DM überhaupt bekommen möchtest. Es gibt drei Typen.
 
@@ -63,7 +61,7 @@ Diese Erinnerung gehört zum [Account-Sitting-System](discord-bot/sitting-system
 
 Diese Erinnerung gehört zum [Bunker-Information-System](discord-bot/bunker-info.md). Du bekommst eine DM, sobald ein Admin deinen Bunker- oder Top-Up-Antrag annimmt oder ablehnt. Auch Admins können die DM für ihre eigenen bearbeiteten Anträge aktivieren.
 
-### 2.3 Server-Übersicht
+### 2.2 Server-Übersicht
 
 Die Karte `Server-Übersicht` listet alle Discord-Server, in denen du in einer für tw-utils relevanten Guild Mitglied bist. Pro Server kannst du DMs aus diesem Server komplett unterdrücken — unabhängig davon, welche der drei Reminder-Typen oben aktiv sind.
 
@@ -78,7 +76,7 @@ Falls die Liste leer ist, zeigt die Karte den Hinweis:
 
 > Keine Server zur Anzeige. Sobald du in einer Guild verknüpft bist oder einen Server-Schalter setzt, erscheint diese Liste hier.
 
-## 3. Einstellungen für User ohne Website-Account
+## 3. Einstellungen über Discordbot
 
 Wer keinen Account auf tw-utils.net hat, kann pro Discord-Server trotzdem grob steuern, ob er DMs vom Bot bekommen möchte — über einen Button im Bot-Setup-Channel.
 
