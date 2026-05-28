@@ -37,12 +37,15 @@ Fragen, Feedback und Austausch rund um tw-utils.
     → [Account-Verifizierung](discord-bot/verifizierung.md)
 
 ??? question "Wie melde ich Adelsgeschlechter, Abschickzeiten und wie plane ich Offs aus?"
-    Dafür gibt es zwei Tools auf [tw-utils.net](https://tw-utils.net):
+    Über den tw-utils Discordbot im Kanal `#⚫-queries` deines Stammes-Discords. Dort gibt es drei Buttons:
 
-    - **AG-Planungstool** — für die Planung von Adelsgeschlechter-Angriffen. AGs werden gemeldet (über den Discord-Bot oder manuell), Zieldörfer hinzugefügt, und das Tool berechnet die Abschickzeiten.
-    - **Off-Planungstool** — für die Planung von Off-Angriffen. Truppendaten importieren, Abschickzeiten definieren, das Tool generiert die Befehle mit korrekten Laufzeiten.
+    - `Snob Report` — Adelsgeschlechter melden
+    - `Launch Times` — eigene Abschickzeitfenster eintragen
+    - `Off-Exclusion` — Herkunftsdörfer ausschließen, die der Off-Planer nicht nutzen soll
 
-    → [AG-Planungstool](ag-planner/tab1-ag-meldungen.md) · [Off-Planungstool](off-planner/tab1-daten.md)
+    Jeder Button hat ein Sub-Menü mit `Add` / `Show` / `Delete`.
+
+    → [Planning-System](discord-bot/planning-system.md)
 
 ??? question "Wie beantrage ich einen Bunker?"
     Wechsle in den Kanal `#⚫-request-bunker` und klicke auf den Button `Request Bunker`. Trage Koordinate(n), gewünschte Dual-Stärke und eine Begründung ein. Der Bot legt pro Koordinate einen Anfrage-Kanal an, in dem ein TWU-Mod genehmigt oder ablehnt.
@@ -55,16 +58,16 @@ Fragen, Feedback und Austausch rund um tw-utils.
     → [Bunker-Information-System](discord-bot/bunker-info.md)
 
 ??? question "Wie erhalte ich als Stammesführung Zugriff auf den Leader-View?"
-    In zwei Schritten: (1) Verknüpfe deinen Tribalwars-Account im `#⚫-bot-config`-Kanal über `Account-Verification`. (2) Ein Discord-Admin vergibt dir Leader-Rechte über den Button `Manage Access to Leader-View` → `Grant Access`. Danach erscheint der Leader-View im Spieler-Popup ingame.
+    In zwei Schritten: (1) Verknüpfe deinen Tribalwars-Account im `#⚫-bot-config`-Kanal über `Account-Verification`. (2) Ein Discord-Admin vergibt dir Leader-Rechte über den Button `Manage Access to Leader-View` → `Grant Access`. Danach hast du auf [tw-utils.net](https://tw-utils.net) Zugriff auf den Leader-View.
 
     → [Leader-View — Berechtigung](leader-view/uebersicht.md)
 
 ??? question "Wieso kann ich einige Buttons des tw-utils Discordbots nicht benutzen, obwohl ich Administrator-Rechte auf dem Discordserver habe?"
-    Discord-Administrator-Rechte sind nur für die initiale Bot-Einrichtung relevant. Für die laufende Verwaltung (Module aktivieren, Bunker-Anträge bearbeiten, Truppendaten hochladen) braucht es die Rolle **TWU-Mod** — eine separate Rolle, die der Bot beim Setup anlegt. Normale Mitglieder können ihrerseits eigenständig Bunker anfordern, Abschickzeiten melden usw.
+    Discord-Administrator-Rechte sind nur für die initiale Bot-Einrichtung relevant. Für die laufende Verwaltung (Module aktivieren, Bunker-Anträge bearbeiten, Truppendaten hochladen) braucht es die Rolle **TWU-Mod** — eine separate Discord-Rolle, die euer Server-Admin manuell vergibt.
 
     → [Berechtigungskonzept](discord-bot/berechtigungskonzept.md)
 
 ??? question "Welches Format muss die hochgeladene Truppendatei haben?"
-    Eine **TXT- oder CSV-Datei** mit kommagetrennten Werten. Sie wird am einfachsten über das Ingame-Schnellleisten-Skript „Download Tribe Info" erzeugt. Erwartet wird eine Header-Zeile (`Coords,Player,spear,sword,axe,…,snob`), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.
+    Eine **TXT- oder CSV-Datei** mit kommagetrennten Werten. Sie wird am einfachsten über das Ingame-Schnellleisten-Skript [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/) erzeugt. Erwartet wird eine Header-Zeile (`Coords,Player,spear,sword,axe,…,snob`), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.
 
     → [Leader-View — Truppen](leader-view/truppen.md)
