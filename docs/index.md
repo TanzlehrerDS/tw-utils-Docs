@@ -1,8 +1,5 @@
 # tw-utils Doku
 
-!!! warning "Doku im Aufbau"
-    Diese Dokumentation befindet sich noch im Aufbau. Inhalte werden laufend ergänzt.
-
 Willkommen zur Dokumentation von **tw-utils**.
 
 <div class="home-cards" markdown>
@@ -11,7 +8,7 @@ Willkommen zur Dokumentation von **tw-utils**.
 <div class="home-card__icon"><img src="assets/logo.png" alt="tw-utils Logo"></div>
 <div class="home-card__body" markdown>
 ### tw-utils Discordbot
-Bunker-Info, Account-Sitting, Reminder & mehr für euren Stammes-Discord.
+Nützliche Tools für euren Stammes-Discord.
 <p class="home-card__actions" markdown>
 [Bot einladen](https://discord.com/oauth2/authorize?client_id=1457061148980547715&permissions=8&integration_type=0&scope=bot+applications.commands){ target=_blank rel=noopener }
 [Quick-Setup-Guide](discord-bot/quick-setup.md)
@@ -31,3 +28,7 @@ Fragen, Feedback und Austausch rund um tw-utils.
 </div>
 
 </div>
+
+## FAQ
+
+Häufige Fragen zu tw-utils folgen hier.

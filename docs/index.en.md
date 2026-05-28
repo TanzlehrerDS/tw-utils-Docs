@@ -1,8 +1,5 @@
 # tw-utils Documentation
 
-!!! warning "Documentation under construction"
-    This documentation is still under construction. Content is being added continuously.
-
 Welcome to the documentation of **tw-utils**.
 
 <div class="home-cards" markdown>
@@ -11,7 +8,7 @@ Welcome to the documentation of **tw-utils**.
 <div class="home-card__icon"><img src="assets/logo.png" alt="tw-utils Logo"></div>
 <div class="home-card__body" markdown>
 ### tw-utils Discord Bot
-Bunker info, account sitting, reminders & more for your tribe Discord.
+Useful tools for your tribe Discord.
 <p class="home-card__actions" markdown>
 [Invite Bot](https://discord.com/oauth2/authorize?client_id=1457061148980547715&permissions=8&integration_type=0&scope=bot+applications.commands){ target=_blank rel=noopener }
 [Quick-Setup-Guide](discord-bot/quick-setup.md)
@@ -31,3 +28,7 @@ Questions, feedback and chat around tw-utils.
 </div>
 
 </div>
+
+## FAQ
+
+Frequently asked questions about tw-utils will follow here.
