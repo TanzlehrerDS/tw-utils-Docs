@@ -61,7 +61,8 @@ jederzeit einsehen und verwalten.
 ![Abschickzeiten](../assets/nuke-planning-tool/tab1_03_launch_times.png){ .screenshot }
 
 Im Bereich **„Abschickzeiten"** legst du fest, in welchen Zeitfenstern die
-Befehle abgeschickt werden sollen. Es gibt zwei Arten von Abschickzeiten.
+Befehle abgeschickt werden sollen. Es gibt drei Wege, Abschickzeiten zu
+definieren.
 
 ### Typ 1: Standard-Abschickfenster
 
@@ -70,12 +71,48 @@ Endzeit ein und fügst das Fenster über **„Hinzufügen"** hinzu. Du kannst
 mehrere Fenster nacheinander anlegen. Diese Standard-Fenster gelten für
 alle Spieler, für die keine individuellen Zeiten hinterlegt sind.
 
-### Typ 2: Spielerindividuelle Abschickfenster
+### Typ 2: Aus Discord-Server importieren
 
-Im Bereich **„Spielerindividuelle Abschickzeiten (per Upload)"** kannst du
-individuelle Abschickzeiten pro Spieler hochladen. Die Spieler geben dir
-dazu ihre persönlichen Zeiten, die du anschließend als strukturierte Datei
-(.csv oder .txt) in das Tool lädst.
+Im Bereich **„Aus Discord-Server importieren"** kannst du die von deinen
+Stammesmitgliedern bereits auf dem tw-utils-Discordbot gemeldeten
+Abschickzeiten direkt in den Off-Planner übernehmen — ohne Umweg über
+Export-Dateien.
+
+**Voraussetzung:** Du musst auf mindestens einem Discord-Server die Rolle
+`Leader` besitzen, und dieser Server muss auf die aktuell in tw-utils
+ausgewählte Welt konfiguriert sein. Ist das nicht der Fall, ist der
+Bereich zwar sichtbar, zeigt aber den Hinweis „Du hast keinen
+Discord-Server mit Leader-Status für diese Welt." und der Button bleibt
+deaktiviert.
+
+**Bedienung:** Über die Checkbox-Liste wählst du einen oder mehrere
+deiner Leader-Server aus. Per Klick auf **„Importieren"** zieht der
+Off-Planner alle dort gemeldeten zukünftigen Zeitfenster und ordnet sie
+den jeweiligen Spielern zu. Bereits hinterlegte individuelle Zeiten für
+betroffene Spieler — egal ob aus früherem TXT-Upload oder vorigem
+Discord-Import — werden dabei pro Spieler komplett überschrieben.
+Spieler, für die in keinem der ausgewählten Server eine Meldung
+vorliegt, behalten ihre bisherigen Zeiten.
+
+Wie deine Stammesmitglieder ihre Abschickzeiten über den Discord-Bot
+melden, ist hier beschrieben:
+[Discord-Bot · Planning-System · Abschickzeiten](../discord-bot/planning-system.md#3-abschickzeiten).
+
+!!! info "Wenn ein Spieler in mehreren Discord-Servern gemeldet hat"
+    Sollte ein Spieler in mehreren ausgewählten Servern gleichzeitig
+    Zeiten gemeldet haben, gewinnt pro Spieler die Guild mit der
+    **jüngsten** Meldung — von dort werden dann alle seine Fenster
+    übernommen, Meldungen aus den anderen Servern für denselben Spieler
+    werden verworfen. In der Praxis ist dieser Konfliktfall selten,
+    weil Spieler typischerweise nur in einer Guild aktiv ihre Zeiten
+    pflegen.
+
+### Typ 3: Spielerindividuelle Abschickfenster (per Upload)
+
+Im Bereich **„Individuelle Zeiten (Upload)"** kannst du individuelle
+Abschickzeiten pro Spieler hochladen. Die Spieler geben dir dazu ihre
+persönlichen Zeiten, die du anschließend als strukturierte Datei (.csv
+oder .txt) in das Tool lädst.
 
 Erwartetes Format der Datei:
 
@@ -90,17 +127,19 @@ Testuser C,10.05.2026,17:00:00,10.05.2026,19:00:00
 Testuser C,10.05.2026,21:00:00,10.05.2026,21:15:00
 ```
 
-!!! info "Spielerindividuelle Zeiten über den tw-utils-Discordbot sammeln"
-    Das Sammeln der spielerindividuellen Abschickzeiten kann auch
-    komfortabel über den tw-utils-Discordbot erfolgen. Die abgegebenen
-    Zeiten lassen sich anschließend exportieren und direkt in das Tool
-    hochladen.
-
 !!! info "Standard- vs. individuelle Abschickfenster"
     Standard-Abschickfenster und individuelle Abschickfenster schließen
     sich gegenseitig aus. Sind für einen Spieler individuelle Zeiten
-    hinterlegt, werden ausschließlich diese verwendet — die
-    Standard-Fenster gelten für diesen Spieler dann nicht.
+    hinterlegt — egal ob über Discord-Import oder TXT-Upload — werden
+    ausschließlich diese verwendet. Die Standard-Fenster gelten für
+    diesen Spieler dann nicht.
+
+!!! info "Alle individuellen Zeiten löschen"
+    Am Ende des Bereichs **„Abschickzeiten"** findest du den Button
+    **„Alle individuellen Zeiten löschen"**. Über ihn entfernst du in
+    einem Schritt alle individuellen Zeitfenster, unabhängig davon, ob
+    sie aus einem TXT-Upload oder einem Discord-Import stammen. Die
+    Standard-Abschickfenster bleiben dabei unberührt.
 
 !!! info "Liste ansehen"
     Über den Button **„Liste ansehen"** kannst du dir für jeden

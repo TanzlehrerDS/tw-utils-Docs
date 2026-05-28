@@ -60,7 +60,7 @@ villages at any time.
 ![Launch times](../assets/nuke-planning-tool/tab1_03_launch_times.png){ .screenshot }
 
 In the **"Launch times"** section you define the time windows in which
-commands should be launched. There are two types of launch times.
+commands should be launched. There are three ways to define launch times.
 
 ### Type 1: Standard launch time windows
 
@@ -69,12 +69,46 @@ and end time and add the window via **"Add"**. You can create several
 windows in a row. These standard windows apply to all players for whom no
 individual times are defined.
 
-### Type 2: Player-individual launch time windows
+### Type 2: Import from a Discord server
 
-In the **"Player-individual launch times (via Upload)"** area you can
-upload individual launch times per player. The players provide you with
-their personal times, which you then load into the tool as a structured
-file (.csv or .txt).
+In the **"Import from Discord server"** area you can pull the launch
+times that members of your tribe have already submitted via the tw-utils
+Discord bot directly into the Off-Planner — without the detour through
+export files.
+
+**Prerequisite:** You must have the `Leader` role on at least one Discord
+server, and that server must be configured for the world currently
+selected in tw-utils. If that is not the case, the area remains visible
+but shows the hint "You have no Discord server with Leader status for
+this world." and the button stays disabled.
+
+**Usage:** From the checkbox list select one or more of your Leader
+servers. Clicking **"Import"** makes the Off-Planner pull all
+future-dated launch time windows reported there and assign them to the
+respective players. Any existing individual times for the affected
+players — regardless of whether they originated from a previous TXT
+upload or a previous Discord import — are overwritten completely on a
+per-player basis. Players for whom none of the selected servers contains
+a report keep their existing times.
+
+How your tribe members submit their launch times via the Discord bot is
+described here:
+[Discord bot · Planning System · Launch times](../discord-bot/planning-system.en.md#3-launch-times).
+
+!!! info "When a player has reported on multiple Discord servers"
+    If a player has submitted times on more than one of the selected
+    servers, the guild with the **most recent** report wins for that
+    player — all of their windows from that guild are imported, while
+    reports from the other servers for the same player are discarded.
+    In practice this conflict case is rare, since players usually
+    maintain their times on a single guild only.
+
+### Type 3: Player-individual launch time windows (via upload)
+
+In the **"Individual times (upload)"** area you can upload individual
+launch times per player. The players provide you with their personal
+times, which you then load into the tool as a structured file (.csv or
+.txt).
 
 Expected file format:
 
@@ -89,16 +123,18 @@ Testuser C,10.05.2026,17:00:00,10.05.2026,19:00:00
 Testuser C,10.05.2026,21:00:00,10.05.2026,21:15:00
 ```
 
-!!! info "Collect player-individual times via the tw-utils Discord bot"
-    Collecting the player-individual launch times can also be done
-    conveniently via the tw-utils Discord bot. The submitted times can
-    then be exported and uploaded directly into the tool.
-
 !!! info "Standard vs. individual launch windows"
     Standard launch windows and individual launch windows are mutually
-    exclusive. If individual times are defined for a player, only those
-    times are used — the standard windows then do not apply to that
-    player.
+    exclusive. If individual times are defined for a player — whether
+    from a Discord import or from a TXT upload — only those times are
+    used. The standard windows then do not apply to that player.
+
+!!! info "Delete all individual times"
+    At the end of the **"Launch times"** section you find the button
+    **"Delete all individual times"**. It removes all individual time
+    windows in one step, regardless of whether they originated from a
+    TXT upload or from a Discord import. The standard launch windows
+    remain untouched.
 
 !!! info "View entries"
     Use the **"View entries"** button to display, for each scheduled
