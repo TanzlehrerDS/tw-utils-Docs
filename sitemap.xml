@@ -8,6 +8,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/"/>
     </url>
     <url>
+        <loc>https://docs.tw-utils.net/benachrichtigungen/</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/benachrichtigungen/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/benachrichtigungen/"/>
+    </url>
+    <url>
         <loc>https://docs.tw-utils.net/ag-planner/allgemein/</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
@@ -55,13 +62,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/anleitung/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/anleitung/"/>
-    </url>
-    <url>
-        <loc>https://docs.tw-utils.net/discord-bot/benachrichtigungen/</loc>
-        <lastmod>2026-05-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/benachrichtigungen/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/"/>
     </url>
     <url>
         <loc>https://docs.tw-utils.net/discord-bot/berechtigungskonzept/</loc>
@@ -197,6 +197,13 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/"/>
     </url>
     <url>
+        <loc>https://docs.tw-utils.net/en/benachrichtigungen/</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/benachrichtigungen/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/benachrichtigungen/"/>
+    </url>
+    <url>
         <loc>https://docs.tw-utils.net/en/ag-planner/allgemein/</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
@@ -244,13 +251,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/cleaner-fake-ut/anleitung/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/cleaner-fake-ut/anleitung/"/>
-    </url>
-    <url>
-        <loc>https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/</loc>
-        <lastmod>2026-05-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.tw-utils.net/en/discord-bot/benachrichtigungen/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://docs.tw-utils.net/discord-bot/benachrichtigungen/"/>
     </url>
     <url>
         <loc>https://docs.tw-utils.net/en/discord-bot/berechtigungskonzept/</loc>
