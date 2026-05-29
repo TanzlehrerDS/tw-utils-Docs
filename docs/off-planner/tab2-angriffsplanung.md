@@ -56,6 +56,18 @@ fest:
 - **„Standard Kattasplit"** — die Standard-Einheitenanzahl eines
   einzelnen Katta-Splits.
 
+!!! info "Fake-Limit & Puffer"
+    Wie viele Truppen ein **Fake** mindestens enthalten muss, ergibt sich
+    nicht aus diesen Grenzwerten, sondern aus dem **Fake-Limit der gewählten
+    Welt** (z. B. 1 % oder 2 % der Dorfpunkte). Das Tool berechnet die
+    Fake-Truppen automatisch passend dazu und plant zusätzlich einen
+    **Puffer von 500 Dorfpunkten** ein: So enthält der Fake auch dann noch
+    genügend Truppen, wenn das Herkunftsdorf **zwischen Planung und
+    Abschicken um bis zu 500 Punkte wächst** und sich das benötigte
+    Fake-Limit dadurch erhöht. Herkunftsdörfer, die diesen Puffer **nicht
+    aus den vorhandenen Truppen decken** können, werden für Fakes
+    übersprungen.
+
 ### 2.3 Katta-Zwischencleaner
 
 Im Bereich **„Katta-Zwischencleaner"** definierst du im Unterbereich

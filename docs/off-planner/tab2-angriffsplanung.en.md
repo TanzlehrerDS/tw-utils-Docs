@@ -53,6 +53,16 @@ In the **"Global limits"** area you define overarching limits:
 - **Standard C-split** — the standard unit count of a single
   catapult-split.
 
+!!! info "Fake limit & buffer"
+    The minimum troops a **fake** must contain are not derived from these
+    limits but from the **fake limit of the selected world** (e.g. 1 % or
+    2 % of the village points). The tool sizes the fake troops accordingly
+    and additionally plans a **buffer of 500 village points**: this way the
+    fake still contains enough troops even if the origin village **grows by
+    up to 500 points between planning and sending**, which would otherwise
+    raise the required fake limit. Origin villages that **cannot cover this
+    buffer from their available troops** are skipped for fakes.
+
 ### 2.3 Catapult-Cleaner (C-Cleaners)
 
 In the **"Catapult-Cleaner (C-Cleaners)"** area you define the default
