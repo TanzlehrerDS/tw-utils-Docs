@@ -1893,6 +1893,17 @@ most important category at the top.</p>
 <li><strong>Standard C-split</strong> — the standard unit count of a single
   catapult-split.</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Fake limit &amp; buffer</p>
+<p>The minimum troops a <strong>fake</strong> must contain are not derived from these
+limits but from the <strong>fake limit of the selected world</strong> (e.g. 1 % or
+2 % of the village points). The tool sizes the fake troops accordingly
+and additionally plans a <strong>buffer of 500 village points</strong>: this way the
+fake still contains enough troops even if the origin village <strong>grows by
+up to 500 points between planning and sending</strong>, which would otherwise
+raise the required fake limit. Origin villages that <strong>cannot cover this
+buffer from their available troops</strong> are skipped for fakes.</p>
+</div>
 <h3 id="23-catapult-cleaner-c-cleaners">2.3 Catapult-Cleaner (C-Cleaners)<a class="headerlink" href="#23-catapult-cleaner-c-cleaners" title="Permanent link">¶</a></h3>
 <p>In the <strong>"Catapult-Cleaner (C-Cleaners)"</strong> area you define the default
 troop composition for interim cleaners: <strong>axes</strong>, <strong>light cavalry</strong> and
