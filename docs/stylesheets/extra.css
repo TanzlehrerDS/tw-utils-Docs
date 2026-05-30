@@ -150,6 +150,11 @@
   background: #000;
 }
 
+/* Startseiten-Video: bündig mit den Home-Cards darunter (gleiche max-width) */
+.yt-consent--home {
+  max-width: 720px;
+}
+
 .yt-consent__preview {
   position: absolute;
   inset: 0;
