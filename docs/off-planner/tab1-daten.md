@@ -149,6 +149,12 @@ Testuser C,10.05.2026,21:00:00,10.05.2026,21:15:00
 
 ## 4. Frontlinie definieren
 
+Die Frontlinie kannst du auf zwei Wegen festlegen: Du trägst die
+Frontdörfer **manuell** ein oder du **importierst** sie aus einer bereits
+gespeicherten Off-Planung dieser Welt.
+
+### Manuelle Eingabe
+
 ![Frontlinie definieren](../assets/nuke-planning-tool/tab1_04_frontline_definition.png){ .screenshot }
 
 Im Bereich **„Frontlinie definieren"** legst du fest, welche Dörfer als
@@ -165,6 +171,21 @@ Angriffe reagieren.
 
 Über den Button **„Liste ansehen"** kannst du die eingetragenen
 Frontlinien-Koordinaten jederzeit einsehen und bearbeiten.
+
+### Aus vorheriger Planung importieren
+
+![Frontlinie aus vorheriger Planung importieren](../assets/nuke-planning-tool/tab1_07_frontline_import_from_previous_plan.png){ .screenshot }
+
+Statt die Frontlinie manuell einzugeben, kannst du sie aus einer früher
+gespeicherten Off-Planung dieser Welt übernehmen. Wähle dazu im Bereich
+**„Aus vorheriger Planung importieren"** im Dropdown die gewünschte Planung
+aus — in Klammern siehst du jeweils die Anzahl der enthaltenen Befehle — und
+klicke auf **„Importieren"**.
+
+Die gespeicherte Frontlinie wird in deine aktuelle Planung übernommen und mit
+bereits vorhandenen Frontlinien-Koordinaten zusammengeführt. Zur Auswahl stehen
+nur Off-Planungen der aktuell gewählten Welt. Hat eine Planung keine gespeicherte
+Frontlinie, wirst du darüber informiert.
 
 ### Kartenvisualisierung
 

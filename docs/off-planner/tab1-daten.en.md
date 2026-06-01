@@ -143,6 +143,12 @@ Testuser C,10.05.2026,21:00:00,10.05.2026,21:15:00
 
 ## 4. Define the frontline
 
+You can define the frontline in two ways: enter the frontline villages
+**manually** or **import** them from an off-plan you saved earlier for this
+world.
+
+### Manual entry
+
 ![Frontline definition](../assets/nuke-planning-tool/tab1_04_frontline_definition.png){ .screenshot }
 
 In the **"Frontline definition"** section you define which villages are
@@ -159,6 +165,20 @@ notice.
 
 Use the **"View entries"** button to inspect and edit the recorded
 frontline coordinates at any time.
+
+### Import from a previous plan
+
+![Import the frontline from a previous plan](../assets/nuke-planning-tool/tab1_07_frontline_import_from_previous_plan.png){ .screenshot }
+
+Instead of entering the frontline manually, you can adopt it from an off-plan
+you saved earlier for this world. In the **"Import from a previous plan"**
+section, select the desired plan from the dropdown — the number in parentheses
+shows how many commands the plan contains — and click **"Import"**.
+
+The saved frontline is adopted into your current planning and merged with any
+frontline coordinates you already have. Only off-plans of the currently selected
+world are available. If a plan has no saved frontline, you are notified
+accordingly.
 
 ### Map visualization
 
