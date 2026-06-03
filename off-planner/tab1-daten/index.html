@@ -500,6 +500,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Herkunftsdörfer ausplanen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aus-gespeichertem-plan-ausplanen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aus gespeichertem Plan ausplanen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manuelle-eingabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manuelle Eingabe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -565,7 +593,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#manuelle-eingabe" class="md-nav__link">
+  <a href="#manuelle-eingabe_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Manuelle Eingabe
@@ -1697,6 +1725,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Herkunftsdörfer ausplanen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aus-gespeichertem-plan-ausplanen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aus gespeichertem Plan ausplanen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manuelle-eingabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manuelle Eingabe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1762,7 +1818,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#manuelle-eingabe" class="md-nav__link">
+  <a href="#manuelle-eingabe_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Manuelle Eingabe
@@ -1859,18 +1915,42 @@ Diese Datei erzeugst du am bequemsten über das
 Truppen jederzeit anzeigen lassen und prüfen.</p>
 </div>
 <h2 id="2-herkunftsdorfer-ausplanen">2. Herkunftsdörfer ausplanen<a class="headerlink" href="#2-herkunftsdorfer-ausplanen" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png" data-title="Herkunftsdörfer ausplanen" data-desc-position="bottom"><img alt="Herkunftsdörfer ausplanen" class="screenshot" src="../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png"></a></p>
-<p>Im Bereich <strong>„Herkunftsdörfer ausplanen"</strong> kannst du einzelne Dörfer von
-der Planung ausschließen. Füge die Koordinaten in das Textfeld ein und
-klicke auf <strong>„Hinzufügen"</strong>. Umgebender Text stört dabei nicht — das Tool
-erkennt die Koordinaten automatisch.</p>
-<p>Über den Button <strong>„Liste ansehen"</strong> kannst du die ausgeplanten Dörfer
-jederzeit einsehen und verwalten.</p>
+<p>Herkunftsdörfer kannst du auf zwei Wegen von der Planung ausschließen:
+gezielt <strong>aus einer gespeicherten Planung</strong> — optional nur für bestimmte
+Befehlstypen — oder durch <strong>manuelle Eingabe</strong> einzelner Koordinaten.</p>
+<h3 id="aus-gespeichertem-plan-ausplanen">Aus gespeichertem Plan ausplanen<a class="headerlink" href="#aus-gespeichertem-plan-ausplanen" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages_a_exclude_from_saved_plan.png" data-title="Aus gespeichertem Plan ausplanen" data-desc-position="bottom"><img alt="Aus gespeichertem Plan ausplanen" class="screenshot" src="../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages_a_exclude_from_saved_plan.png"></a></p>
+<p>Im Bereich <strong>„Aus gespeichertem Plan ausplanen"</strong> schließt du alle
+Herkunftsdörfer einer bereits gespeicherten Planung in einem Schritt aus.
+Wähle dazu im Dropdown die gewünschte Planung aus — in Klammern siehst du
+jeweils die Anzahl der enthaltenen Befehle.</p>
+<p>Nach der Auswahl erscheint die Liste der im Plan enthaltenen
+<strong>Befehlstypen</strong>, jeweils mit einem farbigen Badge zur schnellen
+Unterscheidung. Hake die Typen an, deren Herkunftsdörfer du ausplanen
+möchtest. Hinter jedem Typ steht, wie viele Herkunftsdörfer er enthält und
+wie viele davon ausplanbar sind. Der Button <strong>„Aus Plan ausplanen"</strong> wird
+erst aktiv, sobald mindestens ein Befehlstyp angehakt ist; ein Klick
+übernimmt die Herkunftsdörfer der angehakten Typen in die Ausschlussliste.</p>
+<div class="admonition info">
+<p class="admonition-title">Was „ausplanbar" bedeutet</p>
+<p><strong>Ausplanbar</strong> sind nur Herkunftsdörfer, die im Plan enthalten sind, in
+deinen hochgeladenen Truppen vorkommen <strong>und</strong> noch nicht ausgeplant
+wurden. Lade daher zuerst deine Truppen hoch (Schritt 1) — andernfalls
+steht beim Zähler ein „—" statt einer Zahl.</p>
+</div>
+<h3 id="manuelle-eingabe">Manuelle Eingabe<a class="headerlink" href="#manuelle-eingabe" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png" data-title="Herkunftsdörfer manuell ausplanen" data-desc-position="bottom"><img alt="Herkunftsdörfer manuell ausplanen" class="screenshot" src="../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png"></a></p>
+<p>Im Bereich <strong>„Koordinaten hinzufügen"</strong> kannst du einzelne Dörfer von der
+Planung ausschließen. Füge die Koordinaten in das Textfeld ein und klicke
+auf <strong>„Hinzufügen"</strong>. Umgebender Text stört dabei nicht — das Tool erkennt
+die Koordinaten automatisch.</p>
+<p>Über den Button <strong>„Liste ansehen"</strong> kannst du alle ausgeplanten Dörfer —
+egal ob manuell oder aus einem Plan ausgeplant — jederzeit einsehen und
+verwalten.</p>
 <div class="admonition info">
 <p class="admonition-title">Keine Befehle aus ausgeplanten Dörfern</p>
-<p>Für manuell ausgeplante Herkunftsdörfer werden <strong>keine</strong> Befehle
-verplant — diese Dörfer werden vollständig von der Planung
-ausgeschlossen.</p>
+<p>Für ausgeplante Herkunftsdörfer werden <strong>keine</strong> Befehle verplant —
+diese Dörfer werden vollständig von der Planung ausgeschlossen.</p>
 </div>
 <h2 id="3-abschickzeiten-festlegen">3. Abschickzeiten festlegen<a class="headerlink" href="#3-abschickzeiten-festlegen" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_03_launch_times.png" data-title="Abschickzeiten" data-desc-position="bottom"><img alt="Abschickzeiten" class="screenshot" src="../../assets/nuke-planning-tool/tab1_03_launch_times.png"></a></p>
@@ -1956,7 +2036,7 @@ Truppen importiert hast.</p>
 <p>Die Frontlinie kannst du auf zwei Wegen festlegen: Du trägst die
 Frontdörfer <strong>manuell</strong> ein oder du <strong>importierst</strong> sie aus einer bereits
 gespeicherten Off-Planung dieser Welt.</p>
-<h3 id="manuelle-eingabe">Manuelle Eingabe<a class="headerlink" href="#manuelle-eingabe" title="Permanent link">¶</a></h3>
+<h3 id="manuelle-eingabe_1">Manuelle Eingabe<a class="headerlink" href="#manuelle-eingabe_1" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/tab1_04_frontline_definition.png" data-title="Frontlinie definieren" data-desc-position="bottom"><img alt="Frontlinie definieren" class="screenshot" src="../../assets/nuke-planning-tool/tab1_04_frontline_definition.png"></a></p>
 <p>Im Bereich <strong>„Frontlinie definieren"</strong> legst du fest, welche Dörfer als
 Frontdörfer gelten und damit bei der Verplanung von Offs ausgenommen
@@ -1993,8 +2073,8 @@ visuell zu überprüfen.</p>
 Offs das Tool tatsächlich verplanen kann. Die Tabelle zeigt:</p>
 <ul>
 <li><strong>Alle</strong> — die insgesamt importierten Offs.</li>
-<li><strong>Manuell</strong> — Offs, die durch manuelle Ausplanung von Herkunftsdörfern
-  ausgeschlossen wurden.</li>
+<li><strong>Manuell</strong> — Offs, die durch Ausplanung von Herkunftsdörfern
+  ausgeschlossen wurden (manuell oder aus einem gespeicherten Plan).</li>
 <li><strong>Frontlinie</strong> — Offs, die aufgrund der Frontliniendefinition
   ausgeschlossen wurden.</li>
 <li><strong>Verfügbar</strong> — die Offs, die nach allen Ausschlüssen für die Planung

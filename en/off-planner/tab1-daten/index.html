@@ -500,6 +500,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Exclude origin villages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exclude-from-a-saved-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exclude from a saved plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -565,7 +593,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#manual-entry" class="md-nav__link">
+  <a href="#manual-entry_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Manual entry
@@ -1697,6 +1725,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Exclude origin villages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exclude-from-a-saved-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exclude from a saved plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1762,7 +1818,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#manual-entry" class="md-nav__link">
+  <a href="#manual-entry_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Manual entry
@@ -1859,17 +1915,41 @@ way to create this file is via the
 any time.</p>
 </div>
 <h2 id="2-exclude-origin-villages">2. Exclude origin villages<a class="headerlink" href="#2-exclude-origin-villages" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png" data-title="Exclude origin villages" data-desc-position="bottom"><img alt="Exclude origin villages" class="screenshot" src="../../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png"></a></p>
-<p>In the <strong>"Exclude origin villages"</strong> section you can exclude individual
-villages from the planning. Paste the coordinates into the text field and
-click <strong>"Add"</strong>. Surrounding text is not a problem — the tool detects the
+<p>You can exclude origin villages from the planning in two ways: specifically
+<strong>from a saved plan</strong> — optionally only for certain command types — or by
+<strong>manually entering</strong> individual coordinates.</p>
+<h3 id="exclude-from-a-saved-plan">Exclude from a saved plan<a class="headerlink" href="#exclude-from-a-saved-plan" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages_a_exclude_from_saved_plan.png" data-title="Exclude from a saved plan" data-desc-position="bottom"><img alt="Exclude from a saved plan" class="screenshot" src="../../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages_a_exclude_from_saved_plan.png"></a></p>
+<p>In the <strong>"Exclude from a saved plan"</strong> section you exclude all origin
+villages of an already saved plan in one step. Select the desired plan from
+the dropdown — the number in parentheses shows how many commands the plan
+contains.</p>
+<p>After selecting a plan, the list of <strong>command types</strong> contained in it
+appears, each with a coloured badge for quick distinction. Tick the types
+whose origin villages you want to exclude. Each type shows how many origin
+villages it contains and how many of those are excludable. The <strong>"Exclude
+from plan"</strong> button only becomes active once at least one command type is
+ticked; clicking it adds the origin villages of the ticked types to the
+exclusion list.</p>
+<div class="admonition info">
+<p class="admonition-title">What 'excludable' means</p>
+<p><strong>Excludable</strong> are only origin villages that are contained in the plan,
+present in your uploaded troops <strong>and</strong> not yet excluded. So upload your
+troops first (step 1) — otherwise the counter shows a "—" instead of a
+number.</p>
+</div>
+<h3 id="manual-entry">Manual entry<a class="headerlink" href="#manual-entry" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png" data-title="Exclude origin villages manually" data-desc-position="bottom"><img alt="Exclude origin villages manually" class="screenshot" src="../../../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png"></a></p>
+<p>In the <strong>"Add coordinates"</strong> section you can exclude individual villages
+from the planning. Paste the coordinates into the text field and click
+<strong>"Add"</strong>. Surrounding text is not a problem — the tool detects the
 coordinates automatically.</p>
-<p>Use the <strong>"View entries"</strong> button to inspect and manage the excluded
-villages at any time.</p>
+<p>Use the <strong>"View entries"</strong> button to inspect and manage all excluded
+villages — whether excluded manually or from a plan — at any time.</p>
 <div class="admonition info">
 <p class="admonition-title">No commands from excluded villages</p>
-<p>For manually excluded origin villages, <strong>no</strong> commands are planned —
-these villages are completely excluded from the planning.</p>
+<p>For excluded origin villages, <strong>no</strong> commands are planned — these
+villages are completely excluded from the planning.</p>
 </div>
 <h2 id="3-set-launch-times">3. Set launch times<a class="headerlink" href="#3-set-launch-times" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab1_03_launch_times.png" data-title="Launch times" data-desc-position="bottom"><img alt="Launch times" class="screenshot" src="../../../assets/nuke-planning-tool/tab1_03_launch_times.png"></a></p>
@@ -1950,7 +2030,7 @@ only becomes available once troops have been imported.</p>
 <p>You can define the frontline in two ways: enter the frontline villages
 <strong>manually</strong> or <strong>import</strong> them from an off-plan you saved earlier for this
 world.</p>
-<h3 id="manual-entry">Manual entry<a class="headerlink" href="#manual-entry" title="Permanent link">¶</a></h3>
+<h3 id="manual-entry_1">Manual entry<a class="headerlink" href="#manual-entry_1" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab1_04_frontline_definition.png" data-title="Frontline definition" data-desc-position="bottom"><img alt="Frontline definition" class="screenshot" src="../../../assets/nuke-planning-tool/tab1_04_frontline_definition.png"></a></p>
 <p>In the <strong>"Frontline definition"</strong> section you define which villages are
 considered frontline villages and are therefore excluded when nukes are
@@ -1985,7 +2065,8 @@ as nukes. The map helps you check your inputs visually.</p>
 nukes the tool can actually plan. The table shows:</p>
 <ul>
 <li><strong>All</strong> — all imported nukes in total.</li>
-<li><strong>Manual</strong> — nukes excluded by manually excluding origin villages.</li>
+<li><strong>Manual</strong> — nukes excluded by excluding origin villages (manually or
+  from a saved plan).</li>
 <li><strong>Frontline</strong> — nukes excluded due to the frontline definition.</li>
 <li><strong>Available</strong> — the nukes that remain available for planning after all
   exclusions.</li>
