@@ -41,19 +41,48 @@ Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight
 
 ## 2. Exclude origin villages
 
-![Exclude origin villages](../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png){ .screenshot }
+You can exclude origin villages from the planning in two ways: specifically
+**from a saved plan** — optionally only for certain command types — or by
+**manually entering** individual coordinates.
 
-In the **"Exclude origin villages"** section you can exclude individual
-villages from the planning. Paste the coordinates into the text field and
-click **"Add"**. Surrounding text is not a problem — the tool detects the
+### Exclude from a saved plan
+
+![Exclude from a saved plan](../assets/nuke-planning-tool/tab1_02_exclude_origin_villages_a_exclude_from_saved_plan.png){ .screenshot }
+
+In the **"Exclude from a saved plan"** section you exclude all origin
+villages of an already saved plan in one step. Select the desired plan from
+the dropdown — the number in parentheses shows how many commands the plan
+contains.
+
+After selecting a plan, the list of **command types** contained in it
+appears, each with a coloured badge for quick distinction. Tick the types
+whose origin villages you want to exclude. Each type shows how many origin
+villages it contains and how many of those are excludable. The **"Exclude
+from plan"** button only becomes active once at least one command type is
+ticked; clicking it adds the origin villages of the ticked types to the
+exclusion list.
+
+!!! info "What 'excludable' means"
+    **Excludable** are only origin villages that are contained in the plan,
+    present in your uploaded troops **and** not yet excluded. So upload your
+    troops first (step 1) — otherwise the counter shows a "—" instead of a
+    number.
+
+### Manual entry
+
+![Exclude origin villages manually](../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png){ .screenshot }
+
+In the **"Add coordinates"** section you can exclude individual villages
+from the planning. Paste the coordinates into the text field and click
+**"Add"**. Surrounding text is not a problem — the tool detects the
 coordinates automatically.
 
-Use the **"View entries"** button to inspect and manage the excluded
-villages at any time.
+Use the **"View entries"** button to inspect and manage all excluded
+villages — whether excluded manually or from a plan — at any time.
 
 !!! info "No commands from excluded villages"
-    For manually excluded origin villages, **no** commands are planned —
-    these villages are completely excluded from the planning.
+    For excluded origin villages, **no** commands are planned — these
+    villages are completely excluded from the planning.
 
 ## 3. Set launch times
 
@@ -196,7 +225,8 @@ In the **"Troop Availability"** section you see at a glance how many
 nukes the tool can actually plan. The table shows:
 
 - **All** — all imported nukes in total.
-- **Manual** — nukes excluded by manually excluding origin villages.
+- **Manual** — nukes excluded by excluding origin villages (manually or
+  from a saved plan).
 - **Frontline** — nukes excluded due to the frontline definition.
 - **Available** — the nukes that remain available for planning after all
   exclusions.

@@ -41,20 +41,49 @@ Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight
 
 ## 2. Herkunftsdörfer ausplanen
 
-![Herkunftsdörfer ausplanen](../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png){ .screenshot }
+Herkunftsdörfer kannst du auf zwei Wegen von der Planung ausschließen:
+gezielt **aus einer gespeicherten Planung** — optional nur für bestimmte
+Befehlstypen — oder durch **manuelle Eingabe** einzelner Koordinaten.
 
-Im Bereich **„Herkunftsdörfer ausplanen"** kannst du einzelne Dörfer von
-der Planung ausschließen. Füge die Koordinaten in das Textfeld ein und
-klicke auf **„Hinzufügen"**. Umgebender Text stört dabei nicht — das Tool
-erkennt die Koordinaten automatisch.
+### Aus gespeichertem Plan ausplanen
 
-Über den Button **„Liste ansehen"** kannst du die ausgeplanten Dörfer
-jederzeit einsehen und verwalten.
+![Aus gespeichertem Plan ausplanen](../assets/nuke-planning-tool/tab1_02_exclude_origin_villages_a_exclude_from_saved_plan.png){ .screenshot }
+
+Im Bereich **„Aus gespeichertem Plan ausplanen"** schließt du alle
+Herkunftsdörfer einer bereits gespeicherten Planung in einem Schritt aus.
+Wähle dazu im Dropdown die gewünschte Planung aus — in Klammern siehst du
+jeweils die Anzahl der enthaltenen Befehle.
+
+Nach der Auswahl erscheint die Liste der im Plan enthaltenen
+**Befehlstypen**, jeweils mit einem farbigen Badge zur schnellen
+Unterscheidung. Hake die Typen an, deren Herkunftsdörfer du ausplanen
+möchtest. Hinter jedem Typ steht, wie viele Herkunftsdörfer er enthält und
+wie viele davon ausplanbar sind. Der Button **„Aus Plan ausplanen"** wird
+erst aktiv, sobald mindestens ein Befehlstyp angehakt ist; ein Klick
+übernimmt die Herkunftsdörfer der angehakten Typen in die Ausschlussliste.
+
+!!! info "Was „ausplanbar" bedeutet"
+    **Ausplanbar** sind nur Herkunftsdörfer, die im Plan enthalten sind, in
+    deinen hochgeladenen Truppen vorkommen **und** noch nicht ausgeplant
+    wurden. Lade daher zuerst deine Truppen hoch (Schritt 1) — andernfalls
+    steht beim Zähler ein „—" statt einer Zahl.
+
+### Manuelle Eingabe
+
+![Herkunftsdörfer manuell ausplanen](../assets/nuke-planning-tool/tab1_02_exclude_origin_villages.png){ .screenshot }
+
+Im Bereich **„Koordinaten hinzufügen"** kannst du einzelne Dörfer von der
+Planung ausschließen. Füge die Koordinaten in das Textfeld ein und klicke
+auf **„Hinzufügen"**. Umgebender Text stört dabei nicht — das Tool erkennt
+die Koordinaten automatisch.
+
+Über den Button **„Liste ansehen"** kannst du alle ausgeplanten Dörfer —
+egal ob manuell oder aus einem Plan ausgeplant — jederzeit einsehen und
+verwalten.
 
 !!! info "Keine Befehle aus ausgeplanten Dörfern"
-    Für manuell ausgeplante Herkunftsdörfer werden **keine** Befehle
-    verplant — diese Dörfer werden vollständig von der Planung
-    ausgeschlossen.
+    Für ausgeplante Herkunftsdörfer werden **keine** Befehle verplant —
+    diese Dörfer werden vollständig von der Planung ausgeschlossen.
 
 ## 3. Abschickzeiten festlegen
 
@@ -204,8 +233,8 @@ Im Bereich **„Truppenverfügbarkeit"** siehst du auf einen Blick, wie viele
 Offs das Tool tatsächlich verplanen kann. Die Tabelle zeigt:
 
 - **Alle** — die insgesamt importierten Offs.
-- **Manuell** — Offs, die durch manuelle Ausplanung von Herkunftsdörfern
-  ausgeschlossen wurden.
+- **Manuell** — Offs, die durch Ausplanung von Herkunftsdörfern
+  ausgeschlossen wurden (manuell oder aus einem gespeicherten Plan).
 - **Frontlinie** — Offs, die aufgrund der Frontliniendefinition
   ausgeschlossen wurden.
 - **Verfügbar** — die Offs, die nach allen Ausschlüssen für die Planung
