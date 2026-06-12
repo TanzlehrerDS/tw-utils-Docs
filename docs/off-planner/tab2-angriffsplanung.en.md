@@ -52,6 +52,29 @@ In the **"Global limits"** area you define overarching limits:
   total may be planned from a single village.
 - **Standard C-split** — the standard unit count of a single
   catapult-split.
+- **Send light cav with C-split** — enable the checkbox to plan a
+  **light cavalry escort** with every catapult split, and enter the
+  desired **number of light cavalry units per split** in the field next
+  to it (default and minimum: `50`).
+
+![Light cavalry with C-split](../assets/nuke-planning-tool/tab2_02_global_settings_Light_in_c_splits.png){ .screenshot }
+
+!!! info "Light cavalry as escort: on/off and minimum amount"
+    If the checkbox is **left unchecked**, the catapult splits are planned
+    with **catapults only** (no light cavalry), as before. When you enable
+    it, every split additionally receives the configured number of light
+    cavalry units as an escort.
+
+    A **minimum of 50 light cavalry units** per split applies: a split
+    receives either **at least 50** units **or none at all** — never just
+    an ineffective handful. If an origin village has fewer than 50 light
+    cavalry units left, the split runs **without** a light-cavalry escort
+    (it is not cancelled, only sent without light cavalry).
+
+    If a village's available amount lies **between 50 and the number
+    entered in the field**, as many light cavalry units are planned as the
+    village can spare — fewer than the desired amount, but at least the
+    minimum of 50.
 
 !!! info "Fake limit & buffer"
     The minimum troops a **fake** must contain are not derived from these

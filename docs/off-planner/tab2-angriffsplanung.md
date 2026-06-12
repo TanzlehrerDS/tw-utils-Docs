@@ -55,6 +55,30 @@ fest:
   insgesamt aus einem einzelnen Dorf verplant werden dürfen.
 - **„Standard Kattasplit"** — die Standard-Einheitenanzahl eines
   einzelnen Katta-Splits.
+- **„Lkav im K-Split mitschicken"** — aktiviere das Häkchen, um jeden
+  Katta-Split zusätzlich mit einer **Eskorte aus Leichter Kavallerie** zu
+  verplanen, und trage im Feld daneben die gewünschte **Anzahl Leichter
+  Kavallerie pro Split** ein (Standard und Minimum: `50`).
+
+![Leichte Kavallerie im K-Split](../assets/nuke-planning-tool/tab2_02_global_settings_Light_in_c_splits.png){ .screenshot }
+
+!!! info "Leichte Kavallerie als Begleittruppen im Kattasplit"
+    Ist das Häkchen **nicht gesetzt**, werden die Katta-Splits wie gewohnt
+    **nur mit Katapulten** (ohne Leichte Kavallerie) verplant. Aktivierst
+    du es, erhält jeder Split zusätzlich die eingestellte Anzahl Leichter
+    Kavallerie als Begleittruppen.
+
+    Dabei gilt eine **Mindestmenge von 50 Leichter Kavallerie** pro Split:
+    Ein Split bekommt entweder **mindestens 50** Einheiten **oder gar
+    keine** — niemals nur eine wirkungslose Handvoll. Hat ein
+    Herkunftsdorf weniger als 50 Leichte Kavallerie übrig, läuft der Split
+    **ohne** Begleittruppen (er wird also nicht abgesagt, sondern nur ohne
+    Leichte Kavallerie verschickt).
+
+    Liegt die verfügbare Menge eines Dorfes **zwischen 50 und der im
+    Kästchen eingetragenen Anzahl**, wird so viel Leichte Kavallerie
+    verplant, wie das Dorf hergibt — also weniger als die Wunschmenge,
+    aber mindestens die 50er-Mindestmenge.
 
 !!! info "Fake-Limit & Puffer"
     Wie viele Truppen ein **Fake** mindestens enthalten muss, ergibt sich
