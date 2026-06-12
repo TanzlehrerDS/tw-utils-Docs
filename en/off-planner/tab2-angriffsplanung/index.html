@@ -1892,7 +1892,28 @@ most important category at the top.</p>
   total may be planned from a single village.</li>
 <li><strong>Standard C-split</strong> — the standard unit count of a single
   catapult-split.</li>
+<li><strong>Send light cav with C-split</strong> — enable the checkbox to plan a
+  <strong>light cavalry escort</strong> with every catapult split, and enter the
+  desired <strong>number of light cavalry units per split</strong> in the field next
+  to it (default and minimum: <code>50</code>).</li>
 </ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/tab2_02_global_settings_Light_in_c_splits.png" data-title="Light cavalry with C-split" data-desc-position="bottom"><img alt="Light cavalry with C-split" class="screenshot" src="../../../assets/nuke-planning-tool/tab2_02_global_settings_Light_in_c_splits.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Light cavalry as escort: on/off and minimum amount</p>
+<p>If the checkbox is <strong>left unchecked</strong>, the catapult splits are planned
+with <strong>catapults only</strong> (no light cavalry), as before. When you enable
+it, every split additionally receives the configured number of light
+cavalry units as an escort.</p>
+<p>A <strong>minimum of 50 light cavalry units</strong> per split applies: a split
+receives either <strong>at least 50</strong> units <strong>or none at all</strong> — never just
+an ineffective handful. If an origin village has fewer than 50 light
+cavalry units left, the split runs <strong>without</strong> a light-cavalry escort
+(it is not cancelled, only sent without light cavalry).</p>
+<p>If a village's available amount lies <strong>between 50 and the number
+entered in the field</strong>, as many light cavalry units are planned as the
+village can spare — fewer than the desired amount, but at least the
+minimum of 50.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Fake limit &amp; buffer</p>
 <p>The minimum troops a <strong>fake</strong> must contain are not derived from these
