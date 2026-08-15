@@ -150,9 +150,10 @@
   background: #000;
 }
 
-/* Startseiten-Video: bündig mit den Home-Cards darunter (gleiche max-width) */
+/* Startseiten-Video: volle Inhaltsbreite, damit es bündig über der
+   Kartenreihe darunter steht (die ebenfalls die volle Breite nutzt). */
 .yt-consent--home {
-  max-width: 720px;
+  max-width: none;
 }
 
 .yt-consent__preview {
@@ -345,21 +346,27 @@
 /* =========================================================
    Home cards — compact, dual-action call-to-actions
    Used on the start page via raw HTML inside Markdown.
+   Nebeneinander in einer Reihe unter dem Video: auto-fit statt
+   fester Dreierteilung, damit die Reihe von selbst auf zwei bzw.
+   eine Spalte umbricht, wenn der Platz knapp wird.
    ========================================================= */
 
 .home-cards {
-  max-width: 720px;
-  margin: 1.5rem auto;
-  display: flex;
-  flex-direction: column;
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 14px;
 }
 
+/* Symbol oben, darunter Titel/Text/Links: in der schmalen Spalte
+   (~200px Innenbreite) bliebe neben einem 40px-Symbol zu wenig für
+   den Text. */
 .home-card {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
-  padding: 10px 14px;
+  gap: 8px;
+  padding: 12px 14px;
   background: #ffffff;
   border: 1px solid #d0d7de;
   border-radius: 10px;
@@ -383,7 +390,7 @@
 }
 
 .home-card__icon {
-  flex: 0 0 40px;
+  flex: 0 0 auto;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -407,31 +414,45 @@
   height: 28px;
   fill: currentColor;
 }
+.home-card__icon--api {
+  background: transparent;
+  color: var(--md-default-fg-color);
+}
+.home-card__icon--api svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 .home-card__body {
   flex: 1 1 auto;
   min-width: 0;
+  width: 100%;
 }
 .md-typeset .home-card__body h3 {
   margin: 0 0 4px 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.25;
 }
 .md-typeset .home-card__body p {
   margin: 0 0 8px 0;
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   color: var(--md-default-fg-color--light);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 .md-typeset .home-card__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 18px;
+  gap: 2px 14px;
   margin: 0;
 }
 .md-typeset .home-card__actions a {
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--md-accent-fg-color);
@@ -459,8 +480,109 @@
     width: 36px;
     height: 36px;
   }
-  .home-card__icon--community svg {
+  .home-card__icon--community svg,
+  .home-card__icon--api svg {
     width: 22px;
     height: 22px;
+  }
+}
+
+
+/* =========================================================
+   Veraltet-Hinweis — mitlaufender Balken über einer Seite,
+   deren Inhalt noch nicht zum Tool passt.
+   Markup ganz oben in der Markdown-Datei, vor der Überschrift:
+     <div class="doc-stale" data-doc-stale="ag-planner"> … </div>
+   Das × hängt doc-stale.js ein; ohne JavaScript bleibt der
+   Balken stehen, statt einen toten Knopf zu zeigen.
+   ========================================================= */
+
+.doc-stale {
+  position: sticky;
+  top: 2.4rem; /* Höhe der Material-Kopfzeile */
+  z-index: 1;  /* über dem Inhalt, unter der Kopfzeile (z-index 2) */
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 1.2rem;
+  padding: 12px 14px;
+  border: 1px solid #d9a441;
+  border-left: 4px solid #d9a441;
+  border-radius: 8px;
+  background: #fff8e6;
+  color: #4a3a12;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* hidden verliert sonst gegen display: flex */
+.doc-stale[hidden] {
+  display: none;
+}
+
+.doc-stale__icon {
+  flex: 0 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.md-typeset .doc-stale p {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.doc-stale__close {
+  display: none; /* erst sichtbar, wenn doc-stale.js es eingehängt hat */
+  flex: 0 0 auto;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.doc-stale--dismissable .doc-stale__close {
+  display: block;
+}
+
+.doc-stale__close:hover,
+.doc-stale__close:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+.doc-stale__close:focus-visible {
+  outline: 2px solid #d9a441;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Sprungmarken (Inhaltsverzeichnis, Deep-Links): Material rechnet mit
+   3.6rem Abstand zur Kopfzeile — solange der Balken steht, verdeckt er die
+   angesprungene Überschrift. Der Balken ist ein Geschwister aller
+   Überschriften, deshalb greift der ~-Selektor; bei weggeklicktem Balken
+   ([hidden]) gilt wieder Materials eigener Wert. */
+.md-typeset .doc-stale:not([hidden]) ~ :target {
+  --md-scroll-margin: 6.6rem;
+}
+
+[data-md-color-scheme="slate"] .doc-stale {
+  border-color: #9e7b2f;
+  border-left-color: #d9a441;
+  background: #2b2413;
+  color: #f0e2c0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 480px) {
+  .doc-stale {
+    padding: 10px 12px;
+    gap: 8px;
   }
 }
