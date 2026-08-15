@@ -1,14 +1,13 @@
 # Bunker-Information-System
 
-The Bunker-Information-System is where you manage your bunkers. Tribe members submit bunker requests, TWU-Mods approve or reject them. Top-ups can be requested and approved the same way, and bunkers can be dissolved. The module also gives leaders a quick Bunker-Health check and a way to identify and control flex bunkers.
+The Bunker-Information-System is where you manage your bunkers. Tribe members submit bunker requests, users with the **TWU-Bunker** role (or TWU-Leader) approve or reject them. Top-ups can be requested and approved the same way, and bunkers can be dissolved. The module also gives leaders a quick Bunker-Health check and a way to identify and control flex bunkers.
 
 ## 1. Module channels
 
-After the [setup](modul-verwaltung.md), the bot creates the category `🧱 BUNKER-INFORMATION-SYSTEM` with four channels:
+After the [setup](modul-verwaltung.md), the bot creates the category `🧱 BUNKER-INFORMATION-SYSTEM` with three channels:
 
+- `#⚫-leaderview-bunker` — leader tools: Bunker-Health check of all approved bunkers and flex-bunker control
 - `#⚫-request-bunker` — central request channel with the buttons to request, top up, view and dissolve your own bunkers
-- `#⚫-leaderview-bunker` — leader view with the Bunker-Health overview of all approved bunkers
-- `#⚫-leaderview-flexbunker` — leader view with the flex-bunker control
 - `#⚫-report-bunker` — channel for reporting and managing enemy bunkers
 
 ![Channel overview of the Bunker-Information-System](../assets/discordbot/bunker-information-system/01_channel_overview.png){ .screenshot }
@@ -37,7 +36,7 @@ After submitting, the bot creates a dedicated channel `❓-bunker-for-XXX-YYY-Pl
 
 ![New request channel in the category](../assets/discordbot/bunker-information-system/05_request_bunker_new_channel_created.png){ .screenshot }
 
-In the new channel the bot posts a request embed with player, coordinate, desired size and reason, plus the approval buttons for TWU-Mods.
+In the new channel the bot posts a request embed with player, coordinate, desired size and reason, plus the approval buttons for TWU-Bunkers.
 
 ![Request summary in the new channel](../assets/discordbot/bunker-information-system/06_request_bunker_new_channel_request_summary.png){ .screenshot }
 
@@ -46,7 +45,7 @@ In the new channel the bot posts a request embed with player, coordinate, desire
 
 ## 3. Approve or reject a bunker
 
-In the per-request channel, TWU-Mods see the `Admin: Approve` button.
+In the per-request channel, TWU-Bunkers see the `Admin: Approve` button.
 
 ![Admin: Approve button](../assets/discordbot/bunker-information-system/07_approve_bunker.png){ .screenshot }
 
@@ -58,16 +57,16 @@ After a successful approval, both the requester and the user who approved the re
 
 ![Approval DM](../assets/discordbot/bunker-information-system/09_approve_bunker_summary_as_discord_dm.png){ .screenshot }
 
-Instead of approving, TWU-Mods can also reject a request with `Admin: Reject`. Both the requester and the rejecting TWU-Mod then receive a Discord direct message about the rejection; the request channel is likewise deleted automatically.
+Instead of approving, TWU-Bunkers can also reject a request with `Admin: Reject`. Both the requester and the rejecting TWU-Bunker then receive a Discord direct message about the rejection; the request channel is likewise deleted automatically.
 
 ![Admin: Reject button](../assets/discordbot/bunker-information-system/14_leader_reject_button.png){ .screenshot }
 
-The requester — or a TWU-Mod — can withdraw the request at any time via `Withdraw (Delete)`. The per-request channel is deleted along with it.
+The requester — or a TWU-Bunker — can withdraw the request at any time via `Withdraw (Delete)`. The per-request channel is deleted along with it.
 
 ![Withdraw (Delete) button](../assets/discordbot/bunker-information-system/15_withdraw_delete_button.png){ .screenshot }
 
 !!! info "Approval with size override"
-    In the approval modal the TWU-Mod can assign a different size — for example because the village should have a different strength than originally requested. This size becomes the binding target size and is the basis for the Bunker-Health traffic light in the leader view.
+    In the approval modal the TWU-Bunker can assign a different size — for example because the village should have a different strength than originally requested. This size becomes the binding target size and is the basis for the Bunker-Health traffic light in the leader view.
 
 !!! info "Copy the SD command from the approval DM"
     The `Bunker Approved` DM ends with a ready-made SD command string (`{coord} {units}"{Player}"request tw-utils.net""`). You can paste this block straight into the tribe forum without building it manually.
@@ -108,17 +107,17 @@ When a bunker is no longer needed (e. g. because the village is in the safe zone
 
 ![Dissolve Bunker button](../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png){ .screenshot }
 
-In the `Dissolve Bunker` modal you enter the coordinates to be dissolved — the `Coordinate(s) / Text` field also accepts several coordinates or text with embedded coordinates. After a confirmation the bot removes the affected bunkers from the database and updates the leader view. TWU-Mods can dissolve other players' bunkers the same way.
+In the `Dissolve Bunker` modal you enter the coordinates to be dissolved — the `Coordinate(s) / Text` field also accepts several coordinates or text with embedded coordinates. After a confirmation the bot removes the affected bunkers from the database and updates the leader view. TWU-Bunkers can dissolve other players' bunkers the same way.
 
 ![Modal: Dissolve Bunker](../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png){ .screenshot }
 
 ## 6. Bunker-Health & flex-bunker control
 
-In the `#⚫-leaderview-bunker` channel, TWU-Mods see all approved bunkers at a glance.
+The `#⚫-leaderview-bunker` channel holds a fixed panel with the two leader tools. No bunker list is posted there — you get it at the press of a button.
 
 ![#⚫-leaderview-bunker channel overview](../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png){ .screenshot }
 
-The `Bunker Health` button refreshes the overview and compares the approved target size against the currently uploaded troop data for each bunker. The result is shown as a traffic light per bunker.
+The `Bunker Health` button compares the approved target size against the currently uploaded troop data for every approved bunker and sends the list back to you as a traffic-light overview — visible **only to you**, the channel stays untouched.
 
 ![Bunker Health button in the leader view](../assets/discordbot/bunker-information-system/21_leaderview_bunker_channel_bunkerhealth_button.png){ .screenshot }
 
@@ -130,7 +129,7 @@ The `Bunker Health` button refreshes the overview and compares the approved targ
     - 🟠 10 % to 25 % deviation
     - 🔴 more than 25 % deviation
 
-In the second leader-view channel `#⚫-leaderview-flexbunker`, the `Flexbunker Control` button is available — it helps to identify villages that tie up high defensive capacity but are not approved bunkers themselves.
+In the same channel, the `Flexbunker Control` button is available below — it helps to identify villages that tie up high defensive capacity but are not approved bunkers themselves.
 
 ![Flexbunker Control button](../assets/discordbot/bunker-information-system/22_leaderview_bunker_flexcontrol.png){ .screenshot }
 
@@ -143,7 +142,7 @@ As a result you get a table of all villages in the tribe whose actual dual stren
 ![FlexControl result table](../assets/discordbot/bunker-information-system/24_leaderview_bunker_flexcontrol_result_table.png){ .screenshot }
 
 !!! warning "Rate limit on Bunker-Health & FlexControl"
-    Both `Bunker Health` and `Flexbunker Control` are limited for performance reasons to **one execution per minute per server**. If you press the button twice in quick succession, the second click returns a notice — just wait a moment and click again.
+    Both `Bunker Health` and `Flexbunker Control` are limited for performance reasons to **one execution per minute per person**. If you press the button twice in quick succession, the second click returns a notice — just wait a moment and click again. It does not block other leaders.
 
 ## 7. Report enemy bunkers
 
@@ -151,7 +150,7 @@ In the `#⚫-report-bunker` channel, known enemy bunkers are collected. The bot 
 
 ![Report-bunker channel with buttons](../assets/discordbot/bunker-information-system/25_report_bunker_channel_buttons.png){ .screenshot }
 
-`Report-Link / Copy & Paste` lets you add enemy bunkers directly from a report — via TW report link, `[report]` tag or pasted report text. `Manual Entry` allows manual entry of coordinate, units and info time when no report is available. With `Admin: Remove Bunker`, TWU-Mods can remove individual enemy-bunker entries again, and `Export` returns the full list as a TSV file for Excel & co.
+`Report-Link / Copy & Paste` lets you add enemy bunkers directly from a report — via TW report link, `[report]` tag or pasted report text. `Manual Entry` allows manual entry of coordinate, units and info time when no report is available. With `Admin: Remove Bunker`, TWU-Bunkers can remove individual enemy-bunker entries again, and `Export` returns the full list as a TSV file for Excel & co.
 
 `Report-Link / Copy & Paste` opens a modal that accepts a report link, `[report]` tag or pasted report text. The bot parses the units, coordinate and info time automatically from the report.
 

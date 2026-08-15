@@ -3,7 +3,7 @@
 Die zentrale Verwaltung aller Bot-Module läuft über den Button `Manage Bot-Modules` im Kanal `#⚫-bot-config`. Dort kannst du Module installieren, aktualisieren oder wieder entfernen — und für jedes Modul festlegen, welche Discord-Rollen die zugehörigen Kanäle sehen dürfen. Die Modul-spezifische Konfiguration findest du auf den jeweils verlinkten Unterseiten der einzelnen Module.
 
 !!! warning "Voraussetzung"
-    Die Modul-Verwaltung ist nur für Discord-User mit **Administrator-Rechten** oder der Rolle **TWU-Mod** zugänglich.
+    Die Modul-Verwaltung ist für Discord-User mit der Rolle **TWU-Leader** zugänglich. Discord-**Administratoren** kommen ebenfalls heran — und zwar dauerhaft, nicht nur bei der Ersteinrichtung (siehe [Berechtigungskonzept](berechtigungskonzept.md)).
 
 ![Manage Bot-Modules Button](../assets/discordbot/bot-module-setup/01_Manage_bot_modules_button.png){ .screenshot }
 
@@ -25,8 +25,8 @@ Klicke im Modul-Verwaltungs-Menü auf den Button `Delete`, um ein installiertes 
 
 ![Delete Button](../assets/discordbot/bot-module-setup/04_delete_button.png){ .screenshot }
 
-!!! warning "Achtung: Daten gehen verloren"
-    Beim Deinstallieren eines Moduls werden die zugehörigen Kanäle inklusive aller Inhalte (Anfragen, Planungen, Listen etc.) unwiderruflich gelöscht.
+!!! warning "Was beim Deinstallieren verloren geht"
+    Die zugehörigen Kanäle werden inklusive aller Inhalte unwiderruflich gelöscht. Ob auch die Daten dahinter verschwinden, hängt vom Modul ab: Das **Account-Sitting-System** und das **Off/Deff/Snob-Search-System** löschen ihre Daten mit. Das **Planning-System** behält AG-Meldungen, Abschickzeiten, Off-Ausschlüsse und Pläne — sie bleiben im Leader-View verfügbar. Das **Bunker-Information-System** behält genehmigte Bunker und gemeldete Feind-Bunker; nur offene Anträge verschwinden.
 
 ## 4. Sichtbarkeits-Rollen festlegen
 

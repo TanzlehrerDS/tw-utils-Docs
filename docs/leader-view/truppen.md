@@ -13,6 +13,11 @@ tw-utils-Discordbots.
     **Bunker-Information-System** und **Off/Deff/Snob-Search-Systems**
     weiterverwendet.
 
+!!! info "Wer sieht diesen Tab?"
+    Der Tab **„Truppen"** ist für alle vier Rollen sichtbar —
+    TWU-Troops, TWU-Bunker, TWU-Planner und TWU-Leader. Details unter
+    [Berechtigung](uebersicht.md#welche-rolle-sieht-welchen-tab).
+
 ## Spalten der Tabelle
 
 | Spalte | Bedeutung |
@@ -45,12 +50,19 @@ Upload-Dialog:
 Felder im Dialog:
 
 - **Stammeskürzel** — Tag des Stammes, zu dem die Daten gehören
-  (z. B. `ABC`).
+  (z. B. `ABC`). Das Feld schlägt beim Tippen passende Stämme der
+  aktuellen Welt vor; ein Kürzel, das es auf der Welt nicht gibt, wird
+  beim Hochladen abgelehnt.
 - **Scope** — wähle entweder **„Truppen im Dorf"** oder
   **„Truppen Insgesamt"** (siehe [Die beiden Scopes](#die-beiden-scopes)).
 - **Truppen-Datei (.txt)** — die mit dem
   [Schnellleistenscript](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/)
   erzeugte TXT-Datei.
+
+Ein Upload **ersetzt** immer den kompletten bisherigen Datensatz
+dieser Kombination aus Stamm und Scope — es wird also nichts
+zusammengeführt. Ein Upload ohne verwertbare Zeilen lässt die
+vorhandenen Daten unangetastet, statt sie zu leeren.
 
 ### Erwartetes Datei-Format
 

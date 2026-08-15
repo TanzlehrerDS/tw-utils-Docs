@@ -20,6 +20,15 @@ After the [setup](modul-verwaltung.md), the bot creates the category `🪓 PLANN
 
 In the `#⚫-queries` channel you'll find three colour-coded buttons below the `Queries` embed: `Snob Report`, `Launch Times` and `Off-Exclusion`.
 
+!!! info "Reports belong to a tribe survey"
+    All reports now run through a
+    [tribe survey](../leader-view/stammes-umfragen.md) that the tribe
+    leadership creates in the Leader-View. That is why the bot first
+    asks **which** survey the action applies to on `Add`, `Show` and
+    `Delete`. If only one matching survey exists, that question is
+    skipped. If none exists at all, the bot rejects the action with a
+    notice.
+
 ![Queries channel](../assets/discordbot/planning-system/02_planning_system_queries_channel.png){ .screenshot }
 
 ![Query buttons in the Queries channel](../assets/discordbot/planning-system/03_planning_system_queries_channel_query-buttons.png){ .screenshot }
@@ -80,22 +89,7 @@ Then the off-exclusion modal opens, in which you enter the origin villages that 
 
 With the `Show` button you can view all the off-exclusions already stored for the selected account. With the `Delete` button you can remove a specific entry again.
 
-## 5. Admin functions
-
-Below the player buttons, the `#⚫-queries` channel also offers two additional admin buttons.
-
-With `Admin: Delete All` you can delete **all** Snob reports, launch times and off-exclusion entries on the entire server. This is especially useful when the tribe leadership wants to start a completely fresh round of planning and reset all old player data from the three query areas. Before the action runs, a confirmation prompt appears with the buttons `Confirm` and `Cancel` so that nothing is deleted by accident.
-
-![Admin Delete All button](../assets/discordbot/planning-system/16_planning_system_queries_admin_delete_all_button.png){ .screenshot }
-
-With the `Admin: Export` button you can export all currently submitted reports as a file — handy for further processing the collected entries outside of Discord, e. g. inside the tribe leadership.
-
-![Admin Export button](../assets/discordbot/planning-system/17_planning_system_queries_admin_export_button.png){ .screenshot }
-
-!!! info "Who can use the admin functions?"
-    Only users with the `TWU-Mod` role or Discord administrator permissions can press the `Admin: Delete All` and `Admin: Export` buttons. For normal members the buttons are visible but a click is rejected by the bot with a permission error.
-
-## 6. Plan distribution
+## 5. Plan distribution
 
 In the `#⚫-plan-distribution` channel you'll find the `Download` button below the `Plan Distribution` embed.
 
@@ -110,7 +104,7 @@ Click `Download`: The bot checks the player's linked TW accounts and sends them 
 !!! info "Plan download via DM"
     For the bot to deliver the plans, direct messages from the bot must be allowed in your Discord settings. Otherwise an ephemeral error message appears in the channel reminding you to enable DMs.
 
-## 7. Plan information
+## 6. Plan information
 
 In the `#⚫-leaderview-planinfo` channel you'll find the `Retrieve Plan Information` button below the `Plan Information` embed.
 
@@ -122,7 +116,7 @@ Clicking `Retrieve Plan Information` opens the `Plan Information` modal. Enter t
 
 ![Plan Information modal](../assets/discordbot/planning-system/23_planning_system_leaderview-planinfo_retrieve-plan-information_modal.png){ .screenshot }
 
-The bot then renders an overview directly in the channel of all currently planned commands from all active plan containers for the given coordinate.
+The bot then renders an overview of all currently planned commands from all active plan containers for the given coordinate. The answer is ephemeral — it is visible only to you and disappears again.
 
 ![Bot answer with plan information](../assets/discordbot/planning-system/24_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer.png){ .screenshot }
 
@@ -131,9 +125,9 @@ The detailed view additionally shows the individual commands with origin village
 ![Detailed bot answer with plan information](../assets/discordbot/planning-system/25_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer_detailed.png){ .screenshot }
 
 !!! info "Leaderview-PlanInfo visibility"
-    The `#⚫-leaderview-planinfo` channel is by default **only visible to users with the `TWU-Mod` role**. Normal members do not see the channel — plan information thus stays within the tribe leadership.
+    The `#⚫-leaderview-planinfo` channel is visible like the other channels of the module; who may see it is controlled by your [visibility roles](modul-verwaltung.md). The `Retrieve Plan Information` button, however, can only be used by users with the `TWU-Planner` or `TWU-Leader` role — and the bot's answer is ephemeral, so only the requester sees it. Plan information thus stays within the tribe leadership.
 
-## 8. Nuke-Replacement
+## 7. Nuke-Replacement
 
 In the `#⚫-nuke-replacement` channel you'll find five management buttons at the top under the `Nuke-Replacement` embed; below them, two status embeds (`NOT DONE` and `DONE`) list the current state of all replacement requests.
 
@@ -143,7 +137,7 @@ With the `Request Nuke-replacement` button you submit a new replacement request 
 
 ![Request-Nuke-replacement button](../assets/discordbot/planning-system/27_planning_system_nuke_replacementsystem_requestnukereplacement_button.png){ .screenshot }
 
-Clicking it opens the request modal with input fields for the target coordinate, the desired launch time and the Nuke size (entered as axe and light-cavalry count).
+Clicking it opens the request modal with input fields for the target coordinate, the desired **arrival time** and the Nuke size (entered as axe and light-cavalry count).
 
 ![Request-Nuke-replacement modal](../assets/discordbot/planning-system/32_planning_system_nuke_replacementsystem_requestnukereplacement_modal.png){ .screenshot }
 
@@ -180,4 +174,4 @@ With `Admin: Delete all requests` you can finally delete all Nuke-Replacement re
 ![Admin-Delete-all-requests button](../assets/discordbot/planning-system/31_planning_system_nuke_replacementsystem_admindeleteallrequests_button.png){ .screenshot }
 
 !!! info "Who can delete Nuke-Replacement requests?"
-    A single request can only be deleted by its creator or by a user with the `TWU-Mod` role via `Delete Request`. The `Admin: Delete all requests` button for bulk deletion of all requests is only available to users with the `TWU-Mod` role or Discord administrator permissions.
+    A single request can only be deleted by its creator or by a user with the `TWU-Planner` or `TWU-Leader` role via `Delete Request`. The `Admin: Delete all requests` button for bulk deletion of all requests is only available to those two roles.

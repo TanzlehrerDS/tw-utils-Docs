@@ -27,7 +27,7 @@ You land on the `Notifications` page with two cards: `Global Settings` and `Serv
 
 ### 2.1 Global Settings
 
-The `Global Settings` card controls per reminder type whether you want to receive this kind of DM at all. There are three types.
+The `Global Settings` card controls per reminder type whether you want to receive this kind of DM at all. There are four types.
 
 #### Launch time-Reminder
 
@@ -61,9 +61,15 @@ This reminder belongs to the [Account-Sitting-System](discord-bot/sitting-system
 
 This reminder belongs to the [Bunker-Information-System](discord-bot/bunker-info.md). You receive a DM as soon as an admin approves or rejects your bunker or top-up request. Admins can also enable the DM for the requests they have processed themselves.
 
+#### Tribe Surveys
+
+> *Discord DM when a leader starts a new tribe survey.*
+
+This reminder belongs to the [Tribe Surveys](leader-view/stammes-umfragen.md) in the Leader-View. You receive exactly **one** DM as soon as your tribe leadership creates a new survey — with title, deadline and a link to the reporting page. The same switch also covers the personal **reminder DM** a leader can send to an account that has not reported anything yet.
+
 ### 2.2 Server overview
 
-The `Server overview` card lists every Discord server in which you are a member of a tw-utils-relevant guild. For each server you can suppress DMs from that server entirely — independently of which of the three reminder types are active above.
+The `Server overview` card lists every Discord server in which you are a member of a tw-utils-relevant guild. For each server you can suppress DMs from that server entirely — independently of which of the four reminder types are active above.
 
 ![Server overview with Active and Muted pills](assets/notifications/06_website_profile-notification_discordservermute.png){ .screenshot }
 
@@ -92,7 +98,7 @@ Clicking `Notifications` posts an embed with two coloured buttons.
 
 ![Notifications embed with ON and OFF buttons](assets/notifications/08_discordbot_notifications_button_menu.png){ .screenshot }
 
-- **`Notifications: ON`** (green) — enables DMs for this Discord server. On the very first click, the three reminder types (`Launch time-Reminder`, `Sitting slot reminder`, `Bunker Info System`) are additionally activated with their default values, so that something is actually sent. If you had already configured the types individually on the website, your values are preserved.
+- **`Notifications: ON`** (green) — enables DMs for this Discord server. On the very first click, the four reminder types (`Launch time-Reminder`, `Sitting slot reminder`, `Bunker Info System`, `Tribe Surveys`) are additionally activated with their default values, so that something is actually sent. If you had already configured the types individually on the website, your values are preserved.
 - **`Notifications: OFF`** (red) — mutes this server. The global reminder type settings remain untouched, you simply stop receiving DMs from this server.
 
 !!! info "Want more control? Create an account on tw-utils.net"
@@ -103,7 +109,7 @@ Clicking `Notifications` posts an embed with two coloured buttons.
 !!! info "A DM is sent only if both toggles are ON"
     Before every DM, the bot checks **two** conditions — both must be satisfied:
 
-    1. The corresponding reminder type is active in the `Global Settings` (`Launch time-Reminder` / `Sitting slot reminder` / `Bunker Info System`).
+    1. The corresponding reminder type is active in the `Global Settings` (`Launch time-Reminder` / `Sitting slot reminder` / `Bunker Info System` / `Tribe Surveys`).
     2. The Discord server the event originates from is set to `Active` in the `Server overview` (equivalent to `Notifications: ON` in the bot channel).
 
     The server control is the **same** setting on both paths: whatever you toggle in the Discord bot with `Notifications: ON/OFF` is reflected afterwards in the `Server overview` on the website — and vice versa.

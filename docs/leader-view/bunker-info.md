@@ -2,7 +2,7 @@
 
 ![Bunker-Info — Übersicht](../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png){ .screenshot }
 
-Der Tab **„Bunker-Informationen"** ist das zentrale Werkzeug für die
+Der Tab **„Bunker-Info"** ist das zentrale Werkzeug für die
 Bunker-Verwaltung des Stammes. Du verwaltest hier die genehmigten
 Bunker, identifizierst zusätzliche Flexbunker, dokumentierst
 feindliche Bunker und hast die Möglichkeit Dir die Bunker-Situation
@@ -155,9 +155,10 @@ Tabs:
 
 ![Feind-Bunker eintragen](../assets/leaderview/13_leaderview_bunkerinfo_enemybunkers_add_enemybunker.png){ .screenshot }
 
-- **Manuell** — Koordinate (`XXX|YYY`), **Speerträger**,
-  **Schwertkämpfer**, **Bogenschütze**, **Schwere Kavallerie** sowie
-  der **Info-Stand** (Format `TT.MM.JJJJ HH:MM:SS`).
+- **Manuell** — Koordinate (`XXX|YYY`), die vier Truppenfelder
+  **`spear:`**, **`sword:`**, **`archer:`** und **`heavy:`** (jeweils
+  mit Einheiten-Symbol davor) sowie der **Info-Stand** (Format
+  `TT.MM.JJJJ HH:MM:SS`).
 - **Report-Link / Text** — entweder die Berichts-URL oder den
   Berichts-Text einfügen; das System parst die Truppen und den
   Zeitstempel automatisch.

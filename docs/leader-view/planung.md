@@ -1,141 +1,19 @@
-# Planung
+# Planung (Container)
 
 Der Tab **„Planung"** ist der größte Bereich des Leader-Views. Er
 gliedert sich in zwei Unterreiter:
 
 - **Container** — Angriffspläne sammeln, koordinieren und an die
-  Spieler verteilen.
-- **Abfragen** — vorbereitende Daten sammeln (AG-Meldungen,
-  Abschickzeiten, ausgeplante Dörfer).
+  Spieler verteilen. Darum geht es auf dieser Seite.
+- **Stammes-Umfragen** — vorbereitende Daten bei den Mitgliedern
+  abfragen (AG-Meldungen, Abschickzeiten, ausgeplante Dörfer). Sie
+  sind unter [Stammes-Umfragen](stammes-umfragen.md) beschrieben und
+  beim Öffnen des Tabs vorausgewählt.
 
-## Abfragen
-
-Unter dem Reiter **„Abfragen"** findest du drei Pill-Tabs:
-**AG-Meldungen**, **Abschickzeiten** und **Ausgeplante Dörfer**. Sie
-liefern die drei wichtigsten Inputs für die Off-Planung, welche von
-den Stammesmembern bereitgestellt werden müssen.
-
-!!! info "Daten kommen i. d. R. aus dem Discordbot"
-    AG-Meldungen, Abschickzeiten und ausgeplante Herkunftsdörfer geben
-    die Spieler in der Regel direkt über das
-    [Planning-System des Discordbots](../discord-bot/planning-system.md)
-    ab. Die Einträge erscheinen dann automatisch in diesen Listen.
-    Leader können aber jederzeit auch manuell Einträge anlegen,
-    bearbeiten oder löschen.
-
-### AG-Meldungen
-
-In diesem Bereich werden die AG-Meldungen verwaltet. Die Liste ist die
-Basis für die spätere AG-Planung.
-
-![AG-Meldungen — Übersicht](../assets/leaderview/15_leaderview_planning_snobqueries_overview.png){ .screenshot }
-
-Oben siehst du eine **Kennzahlen-Leiste**, die alle Meldungen
-zusammenfasst:
-
-- **Gesamt AGs** — Summe aller gemeldeten AGs über alle Spieler.
-- **Trains** — Anzahl Herkunftsdörfer, aus denen mindestens 4 AGs
-  gemeldet sind (Vollnobel-Train).
-- **1er-AGs / 2er-AGs / 3er-AGs** — Anzahl Herkunftsdörfer, aus denen
-  genau 1, 2 bzw. 3 AGs gemeldet sind.
-
-Die Tabelle darunter listet jede einzelne Meldung:
-
-| Spalte | Bedeutung |
-|---|---|
-| **#** | Laufende Nummer |
-| **DS-Account** | Spieler, der die AGs stellt |
-| **Stamm** | Stamm des Spielers |
-| **Koordinate** | Herkunftsdorf der Meldung |
-| **Anzahl** | Wie viele AGs der Spieler aus diesem Herkunftsdorf fertig hat |
-| **Aktionen** | Eintrag bearbeiten (Stift) oder löschen (Mülltonne) |
-
-Oberhalb der Tabelle hat man die folgenden Optionen:
-**„Hinzufügen"**, **„Export"**, **„Alles löschen"**.
-
-### Abschickzeiten
-
-Hier verwaltest du die individuellen Abschickfenster der Spieler —
-also die Zeitfenster, in denen die einzelnen Spieler tatsächlich Zeit
-haben, um Befehle abzuschicken.
-
-![Abschickzeiten — Übersicht](../assets/leaderview/17_leaderview_planning_launchtimes_overview.png){ .screenshot }
-
-Tabellenspalten:
-
-| Spalte | Bedeutung |
-|---|---|
-| **#** | Laufende Nummer |
-| **DS-Account** | Account, für welchen das eingetragene Zeitfenster gilt |
-| **Stamm** | Stamm des Spielers |
-| **Datum** | Tag, an dem der Spieler abschicken kann |
-| **Zeitraum** | Von- und Bis-Uhrzeit (Tribalwars-Serverzeit) |
-| **Aktionen** | Eintrag bearbeiten oder löschen |
-
-Oberhalb der Tabelle hat man die folgenden Optionen:
-**„Hinzufügen"**, **„Export"**, **„Alles löschen"**.
-
-### Ausgeplante Dörfer
-
-Hier markierst du Dörfer, die in der Off-Planung **nicht als
-Herkunftsdorf** verwendet werden sollen — zum Beispiel weil der Spieler
-das Dorf aktuell defensiv halten will oder weil die Truppen für eine
-andere Aktion reserviert sind.
-
-![Ausgeplante Dörfer — Übersicht](../assets/leaderview/19_leaderview_planning_excludedvillages_overview.png){ .screenshot }
-
-Tabellenspalten:
-
-| Spalte | Bedeutung |
-|---|---|
-| **#** | Laufende Nummer |
-| **DS-Account** | Besitzer des ausgeplanten Dorfs |
-| **Stamm** | Stamm des Besitzers |
-| **Koordinate** | Das ausgeplante Dorf |
-| **Aktionen** | Eintrag löschen |
-
-### Manuelles Hinzufügen
-
-Alle drei Listen in den **Abfragen** können nicht nur über den
-Discordbot, sondern auch direkt im Leader-View manuell befüllt werden.
-Über einen Klick auf den Button **„Hinzufügen"** oberhalb der
-jeweiligen Tabelle öffnest du das passende Eingabe-Modal. Nach dem
-Bestätigen erscheint der neue Eintrag unmittelbar in der
-entsprechenden Tabelle.
-
-Die drei Eingabe-Modals im Detail:
-
-#### AG-Meldung hinzufügen
-
-![AG-Meldung hinzufügen](../assets/leaderview/16_leaderview_planning_snobqueries_add.png){ .screenshot }
-
-Felder:
-
-- **Koordinaten (Text mit Koords)** — eine oder mehrere
-  Herkunftskoordinaten; umgebender Text wird ignoriert (z. B.
-  `AGs fertig in 500|500 und 501|501…`).
-- **Anzahl AGs (pro Dorf)** — wie viele AGs der Spieler pro
-  Herkunftsdorf fertig hat. Der eingegebene Wert gilt für **alle** in
-  Schritt 1 erkannten Koordinaten.
-
-#### Abschickzeit hinzufügen
-
-![Abschickzeit hinzufügen](../assets/leaderview/18_leaderview_planning_launchtimes_add.png){ .screenshot }
-
-Felder:
-
-- **Spielername (DS-Account)** — mit Autovervollständigung über die
-  verifizierten Accounts.
-- **Datum** — Tag des Abschickfensters.
-- **Von** / **Bis** — Anfang und Ende des Zeitfensters (Tribalwars-
-  Serverzeit).
-
-#### Herkunftsdorf ausplanen
-
-![Herkunftsdorf ausplanen](../assets/leaderview/20_leaderview_planning_excludedvillages_add.png){ .screenshot }
-
-Im Feld **„Koordinaten (Text mit Koords)"** trägst du eine oder mehrere
-Koordinaten ein (umgebender Text wird ignoriert).
+!!! info "Nur für TWU-Planner und TWU-Leader"
+    Der Tab **„Planung"** ist ausschließlich für User mit der Rolle
+    **TWU-Planner** oder **TWU-Leader** sichtbar. Details unter
+    [Berechtigung](uebersicht.md#welche-rolle-sieht-welchen-tab).
 
 ## Container
 
@@ -204,9 +82,11 @@ weitere Pläne einfügen.
 
 Soll der Container wieder komplett geleert werden, entfernt ein Klick
 auf **„Pläne leeren"** in einem Schritt alle bisher importierten
-Befehle. Der Schalter **„Abgelaufene ausblenden"** versteckt Befehle,
-deren Abschickzeit bereits in der Vergangenheit liegt — sie bleiben
-aber im Container erhalten und werden nur nicht mehr angezeigt.
+Befehle. Der Knopf **„Abgelaufene ausblenden"** versteckt einmalig alle
+Befehle, deren Abschickzeit bereits in der Vergangenheit liegt — sie
+bleiben im Container erhalten und werden nur nicht mehr angezeigt.
+Sichtbar machst du sie über das Häkchen **„Ausgeblendete anzeigen"** im
+Reiter „Befehle" (siehe [Reiter „Befehle"](#reiter-befehle)).
 
 !!! info "DSU-Pläne bleiben nach „Pläne leeren" bestehen"
     Wurde der Container zuvor bereits per **„DSU-Synchronisation"**
@@ -257,21 +137,22 @@ Verfügung, die in den folgenden Unterabschnitten beschrieben sind.
 
 Nach Klick auf **„DSU-Synchronisation"** legt das Tool für jeden
 Spieler einen DSU-Plan auf DS-Ultimate an; in der Spalte **„DSU-Plan"**
-erscheinen die Links **„Bearbeiten · Anzeigen"**.
+erscheinen die Links **„Bearbeiten · Ansehen"**.
 
 ![DSU-Plan: Bearbeiten / Anzeigen](../assets/leaderview/42_leaderview_planning_dsulink_edit_view.png){ .screenshot }
 
 Zusätzlich erscheint ganz oben die hervorgehobene Zeile **„Gesamtplan"**
-mit dem gelben **„Total Plan"**-Badge — sie enthält alle Befehle aller
+mit dem gelben **„Gesamtplan"**-Badge — sie enthält alle Befehle aller
 Spieler in einem einzigen DSU-Plan.
 
 ![Pending changes](../assets/leaderview/41_leaderview_planning_pendingchanges.png){ .screenshot }
 
-Oben rechts zeigt der Hinweis **„Pending changes: +X / -Y / ±Z"** an,
-wie viele Commands seit der letzten Synchronisation **hinzugekommen
-(+)**, **entfernt (−)** oder **geändert (±)** wurden. Solange der
-Zähler nicht 0/0/0 steht, sind die DSU-Pläne nicht auf dem aktuellen
-Stand.
+Unter der Plan-Leiste zeigt der Hinweis
+**„Offene Änderungen: +X / −Y / ±Z"** an, wie viele Befehle seit der
+letzten Synchronisation **hinzugekommen (+)**, **entfernt (−)** oder
+**geändert (±)** wurden. Solange er zu sehen ist, sind die DSU-Pläne
+nicht auf dem aktuellen Stand — gibt es nichts Offenes, verschwindet
+der Hinweis ganz.
 
 !!! info "Was wird synchronisiert?"
     In die DSU-Pläne werden ausschließlich Befehle übertragen, die im
@@ -333,7 +214,7 @@ aufgelösten Platzhaltern, inkl. WB-Commands-Spoiler).
 
 ![Dialog „Ingame-Nachricht senden"](../assets/leaderview/45_leaderview_planning_send_ingame_message_dialog.png){ .screenshot }
 
-Über **„Send & Copy"** wird die Nachricht in die Zwischenablage
+Über **„Senden & Kopieren"** wird die Nachricht in die Zwischenablage
 kopiert und gleichzeitig die Ingame-Nachricht in einem neuen Tab
 geöffnet — dort einfach mit `Strg+V` einfügen und versenden. Der
 Spieler wird automatisch als **„verteilt"** markiert.
@@ -373,14 +254,14 @@ bekommen soll.
 
 Sobald du in der Spieler-Tabelle mindestens einen Eintrag anhakst,
 erscheint oben eine Action-Bar mit Bulk-Aktionen. Über
-**„Abhol-Status zurücksetzen"** setzt du den Verteilungsstatus aller
-ausgewählten Spieler auf 🔴 zurück — nützlich, wenn die Pläne erneut
-verteilt werden sollen. Mit **„Link erneuern"** wird für die
-ausgewählten Spieler ein neuer DSU-Link generiert; der alte Link wird
-dabei sofort ungültig, sodass die betroffenen Spieler den neuen Link
-aktiv abholen müssen. Die Bulk-Aktion **„Export Links"** ist im
+**„Verteilungsstatus zurücksetzen"** setzt du den Verteilungsstatus
+aller ausgewählten Spieler auf 🔴 zurück — nützlich, wenn die Pläne
+erneut verteilt werden sollen. Mit **„Plan-Links erneuern"** wird für
+die ausgewählten Spieler ein neuer DSU-Link generiert; der alte Link
+wird dabei sofort ungültig, sodass die betroffenen Spieler den neuen
+Link aktiv abholen müssen. Die Bulk-Aktion **„Export Links"** ist im
 Abschnitt [Planverteilung](#planverteilung) beschrieben. Über
-**„Abbrechen"** verwirfst du die aktuelle Auswahl.
+**„Abbruch"** verwirfst du die aktuelle Auswahl.
 
 ### Reiter „Befehle"
 
@@ -389,7 +270,7 @@ Abschnitt [Planverteilung](#planverteilung) beschrieben. Über
 Im Reiter **„Befehle"** verwaltest du als Leader die im Container
 enthaltenen Befehle. Einzelne Befehle können hier bearbeitet,
 ausgeblendet oder gelöscht werden — ausgeblendete Befehle lassen
-sich über das Häkchen **„Ausgeblendete zeigen"** jederzeit wieder
+sich über das Häkchen **„Ausgeblendete anzeigen"** jederzeit wieder
 einblenden. Auch Bulk-Aktionen wie das Anpassen von Ankunftszeiten
 sowie das Anwenden von UT-Boosts auf Fake-UT-Befehle sind hier
 möglich. Die einzelnen Funktionen sind im Folgenden beschrieben.
@@ -432,10 +313,9 @@ um z. B. AG-Befehle zeitlich an die zuletzt laufende Off anzupassen.
 Im ersten Schritt wählst du gezielt aus, welche
 Plantyp/Einheit/Icon-Kombinationen angepasst werden sollen — so
 kannst du die Anpassung auf einzelne Befehlsgruppen einschränken und
-andere unberührt lassen. Die Spalte **„Count"** zeigt dir je Zeile,
-wie viele Befehle im Container unter die jeweilige Kombination
-fallen; die Spalte **„Total"** summiert die aktuell markierte
-Auswahl.
+andere unberührt lassen. Die Spalte **„Anzahl"** zeigt dir je Zeile,
+wie viele Befehle im Container unter die jeweilige Kombination fallen;
+die Fußzeile **„Summe"** addiert die aktuell markierte Auswahl.
 
 Im zweiten Schritt lädst du eine Textdatei mit den neuen
 Ankunftszeiten hoch — eine Zeile pro Zieldorf im Format
@@ -467,12 +347,12 @@ Boost-Prozentsatz (0–20 %) ein.
     UT-Boosts wirken ausschließlich auf **Fake-UT-Befehle** und
     schließen dabei auch ausgeblendete Befehle mit ein.
 
-- **„Save only"** — speichert die eingegebenen Boost-Werte, ohne die
+- **„Nur Speichern"** — speichert die eingegebenen Boost-Werte, ohne die
   betroffenen Fake-UT-Befehle bereits umzurechnen. Die tatsächliche
   Anpassung der Befehle erfolgt erst beim späteren Klick auf
-  **„Save & Apply"**.
-- **„Save & Apply"** — Werte speichern und sofort auf alle betroffenen
-  Befehle anwenden.
+  **„Speichern & Anwenden"**.
+- **„Speichern & Anwenden"** — Werte speichern und sofort auf alle
+  betroffenen Befehle anwenden.
 
 ### Veröffentlichung
 
@@ -508,8 +388,8 @@ Operation.
 
 Über den Button **„Changelog"** öffnest du die vollständige Historie
 aller Änderungen am Container. Pro Eintrag siehst du **Zeitpunkt**,
-**Geändert von** (Leader bzw. Spieler) und die ausgeführte
-**Container-Aktion**.
+**Geändert von** (Leader bzw. Spieler) und in der Spalte **Container**
+die ausgeführte Aktion.
 
 #### Container löschen
 
@@ -521,11 +401,12 @@ werden. Vor dem Löschen erscheint ein Bestätigungsdialog, um
 versehentliche Löschungen zu vermeiden.
 
 !!! info "Bereits verteilte DSU-Pläne bleiben erhalten"
-    Das Löschen des Containers hat keine Auswirkung auf bereits an
-    DS-Ultimate synchronisierte Pläne — diese bleiben in DS-Ultimate
-    bestehen. Sollen die DSU-Pläne vor dem Löschen ebenfalls geleert
-    werden, empfiehlt sich folgender Ablauf: zunächst über
-    **„Pläne leeren"** alle Befehle aus dem Container entfernen,
-    anschließend über **„DSU-Synchronisation"** den geleerten Zustand
-    nach DS-Ultimate übertragen — und erst danach den Container
-    löschen.
+    Die bei DS-Ultimate angelegten Pläne bleiben nach dem Löschen des
+    Containers bestehen — ein einmal erstellter DSU-Plan lässt sich
+    über die Schnittstelle nicht mehr entfernen. tw-utils **leert**
+    die zugehörigen DSU-Pläne beim Löschen des Containers allerdings
+    automatisch, entfernt dort also alle Befehle.
+
+    Bereits verteilte Links funktionieren damit weiter, zeigen danach
+    aber einen leeren Plan. Wer den Plan endgültig loswerden will,
+    muss ihn direkt bei DS-Ultimate löschen.

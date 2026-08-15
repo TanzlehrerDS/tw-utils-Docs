@@ -20,6 +20,15 @@ Nach der [Installation](modul-verwaltung.md) legt der Bot die Kategorie `🪓 PL
 
 Im `#⚫-queries`-Kanal findest Du unterhalb des `Queries`-Embeds drei farblich markierte Buttons: `Snob Report`, `Launch Times` und `Off-Exclusion`.
 
+!!! info "Meldungen gehören zu einer Stammes-Umfrage"
+    Alle Meldungen laufen inzwischen über eine
+    [Stammes-Umfrage](../leader-view/stammes-umfragen.md), die die
+    Stammesführung im Leader-View anlegt. Der Bot fragt Dich deshalb
+    bei `Add`, `Show` und `Delete` zuerst, für **welche** Umfrage die
+    Aktion gelten soll. Gibt es nur eine passende Umfrage, entfällt
+    die Abfrage. Existiert gar keine, lehnt der Bot die Aktion mit
+    einem Hinweis ab.
+
 ![Queries-Kanal](../assets/discordbot/planning-system/02_planning_system_queries_channel.png){ .screenshot }
 
 ![Query-Buttons im Queries-Kanal](../assets/discordbot/planning-system/03_planning_system_queries_channel_query-buttons.png){ .screenshot }
@@ -80,22 +89,7 @@ Anschließend öffnet sich das Off-Ausschluss-Modal, in dem Du die Herkunfts-Dö
 
 Über den `Show`-Button kannst Du Dir alle bereits hinterlegten Off-Ausschlüsse für den ausgewählten Account anzeigen lassen. Über den `Delete`-Button kannst Du einen konkreten Eintrag wieder löschen.
 
-## 5. Admin-Funktionen
-
-Unterhalb der Spieler-Buttons stehen im `#⚫-queries`-Kanal zwei zusätzliche Admin-Buttons zur Verfügung.
-
-Mit `Admin: Delete All` lassen sich **alle** AG-Meldungen, Abschickzeiten und Off-Ausschluss-Einträge auf dem gesamten Server löschen. Das ist vor allem dann sinnvoll, wenn die Stammes-Führung mit einer komplett neuen Planung starten und alle Alt-Daten der Spieler aus den drei Abfrage-Bereichen zurücksetzen möchte. Vor der Ausführung erscheint eine Bestätigungs-Abfrage mit den Buttons `Confirm` und `Cancel`, sodass nichts versehentlich gelöscht wird.
-
-![Admin Delete All Button](../assets/discordbot/planning-system/16_planning_system_queries_admin_delete_all_button.png){ .screenshot }
-
-Über den `Admin: Export`-Button kannst Du alle aktuell vorliegenden Meldungen als Datei exportieren — praktisch, um die gesammelten Eingaben z. B. außerhalb von Discord in der Stammes-Führung weiterzuverarbeiten.
-
-![Admin Export Button](../assets/discordbot/planning-system/17_planning_system_queries_admin_export_button.png){ .screenshot }
-
-!!! info "Wer darf Admin-Funktionen nutzen?"
-    Die Buttons `Admin: Delete All` und `Admin: Export` können nur User mit der Rolle `TWU-Mod` oder Discord-Administrator-Rechten ausführen. Für normale Mitglieder sind diese Buttons zwar sichtbar, aber ein Klick wird vom Bot mit einer Berechtigungs-Fehlermeldung abgelehnt.
-
-## 6. Plan-Verteilung
+## 5. Plan-Verteilung
 
 Im `#⚫-plan-distribution`-Kanal findest Du unterhalb des `Plan Distribution`-Embeds den Button `Download`.
 
@@ -110,7 +104,7 @@ Klick auf `Download`: Der Bot prüft die verknüpften TW-Accounts des Spielers u
 !!! info "Plan-Download per DM"
     Damit der Bot die Pläne zustellen kann, müssen Direktnachrichten vom Bot in den Discord-Einstellungen erlaubt sein. Andernfalls erscheint eine ephemerale Fehlermeldung im Kanal mit dem Hinweis, die DMs zu aktivieren.
 
-## 7. Plan-Informationen
+## 6. Plan-Informationen
 
 Im `#⚫-leaderview-planinfo`-Kanal findest Du unterhalb des `Plan Information`-Embeds den Button `Retrieve Plan Information`.
 
@@ -122,7 +116,7 @@ Per Klick auf `Retrieve Plan Information` öffnet sich das Modal `Plan Informati
 
 ![Plan-Information-Modal](../assets/discordbot/planning-system/23_planning_system_leaderview-planinfo_retrieve-plan-information_modal.png){ .screenshot }
 
-Der Bot rendert daraufhin direkt im Kanal eine Übersicht aller aktuell geplanten Befehle aus allen aktiven Plan-Containern für die angegebene Koordinate.
+Der Bot rendert daraufhin eine Übersicht aller aktuell geplanten Befehle aus allen aktiven Plan-Containern für die angegebene Koordinate. Die Antwort ist ephemeral — sie ist also nur für Dich sichtbar und verschwindet wieder.
 
 ![Bot-Antwort mit Plan-Information](../assets/discordbot/planning-system/24_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer.png){ .screenshot }
 
@@ -131,9 +125,9 @@ Die detailliertere Ansicht zeigt zusätzlich die einzelnen Befehle mit Herkunfts
 ![Detaillierte Bot-Antwort mit Plan-Information](../assets/discordbot/planning-system/25_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer_detailed.png){ .screenshot }
 
 !!! info "Sichtbarkeit Leaderview-PlanInfo"
-    Der `#⚫-leaderview-planinfo`-Kanal ist standardmäßig **nur für User mit der Rolle `TWU-Mod` sichtbar**. Normale Mitglieder sehen den Kanal nicht — Plan-Informationen bleiben damit innerhalb der Stammes-Führung.
+    Der `#⚫-leaderview-planinfo`-Kanal ist wie die übrigen Kanäle des Moduls sichtbar; wer ihn sehen darf, steuert ihr über die [Sichtbarkeits-Rollen](modul-verwaltung.md). Den Button `Retrieve Plan Information` können aber nur User mit der Rolle `TWU-Planner` oder `TWU-Leader` benutzen — und die Antwort des Bots ist ephemeral, sieht also ausschließlich der Anfragende. Plan-Informationen bleiben damit innerhalb der Stammes-Führung.
 
-## 8. Off-Ersatz
+## 7. Off-Ersatz
 
 Im `#⚫-nuke-replacement`-Kanal findest Du oben unter dem `Nuke-Replacement`-Embed fünf Verwaltungs-Buttons; darunter listen zwei Status-Embeds (`NOT DONE` und `DONE`) den aktuellen Stand aller Ersatz-Anfragen auf.
 
@@ -143,7 +137,7 @@ Im `#⚫-nuke-replacement`-Kanal findest Du oben unter dem `Nuke-Replacement`-Em
 
 ![Request-Nuke-replacement-Button](../assets/discordbot/planning-system/27_planning_system_nuke_replacementsystem_requestnukereplacement_button.png){ .screenshot }
 
-Per Klick öffnet sich das Anfrage-Modal mit Eingabefeldern für die Zielkoordinate, den gewünschten Abschickzeitpunkt und die Off-Größe (Angabe als Axt- und LKav-Anzahl).
+Per Klick öffnet sich das Anfrage-Modal mit Eingabefeldern für die Zielkoordinate, die gewünschte **Ankunftszeit** und die Off-Größe (Angabe als Axt- und LKav-Anzahl).
 
 ![Request-Nuke-replacement-Modal](../assets/discordbot/planning-system/32_planning_system_nuke_replacementsystem_requestnukereplacement_modal.png){ .screenshot }
 
@@ -180,4 +174,4 @@ Mit `Admin: Delete all requests` lassen sich schließlich alle Off-Ersatz-Anfrag
 ![Admin-Delete-all-requests-Button](../assets/discordbot/planning-system/31_planning_system_nuke_replacementsystem_admindeleteallrequests_button.png){ .screenshot }
 
 !!! info "Wer darf Off-Ersatz-Anfragen löschen?"
-    Eine einzelne Anfrage kann nur der Ersteller selbst oder ein User mit der Rolle `TWU-Mod` über `Delete Request` löschen. Der Button `Admin: Delete all requests` zum gesammelten Löschen aller Anfragen steht ausschließlich Usern mit der Rolle `TWU-Mod` oder Discord-Administrator-Rechten zur Verfügung.
+    Eine einzelne Anfrage kann nur der Ersteller selbst oder ein User mit der Rolle `TWU-Planner` bzw. `TWU-Leader` über `Delete Request` löschen. Der Button `Admin: Delete all requests` zum gesammelten Löschen aller Anfragen steht ausschließlich diesen beiden Rollen zur Verfügung.

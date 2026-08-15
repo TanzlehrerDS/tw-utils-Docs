@@ -1,138 +1,19 @@
-# Planning
+# Planning (Container)
 
 The **"Planning"** tab is the largest area of the Leader-View. It is
 split into two sub-tabs:
 
 - **Container** — collect, coordinate and distribute attack plans to
-  the players.
-- **Queries** — collect preparatory data (Snob-Entries, launch times,
-  excluded source villages).
+  the players. That is what this page is about.
+- **Tribe Surveys** — collect preparatory data from the members
+  (snob entries, launch times, excluded source villages). They are
+  described under [Tribe Surveys](stammes-umfragen.md) and are
+  preselected when the tab is opened.
 
-## Queries
-
-Under the **"Queries"** sub-tab you'll find three pill tabs:
-**Snob-Entries**, **Launch times** and **Excluded Villages**. They
-provide the three most important inputs for nuke planning and must be
-supplied by the tribe members.
-
-!!! info "Data usually comes from the Discord bot"
-    Snob-Entries, launch times and excluded source villages are
-    usually submitted by the players directly via the
-    [Planning-System of the Discord bot](../discord-bot/planning-system.md).
-    The entries then appear automatically in these lists. Leaders can
-    however always create, edit or delete entries manually.
-
-### Snob-Entries
-
-In this area the snob entries are managed. The list is the basis for
-the later snob planning.
-
-![Snob-Entries — overview](../assets/leaderview/15_leaderview_planning_snobqueries_overview.png){ .screenshot }
-
-At the top you see a **metrics bar** summarizing all entries:
-
-- **Total Snobs** — sum of all reported snobs across all players.
-- **Trains** — number of source villages from which at least 4 snobs
-  are reported (full-snob train).
-- **1-Snobs / 2-Snobs / 3-Snobs** — number of source villages from
-  which exactly 1, 2 or 3 snobs are reported.
-
-The table below lists every single entry:
-
-| Column | Meaning |
-|---|---|
-| **#** | Running number |
-| **TW-Account** | Player providing the snobs |
-| **Tribe** | Tribe of the player |
-| **Coordinate** | Source village of the entry |
-| **Count** | How many snobs the player has ready from this source village |
-| **Actions** | Edit entry (pencil) or delete (trash) |
-
-Above the table you have the following options: **"Add"**,
-**"Export"**, **"Delete all"**.
-
-### Launch times
-
-Here you manage the individual launch windows of the players — i.e.
-the time windows in which the individual players actually have time to
-send commands.
-
-![Launch times — overview](../assets/leaderview/17_leaderview_planning_launchtimes_overview.png){ .screenshot }
-
-Table columns:
-
-| Column | Meaning |
-|---|---|
-| **#** | Running number |
-| **TW-Account** | Account the entered time window applies to |
-| **Tribe** | Tribe of the player |
-| **Date** | Day on which the player can launch |
-| **Time range** | From and to time (Tribalwars server time) |
-| **Actions** | Edit or delete entry |
-
-Above the table you have the following options: **"Add"**,
-**"Export"**, **"Delete all"**.
-
-### Excluded Villages
-
-Here you mark villages that should **not be used as a source
-village** in nuke planning — for example because the player currently
-wants to hold the village defensively or because the troops are
-reserved for another operation.
-
-![Excluded Villages — overview](../assets/leaderview/19_leaderview_planning_excludedvillages_overview.png){ .screenshot }
-
-Table columns:
-
-| Column | Meaning |
-|---|---|
-| **#** | Running number |
-| **TW-Account** | Owner of the excluded village |
-| **Tribe** | Tribe of the owner |
-| **Coordinate** | The excluded village |
-| **Actions** | Delete entry |
-
-### Manual add
-
-All three lists in **Queries** can not only be filled via the Discord
-bot, but also directly in the Leader-View. Clicking the **"Add"**
-button above the respective table opens the matching input modal.
-After confirming, the new entry appears immediately in the
-corresponding table.
-
-The three input modals in detail:
-
-#### Add snob entry
-
-![Add snob entry](../assets/leaderview/16_leaderview_planning_snobqueries_add.png){ .screenshot }
-
-Fields:
-
-- **Coordinates (text with coords)** — one or more source coordinates;
-  surrounding text is ignored (e.g. `Snobs ready in 500|500 and
-  501|501…`).
-- **Snob count (per village)** — how many snobs the player has ready
-  per source village. The entered value applies to **all**
-  coordinates detected in step 1.
-
-#### Add launch time
-
-![Add launch time](../assets/leaderview/18_leaderview_planning_launchtimes_add.png){ .screenshot }
-
-Fields:
-
-- **Player name (TW-Account)** — with autocomplete via the verified
-  accounts.
-- **Date** — day of the launch window.
-- **From** / **To** — start and end of the time window (Tribalwars
-  server time).
-
-#### Exclude source village
-
-![Exclude source village](../assets/leaderview/20_leaderview_planning_excludedvillages_add.png){ .screenshot }
-
-In the **"Coordinates (text with coords)"** field you enter one or
-more coordinates (surrounding text is ignored).
+!!! info "TWU-Planner and TWU-Leader only"
+    The **"Planning"** tab is visible exclusively to users with the
+    **TWU-Planner** or **TWU-Leader** role. Details under
+    [Permission](uebersicht.md#which-role-sees-which-tab).
 
 ## Container
 
@@ -197,9 +78,11 @@ after another.
 
 To empty the container completely, a click on **"Empty plans"**
 removes all previously imported commands in one step. The
-**"Hide outdated"** switch hides commands whose launch time already
-lies in the past — they remain in the container but are simply no
-longer displayed.
+**"Hide outdated"** button hides, in one go, every command whose launch
+time already lies in the past — they remain in the container but are
+simply no longer displayed. You bring them back via the
+**"Show hidden"** checkbox in the "Commands" tab (see
+[The "Commands" tab](#commands-tab)).
 
 !!! info "DSU plans persist after \"Empty plans\""
     If the container has previously been transferred to DS-Ultimate
@@ -251,16 +134,17 @@ DS-Ultimate for each player; in the **"DSU plan"** column the links
 
 ![DSU plan: Edit / View](../assets/leaderview/42_leaderview_planning_dsulink_edit_view.png){ .screenshot }
 
-In addition, the highlighted row **"Total Plan"** appears at the very
-top with the yellow **"Total Plan"** badge — it contains all commands
-of all players in a single DSU plan.
+In addition, the highlighted row **`Gesamtplan`** appears at the very
+top, carrying the yellow **"Total Plan"** badge — it contains all
+commands of all players in a single DSU plan.
 
 ![Pending changes](../assets/leaderview/41_leaderview_planning_pendingchanges.png){ .screenshot }
 
-At the top right the hint **"Pending changes: +X / -Y / ±Z"** shows
+Below the plan bar the hint **"Pending changes: +X / −Y / ±Z"** shows
 how many commands have been **added (+)**, **removed (−)** or
-**changed (±)** since the last sync. As long as the counter is not
-0/0/0, the DSU plans are not up to date.
+**changed (±)** since the last sync. As long as it is visible, the DSU
+plans are not up to date — with nothing pending, the hint disappears
+entirely.
 
 !!! info "What gets synchronized?"
     Only commands that are present in the container **and** not
@@ -322,7 +206,7 @@ placeholders, including WB-commands spoiler).
 
 ![\"Send in-game message\" dialog](../assets/leaderview/45_leaderview_planning_send_ingame_message_dialog.png){ .screenshot }
 
-Via **"Send & Copy"** the message is copied to the clipboard and at
+Via **"Send & copy"** the message is copied to the clipboard and at
 the same time the in-game message is opened in a new tab — there
 simply paste with `Ctrl+V` and send. The player is automatically
 marked as **"distributed"**.
@@ -361,9 +245,9 @@ e.g. if a player should receive the plan again.
 
 As soon as you check at least one entry in the player table, an
 action bar appears at the top with bulk actions. Via
-**"Reset fetch status"** you reset the distribution status of all
-selected players to 🔴 — useful when the plans should be distributed
-again. With **"Renew link"** a new DSU link is generated for the
+**"Reset distribution status"** you reset the distribution status of
+all selected players to 🔴 — useful when the plans should be
+distributed again. With **"Renew plan links"** a new DSU link is generated for the
 selected players; the old link becomes invalid immediately, so the
 affected players have to actively fetch the new link. The bulk action
 **"Export Links"** is described in the
@@ -454,8 +338,8 @@ table.
 - **"Save only"** — stores the entered boost values without
   recalculating the affected fake-UT commands yet. The actual
   adjustment of the commands only happens on a later click on
-  **"Save & Apply"**.
-- **"Save & Apply"** — save the values and immediately apply them to
+  **"Save & apply"**.
+- **"Save & apply"** — save the values and immediately apply them to
   all affected commands.
 
 ### Publishing
@@ -491,8 +375,8 @@ operation.
 
 Via the **"Changelog"** button you open the full history of all
 changes to the container. Per entry you see the **timestamp**,
-**changed by** (leader or player) and the executed **container
-action**.
+**changed by** (leader or player) and, in the **Container** column, the
+executed action.
 
 #### Delete container
 
@@ -503,9 +387,12 @@ containers cannot be restored. Before deletion a confirmation dialog
 appears to prevent accidental deletions.
 
 !!! info "Already distributed DSU plans remain intact"
-    Deleting the container has no effect on plans already
-    synchronized to DS-Ultimate — these remain in DS-Ultimate. If you
-    also want to empty the DSU plans before deletion, the recommended
-    workflow is: first remove all commands from the container via
-    **"Empty plans"**, then transfer the emptied state to DS-Ultimate
-    via **"DSU sync"** — and only then delete the container.
+    The plans created on DS-Ultimate remain in place after the
+    container is deleted — once created, a DSU plan can no longer be
+    removed through the interface. tw-utils does, however,
+    automatically **empty** the associated DSU plans when the
+    container is deleted, removing all commands there.
+
+    Links you already handed out therefore keep working, but show an
+    empty plan afterwards. To get rid of the plan for good you have to
+    delete it on DS-Ultimate directly.

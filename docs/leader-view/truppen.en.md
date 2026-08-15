@@ -10,8 +10,13 @@ Discord bot.
 !!! info "Re-use by the Discord bot"
     The uploaded **"Troops in village"** data is automatically synced
     with the tw-utils Discord bot and re-used there in the
-    **Bunker-Information-System** and **Nuke/Deff/Snob-Search-System**
+    **Bunker-Information-System** and **Off/Deff/Snob-Search-System**
     modules.
+
+!!! info "Who sees this tab?"
+    The **"Troops"** tab is visible to all four roles — TWU-Troops,
+    TWU-Bunker, TWU-Planner and TWU-Leader. Details under
+    [Permission](uebersicht.md#which-role-sees-which-tab).
 
 ## Table columns
 
@@ -44,10 +49,17 @@ The button **"Upload Troops"** (top right) opens the upload dialog:
 Dialog fields:
 
 - **Tribe tag** — tag of the tribe the data belongs to (e.g. `ABC`).
+  While typing, the field suggests matching tribes of the current
+  world; a tag that does not exist on the world is rejected on upload.
 - **Scope** — choose either **"Troops in village"** or
   **"Total troops"** (see [The two scopes](#the-two-scopes)).
 - **Troops file (.txt)** — the TXT file produced by the
   [quickbar script](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/).
+
+An upload always **replaces** the entire previous dataset for that
+combination of tribe and scope — nothing is merged. An upload without
+any usable rows leaves the existing data untouched instead of clearing
+it.
 
 ### Expected file format
 

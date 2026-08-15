@@ -20,6 +20,8 @@ Lade den Bot über den folgenden Link auf euren Stammes-Discord ein. Du wirst da
 
 Direkt nach dem Einladen legt der Bot eigenständig die Kategorie `⚙️ TWU-SETUP` mit dem Kanal `#⚫-bot-config` auf eurem Discord-Server an. Dieser Kanal ist die **zentrale Steuerung** für den Bot — alle weiteren Setup-Schritte sowie die spätere Verwaltung der Module laufen ausschließlich dort über Buttons ab.
 
+In derselben Kategorie entsteht zusätzlich der Kanal `#⚫-admin-logs`, in dem der Bot ausgeführte Verwaltungs-Aktionen protokolliert. Er ist nur für Discord-Administratoren sichtbar und muss nicht eingerichtet werden.
+
 ![Automatisch erstellter Konfigurations-Kanal](../assets/discordbot/quick-setup-guide/02_channel_creation.png){ .screenshot }
 
 ## 3. Spielwelt festlegen
@@ -71,6 +73,9 @@ Wähle im ersten Dropdown die Rolle aus, die der User erhalten soll — wähle h
 Wähle anschließend im zweiten Dropdown den Discord-User aus, der den Leader-Status erhalten soll. Die Zuweisung wird sofort wirksam und der ausgewählte User kann ab sofort auf das Leader-View zugreifen.
 
 ![User-Auswahl](../assets/discordbot/quick-setup-guide/13_user_selection.png){ .screenshot }
+
+!!! info "Alle weiteren Rechte werden im Leader-View vergeben"
+    Über den Bot lässt sich nur die Rolle `Leader` (= TWU-Leader) vergeben — das ist der Einstiegspunkt. Sobald es einen TWU-Leader gibt, vergibt dieser alle weiteren Rollen (`TWU-Troops`, `TWU-Bunker`, `TWU-Planner` und die API-Zusatzrollen) direkt auf tw-utils.net im Leader-View unter [Mitglieder](../leader-view/mitglieder.md#rechte-verwalten). Einen Überblick gibt das [Berechtigungskonzept](berechtigungskonzept.md).
 
 ## 6. Bot-Module installieren
 

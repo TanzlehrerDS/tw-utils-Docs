@@ -1,14 +1,13 @@
 # Bunker-Information-System
 
-Im Bunker-Information-System verwaltet Ihr eure Bunker. Stammesmember stellen Bunker-Anfragen, TWU-Mods genehmigen oder lehnen sie ab. Genauso können auch Aufstockungen (Top-Up) beantragt und genehmigt oder Bunker aufgelöst werden. Daneben bietet das Modul für die Leader einen schnellen Bunker-Health-Check sowie eine Möglichkeit zur Kontrolle und Identifizierung von Flexbunkern.
+Im Bunker-Information-System verwaltet Ihr eure Bunker. Stammesmember stellen Bunker-Anfragen, User mit der Rolle **TWU-Bunker** (oder TWU-Leader) genehmigen oder lehnen sie ab. Genauso können auch Aufstockungen (Top-Up) beantragt und genehmigt oder Bunker aufgelöst werden. Daneben bietet das Modul für die Leader einen schnellen Bunker-Health-Check sowie eine Möglichkeit zur Kontrolle und Identifizierung von Flexbunkern.
 
 ## 1. Kanäle des Moduls
 
-Nach der [Installation](modul-verwaltung.md) legt der Bot die Kategorie `🧱 BUNKER-INFORMATION-SYSTEM` mit vier Kanälen an:
+Nach der [Installation](modul-verwaltung.md) legt der Bot die Kategorie `🧱 BUNKER-INFORMATION-SYSTEM` mit drei Kanälen an:
 
+- `#⚫-leaderview-bunker` — Leader-Werkzeuge: Bunker-Health-Check aller genehmigten Bunker und Flexbunker-Kontrolle
 - `#⚫-request-bunker` — zentraler Anfrage-Kanal mit den Buttons zum Anfragen, Aufstocken, Anzeigen und Auflösen eigener Bunker
-- `#⚫-leaderview-bunker` — Leader-View mit Bunker-Health-Übersicht aller genehmigten Bunker
-- `#⚫-leaderview-flexbunker` — Leader-View mit der Flexbunker-Kontrolle
 - `#⚫-report-bunker` — Kanal zum Melden und Verwalten feindlicher Bunker
 
 ![Kanal-Übersicht des Bunker-Information-Systems](../assets/discordbot/bunker-information-system/01_channel_overview.png){ .screenshot }
@@ -37,7 +36,7 @@ Nach dem Absenden legt der Bot pro Koordinate einen eigenen Kanal `❓-bunker-fo
 
 ![Neuer Anfrage-Kanal in der Kategorie](../assets/discordbot/bunker-information-system/05_request_bunker_new_channel_created.png){ .screenshot }
 
-Im neuen Kanal postet der Bot ein Anfrage-Embed mit Spieler, Koordinate, gewünschter Größe und Begründung sowie den Genehmigungs-Buttons für TWU-Mods.
+Im neuen Kanal postet der Bot ein Anfrage-Embed mit Spieler, Koordinate, gewünschter Größe und Begründung sowie den Genehmigungs-Buttons für TWU-Bunker.
 
 ![Anfrage-Zusammenfassung im neuen Kanal](../assets/discordbot/bunker-information-system/06_request_bunker_new_channel_request_summary.png){ .screenshot }
 
@@ -46,7 +45,7 @@ Im neuen Kanal postet der Bot ein Anfrage-Embed mit Spieler, Koordinate, gewüns
 
 ## 3. Bunker genehmigen/ablehnen
 
-Im Per-Request-Kanal sehen TWU-Mods den Button `Admin: Approve`.
+Im Per-Request-Kanal sehen TWU-Bunker den Button `Admin: Approve`.
 
 ![Admin: Approve Button](../assets/discordbot/bunker-information-system/07_approve_bunker.png){ .screenshot }
 
@@ -58,16 +57,16 @@ Nach erfolgreicher Genehmigung erhält der Anfragende sowie derjenige, der die A
 
 ![Genehmigungs-DM](../assets/discordbot/bunker-information-system/09_approve_bunker_summary_as_discord_dm.png){ .screenshot }
 
-Statt zu genehmigen, können TWU-Mods die Anfrage mit `Admin: Reject` ablehnen. Sowohl der Anfragende als auch der ablehnende TWU-Mod erhalten anschließend eine Discord-Direktnachricht zur Ablehnung; der Anfrage-Kanal wird ebenfalls automatisch gelöscht.
+Statt zu genehmigen, können TWU-Bunker die Anfrage mit `Admin: Reject` ablehnen. Sowohl der Anfragende als auch der ablehnende TWU-Bunker erhalten anschließend eine Discord-Direktnachricht zur Ablehnung; der Anfrage-Kanal wird ebenfalls automatisch gelöscht.
 
 ![Admin: Reject Button](../assets/discordbot/bunker-information-system/14_leader_reject_button.png){ .screenshot }
 
-Der Anfragende selbst — oder ein TWU-Mod — kann die Anfrage über `Withdraw (Delete)` jederzeit zurückziehen. Der Per-Request-Kanal wird dabei mit gelöscht.
+Der Anfragende selbst — oder ein TWU-Bunker — kann die Anfrage über `Withdraw (Delete)` jederzeit zurückziehen. Der Per-Request-Kanal wird dabei mit gelöscht.
 
 ![Withdraw (Delete) Button](../assets/discordbot/bunker-information-system/15_withdraw_delete_button.png){ .screenshot }
 
 !!! info "Genehmigung mit Größen-Override"
-    Im Approval-Modal kann der TWU-Mod eine abweichende Größe vergeben — etwa weil das Dorf eine andere Stärke haben soll als ursprünglich angefragt. Diese Größe wird zur verbindlichen Soll-Größe und ist Basis für die Bunker-Health-Ampel im Leader-View.
+    Im Approval-Modal kann der TWU-Bunker eine abweichende Größe vergeben — etwa weil das Dorf eine andere Stärke haben soll als ursprünglich angefragt. Diese Größe wird zur verbindlichen Soll-Größe und ist Basis für die Bunker-Health-Ampel im Leader-View.
 
 !!! info "SD-Befehl aus Approval-DM kopieren"
     Die `Bunker Approved`-DM enthält am Ende einen fertig formatierten SD-Befehl-String (`{coord} {units}"{Spieler}"request tw-utils.net""`). Diesen Block kannst du direkt ins Stammesforum einfügen, ohne ihn manuell zusammenzubauen.
@@ -108,17 +107,17 @@ Wenn ein Bunker nicht mehr notwendig ist (z. B. weil das Dorf im Savegebiet lieg
 
 ![Dissolve Bunker Button](../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png){ .screenshot }
 
-Im Modal `Dissolve Bunker` gibst du die aufzulösenden Koordinaten ein — das Feld `Coordinate(s) / Text` akzeptiert auch mehrere Koordinaten oder Text mit eingebetteten Koordinaten. Nach einer Bestätigung entfernt der Bot die betroffenen Bunker aus der Datenbank und aktualisiert den Leader-View. TWU-Mods können fremde Bunker auf dem gleichen Weg auflösen.
+Im Modal `Dissolve Bunker` gibst du die aufzulösenden Koordinaten ein — das Feld `Coordinate(s) / Text` akzeptiert auch mehrere Koordinaten oder Text mit eingebetteten Koordinaten. Nach einer Bestätigung entfernt der Bot die betroffenen Bunker aus der Datenbank und aktualisiert den Leader-View. TWU-Bunker können fremde Bunker auf dem gleichen Weg auflösen.
 
 ![Modal: Dissolve Bunker](../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png){ .screenshot }
 
 ## 6. Bunker-Health & Flexbunker-Kontrolle
 
-Im Kanal `#⚫-leaderview-bunker` sehen TWU-Mods alle genehmigten Bunker im Überblick.
+Im Kanal `#⚫-leaderview-bunker` steht ein festes Bedienfeld mit den beiden Leader-Werkzeugen. Eine Bunker-Liste wird dort nicht gepostet — die bekommst du auf Knopfdruck.
 
 ![#⚫-leaderview-bunker Kanal-Übersicht](../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png){ .screenshot }
 
-Der Button `Bunker Health` aktualisiert die Übersicht und vergleicht für jeden Bunker die genehmigte Soll-Größe mit den aktuell hochgeladenen Truppendaten. Das Ergebnis wird als Ampel pro Bunker angezeigt.
+Der Button `Bunker Health` vergleicht für jeden genehmigten Bunker die Soll-Größe mit den aktuell hochgeladenen Truppendaten und schickt dir die Liste als Ampel-Übersicht zurück — sichtbar **nur für dich**, der Kanal bleibt unverändert.
 
 ![Bunker Health Button im Leader-View](../assets/discordbot/bunker-information-system/21_leaderview_bunker_channel_bunkerhealth_button.png){ .screenshot }
 
@@ -130,7 +129,7 @@ Der Button `Bunker Health` aktualisiert die Übersicht und vergleicht für jeden
     - 🟠 10 % bis 25 % Abweichung
     - 🔴 mehr als 25 % Abweichung
 
-Im zweiten Leader-View-Kanal `#⚫-leaderview-flexbunker` steht der Button `Flexbunker Control` zur Verfügung — er hilft, Dörfer zu identifizieren, die hohe defensive Kapazitäten binden, gleichzeitig aber keine genehmigten Bunker sind.
+Im selben Kanal steht darunter der Button `Flexbunker Control` zur Verfügung — er hilft, Dörfer zu identifizieren, die hohe defensive Kapazitäten binden, gleichzeitig aber keine genehmigten Bunker sind.
 
 ![Flexbunker Control Button](../assets/discordbot/bunker-information-system/22_leaderview_bunker_flexcontrol.png){ .screenshot }
 
@@ -143,7 +142,7 @@ Als Ergebnis bekommst du eine Tabelle aller Dörfer im Stamm, deren tatsächlich
 ![FlexControl-Ergebnis-Tabelle](../assets/discordbot/bunker-information-system/24_leaderview_bunker_flexcontrol_result_table.png){ .screenshot }
 
 !!! warning "Rate-Limit Bunker-Health & FlexControl"
-    Sowohl `Bunker Health` als auch `Flexbunker Control` sind aus Performance-Gründen **auf eine Ausführung pro Minute pro Server** begrenzt. Wer den Button kurz hintereinander zweimal drückt, erhält beim zweiten Klick eine Hinweismeldung — einfach kurz warten und erneut klicken.
+    Sowohl `Bunker Health` als auch `Flexbunker Control` sind aus Performance-Gründen **auf eine Ausführung pro Minute und Person** begrenzt. Wer den Button kurz hintereinander zweimal drückt, erhält beim zweiten Klick eine Hinweismeldung — einfach kurz warten und erneut klicken. Andere Leader blockiert das nicht.
 
 ## 7. Feindliche Bunker melden
 
@@ -151,7 +150,7 @@ Im Kanal `#⚫-report-bunker` werden bekannte feindliche Bunker gesammelt. Der B
 
 ![Report-Bunker-Kanal mit Buttons](../assets/discordbot/bunker-information-system/25_report_bunker_channel_buttons.png){ .screenshot }
 
-Über `Report-Link / Copy & Paste` lassen sich Feindbunker direkt aus einem Bericht heraus eintragen — per TW-Berichts-Link, `[report]`-Tag oder kopiertem Berichtstext. `Manual Entry` ermöglicht die manuelle Eingabe von Koordinate, Truppen und Info-Zeitpunkt, falls kein Bericht vorliegt. Mit `Admin: Remove Bunker` können TWU-Mods einzelne Feindbunker-Einträge wieder entfernen, und `Export` liefert die komplette Liste als TSV-Datei für Excel & Co.
+Über `Report-Link / Copy & Paste` lassen sich Feindbunker direkt aus einem Bericht heraus eintragen — per TW-Berichts-Link, `[report]`-Tag oder kopiertem Berichtstext. `Manual Entry` ermöglicht die manuelle Eingabe von Koordinate, Truppen und Info-Zeitpunkt, falls kein Bericht vorliegt. Mit `Admin: Remove Bunker` können TWU-Bunker einzelne Feindbunker-Einträge wieder entfernen, und `Export` liefert die komplette Liste als TSV-Datei für Excel & Co.
 
 Über `Report-Link / Copy & Paste` öffnet sich ein Modal, das einen Berichts-Link, `[report]`-Tag oder kopierten Bericht-Text entgegennimmt. Der Bot parst Truppen, Koordinate und Info-Zeitpunkt automatisch aus dem Bericht.
 

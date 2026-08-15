@@ -2,7 +2,7 @@
 
 ![Bunker-Info — overview](../assets/leaderview/05_leaderview_bunkerinfo_approvedbunkers_overview.png){ .screenshot }
 
-The **"Bunker Information"** tab is the central tool for the tribe's
+The **"Bunker-Info"** tab is the central tool for the tribe's
 bunker management. Here you manage the approved bunkers, identify
 additional flexbunkers, document enemy bunkers and can visualize the
 overall bunker situation on a map.
@@ -148,8 +148,9 @@ The **"Add enemy bunker"** dialog offers two input methods as tabs:
 
 ![Add enemy bunker](../assets/leaderview/13_leaderview_bunkerinfo_enemybunkers_add_enemybunker.png){ .screenshot }
 
-- **Manual** — coordinate (`XXX|YYY`), **Spearman**, **Swordsman**,
-  **Archer**, **Heavy Cavalry** plus the **last updated** timestamp
+- **Manual** — coordinate (`XXX|YYY`), the four troop fields
+  **`spear:`**, **`sword:`**, **`archer:`** and **`heavy:`** (each
+  preceded by its unit icon) plus the **last updated** timestamp
   (format `DD.MM.YYYY HH:MM:SS`).
 - **Report link / text** — either paste the report URL or the report
   text; the system parses the troops and the timestamp automatically.

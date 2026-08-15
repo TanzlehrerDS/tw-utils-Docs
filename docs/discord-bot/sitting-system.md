@@ -72,7 +72,7 @@ Im erscheinenden Dropdown wählst du die Übernahme aus, die du zurückziehen m�
 
 ![Auswahl der zurückzuziehenden Übernahme](../assets/discordbot/account-sitting-system/11_picking_takeover_to_delete.png){ .screenshot }
 
-Falls die gesamte Anfrage hinfällig wird (z. B. weil das Sitting doch nicht nötig ist), kann der Ersteller — oder ein User mit der Rolle TWU-Mod — die Anfrage über den Button `Delete Request` komplett entfernen. Der zugehörige Kanal wird dabei direkt mit gelöscht.
+Falls die gesamte Anfrage hinfällig wird (z. B. weil das Sitting doch nicht nötig ist), kann der Ersteller — oder ein User mit der Rolle `TWU-Troops` (oder höher) — die Anfrage über den Button `Delete Request` komplett entfernen. Der zugehörige Kanal wird dabei direkt mit gelöscht.
 
 ![Delete Request Button](../assets/discordbot/account-sitting-system/12_delete_request.png){ .screenshot }
 

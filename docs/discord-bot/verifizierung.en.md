@@ -72,5 +72,5 @@ If you already have an account on tw-utils, you can additionally check the succe
 
 ---
 
-!!! info "Note for Admins"
-    Admins can release links for other users via the `Admin: Unverify an account` and `Admin: Unverify a discorduser` buttons (e. g. for abandoned accounts or a Discord user change).
+!!! info "Note for TWU-Leaders"
+    Anyone holding the **TWU-Leader** role can release links for other users via the `Admin: Unverify an account` and `Admin: Unverify a discorduser` buttons (e. g. for abandoned accounts or a Discord user change).

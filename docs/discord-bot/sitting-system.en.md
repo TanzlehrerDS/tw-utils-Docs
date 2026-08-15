@@ -72,7 +72,7 @@ In the dropdown that appears, pick the takeover you want to cancel. The freed-up
 
 ![Picking the takeover to cancel](../assets/discordbot/account-sitting-system/11_picking_takeover_to_delete.png){ .screenshot }
 
-If the entire request is no longer needed (e. g. because the sitting is not necessary anymore), the creator — or a user with the TWU-Mod role — can remove the request completely via the `Delete Request` button. The associated channel is deleted along with it.
+If the entire request is no longer needed (e. g. because the sitting is not necessary anymore), the creator — or a user with the `TWU-Troops` role (or higher) — can remove the request completely via the `Delete Request` button. The associated channel is deleted along with it.
 
 ![Delete Request Button](../assets/discordbot/account-sitting-system/12_delete_request.png){ .screenshot }
 

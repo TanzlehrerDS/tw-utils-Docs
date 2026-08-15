@@ -72,5 +72,5 @@ Sofern du bereits einen Account auf tw-utils hast, kannst du die erfolgreiche Ve
 
 ---
 
-!!! info "Hinweis für Admins"
-    Admins können über die Buttons `Admin: Unverify an account` und `Admin: Unverify a discorduser` Verknüpfungen für andere User lösen (z. B. bei verlassenen Accounts oder einem Discord-User-Wechsel).
+!!! info "Hinweis für TWU-Leader"
+    Wer die Rolle **TWU-Leader** hat, kann über die Buttons `Admin: Unverify an account` und `Admin: Unverify a discorduser` Verknüpfungen für andere User lösen (z. B. bei verlassenen Accounts oder einem Discord-User-Wechsel).

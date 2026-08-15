@@ -27,7 +27,7 @@ Du landest auf der Seite `Benachrichtigungen` mit zwei Karten: `Globale Einstell
 
 ### 2.1 Globale Einstellungen
 
-Die Karte `Globale Einstellungen` steuert pro Reminder-Typ, ob du diese Art von DM überhaupt bekommen möchtest. Es gibt drei Typen.
+Die Karte `Globale Einstellungen` steuert pro Reminder-Typ, ob du diese Art von DM überhaupt bekommen möchtest. Es gibt vier Typen.
 
 #### Abschick-Reminder
 
@@ -61,9 +61,15 @@ Diese Erinnerung gehört zum [Account-Sitting-System](discord-bot/sitting-system
 
 Diese Erinnerung gehört zum [Bunker-Information-System](discord-bot/bunker-info.md). Du bekommst eine DM, sobald ein Admin deinen Bunker- oder Top-Up-Antrag annimmt oder ablehnt. Auch Admins können die DM für ihre eigenen bearbeiteten Anträge aktivieren.
 
+#### Stammes-Umfragen
+
+> *Discord-DM, wenn ein Leader eine neue Stammes-Umfrage startet.*
+
+Diese Erinnerung gehört zu den [Stammes-Umfragen](leader-view/stammes-umfragen.md) im Leader-View. Du bekommst genau **eine** DM, sobald deine Stammesführung eine neue Umfrage anlegt — mit Titel, Frist und einem Link zur Melde-Seite. Über denselben Schalter läuft auch die persönliche **Erinnerungs-DM**, die ein Leader gezielt an einen Account schicken kann, der noch nichts gemeldet hat.
+
 ### 2.2 Server-Übersicht
 
-Die Karte `Server-Übersicht` listet alle Discord-Server, in denen du in einer für tw-utils relevanten Guild Mitglied bist. Pro Server kannst du DMs aus diesem Server komplett unterdrücken — unabhängig davon, welche der drei Reminder-Typen oben aktiv sind.
+Die Karte `Server-Übersicht` listet alle Discord-Server, in denen du in einer für tw-utils relevanten Guild Mitglied bist. Pro Server kannst du DMs aus diesem Server komplett unterdrücken — unabhängig davon, welche der vier Reminder-Typen oben aktiv sind.
 
 ![Server-Übersicht mit Aktiv- und Stumm-Pills](assets/notifications/06_website_profile-notification_discordservermute.png){ .screenshot }
 
@@ -92,7 +98,7 @@ Ein Klick auf `Notifications` postet ein Embed mit zwei farbigen Buttons.
 
 ![Notifications-Embed mit ON- und OFF-Button](assets/notifications/08_discordbot_notifications_button_menu.png){ .screenshot }
 
-- **`Notifications: ON`** (grün) — aktiviert DMs für diesen Discord-Server. Beim allerersten Klick werden zusätzlich die drei Reminder-Typen (`Abschick-Reminder`, `UV-Slot-Reminder`, `Bunker-Info-System`) mit ihren Default-Werten aktiviert, damit überhaupt etwas verschickt wird. Hattest du die Typen vorher schon individuell auf der Website konfiguriert, bleiben deine Werte erhalten.
+- **`Notifications: ON`** (grün) — aktiviert DMs für diesen Discord-Server. Beim allerersten Klick werden zusätzlich die vier Reminder-Typen (`Abschick-Reminder`, `UV-Slot-Reminder`, `Bunker-Info-System`, `Stammes-Umfragen`) mit ihren Default-Werten aktiviert, damit überhaupt etwas verschickt wird. Hattest du die Typen vorher schon individuell auf der Website konfiguriert, bleiben deine Werte erhalten.
 - **`Notifications: OFF`** (rot) — schaltet diesen Server auf stumm. Die globalen Reminder-Typ-Einstellungen werden dabei nicht angefasst, du bekommst aus diesem Server schlicht keine DMs mehr.
 
 !!! info "Mehr Kontrolle? Account auf tw-utils.net anlegen"
@@ -103,7 +109,7 @@ Ein Klick auf `Notifications` postet ein Embed mit zwei farbigen Buttons.
 !!! info "DM kommt nur, wenn beide Schalter AN sind"
     Vor jeder DM prüft der Bot **zwei** Bedingungen — beide müssen erfüllt sein:
 
-    1. Der zugehörige Reminder-Typ ist in den `Globalen Einstellungen` aktiv (`Abschick-Reminder` / `UV-Slot-Reminder` / `Bunker-Info-System`).
+    1. Der zugehörige Reminder-Typ ist in den `Globalen Einstellungen` aktiv (`Abschick-Reminder` / `UV-Slot-Reminder` / `Bunker-Info-System` / `Stammes-Umfragen`).
     2. Der Discord-Server, aus dem das Event stammt, steht in der `Server-Übersicht` auf `Aktiv` (gleichbedeutend mit `Notifications: ON` im Bot-Channel).
 
     Die Server-Steuerung ist auf beiden Wegen **dieselbe** Einstellung: Was du im Discord-Bot mit `Notifications: ON/OFF` umlegst, siehst du anschließend auch in der `Server-Übersicht` auf der Website — und umgekehrt.

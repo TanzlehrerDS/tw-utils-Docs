@@ -3,7 +3,7 @@
 With the ODS system, players can search for Off, Deff or Snob commands targeting a specific coordinate. The ODS system is similar to the Single Village Snipe script — but while that one only considers the troops of a single player, the ODS system pulls villages from the **entire tribe** into the selection. The bot matches incoming search requests against the stored troop data and returns a list of players who can launch a matching Off, Deff or Snob command.
 
 !!! info "Prerequisite: troop upload"
-    The bot can only report hits for players whose troop data is currently uploaded. If no data is available, the hit list stays empty. For meaningful results, the admins (TWU-Mod) should refresh the troop data regularly via `/admin troops_upload`.
+    The bot can only report hits for players whose troop data is currently uploaded. If no data is available, the hit list stays empty. For meaningful results, users with the `TWU-Troops` role should refresh the troop data regularly via `/admin troops_upload`.
 
 ## 1. Module channels
 
@@ -22,11 +22,11 @@ For the bot to be able to answer any search requests at all, the tribe members' 
 
 ![Admin buttons in the ODS Panel](../assets/discordbot/ods-system/02_ods_system_upload_troops.png){ .screenshot }
 
-`Upload Troops` leads to the slash command `/admin troops_upload`, which the TWU-Mod uses to read in the TW troop CSV file.
+`Upload Troops` leads to the slash command `/admin troops_upload`, which is used to read in the TW troop CSV file.
 
 ![Slash command for troop upload](../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png){ .screenshot }
 
-The CSV file is most conveniently generated via the quickbar script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). Expected file format:
+The file is most conveniently generated via the quickbar script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). The content is comma-separated, but the file extension has to be `.txt` — a `.csv` file is rejected by the bot. Expected file format:
 
 ```
 Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
@@ -51,7 +51,7 @@ At a glance, this shows which tribes have up-to-date troop data and where the da
 ![Troop Uploads Overview](../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png){ .screenshot }
 
 !!! info "Who can upload troops?"
-    Only users with the role `TWU-Mod` or Discord administrator permissions can use the buttons `Upload Troops` and `Delete Troops` and run the slash command `/admin troops_upload`. The `Show Troop Status` button is also available to normal members.
+    Only users with the `TWU-Troops` role (or one of the roles building on it — `TWU-Bunker`, `TWU-Planner`, `TWU-Leader`) can use the buttons `Upload Troops` and `Delete Troops` and run the slash command `/admin troops_upload`. The `Show Troop Status` button is also available to normal members.
 
 ## 3. ODS search
 
@@ -83,11 +83,9 @@ Clicking `Search Deff` opens the modal `Find Deff Options`:
 
 - `Target Coordinate` — coordinate of the target village in the format `XXX|YYY`.
 - `Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)` — desired arrival time of the deff.
-- `Minimum Off Strength (Axe,Lcav)` (optional) — minimum strength of the incoming offs (Axe / Light Cavalry counts) against which the deff village should be able to hold mathematically.
+- `Minimum Population` (optional) — minimum population of the source village; prevents small villages from appearing in the hit list.
+- `UT-Boost (0-20%)` (optional) — option to factor a UT boost into the search request.
 - `Earliest Launch Time` (optional) — earliest allowed launch time; deff commands that would have to be launched before this time are filtered out.
-- `Fixed Runtime (Unit name)` (optional) — restricts the search to a specific unit runtime, when the deff should run with a fixed unit.
-- `Minimum Population` — minimum population of the source village; prevents small villages from appearing in the hit list.
-- `UT-Boost (0-20%)` — option to factor a UT boost into the search request.
 
 ## 4. The search result
 
@@ -103,7 +101,7 @@ Below the search result, up to ten buttons are available — each of these butto
 
 ![Workbench buttons in the search result](../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png){ .screenshot }
 
-The reply embed also contains a `Rally Point` button: clicking it takes you straight to the in-game rally point of the source village, so the command can be launched immediately.
+The reply to one of these buttons is headed `Rally Point` — the heading is a link and takes you straight to the in-game rally point of the source village, so the command can be launched immediately.
 
 ![Bot reply after workbench action with Rally Point button](../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png){ .screenshot }
 
@@ -139,7 +137,7 @@ The `Add/Edit Note` button lets the requester or other users attach notes to the
 ![Delete Request button](../assets/discordbot/ods-system/21_ods_system_search_result_new_channel_deleterequest_button.png){ .screenshot }
 
 !!! info "Permission to delete"
-    The request can only be deleted by its creator or by a user with the role `TWU-Mod`.
+    The request can only be deleted by its creator or by a user with the `TWU-Troops` role (or higher).
 
 In addition, the search buttons `Search Off`, `Search Snob`, `Search Deff` are available again inside the exported search request.
 

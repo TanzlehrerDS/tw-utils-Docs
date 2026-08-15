@@ -31,6 +31,7 @@ extra_css:
 
 extra_javascript:
   - assets/yt-consent.js
+  - assets/doc-stale.js
 
 copyright: >
   &copy; 2026 tw-utils &middot;
@@ -64,21 +65,35 @@ plugins:
             Der Leaderview: Leader-View
             Discordbot: Discordbot
             Video-Tutorial: Video Tutorial
-            "Tab 1: Daten & Vorbereitung": "Tab 1: Data & Preparations"
-            "Tab 2: Angriffsplanung": "Tab 2: Nuke-Planning"
-            "Tab 3: Fakeplanung": "Tab 3: Fake-Planning"
-            "Tab 4: Berechnung": "Tab 4: Calculation"
-            "Tab 1: AG-Meldungen": "Tab 1: Snob-Entries"
-            "Tab 2: Zieldörfer": "Tab 2: Targets"
-            "Tab 3: Einstellungen": "Tab 3: Settings"
-            "Tab 4: Ergebnisübersicht": "Tab 4: Results Overview"
-            Anleitung: Instructions
+            "Schritt 1: Truppen": "Step 1: Troops"
+            "Schritt 2: Abschickzeiten": "Step 2: Launch times"
+            "Schritt 3: Ankunftszeiten": "Step 3: Arrival Times"
+            "Schritt 4: Angriffsplanung": "Step 4: Attack planning"
+            "Schritt 5: Fakeplanung": "Step 5: Fake planning"
+            "Schritt 6: Übersicht": "Step 6: Overview"
+            "Schritt 7: Berechnung": "Step 7: Calculation"
+            "Schritt 8: Ergebnis": "Step 8: Results"
+            Die Gesamtkarte: The Overall Map
+            "Schritt 2: Befehle": "Step 2: Commands"
+            "Schritt 3: Cleaner": "Step 3: Cleaner"
+            "Schritt 4: Fake-UT": "Step 4: Fake-Sup"
+            "Schritt 5: Ergebnis": "Step 5: Results"
+            Die zwei Wege: The Two Ways
+            "Schritt 1: AG-Meldungen": "Step 1: Snob-Entries"
+            "Schritt 2: Zieldörfer": "Step 2: Targets"
+            "Schritt 3: Einstellungen": "Step 3: Settings"
+            "Schritt 4: Ergebnis": "Step 4: Results"
+            "Meine Pläne & Container": "My Plans & Containers"
+            Gespeicherte Pläne: Saved Plans
+            Veröffentlichte Container: Published Containers
             Übersicht: Overview
             Berechtigung: Permission
             Mitglieder: Members
             Truppen: Troops
             Bunker-Info: Bunker-Info
-            Planung: Planning
+            Stammes-Umfragen: Tribe Surveys
+            "Planung (Container)": "Planning (Container)"
+            Laufende Befehle: Running Commands
             Quick-Setup-Guide: Quick-Setup-Guide
             Berechtigungskonzept: Permission Concept
             Account-Verifizierung: Account-Verification
@@ -89,26 +104,40 @@ plugins:
 nav:
   - Startseite: index.md
   - Off-Planungstool:
-      - Video-Tutorial: off-planner/allgemein.md
-      - "Tab 1: Daten & Vorbereitung": off-planner/tab1-daten.md
-      - "Tab 2: Angriffsplanung": off-planner/tab2-angriffsplanung.md
-      - "Tab 3: Fakeplanung": off-planner/tab3-fakeplanung.md
-      - "Tab 4: Berechnung": off-planner/tab4-berechnung.md
+      - "Schritt 1: Truppen": off-planner/schritt1-truppen.md
+      - "Schritt 2: Abschickzeiten": off-planner/schritt2-abschickzeiten.md
+      - "Schritt 3: Ankunftszeiten": off-planner/schritt3-ankunftszeiten.md
+      - "Schritt 4: Angriffsplanung": off-planner/schritt4-angriffsplanung.md
+      - "Schritt 5: Fakeplanung": off-planner/schritt5-fakeplanung.md
+      - "Schritt 6: Übersicht": off-planner/schritt6-uebersicht.md
+      - "Schritt 7: Berechnung": off-planner/schritt7-berechnung.md
+      - "Schritt 8: Ergebnis": off-planner/schritt8-ergebnis.md
+      - Die Gesamtkarte: off-planner/gesamtkarte.md
   - AG-Planungstool:
       - Video-Tutorial: ag-planner/allgemein.md
-      - "Tab 1: AG-Meldungen": ag-planner/tab1-ag-meldungen.md
-      - "Tab 2: Zieldörfer": ag-planner/tab2-zieldoerfer.md
-      - "Tab 3: Einstellungen": ag-planner/tab3-einstellungen.md
-      - "Tab 4: Ergebnisübersicht": ag-planner/tab4-ergebnisuebersicht.md
+      - Die zwei Wege: ag-planner/die-zwei-wege.md
+      - "Schritt 1: AG-Meldungen": ag-planner/schritt1-ag-meldungen.md
+      - "Schritt 2: Zieldörfer": ag-planner/schritt2-zieldoerfer.md
+      - "Schritt 3: Einstellungen": ag-planner/schritt3-einstellungen.md
+      - "Schritt 4: Ergebnis": ag-planner/schritt4-ergebnis.md
+      - Die Gesamtkarte: ag-planner/gesamtkarte.md
   - Zwischencleaner & Fake-UT:
-      - Video-Tutorial: cleaner-fake-ut/allgemein.md
-      - Anleitung: cleaner-fake-ut/anleitung.md
+      - "Schritt 1: Truppen": cleaner-fake-ut/schritt1-truppen.md
+      - "Schritt 2: Befehle": cleaner-fake-ut/schritt2-befehle.md
+      - "Schritt 3: Cleaner": cleaner-fake-ut/schritt3-cleaner.md
+      - "Schritt 4: Fake-UT": cleaner-fake-ut/schritt4-fake-ut.md
+      - "Schritt 5: Ergebnis": cleaner-fake-ut/schritt5-ergebnis.md
+  - Meine Pläne & Container:
+      - Gespeicherte Pläne: meine-plaene/gespeicherte-plaene.md
+      - Veröffentlichte Container: meine-plaene/container.md
   - Der Leaderview:
       - Berechtigung: leader-view/uebersicht.md
       - Mitglieder: leader-view/mitglieder.md
       - Truppen: leader-view/truppen.md
       - Bunker-Info: leader-view/bunker-info.md
-      - Planung: leader-view/planung.md
+      - Stammes-Umfragen: leader-view/stammes-umfragen.md
+      - "Planung (Container)": leader-view/planung.md
+      - Laufende Befehle: leader-view/laufende-befehle.md
   - Discordbot:
       - Quick-Setup-Guide: discord-bot/quick-setup.md
       - Berechtigungskonzept: discord-bot/berechtigungskonzept.md

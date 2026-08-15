@@ -20,6 +20,8 @@ Invite the bot to your tribe Discord via the link below. You will be automatical
 
 Right after the invite, the bot automatically creates the category `⚙️ TWU-SETUP` together with the channel `#⚫-bot-config` on your Discord server. This channel is the **central control** for the bot — all further setup steps as well as the later management of the modules run exclusively through buttons in this channel.
 
+In the same category the channel `#⚫-admin-logs` is created as well, where the bot logs the management actions that were carried out. It is visible to Discord administrators only and needs no setup.
+
 ![Automatically created configuration channel](../assets/discordbot/quick-setup-guide/02_channel_creation.png){ .screenshot }
 
 ## 3. Set the game world
@@ -71,6 +73,9 @@ In the first dropdown, select the role the user should receive — choose `Leade
 Then, in the second dropdown, select the Discord user who should receive the leader status. The assignment takes effect immediately and the selected user can access the Leader-View from now on.
 
 ![User selection](../assets/discordbot/quick-setup-guide/13_user_selection.png){ .screenshot }
+
+!!! info "All further rights are granted in the Leader-View"
+    Via the bot only the `Leader` role (= TWU-Leader) can be granted — that is the entry point. As soon as a TWU-Leader exists, they grant all further roles (`TWU-Troops`, `TWU-Bunker`, `TWU-Planner` and the additional API roles) directly on tw-utils.net in the Leader-View under [Members](../leader-view/mitglieder.md#manage-rights). The [Permission Concept](berechtigungskonzept.md) gives an overview.
 
 ## 6. Install bot modules
 

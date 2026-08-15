@@ -3,7 +3,7 @@
 Mit dem ODS-System können Spieler Off-, Deff- oder Snob-Befehle für eine bestimmte Zielkoordinate suchen. Das ODS-System besitzt Ähnlichkeit zum Single Village Snipe-Skript — während dort nur die Truppen eines einzelnen Spielers berücksichtigt werden, fließen im ODS-System die Dörfer des **gesamten Stammes** in die Auswahl ein. Der Bot gleicht ankommende Suchanfragen mit den hinterlegten Truppendaten ab und liefert eine Liste der Spieler, die einen passenden Off-, Deff- oder Snob-Befehl abschicken können.
 
 !!! info "Voraussetzung Truppen-Upload"
-    Der Bot kann nur Treffer melden für Spieler, deren Truppendaten aktuell hochgeladen sind. Liegen keine Daten vor, bleibt die Trefferliste leer. Für aussagekräftige Ergebnisse sollten die Admins (TWU-Mod) die Truppendaten regelmäßig per `/admin troops_upload` aktualisieren.
+    Der Bot kann nur Treffer melden für Spieler, deren Truppendaten aktuell hochgeladen sind. Liegen keine Daten vor, bleibt die Trefferliste leer. Für aussagekräftige Ergebnisse sollten User mit der Rolle `TWU-Troops` die Truppendaten regelmäßig per `/admin troops_upload` aktualisieren.
 
 ## 1. Kanäle des Moduls
 
@@ -22,11 +22,11 @@ Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten
 
 ![Admin-Buttons im ODS Panel](../assets/discordbot/ods-system/02_ods_system_upload_troops.png){ .screenshot }
 
-`Upload Troops` führt zum Slash-Command `/admin troops_upload`, über die der TWU-Mod die TW-Truppen-CSV-Datei einliest.
+`Upload Troops` führt zum Slash-Command `/admin troops_upload`, über den die TW-Truppen-CSV-Datei eingelesen wird.
 
 ![Slash-Command zum Truppen-Upload](../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png){ .screenshot }
 
-Die CSV-Datei erzeugst du am bequemsten über das Schnellleisten-Script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). Erwartetes Dateiformat:
+Die Datei erzeugst du am bequemsten über das Schnellleisten-Script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). Der Inhalt ist kommagetrennt, die Dateiendung muss aber `.txt` sein — eine `.csv`-Datei lehnt der Bot ab. Erwartetes Dateiformat:
 
 ```
 Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
@@ -51,7 +51,7 @@ So sieht man auf einen Blick, welche Stämme aktuelle Truppendaten hinterlegt ha
 ![Troop Uploads Overview](../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png){ .screenshot }
 
 !!! info "Wer darf Truppen hochladen?"
-    Nur User mit der Rolle `TWU-Mod` oder Discord-Administrator-Rechten können die Buttons `Upload Troops` und `Delete Troops` ausführen und den Slash-Command `/admin troops_upload` benutzen. Den Button `Show Troop Status` können auch normale Mitglieder verwenden.
+    Nur User mit der Rolle `TWU-Troops` (oder einer der darauf aufbauenden Rollen `TWU-Bunker`, `TWU-Planner`, `TWU-Leader`) können die Buttons `Upload Troops` und `Delete Troops` ausführen und den Slash-Command `/admin troops_upload` benutzen. Den Button `Show Troop Status` können auch normale Mitglieder verwenden.
 
 ## 3. ODS-Suche
 
@@ -83,11 +83,9 @@ Klick auf `Search Deff` öffnet das Modal `Find Deff Options`:
 
 - `Target Coordinate` — Koordinate des Ziel-Dorfs im Format `XXX|YYY`.
 - `Arrival Time (hh:mm:ss / DD.MM.YYYY hh:mm:ss)` — gewünschte Ankunftszeit der Deff.
-- `Minimum Off Strength (Axe,Lcav)` (optional) — Mindeststärke der einlaufenden Offs (Axt-/Leichte-Kavalerie-Anzahl), gegen die das Deff-Dorf rechnerisch standhalten soll.
+- `Minimum Population` (optional) — Mindesteinwohnerzahl des Herkunftsdorfs; verhindert, dass kleine Dörfer in die Trefferliste fallen.
+- `UT-Boost (0-20%)` (optional) — Möglichkeit zur Berücksichtigung eines UT-Boosts bei der Suchanfrage.
 - `Earliest Launch Time` (optional) — frühester erlaubter Abschickzeitpunkt; Deff-Befehle, die schon davor losgeschickt werden müssten, werden rausgefiltert.
-- `Fixed Runtime (Unit name)` (optional) — beschränkt die Suche auf eine bestimmte Einheitenlaufzeit, wenn die Deff mit einer fixen Einheit laufen soll.
-- `Minimum Population` — Mindesteinwohnerzahl des Herkunftsdorfs; verhindert, dass kleine Dörfer in die Trefferliste fallen.
-- `UT-Boost (0-20%)` — Möglichkeit zur Berücksichtigung eines UT-Boosts bei der Suchanfrage.
 
 ## 4. Das Suchergebnis
 
@@ -103,7 +101,7 @@ Unter dem Suchergebnis stehen bis zu zehn Buttons zur Verfügung — jeder diese
 
 ![Workbench-Buttons im Suchergebnis](../assets/discordbot/ods-system/14_ods_system_search_result_view_workbench_buttons.png){ .screenshot }
 
-Im Antwort-Embed steht zusätzlich ein `Rally Point`-Button: Per Klick wird man direkt zum Ingame-Versammlungsplatz des Herkunftsdorfs weitergeleitet, sodass der Befehl unmittelbar abgeschickt werden kann.
+Die Antwort auf einen dieser Buttons trägt die Überschrift `Rally Point` — sie ist verlinkt und führt direkt zum Ingame-Versammlungsplatz des Herkunftsdorfs, sodass der Befehl unmittelbar abgeschickt werden kann.
 
 ![Bot-Antwort nach Workbench-Aktion mit Rally-Point-Button](../assets/discordbot/ods-system/15_ods_system_search_result_view_workbench_button_answer.png){ .screenshot }
 
@@ -139,7 +137,7 @@ In der exportierten Suchanfrage stehen oberhalb des Such-Embeds die Verwaltungs-
 ![Delete-Request-Button](../assets/discordbot/ods-system/21_ods_system_search_result_new_channel_deleterequest_button.png){ .screenshot }
 
 !!! info "Voraussetzung Löschen"
-    Die Anfrage kann nur vom Ersteller selbst oder von einem User mit der Rolle `TWU-Mod` gelöscht werden.
+    Die Anfrage kann nur vom Ersteller selbst oder von einem User mit der Rolle `TWU-Troops` (oder höher) gelöscht werden.
 
 Zusätzlich stehen in der exportierten Suchanfrage die Such-Buttons `Search Off`, `Search Snob`, `Search Deff` erneut zur Verfügung.
 

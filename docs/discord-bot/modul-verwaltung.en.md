@@ -3,7 +3,7 @@
 The central management of all bot modules runs via the `Manage Bot-Modules` button in the `#⚫-bot-config` channel. From there you can install, update, or remove modules — and define for each module which Discord roles are allowed to see the corresponding channels. The module-specific configuration is documented on the respective linked subpages of each module.
 
 !!! warning "Prerequisite"
-    Module management is only accessible to Discord users with **administrator permissions** or the **TWU-Mod** role.
+    Module management is accessible to Discord users with the **TWU-Leader** role. Discord **administrators** can reach it as well — permanently, not just during the initial setup (see [Permission Concept](berechtigungskonzept.md)).
 
 ![Manage Bot-Modules Button](../assets/discordbot/bot-module-setup/01_Manage_bot_modules_button.png){ .screenshot }
 
@@ -25,8 +25,8 @@ In the module management menu, click on the `Delete` button to remove an install
 
 ![Delete Button](../assets/discordbot/bot-module-setup/04_delete_button.png){ .screenshot }
 
-!!! warning "Warning: Data will be lost"
-    When a module is uninstalled, the corresponding channels are deleted along with all their contents (requests, planning, lists, etc.) — this cannot be undone.
+!!! warning "What is lost when uninstalling"
+    The corresponding channels are deleted along with all their contents — this cannot be undone. Whether the data behind them disappears as well depends on the module: the **Account-Sitting-System** and the **Off/Deff/Snob-Search-System** delete theirs. The **Planning-System** keeps snob entries, launch times, off exclusions and plans — they remain available in the Leader-View. The **Bunker-Information-System** keeps approved bunkers and reported enemy bunkers; only open requests disappear.
 
 ## 4. Define visibility roles
 
