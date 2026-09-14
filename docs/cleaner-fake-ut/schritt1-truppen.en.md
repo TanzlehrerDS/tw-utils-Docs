@@ -28,9 +28,19 @@ on is visible.
 
 ![Importing troops from a file](../assets/cleaner-fake-ut-tool/step1_02_import_file.png){ .screenshot }
 
-Via **"Upload file"** you load one or more TXT files. The most convenient way
-to create these files is the
-[quickbar script "Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/).
+Via **"Upload file"** you load one or more files — the allowed extensions are
+`.txt`, `.csv` and `.json`. **Two formats** are accepted; which one it is, the
+tool recognises from the **content**. You never have to select which one you
+are uploading.
+
+The file must contain troops — a buildings-only export is rejected. A file containing units that do not exist
+on the selected world at all (for instance the file of an archer world on a
+world without archers) is rejected as well; it is then not half-imported but
+turned down with a message.
+
+**Format 1: "Download Tribe Info"** — the
+[quickbar script](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/)
+downloads a ready-made file.
 
 Expected format:
 
@@ -49,13 +59,29 @@ the rows. Which units occur depends on the world — on worlds without archers,
 `archer` and `marcher` simply drop out. The first column is always the
 coordinate, the second always the player name.
 
+**Format 2: "NeilsTribeInfo"** — this script does **not** download a file, it
+copies the result to the clipboard via **"Copy CSV"** or **"Copy JSON"**. In the
+planner that is no detour: you paste the content straight into the **"Copy &
+Paste"** field — you do not have to create a file at all. Only the Leader-View
+and the Discord bot know the file upload alone; for them you save the content
+as `.txt`, `.csv` or `.json` first.
+
+Where the in-game **Script Library** exists — on the .net worlds, for instance —
+you do not have to install anything: it is listed there as **"NeilB Tribe
+Info"**, and one click on **"Activate"** puts it on your quick bar. The
+screenshot shows **"Deactivate"** because the script is already active there.
+
+![NeilB Tribe Info in the in-game Script Library](../assets/cleaner-fake-ut-tool/step1_07_script_library.png){ .screenshot }
+
 ### Copy & Paste
 
 ![Pasting troops via copy & paste](../assets/cleaner-fake-ut-tool/step1_03_import_paste.png){ .screenshot }
 
 Via **"Copy & Paste"** you paste the troops straight from the in-game troop
-overview (Ctrl+A, Ctrl+C). Alternatively the field also accepts the same CSV
-data as the file upload — header row included.
+overview (Ctrl+A, Ctrl+C). Alternatively the field also accepts the same data
+as the file upload — header row included. That applies to both file formats,
+including whatever "NeilsTribeInfo" puts on the clipboard via **"Copy CSV"** or
+**"Copy JSON"**.
 
 !!! info "The way that is switched on counts"
     File upload and copy & paste are **not** merged. The tool calculates with
@@ -72,6 +98,17 @@ This choice is mandatory for **both** import paths and is **not preselected**:
 
 When pasting from the in-game overview, the tool looks for exactly those rows
 that begin with the selected keyword.
+
+The **"NeilsTribeInfo"** format states its troop type itself: the "Troops" page
+yields **"Total troops"**, the "Defence" page yields **"Troops in village"** —
+troops that are currently on their way are deliberately not taken over. If a
+file names exactly one troop type, the selection jumps to it automatically;
+with the "Download Tribe Info" format that does not happen. Your choice remains
+decisive in every case: if it does not match the file, a message names what is
+actually in it.
+
+Switching the troop type re-reads files you have already uploaded — so you do
+not have to select them again.
 
 !!! info "Without this choice seemingly nothing happens"
     As long as no troop type is selected, the tool cannot evaluate the pasted

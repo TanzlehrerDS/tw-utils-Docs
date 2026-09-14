@@ -22,11 +22,13 @@ For the bot to be able to answer any search requests at all, the tribe members' 
 
 ![Admin buttons in the ODS Panel](../assets/discordbot/ods-system/02_ods_system_upload_troops.png){ .screenshot }
 
-`Upload Troops` leads to the slash command `/admin troops_upload`, which is used to read in the TW troop CSV file.
+`Upload Troops` leads to the slash command `/admin troops_upload`, which is used to read in the TW troop file.
 
 ![Slash command for troop upload](../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png){ .screenshot }
 
-The file is most conveniently generated via the quickbar script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). The content is comma-separated, but the file extension has to be `.txt` — a `.csv` file is rejected by the bot. Expected file format:
+You generate the file with one of two export scripts. You never choose which one you are using — the bot detects the format from the content of the file. The allowed file extensions are `.txt`, `.csv` and `.json`. The file must contain troop columns; a buildings-only export is rejected.
+
+The quickbar script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/) downloads the file directly. The content is comma-separated:
 
 ```
 Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
@@ -34,7 +36,27 @@ Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight
 543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
 ```
 
-After a successful upload, the bot confirms with a short success message.
+The script **"NeilsTribeInfo"** instead delivers an `exported_at` preamble line with quoted columns:
+
+```
+exported_at,1789240946
+"player_name","player_id","village","coords","points","spear","sword","axe",…
+"Testuser A","9859907","Test village (603|576) K56","603|576","5491","2222","11","12",…
+```
+
+Where the in-game **Script Library** exists — on the .net worlds, for instance — you do not have to install anything: it is listed there as **"NeilB Tribe Info"**, and one click on **"Activate"** puts it on your quick bar. The screenshot shows **"Deactivate"** because the script is already active there.
+
+![NeilB Tribe Info in the in-game Script Library](../assets/discordbot/ods-system/26_ods_system_script_library.png){ .screenshot }
+
+!!! info "NeilsTribeInfo does not download a file"
+    Instead of a download it offers the buttons **"Copy CSV"** and **"Copy JSON"** — the result ends up in the **clipboard**. So paste it into an editor (e.g. Notepad) and save it as a file before attaching it to the slash command.
+
+!!! info "The bot only stores troops in village"
+    NeilsTribeInfo names the scope itself: the script page **"Defence"** yields **Troops in village**, the page **"Troops"** yields **Total troops**. The bot stores **Troops in village** only — if you upload a pure "Troops" export here, it is rejected with an explanation. "Total troops" is handled by the [Leader-View](../leader-view/truppen.md).
+
+If the file contains units that do not exist on the world at all (e.g. the export of an archer world for a tribe on a world without archers), the upload is rejected instead of being read in halfway.
+
+After a successful upload, the bot confirms with a short success message. Besides the number of villages, it also reports skipped rows and players who have no unit in any village — the most common cause for that is a missing troop-sharing setting in the tribe.
 
 ![Success message after troop upload](../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png){ .screenshot }
 

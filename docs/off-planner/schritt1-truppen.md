@@ -28,9 +28,20 @@ gleichwertigen Wegen.
 
 ![Truppen per Datei hochladen](../assets/nuke-planning-tool/step1_02_import_file.png){ .screenshot }
 
-Über **„Datei hochladen"** lädst du eine oder mehrere TXT-Dateien ein. Diese
-Dateien erzeugst du am bequemsten über das
-[Schnellleisten-Script „Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/).
+Über **„Datei hochladen"** lädst du eine oder mehrere Dateien ein — erlaubt
+sind die Endungen `.txt`, `.csv` und `.json`. Angenommen werden **zwei
+Formate**; welches vorliegt, erkennt das Tool am **Inhalt**. Du musst nirgends
+auswählen, welches du hochlädst.
+
+Die Datei muss Truppen enthalten — ein reiner Gebäude-Export wird
+abgelehnt. Ebenso abgelehnt wird
+eine Datei mit Einheiten, die es auf der gewählten Welt gar nicht gibt (etwa
+die Datei einer Bogenschützen-Welt auf einer Welt ohne Bogenschützen); sie wird
+dann nicht halb eingelesen, sondern mit einer Meldung zurückgewiesen.
+
+**Format 1: „Download Tribe Info"** — das
+[Schnellleisten-Script](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/)
+lädt eine fertige Datei herunter.
 
 Erwartetes Format:
 
@@ -49,14 +60,30 @@ sie in den Zeilen stehen. Welche Einheiten vorkommen, hängt von der Welt ab —
 auf Welten ohne Bogenschützen fallen `archer` und `marcher` einfach weg. Die
 erste Spalte ist immer die Koordinate, die zweite immer der Spielername.
 
+**Format 2: „NeilsTribeInfo"** — dieses Script lädt **keine** Datei herunter,
+sondern kopiert das Ergebnis über **„Copy CSV"** bzw. **„Copy JSON"** in die
+Zwischenablage. Im Planer ist das kein Umweg: Du fügst den Inhalt direkt in das
+Feld **„Copy & Paste"** ein — eine Datei musst du dafür gar nicht erst anlegen.
+Nur der Leader-View und der Discordbot kennen ausschließlich den Datei-Upload;
+für sie speicherst du den Inhalt vorher als `.txt`, `.csv` oder `.json`.
+
+Wo es die Ingame-**Skriptbibliothek** gibt — auf den .net-Welten etwa —, musst
+du dafür nichts installieren: Dort steht es als **„NeilB Tribe Info"**, und ein
+Klick auf **„Activate"** legt es in deine Schnellleiste. Im Bild steht
+stattdessen **„Deactivate"**, weil das Script dort schon aktiv ist.
+
+![NeilB Tribe Info in der Ingame-Skriptbibliothek](../assets/nuke-planning-tool/step1_11_script_library.png){ .screenshot }
+
 ### Copy & Paste
 
 ![Truppen per Copy & Paste einfügen](../assets/nuke-planning-tool/step1_03_import_paste.png){ .screenshot }
 
 Über **„Copy & Paste"** fügst du die Truppen direkt aus der
 Ingame-Truppenübersicht ein (Strg+A, Strg+C). Der Import startet automatisch
-beim Einfügen. Alternativ nimmt das Feld dieselben CSV-Daten wie der
-Datei-Upload entgegen — inklusive Kopfzeile.
+beim Einfügen. Alternativ nimmt das Feld dieselben Daten wie der Datei-Upload
+entgegen — inklusive Kopfzeile. Das gilt für beide Dateiformate, also auch für
+das, was „NeilsTribeInfo" über **„Copy CSV"** bzw. **„Copy JSON"** in die
+Zwischenablage legt.
 
 ### Was zeigen die importierten Truppen?
 
@@ -71,6 +98,24 @@ Diese Auswahl ist für **beide** Importwege Pflicht:
 Beim Einfügen aus der Ingame-Übersicht sucht das Tool genau die Zeilen, die
 mit dem gewählten Schlüsselwort beginnen. Passt die Auswahl nicht zu deinen
 Daten, meldet es das ausdrücklich, statt stillschweigend nichts zu finden.
+
+Das Format **„NeilsTribeInfo"** nennt seinen Truppen-Typ selbst: Die Seite
+„Truppen" ergibt **„Truppen Insgesamt"**, die Seite „Verteidigung" ergibt
+**„Truppen im Dorf"** — unterwegs befindliche Truppen werden dabei bewusst
+nicht übernommen. Nennt eine Datei genau einen Truppen-Typ, springt die
+Auswahl automatisch darauf; beim Format „Download Tribe Info" passiert das
+nicht. Entscheidend bleibt in jedem Fall deine Auswahl: Passt sie nicht zur
+Datei, kommt eine Meldung, die nennt, was tatsächlich drinsteht.
+
+Ein Wechsel des Truppen-Typs liest bereits hochgeladene Dateien neu ein — du
+musst sie also nicht noch einmal auswählen.
+
+!!! info "Konsekutive Planung hat Vorrang"
+    Hast du unter
+    [Truppen aus anderen Plänen abziehen](#4-truppen-aus-anderen-planen-abziehen)
+    schon Pläne ausgewählt, stellt das Tool den Truppen-Typ **nicht**
+    automatisch um — diese Planung ginge sonst verloren. Stattdessen erscheint
+    ein Hinweis.
 
 !!! info "Konsekutive Planung braucht „Truppen Insgesamt""
     Die beiden Abschnitte

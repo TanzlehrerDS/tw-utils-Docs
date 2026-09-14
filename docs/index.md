@@ -166,9 +166,12 @@ Für Script-Entwickler: Endpunkte, Authentifizierung und Beispiele.
 ### Truppen & Uploads
 
 ??? question "Welches Format muss die hochgeladene Truppendatei haben?"
-    Eine **`.txt`-Datei** mit kommagetrennten Werten. Sie wird am einfachsten über das Ingame-Schnellleisten-Skript [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/) erzeugt. Erwartet wird eine Header-Zeile (`Coords,Player,spear,sword,axe,…,snob`), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.
+    Angenommen werden **zwei Formate**, und welches vorliegt, erkennt tw-utils am **Inhalt** — auswählen musst du nichts. Erlaubt sind die Dateiendungen **`.txt`, `.csv` und `.json`**.
 
-    Der **Inhalt** ist zwar CSV, die **Dateiendung** muss aber `.txt` sein — eine Datei namens `truppen.csv` wird abgelehnt und muss vorher umbenannt werden.
+    - **„Download Tribe Info"** — das [Ingame-Schnellleisten-Skript](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/) lädt eine fertige Datei herunter. Erwartet wird eine Header-Zeile (`Coords,Player,spear,sword,axe,…,snob`), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.
+    - **„NeilsTribeInfo"** — dieses Skript lädt keine Datei herunter, sondern kopiert das Ergebnis über „Copy CSV" bzw. „Copy JSON" in die Zwischenablage. Im Off-Planer und im Cleaner/Fake-UT-Tool fügst du es direkt in das Feld „Copy & Paste" ein — eine Datei brauchst du dafür gar nicht. Nur für den Leader-View und den Discordbot, die ausschließlich den Datei-Upload kennen, speicherst du es vorher als Datei. Wo es die Ingame-Skriptbibliothek gibt (auf den .net-Welten etwa), steht es dort als „NeilB Tribe Info" und lässt sich mit einem Klick auf „Activate" freischalten.
+
+    In beiden Fällen muss die Datei Truppen enthalten — ein reiner Gebäude-Export wird abgelehnt. Ebenso abgelehnt wird eine Datei mit Einheiten, die es auf der Welt gar nicht gibt.
 
     → [Leader-View — Truppen](leader-view/truppen.md)
 
@@ -178,7 +181,7 @@ Für Script-Entwickler: Endpunkte, Authentifizierung und Beispiele.
     → [Leader-View — Truppen](leader-view/truppen.md)
 
 ??? question "Warum überschreibt mein neuer Upload die alten Truppen nicht?"
-    „Truppen insgesamt" und „Truppen im Dorf" sind **zwei getrennte Datensätze**. Ein Upload ersetzt immer nur die Daten derselben Erfassungsart desselben Stammes — lädst du versehentlich in die andere Sicht hoch, steht der alte Datensatz unverändert daneben. Auch beim Löschen musst du die Erfassungsart angeben.
+    „Truppen insgesamt" und „Truppen im Dorf" sind **zwei getrennte Datensätze**. Ein Upload ersetzt immer nur die Daten derselben Erfassungsart desselben Stammes — lädst du versehentlich in die andere Sicht hoch, steht der alte Datensatz unverändert daneben. Auch beim Löschen musst du die Erfassungsart angeben. Das Format „NeilsTribeInfo" bringt seine Erfassungsart selbst mit: Die Seite „Truppen" ergibt „Truppen insgesamt", die Seite „Verteidigung" ergibt „Truppen im Dorf".
 
     → [Leader-View — Truppen](leader-view/truppen.md)
 

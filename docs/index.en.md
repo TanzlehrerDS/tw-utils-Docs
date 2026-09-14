@@ -166,9 +166,12 @@ For script developers: endpoints, authentication and examples.
 ### Troops & uploads
 
 ??? question "What format does the uploaded troops file need to have?"
-    A **`.txt` file** with comma-separated values. It is most easily generated via the in-game quickbar script ["Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). The file must start with a header row (`Coords,Player,spear,sword,axe,…,snob`), followed by one row per village with coordinates and troop counts.
+    **Two formats** are accepted, and tw-utils recognises from the **content** which one it is — you never have to select anything. The allowed file extensions are **`.txt`, `.csv` and `.json`**.
 
-    The **content** is CSV, but the **file extension** has to be `.txt` — a file named `troops.csv` is rejected and has to be renamed first.
+    - **“Download Tribe Info”** — the [in-game quickbar script](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/) downloads a ready-made file. It must start with a header row (`Coords,Player,spear,sword,axe,…,snob`), followed by one row per village with coordinates and troop counts.
+    - **“NeilsTribeInfo”** — this script does not download a file, it copies the result to the clipboard via “Copy CSV” or “Copy JSON”. In the nuke planner and in the cleaner/Fake-Sup tool you paste it straight into the “Copy & Paste” field — no file needed at all. Only for the Leader-View and the Discord bot, which know the file upload alone, do you have to save it as a file first. Where the in-game Script Library exists (on the .net worlds, for instance), it is listed there as “NeilB Tribe Info” and can be switched on with a single click on “Activate”.
+
+    In both cases the file must contain troops — a buildings-only export is rejected. A file containing units that do not exist on the world at all is rejected as well.
 
     → [Leader-View — Troops](leader-view/truppen.md)
 
@@ -178,7 +181,7 @@ For script developers: endpoints, authentication and examples.
     → [Leader-View — Troops](leader-view/truppen.md)
 
 ??? question "Why does my new upload not overwrite the old troops?"
-    “Total troops” and “troops in village” are **two separate data sets**. An upload only ever replaces the data of the same scope for the same tribe — if you accidentally upload into the other scope, the old data set stays untouched next to it. Deleting requires the scope as well.
+    “Total troops” and “troops in village” are **two separate data sets**. An upload only ever replaces the data of the same scope for the same tribe — if you accidentally upload into the other scope, the old data set stays untouched next to it. Deleting requires the scope as well. The “NeilsTribeInfo” format brings its scope along itself: the “Troops” page yields “total troops”, the “Defence” page yields “troops in village”.
 
     → [Leader-View — Troops](leader-view/truppen.md)
 

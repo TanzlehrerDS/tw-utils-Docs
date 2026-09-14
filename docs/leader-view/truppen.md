@@ -55,19 +55,42 @@ Felder im Dialog:
   beim Hochladen abgelehnt.
 - **Scope** — wähle entweder **„Truppen im Dorf"** oder
   **„Truppen Insgesamt"** (siehe [Die beiden Scopes](#die-beiden-scopes)).
-- **Truppen-Datei (.txt)** — die mit dem
-  [Schnellleistenscript](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/)
-  erzeugte TXT-Datei.
+  Nennt die gewählte Datei selbst genau eine Erfassungsart, springt die
+  Auswahl automatisch darauf. Entscheidend bleibt trotzdem, was hier
+  steht: Enthält die Datei die gewählte Erfassungsart nicht, lehnt der
+  Upload mit einer Meldung ab, die nennt, was stattdessen drinsteht.
+- **Truppen-Datei (.txt, .csv, .json)** — die Datei aus einem der beiden
+  unterstützten Auslese-Scripte (siehe
+  [Erwartetes Datei-Format](#erwartetes-datei-format)).
 
 Ein Upload **ersetzt** immer den kompletten bisherigen Datensatz
 dieser Kombination aus Stamm und Scope — es wird also nichts
 zusammengeführt. Ein Upload ohne verwertbare Zeilen lässt die
 vorhandenen Daten unangetastet, statt sie zu leeren.
 
+Stehen in der Datei Einheiten, die es auf der Welt gar nicht gibt (etwa
+der Export einer Bogenschützen-Welt für einen Stamm auf einer Welt ohne
+Bogenschützen), wird der Upload mit einer Meldung abgelehnt, statt die
+Daten halb zu importieren. Die Erfolgsmeldung nennt zusätzlich
+übersprungene Zeilen und Spieler, bei denen in keinem Dorf eine Einheit
+steht — häufigste Ursache dafür ist eine fehlende Truppenfreigabe im
+Stamm.
+
 ### Erwartetes Datei-Format
 
-Die TXT-Datei muss als erste Zeile eine Header-Zeile mit den
-Spaltennamen enthalten, gefolgt von einer Zeile pro Dorf:
+Es werden zwei Auslese-Scripte unterstützt. **Du wählst nirgends aus,
+welches Format du hochlädst** — erkannt wird es am Inhalt der Datei.
+Erlaubt sind die Dateiendungen `.txt`, `.csv` und `.json`.
+
+Die Datei muss Truppenspalten enthalten — ein reiner Gebäude-Export wird
+abgelehnt.
+
+#### „Download Tribe Info"
+
+Das [Schnellleisten-Script](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/)
+lädt die Datei direkt herunter. Sie muss als erste Zeile eine
+Header-Zeile mit den Spaltennamen enthalten, gefolgt von einer Zeile pro
+Dorf:
 
 ```
 Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
@@ -77,3 +100,36 @@ Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight
 465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
 468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
 ```
+
+Dieses Format sagt nicht, welche Erfassungsart darin steckt — hier
+entscheidet allein deine Auswahl im Feld **Scope**.
+
+#### „NeilsTribeInfo"
+
+Wo es die Ingame-**Skriptbibliothek** gibt — auf den .net-Welten
+etwa —, musst du dafür nichts installieren: Dort steht es als
+**„NeilB Tribe Info"**, und ein Klick auf **„Activate"** legt es in
+deine Schnellleiste. Im Bild steht stattdessen **„Deactivate"**,
+weil das Script dort schon aktiv ist.
+
+![NeilB Tribe Info in der Ingame-Skriptbibliothek](../assets/leaderview/59_leaderview_troops_script_library.png){ .screenshot }
+
+!!! info "Dieses Script lädt keine Datei herunter"
+    Statt eines Downloads hat es die Knöpfe **„Copy CSV"** und
+    **„Copy JSON"** — das Ergebnis landet in der **Zwischenablage**.
+    Füge es also erst in einen Editor (z. B. Notepad) ein und speichere
+    es als Datei, bevor du es hier hochlädst.
+
+Die Datei beginnt mit einer `exported_at`-Zeile, darunter folgt die
+quotierte Spaltenzeile und je Dorf eine Zeile:
+
+```
+exported_at,1789240946
+"player_name","player_id","village","coords","points","spear","sword","axe",…
+"Testuser A","9859907","Testdorf (603|576) K56","603|576","5491","2222","11","12",…
+```
+
+Dieses Format nennt die Erfassungsart selbst: die Script-Seite
+**„Truppen"** ergibt **Truppen Insgesamt**, die Seite
+**„Verteidigung"** ergibt **Truppen im Dorf**. Unterwegs befindliche
+Truppen werden dabei bewusst nicht übernommen.

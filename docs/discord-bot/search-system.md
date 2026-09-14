@@ -22,11 +22,13 @@ Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten
 
 ![Admin-Buttons im ODS Panel](../assets/discordbot/ods-system/02_ods_system_upload_troops.png){ .screenshot }
 
-`Upload Troops` führt zum Slash-Command `/admin troops_upload`, über den die TW-Truppen-CSV-Datei eingelesen wird.
+`Upload Troops` führt zum Slash-Command `/admin troops_upload`, über den die TW-Truppendatei eingelesen wird.
 
 ![Slash-Command zum Truppen-Upload](../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png){ .screenshot }
 
-Die Datei erzeugst du am bequemsten über das Schnellleisten-Script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/). Der Inhalt ist kommagetrennt, die Dateiendung muss aber `.txt` sein — eine `.csv`-Datei lehnt der Bot ab. Erwartetes Dateiformat:
+Die Datei erzeugst du mit einem von zwei Auslese-Scripten. Welches du benutzt, wählst du nirgends aus — der Bot erkennt das Format am Inhalt der Datei. Erlaubt sind die Dateiendungen `.txt`, `.csv` und `.json`. Die Datei muss Truppenspalten enthalten; ein reiner Gebäude-Export wird abgelehnt.
+
+Das Schnellleisten-Script [„Download Tribe Info"](https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/) lädt die Datei direkt herunter. Der Inhalt ist kommagetrennt:
 
 ```
 Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
@@ -34,7 +36,27 @@ Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight
 543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
 ```
 
-Nach erfolgreichem Upload bestätigt der Bot mit einer kurzen Erfolgs-Nachricht.
+Das Script **„NeilsTribeInfo"** liefert stattdessen eine `exported_at`-Vorzeile mit quotierten Spalten:
+
+```
+exported_at,1789240946
+"player_name","player_id","village","coords","points","spear","sword","axe",…
+"Testuser A","9859907","Testdorf (603|576) K56","603|576","5491","2222","11","12",…
+```
+
+Wo es die Ingame-**Skriptbibliothek** gibt — auf den .net-Welten etwa —, musst du dafür nichts installieren: Dort steht es als **„NeilB Tribe Info"**, und ein Klick auf **„Activate"** legt es in deine Schnellleiste. Im Bild steht stattdessen **„Deactivate"**, weil das Script dort schon aktiv ist.
+
+![NeilB Tribe Info in der Ingame-Skriptbibliothek](../assets/discordbot/ods-system/26_ods_system_script_library.png){ .screenshot }
+
+!!! info "NeilsTribeInfo lädt keine Datei herunter"
+    Statt eines Downloads hat es die Knöpfe **„Copy CSV"** und **„Copy JSON"** — das Ergebnis landet in der **Zwischenablage**. Füge es also erst in einen Editor (z. B. Notepad) ein und speichere es als Datei, bevor du die Datei an den Slash-Command anhängst.
+
+!!! info "Nur „Truppen im Dorf" werden gespeichert"
+    NeilsTribeInfo sagt selbst, welche Erfassungsart in der Datei steckt: die Script-Seite **„Verteidigung"** ergibt **Truppen im Dorf**, die Seite **„Truppen"** ergibt **Truppen Insgesamt**. Der Bot speichert ausschließlich **Truppen im Dorf** — lädst du hier einen reinen „Truppen"-Export hoch, lehnt er ihn mit einer Erklärung ab. Für „Truppen Insgesamt" ist der [Leader-View](../leader-view/truppen.md) zuständig.
+
+Enthält die Datei Einheiten, die es auf der Welt gar nicht gibt (etwa der Export einer Bogenschützen-Welt für einen Stamm auf einer Welt ohne Bogenschützen), wird der Upload abgelehnt, statt die Daten halb einzulesen.
+
+Nach erfolgreichem Upload bestätigt der Bot mit einer kurzen Erfolgs-Nachricht. Sie nennt neben der Zahl der Dörfer auch übersprungene Zeilen und Spieler, bei denen in keinem Dorf eine Einheit steht — häufigste Ursache dafür ist eine fehlende Truppenfreigabe im Stamm.
 
 ![Erfolgs-Meldung nach Truppen-Upload](../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png){ .screenshot }
 
