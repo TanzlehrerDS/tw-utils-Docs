@@ -2124,14 +2124,31 @@
 <h2 id="2-truppendaten">2. Truppendaten<a class="headerlink" href="#2-truppendaten" title="Permanent link">¶</a></h2>
 <p>Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten der Stammesmitglieder im Bot hinterlegt sein. Im Such-Kanal <code>#⚫-ods-search</code> steht dafür das <code>ODS Panel</code>-Embed mit drei Admin-Buttons: <code>Upload Troops</code>, <code>Delete Troops</code>, <code>Show Troop Status</code> zur Verfügung.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/02_ods_system_upload_troops.png" data-title="Admin-Buttons im ODS Panel" data-desc-position="bottom"><img alt="Admin-Buttons im ODS Panel" class="screenshot" src="../../assets/discordbot/ods-system/02_ods_system_upload_troops.png"></a></p>
-<p><code>Upload Troops</code> führt zum Slash-Command <code>/admin troops_upload</code>, über den die TW-Truppen-CSV-Datei eingelesen wird.</p>
+<p><code>Upload Troops</code> führt zum Slash-Command <code>/admin troops_upload</code>, über den die TW-Truppendatei eingelesen wird.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png" data-title="Slash-Command zum Truppen-Upload" data-desc-position="bottom"><img alt="Slash-Command zum Truppen-Upload" class="screenshot" src="../../assets/discordbot/ods-system/03_ods_system_upload_troops_slash_command.png"></a></p>
-<p>Die Datei erzeugst du am bequemsten über das Schnellleisten-Script <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">„Download Tribe Info"</a>. Der Inhalt ist kommagetrennt, die Dateiendung muss aber <code>.txt</code> sein — eine <code>.csv</code>-Datei lehnt der Bot ab. Erwartetes Dateiformat:</p>
+<p>Die Datei erzeugst du mit einem von zwei Auslese-Scripten. Welches du benutzt, wählst du nirgends aus — der Bot erkennt das Format am Inhalt der Datei. Erlaubt sind die Dateiendungen <code>.txt</code>, <code>.csv</code> und <code>.json</code>. Die Datei muss Truppenspalten enthalten; ein reiner Gebäude-Export wird abgelehnt.</p>
+<p>Das Schnellleisten-Script <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">„Download Tribe Info"</a> lädt die Datei direkt herunter. Der Inhalt ist kommagetrennt:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
 </code></pre></div>
-<p>Nach erfolgreichem Upload bestätigt der Bot mit einer kurzen Erfolgs-Nachricht.</p>
+<p>Das Script <strong>„NeilsTribeInfo"</strong> liefert stattdessen eine <code>exported_at</code>-Vorzeile mit quotierten Spalten:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>exported_at,1789240946
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>"player_name","player_id","village","coords","points","spear","sword","axe",…
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>"Testuser A","9859907","Testdorf (603|576) K56","603|576","5491","2222","11","12",…
+</code></pre></div>
+<p>Wo es die Ingame-<strong>Skriptbibliothek</strong> gibt — auf den .net-Welten etwa —, musst du dafür nichts installieren: Dort steht es als <strong>„NeilB Tribe Info"</strong>, und ein Klick auf <strong>„Activate"</strong> legt es in deine Schnellleiste. Im Bild steht stattdessen <strong>„Deactivate"</strong>, weil das Script dort schon aktiv ist.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/26_ods_system_script_library.png" data-title="NeilB Tribe Info in der Ingame-Skriptbibliothek" data-desc-position="bottom"><img alt="NeilB Tribe Info in der Ingame-Skriptbibliothek" class="screenshot" src="../../assets/discordbot/ods-system/26_ods_system_script_library.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">NeilsTribeInfo lädt keine Datei herunter</p>
+<p>Statt eines Downloads hat es die Knöpfe <strong>„Copy CSV"</strong> und <strong>„Copy JSON"</strong> — das Ergebnis landet in der <strong>Zwischenablage</strong>. Füge es also erst in einen Editor (z. B. Notepad) ein und speichere es als Datei, bevor du die Datei an den Slash-Command anhängst.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Nur „Truppen im Dorf" werden gespeichert</p>
+<p>NeilsTribeInfo sagt selbst, welche Erfassungsart in der Datei steckt: die Script-Seite <strong>„Verteidigung"</strong> ergibt <strong>Truppen im Dorf</strong>, die Seite <strong>„Truppen"</strong> ergibt <strong>Truppen Insgesamt</strong>. Der Bot speichert ausschließlich <strong>Truppen im Dorf</strong> — lädst du hier einen reinen „Truppen"-Export hoch, lehnt er ihn mit einer Erklärung ab. Für „Truppen Insgesamt" ist der <a href="../../leader-view/truppen/">Leader-View</a> zuständig.</p>
+</div>
+<p>Enthält die Datei Einheiten, die es auf der Welt gar nicht gibt (etwa der Export einer Bogenschützen-Welt für einen Stamm auf einer Welt ohne Bogenschützen), wird der Upload abgelehnt, statt die Daten halb einzulesen.</p>
+<p>Nach erfolgreichem Upload bestätigt der Bot mit einer kurzen Erfolgs-Nachricht. Sie nennt neben der Zahl der Dörfer auch übersprungene Zeilen und Spieler, bei denen in keinem Dorf eine Einheit steht — häufigste Ursache dafür ist eine fehlende Truppenfreigabe im Stamm.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png" data-title="Erfolgs-Meldung nach Truppen-Upload" data-desc-position="bottom"><img alt="Erfolgs-Meldung nach Truppen-Upload" class="screenshot" src="../../assets/discordbot/ods-system/04_ods_system_upload_troops_success_message.png"></a></p>
 <p>Über den Button <code>Delete Troops</code> können hochgeladene Truppendaten wieder entfernt werden.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png" data-title="Delete-Troops-Button" data-desc-position="bottom"><img alt="Delete-Troops-Button" class="screenshot" src="../../assets/discordbot/ods-system/05_ods_system_upload_troops_delete_button.png"></a></p>

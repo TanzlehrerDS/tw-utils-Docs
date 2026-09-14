@@ -2380,8 +2380,12 @@
 <h3 id="troops-uploads">Troops &amp; uploads<a class="headerlink" href="#troops-uploads" title="Permanent link">¶</a></h3>
 <details class="question">
 <summary>What format does the uploaded troops file need to have?</summary>
-<p>A <strong><code>.txt</code> file</strong> with comma-separated values. It is most easily generated via the in-game quickbar script <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">"Download Tribe Info"</a>. The file must start with a header row (<code>Coords,Player,spear,sword,axe,…,snob</code>), followed by one row per village with coordinates and troop counts.</p>
-<p>The <strong>content</strong> is CSV, but the <strong>file extension</strong> has to be <code>.txt</code> — a file named <code>troops.csv</code> is rejected and has to be renamed first.</p>
+<p><strong>Two formats</strong> are accepted, and tw-utils recognises from the <strong>content</strong> which one it is — you never have to select anything. The allowed file extensions are <strong><code>.txt</code>, <code>.csv</code> and <code>.json</code></strong>.</p>
+<ul>
+<li><strong>“Download Tribe Info”</strong> — the <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">in-game quickbar script</a> downloads a ready-made file. It must start with a header row (<code>Coords,Player,spear,sword,axe,…,snob</code>), followed by one row per village with coordinates and troop counts.</li>
+<li><strong>“NeilsTribeInfo”</strong> — this script does not download a file, it copies the result to the clipboard via “Copy CSV” or “Copy JSON”. In the nuke planner and in the cleaner/Fake-Sup tool you paste it straight into the “Copy &amp; Paste” field — no file needed at all. Only for the Leader-View and the Discord bot, which know the file upload alone, do you have to save it as a file first. Where the in-game Script Library exists (on the .net worlds, for instance), it is listed there as “NeilB Tribe Info” and can be switched on with a single click on “Activate”.</li>
+</ul>
+<p>In both cases the file must contain troops — a buildings-only export is rejected. A file containing units that do not exist on the world at all is rejected as well.</p>
 <p>→ <a href="leader-view/truppen/">Leader-View — Troops</a></p>
 </details>
 <details class="question">
@@ -2391,7 +2395,7 @@
 </details>
 <details class="question">
 <summary>Why does my new upload not overwrite the old troops?</summary>
-<p>“Total troops” and “troops in village” are <strong>two separate data sets</strong>. An upload only ever replaces the data of the same scope for the same tribe — if you accidentally upload into the other scope, the old data set stays untouched next to it. Deleting requires the scope as well.</p>
+<p>“Total troops” and “troops in village” are <strong>two separate data sets</strong>. An upload only ever replaces the data of the same scope for the same tribe — if you accidentally upload into the other scope, the old data set stays untouched next to it. Deleting requires the scope as well. The “NeilsTribeInfo” format brings its scope along itself: the “Troops” page yields “total troops”, the “Defence” page yields “troops in village”.</p>
 <p>→ <a href="leader-view/truppen/">Leader-View — Troops</a></p>
 </details>
 <h3 id="planning-calculation-plans">Planning, calculation &amp; plans<a class="headerlink" href="#planning-calculation-plans" title="Permanent link">¶</a></h3>

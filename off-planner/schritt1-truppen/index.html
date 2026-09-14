@@ -2204,9 +2204,18 @@ steht — siehe <a href="../gesamtkarte/">Die Gesamtkarte</a>.</p>
 gleichwertigen Wegen.</p>
 <h3 id="datei-hochladen">Datei hochladen<a class="headerlink" href="#datei-hochladen" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/step1_02_import_file.png" data-title="Truppen per Datei hochladen" data-desc-position="bottom"><img alt="Truppen per Datei hochladen" class="screenshot" src="../../assets/nuke-planning-tool/step1_02_import_file.png"></a></p>
-<p>Über <strong>„Datei hochladen"</strong> lädst du eine oder mehrere TXT-Dateien ein. Diese
-Dateien erzeugst du am bequemsten über das
-<a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">Schnellleisten-Script „Download Tribe Info"</a>.</p>
+<p>Über <strong>„Datei hochladen"</strong> lädst du eine oder mehrere Dateien ein — erlaubt
+sind die Endungen <code>.txt</code>, <code>.csv</code> und <code>.json</code>. Angenommen werden <strong>zwei
+Formate</strong>; welches vorliegt, erkennt das Tool am <strong>Inhalt</strong>. Du musst nirgends
+auswählen, welches du hochlädst.</p>
+<p>Die Datei muss Truppen enthalten — ein reiner Gebäude-Export wird
+abgelehnt. Ebenso abgelehnt wird
+eine Datei mit Einheiten, die es auf der gewählten Welt gar nicht gibt (etwa
+die Datei einer Bogenschützen-Welt auf einer Welt ohne Bogenschützen); sie wird
+dann nicht halb eingelesen, sondern mit einer Meldung zurückgewiesen.</p>
+<p><strong>Format 1: „Download Tribe Info"</strong> — das
+<a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">Schnellleisten-Script</a>
+lädt eine fertige Datei herunter.</p>
 <p>Erwartetes Format:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
@@ -2220,12 +2229,25 @@ die Spalten danach müssen die Einheiten in der Reihenfolge benennen, in der
 sie in den Zeilen stehen. Welche Einheiten vorkommen, hängt von der Welt ab —
 auf Welten ohne Bogenschützen fallen <code>archer</code> und <code>marcher</code> einfach weg. Die
 erste Spalte ist immer die Koordinate, die zweite immer der Spielername.</p>
+<p><strong>Format 2: „NeilsTribeInfo"</strong> — dieses Script lädt <strong>keine</strong> Datei herunter,
+sondern kopiert das Ergebnis über <strong>„Copy CSV"</strong> bzw. <strong>„Copy JSON"</strong> in die
+Zwischenablage. Im Planer ist das kein Umweg: Du fügst den Inhalt direkt in das
+Feld <strong>„Copy &amp; Paste"</strong> ein — eine Datei musst du dafür gar nicht erst anlegen.
+Nur der Leader-View und der Discordbot kennen ausschließlich den Datei-Upload;
+für sie speicherst du den Inhalt vorher als <code>.txt</code>, <code>.csv</code> oder <code>.json</code>.</p>
+<p>Wo es die Ingame-<strong>Skriptbibliothek</strong> gibt — auf den .net-Welten etwa —, musst
+du dafür nichts installieren: Dort steht es als <strong>„NeilB Tribe Info"</strong>, und ein
+Klick auf <strong>„Activate"</strong> legt es in deine Schnellleiste. Im Bild steht
+stattdessen <strong>„Deactivate"</strong>, weil das Script dort schon aktiv ist.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/step1_11_script_library.png" data-title="NeilB Tribe Info in der Ingame-Skriptbibliothek" data-desc-position="bottom"><img alt="NeilB Tribe Info in der Ingame-Skriptbibliothek" class="screenshot" src="../../assets/nuke-planning-tool/step1_11_script_library.png"></a></p>
 <h3 id="copy-paste">Copy &amp; Paste<a class="headerlink" href="#copy-paste" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/step1_03_import_paste.png" data-title="Truppen per Copy &amp; Paste einfügen" data-desc-position="bottom"><img alt="Truppen per Copy &amp; Paste einfügen" class="screenshot" src="../../assets/nuke-planning-tool/step1_03_import_paste.png"></a></p>
 <p>Über <strong>„Copy &amp; Paste"</strong> fügst du die Truppen direkt aus der
 Ingame-Truppenübersicht ein (Strg+A, Strg+C). Der Import startet automatisch
-beim Einfügen. Alternativ nimmt das Feld dieselben CSV-Daten wie der
-Datei-Upload entgegen — inklusive Kopfzeile.</p>
+beim Einfügen. Alternativ nimmt das Feld dieselben Daten wie der Datei-Upload
+entgegen — inklusive Kopfzeile. Das gilt für beide Dateiformate, also auch für
+das, was „NeilsTribeInfo" über <strong>„Copy CSV"</strong> bzw. <strong>„Copy JSON"</strong> in die
+Zwischenablage legt.</p>
 <h3 id="was-zeigen-die-importierten-truppen">Was zeigen die importierten Truppen?<a class="headerlink" href="#was-zeigen-die-importierten-truppen" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/nuke-planning-tool/step1_04_troop_type.png" data-title="Auswahl zwischen „Truppen Insgesamt&quot; und „Truppen im Dorf&quot;" data-desc-position="bottom"><img alt="Auswahl zwischen „Truppen Insgesamt&quot; und „Truppen im Dorf&quot;" class="screenshot" src="../../assets/nuke-planning-tool/step1_04_troop_type.png"></a></p>
 <p>Diese Auswahl ist für <strong>beide</strong> Importwege Pflicht:</p>
@@ -2237,6 +2259,23 @@ Datei-Upload entgegen — inklusive Kopfzeile.</p>
 <p>Beim Einfügen aus der Ingame-Übersicht sucht das Tool genau die Zeilen, die
 mit dem gewählten Schlüsselwort beginnen. Passt die Auswahl nicht zu deinen
 Daten, meldet es das ausdrücklich, statt stillschweigend nichts zu finden.</p>
+<p>Das Format <strong>„NeilsTribeInfo"</strong> nennt seinen Truppen-Typ selbst: Die Seite
+„Truppen" ergibt <strong>„Truppen Insgesamt"</strong>, die Seite „Verteidigung" ergibt
+<strong>„Truppen im Dorf"</strong> — unterwegs befindliche Truppen werden dabei bewusst
+nicht übernommen. Nennt eine Datei genau einen Truppen-Typ, springt die
+Auswahl automatisch darauf; beim Format „Download Tribe Info" passiert das
+nicht. Entscheidend bleibt in jedem Fall deine Auswahl: Passt sie nicht zur
+Datei, kommt eine Meldung, die nennt, was tatsächlich drinsteht.</p>
+<p>Ein Wechsel des Truppen-Typs liest bereits hochgeladene Dateien neu ein — du
+musst sie also nicht noch einmal auswählen.</p>
+<div class="admonition info">
+<p class="admonition-title">Konsekutive Planung hat Vorrang</p>
+<p>Hast du unter
+<a href="#4-truppen-aus-anderen-planen-abziehen">Truppen aus anderen Plänen abziehen</a>
+schon Pläne ausgewählt, stellt das Tool den Truppen-Typ <strong>nicht</strong>
+automatisch um — diese Planung ginge sonst verloren. Stattdessen erscheint
+ein Hinweis.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Konsekutive Planung braucht „Truppen Insgesamt"</p>
 <p>Die beiden Abschnitte

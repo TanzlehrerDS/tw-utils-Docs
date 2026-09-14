@@ -2202,9 +2202,17 @@ the overall map, which is available in every step — see
 equivalent ways.</p>
 <h3 id="upload-file">Upload file<a class="headerlink" href="#upload-file" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/step1_02_import_file.png" data-title="Importing troops from a file" data-desc-position="bottom"><img alt="Importing troops from a file" class="screenshot" src="../../../assets/nuke-planning-tool/step1_02_import_file.png"></a></p>
-<p>Via <strong>"Upload file"</strong> you load one or more TXT files. The most convenient way
-to create these files is the
-<a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">quickbar script "Download Tribe Info"</a>.</p>
+<p>Via <strong>"Upload file"</strong> you load one or more files — the allowed extensions are
+<code>.txt</code>, <code>.csv</code> and <code>.json</code>. <strong>Two formats</strong> are accepted; which one it is, the
+tool recognises from the <strong>content</strong>. You never have to select which one you
+are uploading.</p>
+<p>The file must contain troops — a buildings-only export is rejected. A file containing units that do not exist
+on the selected world at all (for instance the file of an archer world on a
+world without archers) is rejected as well; it is then not half-imported but
+turned down with a message.</p>
+<p><strong>Format 1: "Download Tribe Info"</strong> — the
+<a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">quickbar script</a>
+downloads a ready-made file.</p>
 <p>Expected format:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
@@ -2218,12 +2226,24 @@ columns after it must name the units in the same order in which they appear in
 the rows. Which units occur depends on the world — on worlds without archers,
 <code>archer</code> and <code>marcher</code> simply drop out. The first column is always the
 coordinate, the second always the player name.</p>
+<p><strong>Format 2: "NeilsTribeInfo"</strong> — this script does <strong>not</strong> download a file, it
+copies the result to the clipboard via <strong>"Copy CSV"</strong> or <strong>"Copy JSON"</strong>. In the
+planner that is no detour: you paste the content straight into the <strong>"Copy &amp;
+Paste"</strong> field — you do not have to create a file at all. Only the Leader-View
+and the Discord bot know the file upload alone; for them you save the content
+as <code>.txt</code>, <code>.csv</code> or <code>.json</code> first.</p>
+<p>Where the in-game <strong>Script Library</strong> exists — on the .net worlds, for instance —
+you do not have to install anything: it is listed there as <strong>"NeilB Tribe
+Info"</strong>, and one click on <strong>"Activate"</strong> puts it on your quick bar. The
+screenshot shows <strong>"Deactivate"</strong> because the script is already active there.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/step1_11_script_library.png" data-title="NeilB Tribe Info in the in-game Script Library" data-desc-position="bottom"><img alt="NeilB Tribe Info in the in-game Script Library" class="screenshot" src="../../../assets/nuke-planning-tool/step1_11_script_library.png"></a></p>
 <h3 id="copy-paste">Copy &amp; Paste<a class="headerlink" href="#copy-paste" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/step1_03_import_paste.png" data-title="Pasting troops via copy &amp; paste" data-desc-position="bottom"><img alt="Pasting troops via copy &amp; paste" class="screenshot" src="../../../assets/nuke-planning-tool/step1_03_import_paste.png"></a></p>
 <p>Via <strong>"Copy &amp; Paste"</strong> you paste the troops straight from the in-game troop
 overview (Ctrl+A, Ctrl+C). The import starts automatically when you paste.
-Alternatively the field also accepts the same CSV data as the file upload —
-header row included.</p>
+Alternatively the field also accepts the same data as the file upload — header
+row included. That applies to both file formats, including whatever
+"NeilsTribeInfo" puts on the clipboard via <strong>"Copy CSV"</strong> or <strong>"Copy JSON"</strong>.</p>
 <h3 id="what-do-the-imported-troops-show">What do the imported troops show?<a class="headerlink" href="#what-do-the-imported-troops-show" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/nuke-planning-tool/step1_04_troop_type.png" data-title="Choosing between &quot;Total troops&quot; and &quot;Troops in village&quot;" data-desc-position="bottom"><img alt="Choosing between &quot;Total troops&quot; and &quot;Troops in village&quot;" class="screenshot" src="../../../assets/nuke-planning-tool/step1_04_troop_type.png"></a></p>
 <p>This choice is mandatory for <strong>both</strong> import paths:</p>
@@ -2235,6 +2255,22 @@ header row included.</p>
 <p>When pasting from the in-game overview, the tool looks for exactly those rows
 that begin with the selected keyword. If the choice does not match your data,
 it says so explicitly instead of quietly finding nothing.</p>
+<p>The <strong>"NeilsTribeInfo"</strong> format states its troop type itself: the "Troops" page
+yields <strong>"Total troops"</strong>, the "Defence" page yields <strong>"Troops in village"</strong> —
+troops that are currently on their way are deliberately not taken over. If a
+file names exactly one troop type, the selection jumps to it automatically;
+with the "Download Tribe Info" format that does not happen. Your choice remains
+decisive in every case: if it does not match the file, a message names what is
+actually in it.</p>
+<p>Switching the troop type re-reads files you have already uploaded — so you do
+not have to select them again.</p>
+<div class="admonition info">
+<p class="admonition-title">Consecutive planning takes precedence</p>
+<p>If you have already selected plans under
+<a href="#4-subtracting-troops-from-other-plans">Subtract troops from other plans</a>,
+the tool does <strong>not</strong> switch the troop type automatically — that planning
+would otherwise be lost. A note appears instead.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Consecutive planning requires the Total troops mode</p>
 <p>The two sections

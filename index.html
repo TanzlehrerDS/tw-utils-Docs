@@ -2380,8 +2380,12 @@
 <h3 id="truppen-uploads">Truppen &amp; Uploads<a class="headerlink" href="#truppen-uploads" title="Permanent link">¶</a></h3>
 <details class="question">
 <summary>Welches Format muss die hochgeladene Truppendatei haben?</summary>
-<p>Eine <strong><code>.txt</code>-Datei</strong> mit kommagetrennten Werten. Sie wird am einfachsten über das Ingame-Schnellleisten-Skript <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">„Download Tribe Info"</a> erzeugt. Erwartet wird eine Header-Zeile (<code>Coords,Player,spear,sword,axe,…,snob</code>), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.</p>
-<p>Der <strong>Inhalt</strong> ist zwar CSV, die <strong>Dateiendung</strong> muss aber <code>.txt</code> sein — eine Datei namens <code>truppen.csv</code> wird abgelehnt und muss vorher umbenannt werden.</p>
+<p>Angenommen werden <strong>zwei Formate</strong>, und welches vorliegt, erkennt tw-utils am <strong>Inhalt</strong> — auswählen musst du nichts. Erlaubt sind die Dateiendungen <strong><code>.txt</code>, <code>.csv</code> und <code>.json</code></strong>.</p>
+<ul>
+<li><strong>„Download Tribe Info"</strong> — das <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">Ingame-Schnellleisten-Skript</a> lädt eine fertige Datei herunter. Erwartet wird eine Header-Zeile (<code>Coords,Player,spear,sword,axe,…,snob</code>), gefolgt von einer Zeile pro Dorf mit Koordinaten und Truppenanzahlen.</li>
+<li><strong>„NeilsTribeInfo"</strong> — dieses Skript lädt keine Datei herunter, sondern kopiert das Ergebnis über „Copy CSV" bzw. „Copy JSON" in die Zwischenablage. Im Off-Planer und im Cleaner/Fake-UT-Tool fügst du es direkt in das Feld „Copy &amp; Paste" ein — eine Datei brauchst du dafür gar nicht. Nur für den Leader-View und den Discordbot, die ausschließlich den Datei-Upload kennen, speicherst du es vorher als Datei. Wo es die Ingame-Skriptbibliothek gibt (auf den .net-Welten etwa), steht es dort als „NeilB Tribe Info" und lässt sich mit einem Klick auf „Activate" freischalten.</li>
+</ul>
+<p>In beiden Fällen muss die Datei Truppen enthalten — ein reiner Gebäude-Export wird abgelehnt. Ebenso abgelehnt wird eine Datei mit Einheiten, die es auf der Welt gar nicht gibt.</p>
 <p>→ <a href="leader-view/truppen/">Leader-View — Truppen</a></p>
 </details>
 <details class="question">
@@ -2391,7 +2395,7 @@
 </details>
 <details class="question">
 <summary>Warum überschreibt mein neuer Upload die alten Truppen nicht?</summary>
-<p>„Truppen insgesamt" und „Truppen im Dorf" sind <strong>zwei getrennte Datensätze</strong>. Ein Upload ersetzt immer nur die Daten derselben Erfassungsart desselben Stammes — lädst du versehentlich in die andere Sicht hoch, steht der alte Datensatz unverändert daneben. Auch beim Löschen musst du die Erfassungsart angeben.</p>
+<p>„Truppen insgesamt" und „Truppen im Dorf" sind <strong>zwei getrennte Datensätze</strong>. Ein Upload ersetzt immer nur die Daten derselben Erfassungsart desselben Stammes — lädst du versehentlich in die andere Sicht hoch, steht der alte Datensatz unverändert daneben. Auch beim Löschen musst du die Erfassungsart angeben. Das Format „NeilsTribeInfo" bringt seine Erfassungsart selbst mit: Die Seite „Truppen" ergibt „Truppen insgesamt", die Seite „Verteidigung" ergibt „Truppen im Dorf".</p>
 <p>→ <a href="leader-view/truppen/">Leader-View — Truppen</a></p>
 </details>
 <h3 id="planung-berechnung-plane">Planung, Berechnung &amp; Pläne<a class="headerlink" href="#planung-berechnung-plane" title="Permanent link">¶</a></h3>

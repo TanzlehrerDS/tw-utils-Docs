@@ -1441,6 +1441,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Expected file format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-tribe-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Download Tribe Info"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neilstribeinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "NeilsTribeInfo"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2027,6 +2055,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Expected file format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-tribe-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Download Tribe Info"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neilstribeinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "NeilsTribeInfo"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2127,17 +2183,35 @@ Both views can be maintained in parallel.</p>
   While typing, the field suggests matching tribes of the current
   world; a tag that does not exist on the world is rejected on upload.</li>
 <li><strong>Scope</strong> — choose either <strong>"Troops in village"</strong> or
-  <strong>"Total troops"</strong> (see <a href="#the-two-scopes">The two scopes</a>).</li>
-<li><strong>Troops file (.txt)</strong> — the TXT file produced by the
-  <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">quickbar script</a>.</li>
+  <strong>"Total troops"</strong> (see <a href="#the-two-scopes">The two scopes</a>). If the
+  selected file names exactly one scope itself, the selection jumps to
+  it automatically. What is set here still decides, though: if the file
+  does not contain the selected scope, the upload is rejected with a
+  message naming what it contains instead.</li>
+<li><strong>Troops file (.txt, .csv, .json)</strong> — the file produced by one of the
+  two supported export scripts (see
+  <a href="#expected-file-format">Expected file format</a>).</li>
 </ul>
 <p>An upload always <strong>replaces</strong> the entire previous dataset for that
 combination of tribe and scope — nothing is merged. An upload without
 any usable rows leaves the existing data untouched instead of clearing
 it.</p>
+<p>If the file contains units that do not exist on the world at all (e.g.
+the export of an archer world for a tribe on a world without archers),
+the upload is rejected with a message instead of importing the data
+halfway. The success message additionally reports skipped rows and
+players who have no unit in any village — the most common cause for
+that is a missing troop-sharing setting in the tribe.</p>
 <h3 id="expected-file-format">Expected file format<a class="headerlink" href="#expected-file-format" title="Permanent link">¶</a></h3>
-<p>The TXT file must contain a header line with the column names as its
-first line, followed by one line per village:</p>
+<p>Two export scripts are supported. <strong>You never choose which format you
+are uploading</strong> — it is detected from the content of the file. The
+allowed file extensions are <code>.txt</code>, <code>.csv</code> and <code>.json</code>.</p>
+<p>The file must contain troop columns — a buildings-only export is rejected.
+A pure building export is rejected because it contains no troop columns.</p>
+<h4 id="download-tribe-info">"Download Tribe Info"<a class="headerlink" href="#download-tribe-info" title="Permanent link">¶</a></h4>
+<p>The <a href="https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/">quickbar script</a>
+downloads the file directly. It must contain a header line with the
+column names as its first line, followed by one line per village:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Coords,Player,spear,sword,axe,archer,spy,light,marcher,heavy,ram,catapult,knight,snob
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>483|520,Testuser A,2421,6099,100,5963,50,50,3632,200,5,279,0,8
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>543|538,Testuser A,100,100,6027,100,6,3014,100,100,159,5,0,0
@@ -2145,6 +2219,31 @@ first line, followed by one line per village:</p>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>465|523,Testuser B,4298,5495,100,6752,23,50,5761,1131,5,35,0,0
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>468|515,Testuser B,721,4160,100,2280,61,50,5935,832,5,308,0,4
 </code></pre></div>
+<p>This format does not say which scope it contains — here your selection
+in the <strong>Scope</strong> field alone decides.</p>
+<h4 id="neilstribeinfo">"NeilsTribeInfo"<a class="headerlink" href="#neilstribeinfo" title="Permanent link">¶</a></h4>
+<p>Where the in-game <strong>Script Library</strong> exists — on the .net worlds,
+for instance — you do not have to install anything: it is listed
+there as <strong>"NeilB Tribe Info"</strong>, and one click on <strong>"Activate"</strong>
+puts it on your quick bar. The screenshot shows <strong>"Deactivate"</strong>
+because the script is already active there.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/leaderview/59_leaderview_troops_script_library.png" data-title="NeilB Tribe Info in the in-game Script Library" data-desc-position="bottom"><img alt="NeilB Tribe Info in the in-game Script Library" class="screenshot" src="../../../assets/leaderview/59_leaderview_troops_script_library.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">This script does not download a file</p>
+<p>Instead of a download it offers the buttons <strong>"Copy CSV"</strong> and
+<strong>"Copy JSON"</strong> — the result ends up in the <strong>clipboard</strong>. So paste
+it into an editor (e.g. Notepad) and save it as a file before
+uploading it here.</p>
+</div>
+<p>The file starts with an <code>exported_at</code> line, followed by the quoted
+column line and one line per village:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>exported_at,1789240946
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>"player_name","player_id","village","coords","points","spear","sword","axe",…
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>"Testuser A","9859907","Test village (603|576) K56","603|576","5491","2222","11","12",…
+</code></pre></div>
+<p>This format names the scope itself: the script page <strong>"Troops"</strong>
+yields <strong>Total troops</strong>, the page <strong>"Defence"</strong> yields <strong>Troops in
+village</strong>. Troops in transit are deliberately not taken over.</p>
 
 
 
