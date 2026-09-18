@@ -178,6 +178,8 @@ For script developers: endpoints, authentication and examples.
 ??? question "How long is uploaded troop data kept?"
     **5 days.** A daily cleanup removes older uploads — separately per tribe and per scope. For reliable planning you should therefore re-upload your troops regularly.
 
+    Regardless of age, **individual villages** drop out earlier: once an hour tw-utils removes the villages that have meanwhile been conquered or have become barbarian villages.
+
     → [Leader-View — Troops](leader-view/truppen.md)
 
 ??? question "Why does my new upload not overwrite the old troops?"

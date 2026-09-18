@@ -18,7 +18,7 @@ As soon as someone exports a search result into a separate channel (see [Section
 
 ## 2. Troop data
 
-For the bot to be able to answer any search requests at all, the tribe members' troop data must be stored in the bot. To do that, the search channel `#⚫-ods-search` provides the `ODS Panel` embed with three admin buttons: `Upload Troops`, `Delete Troops`, `Show Troop Status`.
+For the bot to be able to answer any search requests at all, the tribe members' troop data must be stored in the bot. To do that, the search channel `#⚫-ods-search` provides the `ODS Panel` embed with four admin buttons: `Upload Troops`, `Delete Troops`, `Show Troop Status` and `Settings`.
 
 ![Admin buttons in the ODS Panel](../assets/discordbot/ods-system/02_ods_system_upload_troops.png){ .screenshot }
 
@@ -72,8 +72,18 @@ At a glance, this shows which tribes have up-to-date troop data and where the da
 
 ![Troop Uploads Overview](../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png){ .screenshot }
 
+`Settings` opens the settings of the ODS system. There is currently one switch there, `Include Running Commands`, whose label already states the current state.
+
+![ODS Settings](../assets/discordbot/ods-system/27_ods_system_settings.png){ .screenshot }
+
+Clicking it explains the switch and offers `Activate` and `Deactivate`. When it is active, the bot corrects the troop numbers of the Off, Snob and Deff search with the uploaded running commands: troops that were sent out after the last troop upload are subtracted, and troops that are back home by the launch time are added. **The feature is ON by default.** How running commands get to tw-utils is described under [Running Commands](../leader-view/laufende-befehle.md).
+
+![Include Running Commands](../assets/discordbot/ods-system/28_ods_system_settings_include_running_commands.png){ .screenshot }
+
+Uploaded troop data disappears on its own in two ways: after five days a daily run removes a tribe's entire upload, and once an hour individual villages drop out that have meanwhile been conquered or have become barbarian villages.
+
 !!! info "Who can upload troops?"
-    Only users with the `TWU-Troops` role (or one of the roles building on it — `TWU-Bunker`, `TWU-Planner`, `TWU-Leader`) can use the buttons `Upload Troops` and `Delete Troops` and run the slash command `/admin troops_upload`. The `Show Troop Status` button is also available to normal members.
+    Only users with the `TWU-Troops` role (or one of the roles building on it — `TWU-Bunker`, `TWU-Planner`, `TWU-Leader`) can use the buttons `Upload Troops`, `Delete Troops` and `Settings` and run the slash command `/admin troops_upload`. The `Show Troop Status` button is also available to normal members.
 
 ## 3. ODS search
 
@@ -118,6 +128,10 @@ After submitting a search modal, the bot replies with an **ephemeral embed** tha
 The possible commands are presented neatly in tabular form:
 
 ![Detailed search response in tabular form](../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png){ .screenshot }
+
+If running commands are included (see [section 2](#2-troop-data)), the row number carries a `*` — but only where a displayed number has actually changed because of it. A legend then appears below the table, which also states how many players the included commands come from.
+
+![Search result with running commands included](../assets/discordbot/ods-system/29_ods_system_search_result_running_commands.png){ .screenshot }
 
 Below the search result, up to ten buttons are available — each of these buttons generates the matching WB command.
 

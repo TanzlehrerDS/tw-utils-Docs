@@ -50,6 +50,14 @@ Die Tabelle hat folgende Spalten:
 | **benötigte Refills** | Differenz Soll - Ist als Dual |
 | **Aktionen** | Aufstocken (`+`), Löschen (Mülltonne) |
 
+!!! info "Zeilen können auch ohne Zutun verschwinden"
+    Einmal pro Stunde entfernt tw-utils die Bunker, deren Dorf nach der
+    Genehmigung erobert wurde oder inzwischen ein Barbarendorf geworden
+    ist — genehmigte Bunker ebenso wie offene Anträge und
+    Aufstockungsanfragen. Dasselbe gilt im Unterreiter **Feindliche
+    Bunker**. Jede Entfernung steht mit Dorf und Grund im Kanal
+    `#⚫-admin-logs` eures Discord-Servers.
+
 ### Bunker manuell eintragen
 
 Der **Standardweg** für neue Bunker führt über das

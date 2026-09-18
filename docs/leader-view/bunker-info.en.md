@@ -47,6 +47,14 @@ The table has the following columns:
 | **required Refills** | Difference target − actual as dual |
 | **Actions** | Top up (`+`), delete (trash) |
 
+!!! info "Rows can also disappear without anyone doing anything"
+    Once an hour tw-utils removes the bunkers whose village was
+    conquered after the approval, or has become a barbarian village in
+    the meantime — approved bunkers just as much as open requests and
+    top-up requests. The same goes for the **Enemy bunkers** sub-tab.
+    Every removal is listed with village and reason in the
+    `#⚫-admin-logs` channel of your Discord server.
+
 ### Add a bunker manually
 
 The **standard path** for new bunkers goes through the

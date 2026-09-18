@@ -39,6 +39,11 @@ an mehreren Stellen in die Planung ein:
 
 - **Leader-View** — dieser Tab mit den Unterreitern **Übersicht** und
   **Befehle**.
+- **ODS-System des Discordbots** — die Off-, Snob- und Deff-Suche zieht
+  Truppen ab, die seit dem Truppen-Upload losgeschickt wurden, und
+  zählt Unterstützungen dazu, die zur gesuchten Abschickzeit wieder
+  daheim sind. Siehe
+  [Off/Deff/Snob-Search-System](../discord-bot/search-system.md).
 - **Off-Planungstool** — im Schritt 1 zieht der Schalter
   **„Laufende Befehle (API) einbeziehen"** die Truppen ab, die
   aktuell schon unterwegs sind. Das ist genauer als das Rechnen aus
@@ -158,13 +163,16 @@ zugleich.
 Befehle verschwinden von selbst — allerdings nicht nach der Uhr,
 sondern **beim nächsten Upload**: Lädt irgendein Spieler dieses
 Discord-Servers neu hoch, räumt tw-utils bei der Gelegenheit alles weg,
-dessen Truppenbewegung mehr als eine Stunde vorbei ist. Bei
+dessen Truppenbewegung mehr als 24 Stunden vorbei ist. Bei
 **Angriffen** zählt dafür nicht die Ankunft, sondern erst der
 **Rückflug** — die Truppen sind ja bis zur Heimkehr gebunden. Bei allen
 anderen Befehlsarten zählt die Ankunft.
 
-Lädt niemand mehr hoch, bleiben alte Zeilen also stehen. Im
-Normalbetrieb ist manuelles Aufräumen trotzdem nicht nötig.
+Lädt niemand mehr hoch, bleiben alte Zeilen nach dieser Regel stehen.
+Davon unabhängig entfernt der Discordbot einmal pro Stunde die Befehle,
+deren **Herkunftsdorf** inzwischen erobert wurde oder ein Barbarendorf
+geworden ist — dieser Lauf braucht keinen Upload. Im Normalbetrieb ist
+manuelles Aufräumen also nicht nötig.
 
 !!! warning "„Alle hochgeladenen Befehle löschen" trifft den ganzen Server"
     Der Button oben rechts löscht die laufenden Befehle **aller**

@@ -178,6 +178,8 @@ Für Script-Entwickler: Endpunkte, Authentifizierung und Beispiele.
 ??? question "Wie lange bleiben hochgeladene Truppendaten gespeichert?"
     **5 Tage.** Ein täglicher Aufräumlauf entfernt ältere Uploads — getrennt je Stamm und je Erfassungsart. Für eine belastbare Planung solltest du die Truppen also regelmäßig neu hochladen.
 
+    Unabhängig vom Alter fallen **einzelne Dörfer** früher heraus: Einmal pro Stunde entfernt tw-utils die Dörfer, die inzwischen erobert wurden oder Barbarendörfer geworden sind.
+
     → [Leader-View — Truppen](leader-view/truppen.md)
 
 ??? question "Warum überschreibt mein neuer Upload die alten Truppen nicht?"

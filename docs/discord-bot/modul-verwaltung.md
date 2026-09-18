@@ -19,6 +19,9 @@ Klicke im Modul-Verwaltungs-Menü auf den Button `Update`, um ein installiertes 
 
 ![Update Button](../assets/discordbot/bot-module-setup/03_update_button.png){ .screenshot }
 
+!!! warning "Die Kanäle des Moduls werden dabei neu angelegt"
+    Ein Update löscht die Discord-Kanäle des gewählten Moduls und erstellt sie neu — nur so kommen die Panels in der neuen Fassung heraus. Die Datenbank-Einträge (Bunker, Anträge, Sitting-Anfragen, Truppendaten) bleiben unangetastet; verloren geht nur, was in den alten Kanälen an Nachrichten stand. Betroffen ist immer nur das eine ausgewählte Modul.
+
 ## 3. Modul deinstallieren
 
 Klicke im Modul-Verwaltungs-Menü auf den Button `Delete`, um ein installiertes Modul wieder zu entfernen. Wähle im erscheinenden Dropdown das Modul aus, das deinstalliert werden soll.

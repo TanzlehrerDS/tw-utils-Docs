@@ -30,6 +30,14 @@ Discord bot.
 | **Uploaded by** | Discord user who triggered the upload |
 | **Actions** | Delete entry (trash icon) |
 
+!!! info "The number under **Villages** can drop on its own"
+    Once an hour tw-utils removes from the uploaded troops those
+    villages that have meanwhile been conquered or have become
+    barbarian villages; the number under **Villages** drops
+    accordingly, while the timestamp under **Uploaded at** stays as it
+    is. The entry as a whole still only disappears when somebody
+    deletes it or when it has become five days old.
+
 ## The two scopes
 
 When uploading you choose which view of the troops the file contains.

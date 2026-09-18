@@ -111,6 +111,9 @@ Im Modal `Dissolve Bunker` gibst du die aufzulösenden Koordinaten ein — das F
 
 ![Modal: Dissolve Bunker](../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png){ .screenshot }
 
+!!! info "Von Hand auflösen ist nicht der einzige Weg"
+    Einmal pro Stunde entfernt der Bot von selbst die Bunker, deren Dorf inzwischen erobert wurde oder ein Barbarendorf geworden ist. Das gilt für genehmigte Bunker ebenso wie für **offene Anträge und Aufstockungsanfragen**; bei einem offenen Antrag wird auch sein Antrags-Kanal gelöscht.
+
 ## 6. Bunker-Health & Flexbunker-Kontrolle
 
 Im Kanal `#⚫-leaderview-bunker` steht ein festes Bedienfeld mit den beiden Leader-Werkzeugen. Eine Bunker-Liste wird dort nicht gepostet — die bekommst du auf Knopfdruck.
@@ -171,3 +174,5 @@ Nach `Confirm` wird der Eintrag gespeichert und der Bot bestätigt den erfolgrei
 Anschließend taucht der Eintrag in der Feindbunker-Übersicht im Kanal auf — gruppiert nach gegnerischem Stamm, dann nach Spieler, mit Koordinate, Truppenanzahl und Info-Zeitpunkt.
 
 ![Feindbunker-Übersicht im Kanal](../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png){ .screenshot }
+
+Neben `Admin: Remove Bunker` räumt der Bot auch von selbst auf: Einmal pro Stunde verschwinden die Feindbunker, deren Dorf nach dem Info-Zeitpunkt erobert wurde oder inzwischen ein Barbarendorf geworden ist.

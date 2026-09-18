@@ -111,6 +111,9 @@ In the `Dissolve Bunker` modal you enter the coordinates to be dissolved — the
 
 ![Modal: Dissolve Bunker](../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png){ .screenshot }
 
+!!! info "Dissolving by hand is not the only way"
+    Once an hour the bot removes on its own those bunkers whose village has meanwhile been conquered or has become a barbarian village. This applies to approved bunkers just as much as to **open requests and top-up requests**; for an open request its request channel is deleted as well.
+
 ## 6. Bunker-Health & flex-bunker control
 
 The `#⚫-leaderview-bunker` channel holds a fixed panel with the two leader tools. No bunker list is posted there — you get it at the press of a button.
@@ -171,3 +174,5 @@ After `Confirm`, the entry is saved and the bot confirms the successful operatio
 The entry then shows up in the enemy-bunker overview in the channel — grouped by enemy tribe, then by player, with coordinate, unit counts and info time.
 
 ![Enemy-bunker overview in the channel](../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png){ .screenshot }
+
+Besides `Admin: Remove Bunker`, the bot also cleans up by itself: once an hour the enemy bunkers disappear whose village was conquered after the info time, or has become a barbarian village in the meantime.

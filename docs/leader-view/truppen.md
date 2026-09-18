@@ -30,6 +30,14 @@ tw-utils-Discordbots.
 | **Hochgeladen von** | Discord-User, der den Upload ausgelöst hat |
 | **Aktion** | Eintrag löschen (Mülltonnen-Icon) |
 
+!!! info "Die Zahl unter **Dörfer** kann von selbst kleiner werden"
+    Einmal pro Stunde entfernt tw-utils aus den hochgeladenen Truppen
+    die Dörfer, die inzwischen erobert wurden oder Barbarendörfer
+    geworden sind; die Zahl unter **Dörfer** sinkt entsprechend, der
+    Zeitstempel unter **Hochgeladen am** bleibt stehen. Der Eintrag als
+    Ganzes verschwindet weiterhin nur, wenn ihn jemand löscht oder er
+    fünf Tage alt geworden ist.
+
 ## Die beiden Scopes
 
 Beim Hochladen wählst du, welche Sicht der Truppen die Datei enthält.

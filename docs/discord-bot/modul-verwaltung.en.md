@@ -19,6 +19,9 @@ In the module management menu, click on the `Update` button to update an install
 
 ![Update Button](../assets/discordbot/bot-module-setup/03_update_button.png){ .screenshot }
 
+!!! warning "The module's channels are recreated in the process"
+    An update deletes the Discord channels of the selected module and creates them again — that is the only way the panels come out in their new form. The database entries (bunkers, requests, sitting requests, troop data) are left untouched; the only thing lost is whatever messages were in the old channels. Only the one selected module is affected.
+
 ## 3. Uninstall a module
 
 In the module management menu, click on the `Delete` button to remove an installed module. Select the module to be uninstalled in the dropdown that appears.

@@ -18,7 +18,7 @@ Sobald jemand ein Suchergebnis in einen eigenen Kanal exportiert (siehe [Abschni
 
 ## 2. Truppendaten
 
-Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten der Stammesmitglieder im Bot hinterlegt sein. Im Such-Kanal `#⚫-ods-search` steht dafür das `ODS Panel`-Embed mit drei Admin-Buttons: `Upload Troops`, `Delete Troops`, `Show Troop Status` zur Verfügung.
+Damit der Bot überhaupt Suchanfragen beantworten kann, müssen die Truppendaten der Stammesmitglieder im Bot hinterlegt sein. Im Such-Kanal `#⚫-ods-search` steht dafür das `ODS Panel`-Embed mit vier Admin-Buttons: `Upload Troops`, `Delete Troops`, `Show Troop Status` und `Settings` zur Verfügung.
 
 ![Admin-Buttons im ODS Panel](../assets/discordbot/ods-system/02_ods_system_upload_troops.png){ .screenshot }
 
@@ -72,8 +72,18 @@ So sieht man auf einen Blick, welche Stämme aktuelle Truppendaten hinterlegt ha
 
 ![Troop Uploads Overview](../assets/discordbot/ods-system/07_ods_system_upload_troops_status_overview.png){ .screenshot }
 
+`Settings` öffnet die Einstellungen des ODS-Systems. Dort steht derzeit ein Schalter, `Include Running Commands`, dessen Beschriftung gleich den aktuellen Zustand nennt.
+
+![ODS Settings](../assets/discordbot/ods-system/27_ods_system_settings.png){ .screenshot }
+
+Ein Klick darauf erklärt den Schalter und bietet `Activate` und `Deactivate` an. Ist er aktiv, korrigiert der Bot die Truppenzahlen der Off-, Snob- und Deff-Suche mit den hochgeladenen laufenden Befehlen: Truppen, die seit dem letzten Truppen-Upload losgeschickt wurden, werden abgezogen, und Truppen, die bis zur Abschickzeit wieder zu Hause sind, kommen dazu. **Standardmäßig ist die Funktion AN.** Wie laufende Befehle zu tw-utils kommen, steht unter [Laufende Befehle](../leader-view/laufende-befehle.md).
+
+![Include Running Commands](../assets/discordbot/ods-system/28_ods_system_settings_include_running_commands.png){ .screenshot }
+
+Hochgeladene Truppendaten verschwinden auf zwei Wegen von selbst: Nach fünf Tagen entfernt ein täglicher Lauf den kompletten Upload eines Stammes, und einmal pro Stunde fallen einzelne Dörfer heraus, die inzwischen erobert wurden oder Barbarendörfer geworden sind.
+
 !!! info "Wer darf Truppen hochladen?"
-    Nur User mit der Rolle `TWU-Troops` (oder einer der darauf aufbauenden Rollen `TWU-Bunker`, `TWU-Planner`, `TWU-Leader`) können die Buttons `Upload Troops` und `Delete Troops` ausführen und den Slash-Command `/admin troops_upload` benutzen. Den Button `Show Troop Status` können auch normale Mitglieder verwenden.
+    Nur User mit der Rolle `TWU-Troops` (oder einer der darauf aufbauenden Rollen `TWU-Bunker`, `TWU-Planner`, `TWU-Leader`) können die Buttons `Upload Troops`, `Delete Troops` und `Settings` ausführen und den Slash-Command `/admin troops_upload` benutzen. Den Button `Show Troop Status` können auch normale Mitglieder verwenden.
 
 ## 3. ODS-Suche
 
@@ -118,6 +128,10 @@ Nach dem Abschicken eines Such-Modals antwortet der Bot mit einem **ephemeralen 
 Die möglichen Befehle werden übersichtlich in tabellarischer Form dargestellt:
 
 ![Detaillierte Such-Antwort in Tabellenform](../assets/discordbot/ods-system/13_ods_system_search_result_view_detailed.png){ .screenshot }
+
+Sind laufende Befehle einbezogen (siehe [Abschnitt 2](#2-truppendaten)), trägt die Zeilennummer ein `*` — allerdings nur dort, wo sich dadurch eine angezeigte Zahl tatsächlich geändert hat. Unter der Tabelle steht dann eine Legende, die auch nennt, von wie vielen Spielern die einbezogenen Befehle stammen.
+
+![Suchergebnis mit einbezogenen laufenden Befehlen](../assets/discordbot/ods-system/29_ods_system_search_result_running_commands.png){ .screenshot }
 
 Unter dem Suchergebnis stehen bis zu zehn Buttons zur Verfügung — jeder dieser Buttons generiert den jeweiligen WB-Befehl.
 
