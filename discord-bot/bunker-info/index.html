@@ -2180,6 +2180,10 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png" data-title="Dissolve Bunker Button" data-desc-position="bottom"><img alt="Dissolve Bunker Button" class="screenshot" src="../../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png"></a></p>
 <p>Im Modal <code>Dissolve Bunker</code> gibst du die aufzulösenden Koordinaten ein — das Feld <code>Coordinate(s) / Text</code> akzeptiert auch mehrere Koordinaten oder Text mit eingebetteten Koordinaten. Nach einer Bestätigung entfernt der Bot die betroffenen Bunker aus der Datenbank und aktualisiert den Leader-View. TWU-Bunker können fremde Bunker auf dem gleichen Weg auflösen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png" data-title="Modal: Dissolve Bunker" data-desc-position="bottom"><img alt="Modal: Dissolve Bunker" class="screenshot" src="../../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Von Hand auflösen ist nicht der einzige Weg</p>
+<p>Einmal pro Stunde entfernt der Bot von selbst die Bunker, deren Dorf inzwischen erobert wurde oder ein Barbarendorf geworden ist. Das gilt für genehmigte Bunker ebenso wie für <strong>offene Anträge und Aufstockungsanfragen</strong>; bei einem offenen Antrag wird auch sein Antrags-Kanal gelöscht.</p>
+</div>
 <h2 id="6-bunker-health-flexbunker-kontrolle">6. Bunker-Health &amp; Flexbunker-Kontrolle<a class="headerlink" href="#6-bunker-health-flexbunker-kontrolle" title="Permanent link">¶</a></h2>
 <p>Im Kanal <code>#⚫-leaderview-bunker</code> steht ein festes Bedienfeld mit den beiden Leader-Werkzeugen. Eine Bunker-Liste wird dort nicht gepostet — die bekommst du auf Knopfdruck.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png" data-title="#⚫-leaderview-bunker Kanal-Übersicht" data-desc-position="bottom"><img alt="#⚫-leaderview-bunker Kanal-Übersicht" class="screenshot" src="../../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png"></a></p>
@@ -2219,6 +2223,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/29_report_bunker_manualentry_success_message.png" data-title="Erfolgsmeldung nach Feindbunker-Eintrag" data-desc-position="bottom"><img alt="Erfolgsmeldung nach Feindbunker-Eintrag" class="screenshot" src="../../assets/discordbot/bunker-information-system/29_report_bunker_manualentry_success_message.png"></a></p>
 <p>Anschließend taucht der Eintrag in der Feindbunker-Übersicht im Kanal auf — gruppiert nach gegnerischem Stamm, dann nach Spieler, mit Koordinate, Truppenanzahl und Info-Zeitpunkt.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png" data-title="Feindbunker-Übersicht im Kanal" data-desc-position="bottom"><img alt="Feindbunker-Übersicht im Kanal" class="screenshot" src="../../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png"></a></p>
+<p>Neben <code>Admin: Remove Bunker</code> räumt der Bot auch von selbst auf: Einmal pro Stunde verschwinden die Feindbunker, deren Dorf nach dem Info-Zeitpunkt erobert wurde oder inzwischen ein Barbarendorf geworden ist.</p>
 
 
 

@@ -2054,6 +2054,10 @@
 <h2 id="2-update-a-module">2. Update a module<a class="headerlink" href="#2-update-a-module" title="Permanent link">¶</a></h2>
 <p>In the module management menu, click on the <code>Update</code> button to update an installed module to the current version. Select the desired module in the dropdown that appears. Existing data and configurations are preserved.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bot-module-setup/03_update_button.png" data-title="Update Button" data-desc-position="bottom"><img alt="Update Button" class="screenshot" src="../../../assets/discordbot/bot-module-setup/03_update_button.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">The module's channels are recreated in the process</p>
+<p>An update deletes the Discord channels of the selected module and creates them again — that is the only way the panels come out in their new form. The database entries (bunkers, requests, sitting requests, troop data) are left untouched; the only thing lost is whatever messages were in the old channels. Only the one selected module is affected.</p>
+</div>
 <h2 id="3-uninstall-a-module">3. Uninstall a module<a class="headerlink" href="#3-uninstall-a-module" title="Permanent link">¶</a></h2>
 <p>In the module management menu, click on the <code>Delete</code> button to remove an installed module. Select the module to be uninstalled in the dropdown that appears.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bot-module-setup/04_delete_button.png" data-title="Delete Button" data-desc-position="bottom"><img alt="Delete Button" class="screenshot" src="../../../assets/discordbot/bot-module-setup/04_delete_button.png"></a></p>

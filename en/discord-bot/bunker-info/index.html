@@ -2180,6 +2180,10 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png" data-title="Dissolve Bunker button" data-desc-position="bottom"><img alt="Dissolve Bunker button" class="screenshot" src="../../../assets/discordbot/bunker-information-system/18_dissolve_Bunker_button.png"></a></p>
 <p>In the <code>Dissolve Bunker</code> modal you enter the coordinates to be dissolved — the <code>Coordinate(s) / Text</code> field also accepts several coordinates or text with embedded coordinates. After a confirmation the bot removes the affected bunkers from the database and updates the leader view. TWU-Bunkers can dissolve other players' bunkers the same way.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png" data-title="Modal: Dissolve Bunker" data-desc-position="bottom"><img alt="Modal: Dissolve Bunker" class="screenshot" src="../../../assets/discordbot/bunker-information-system/19_dissolve_Bunker_modal.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Dissolving by hand is not the only way</p>
+<p>Once an hour the bot removes on its own those bunkers whose village has meanwhile been conquered or has become a barbarian village. This applies to approved bunkers just as much as to <strong>open requests and top-up requests</strong>; for an open request its request channel is deleted as well.</p>
+</div>
 <h2 id="6-bunker-health-flex-bunker-control">6. Bunker-Health &amp; flex-bunker control<a class="headerlink" href="#6-bunker-health-flex-bunker-control" title="Permanent link">¶</a></h2>
 <p>The <code>#⚫-leaderview-bunker</code> channel holds a fixed panel with the two leader tools. No bunker list is posted there — you get it at the press of a button.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png" data-title="#⚫-leaderview-bunker channel overview" data-desc-position="bottom"><img alt="#⚫-leaderview-bunker channel overview" class="screenshot" src="../../../assets/discordbot/bunker-information-system/20_leaderview_bunker_channel_overview.png"></a></p>
@@ -2219,6 +2223,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/29_report_bunker_manualentry_success_message.png" data-title="Success message after enemy-bunker entry" data-desc-position="bottom"><img alt="Success message after enemy-bunker entry" class="screenshot" src="../../../assets/discordbot/bunker-information-system/29_report_bunker_manualentry_success_message.png"></a></p>
 <p>The entry then shows up in the enemy-bunker overview in the channel — grouped by enemy tribe, then by player, with coordinate, unit counts and info time.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png" data-title="Enemy-bunker overview in the channel" data-desc-position="bottom"><img alt="Enemy-bunker overview in the channel" class="screenshot" src="../../../assets/discordbot/bunker-information-system/30_report_bunker_manualentry_enemy_bunker_overview.png"></a></p>
+<p>Besides <code>Admin: Remove Bunker</code>, the bot also cleans up by itself: once an hour the enemy bunkers disappear whose village was conquered after the info time, or has become a barbarian village in the meantime.</p>
 
 
 

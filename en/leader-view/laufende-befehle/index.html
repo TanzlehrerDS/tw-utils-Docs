@@ -2130,6 +2130,10 @@ the planning in several places:</p>
 <ul>
 <li><strong>Leader-View</strong> — this tab with the <strong>Overview</strong> and <strong>Commands</strong>
   sub-tabs.</li>
+<li><strong>ODS system of the Discord bot</strong> — the Off, Snob and Deff search
+  subtracts troops that were sent out after the troop upload and adds
+  support that is back home by the launch time being searched for.
+  See <a href="../../discord-bot/search-system/">Off/Deff/Snob-Search-System</a>.</li>
 <li><strong>Nuke-planning tool</strong> — in step 1 the switch <strong>"Include running
   commands (API)"</strong> subtracts the troops that are already on their
   way. That is more precise than calculating from saved plans,
@@ -2292,12 +2296,15 @@ once.</p>
 <p>Commands disappear by themselves — not by the clock, though, but <strong>on
 the next upload</strong>: whenever any player of this Discord server uploads
 again, tw-utils takes the opportunity to clear out everything whose
-troop movement ended more than an hour ago. For <strong>attacks</strong> it is not
+troop movement ended more than 24 hours ago. For <strong>attacks</strong> it is not
 the arrival that counts but the <strong>return flight</strong> — after all, the
 troops are tied up until they get home. For all other command types the
 arrival counts.</p>
-<p>So if nobody uploads any more, old rows stay put. In normal operation
-manual clean-up is still not needed.</p>
+<p>So if nobody uploads any more, old rows stay put under that rule.
+Independently of it, once an hour the Discord bot removes the commands
+whose <strong>source village</strong> has meanwhile been conquered or has become a
+barbarian village — that run needs no upload. In normal operation
+manual clean-up is therefore not needed.</p>
 <div class="admonition warning">
 <p class="admonition-title">\"Delete all uploaded commands\" hits the whole server</p>
 <p>The button at the top right deletes the running commands of
