@@ -2108,7 +2108,7 @@
 
 
 <h1 id="planning-system">Planning-System<a class="headerlink" href="#planning-system" title="Permanent link">¶</a></h1>
-<p>The Planning-System is the Discord-side bridge to the Off-Planner on <a href="https://tw-utils.net">tw-utils.net</a>. In addition to the website, players can also use the tw-utils Discord bot to report Snobs, enter launch times and exclude origin villages from their plans. Tribe leadership in turn distributes the finished attack plans. Leaders can also check in on the planning from anywhere via Discord.</p>
+<p>The Planning-System is the Discord-side bridge to the Off-Planner on <a href="https://tw-utils.net">tw-utils.net</a>. In addition to the website, players can also use the tw-utils Discord bot to report Snobs, enter launch times and exclude origin villages from their plans. Tribe leadership in turn distributes the finished attack plans. Leaders can also check in on the planning from anywhere via Discord, and snob senders can use the <a href="#6-plan-information">plan information</a> to see who sends the Nuke on their target.</p>
 <div class="admonition info">
 <p class="admonition-title">Prerequisite: verified TW account</p>
 <p>Without a linked account the input buttons and the <code>Download</code> button in the Plan-Distribution channel cannot be used.</p>
@@ -2118,7 +2118,7 @@
 <ul>
 <li><code>#⚫-queries</code> — reporting channel for players (Snob reports, launch times, off-exclusions)</li>
 <li><code>#⚫-plan-distribution</code> — players can download their personal attack plan here</li>
-<li><code>#⚫-leaderview-planinfo</code> — leaders can review the planned commands here</li>
+<li><code>#⚫-leaderview-planinfo</code> — leaders can review the planned commands here, snob senders the commands on their snob targets</li>
 <li><code>#⚫-nuke-replacement</code> — enables a structured search for replacement Nukes</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/planning-system/01_planning_system_channels.png" data-title="Channel overview of the Planning-System" data-desc-position="bottom"><img alt="Channel overview of the Planning-System" class="screenshot" src="../../../assets/discordbot/planning-system/01_planning_system_channels.png"></a></p>
@@ -2182,11 +2182,20 @@ notice.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/planning-system/23_planning_system_leaderview-planinfo_retrieve-plan-information_modal.png" data-title="Plan Information modal" data-desc-position="bottom"><img alt="Plan Information modal" class="screenshot" src="../../../assets/discordbot/planning-system/23_planning_system_leaderview-planinfo_retrieve-plan-information_modal.png"></a></p>
 <p>The bot then renders an overview of all currently planned commands from all active plan containers for the given coordinate. The answer is ephemeral — it is visible only to you and disappears again.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/planning-system/24_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer.png" data-title="Bot answer with plan information" data-desc-position="bottom"><img alt="Bot answer with plan information" class="screenshot" src="../../../assets/discordbot/planning-system/24_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer.png"></a></p>
-<p>The detailed view additionally shows the individual commands with origin village, player, command type as well as launch and arrival time — so you can tell at a glance which players are preparing which command on the target village.</p>
+<p>The detailed view additionally shows the individual commands with command type, player, launch and arrival time and the troops — so you can tell at a glance which players are preparing which command on the target village.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/discordbot/planning-system/25_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer_detailed.png" data-title="Detailed bot answer with plan information" data-desc-position="bottom"><img alt="Detailed bot answer with plan information" class="screenshot" src="../../../assets/discordbot/planning-system/25_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer_detailed.png"></a></p>
 <div class="admonition info">
-<p class="admonition-title">Leaderview-PlanInfo visibility</p>
-<p>The <code>#⚫-leaderview-planinfo</code> channel is visible like the other channels of the module; who may see it is controlled by your <a href="../modul-verwaltung/">visibility roles</a>. The <code>Retrieve Plan Information</code> button, however, can only be used by users with the <code>TWU-Planner</code> or <code>TWU-Leader</code> role — and the bot's answer is ephemeral, so only the requester sees it. Plan information thus stays within the tribe leadership.</p>
+<p class="admonition-title">Who may retrieve plan information</p>
+<p>The <code>#⚫-leaderview-planinfo</code> channel is visible like the other channels of the module; who may see it is controlled by your <a href="../modul-verwaltung/">visibility roles</a>. The <code>Plan Information</code> modal opens for everyone — what the bot answers depends on the coordinate:</p>
+<ul>
+<li><strong><code>TWU-Planner</code> and <code>TWU-Leader</code></strong> see the commands on any village.</li>
+<li><strong>Everyone else</strong> sees the commands on a village only if one of their accounts linked on this server has a command of type <strong>Snob</strong> on it in an active Leader-View container (<strong>"Publishing: Active"</strong>). Snob fakes and snobs the planner hid before their launch time don't count, and access ends 24 hours after the snob's arrival. The image is the same one the tribe leadership sees — so every snob sender can see who sends the Nuke on their target.</li>
+</ul>
+<p>For any other village the refusal always reads the same, even if nothing is planned there at all. The bot's answer is ephemeral, so only the requester sees it; every lookup is noted in <code>#⚫-admin-logs</code>, a refused one together with the reason.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">External plans: assign the Snob type correctly</p>
+<p>Whether a command counts as a snob depends on its type alone. When importing an external plan, make sure the snobs are assigned the <strong>Snob</strong> type — otherwise the snob senders won't see the commands on their targets.</p>
 </div>
 <h2 id="7-nuke-replacement">7. Nuke-Replacement<a class="headerlink" href="#7-nuke-replacement" title="Permanent link">¶</a></h2>
 <p>In the <code>#⚫-nuke-replacement</code> channel you'll find five management buttons at the top under the <code>Nuke-Replacement</code> embed; below them, two status embeds (<code>NOT DONE</code> and <code>DONE</code>) list the current state of all replacement requests.</p>

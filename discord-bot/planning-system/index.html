@@ -2108,7 +2108,7 @@
 
 
 <h1 id="planning-system">Planning-System<a class="headerlink" href="#planning-system" title="Permanent link">¶</a></h1>
-<p>Das Planning-System ist die Discord-seitige Brücke zum Off-Planner auf <a href="https://tw-utils.net">tw-utils.net</a>. Zusätzlich zur Website haben die Spieler auch über den tw-utils Discordbot die Möglichkeit Adelsgeschlechter zu melden, Abschickzeiten einzutragen und Herkunftsdörfer auszuplanen. Die Stammesführung kann im Gegenzug die fertig erstellten Angriffspläne verteilen. Zusätzlich können die Leader auch von unterwegs über Discord Einsicht in die Planung nehmen.</p>
+<p>Das Planning-System ist die Discord-seitige Brücke zum Off-Planner auf <a href="https://tw-utils.net">tw-utils.net</a>. Zusätzlich zur Website haben die Spieler auch über den tw-utils Discordbot die Möglichkeit Adelsgeschlechter zu melden, Abschickzeiten einzutragen und Herkunftsdörfer auszuplanen. Die Stammesführung kann im Gegenzug die fertig erstellten Angriffspläne verteilen. Zusätzlich können die Leader auch von unterwegs über Discord Einsicht in die Planung nehmen, und AG-Schicker sehen dort über die <a href="#6-plan-informationen">Plan-Informationen</a>, wer die Off auf ihr Ziel schickt.</p>
 <div class="admonition info">
 <p class="admonition-title">Voraussetzung verifizierter TW-Account</p>
 <p>Ohne verknüpften Account können die Eingabe-Buttons und der <code>Download</code>-Button im Plan-Verteilungs-Kanal nicht genutzt werden.</p>
@@ -2118,7 +2118,7 @@
 <ul>
 <li><code>#⚫-queries</code> — Meldungs-Kanal für Spieler (AG-Meldungen, Abschickzeiten, Off-Ausschlüsse)</li>
 <li><code>#⚫-plan-distribution</code> — Spieler können sich hier Ihren persönlichen Angriffsplan herunterladen</li>
-<li><code>#⚫-leaderview-planinfo</code> — Leader können hier Einsicht in die geplanten Befehle nehmen</li>
+<li><code>#⚫-leaderview-planinfo</code> — Leader können hier Einsicht in die geplanten Befehle nehmen, AG-Schicker in die Befehle auf ihre AG-Ziele</li>
 <li><code>#⚫-nuke-replacement</code> — ermöglicht das strukturierte Suchen nach Ersatz-Offs</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/planning-system/01_planning_system_channels.png" data-title="Kanal-Übersicht des Planning-Systems" data-desc-position="bottom"><img alt="Kanal-Übersicht des Planning-Systems" class="screenshot" src="../../assets/discordbot/planning-system/01_planning_system_channels.png"></a></p>
@@ -2182,11 +2182,20 @@ einem Hinweis ab.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/planning-system/23_planning_system_leaderview-planinfo_retrieve-plan-information_modal.png" data-title="Plan-Information-Modal" data-desc-position="bottom"><img alt="Plan-Information-Modal" class="screenshot" src="../../assets/discordbot/planning-system/23_planning_system_leaderview-planinfo_retrieve-plan-information_modal.png"></a></p>
 <p>Der Bot rendert daraufhin eine Übersicht aller aktuell geplanten Befehle aus allen aktiven Plan-Containern für die angegebene Koordinate. Die Antwort ist ephemeral — sie ist also nur für Dich sichtbar und verschwindet wieder.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/planning-system/24_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer.png" data-title="Bot-Antwort mit Plan-Information" data-desc-position="bottom"><img alt="Bot-Antwort mit Plan-Information" class="screenshot" src="../../assets/discordbot/planning-system/24_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer.png"></a></p>
-<p>Die detailliertere Ansicht zeigt zusätzlich die einzelnen Befehle mit Herkunfts-Dorf, Spieler, Befehlstyp sowie Abschick- und Ankunftszeit — damit kannst Du auf einen Blick erkennen, welche Spieler welchen Befehl auf das Ziel-Dorf vorbereiten.</p>
+<p>Die detailliertere Ansicht zeigt zusätzlich die einzelnen Befehle mit Befehlstyp, Spieler, Abschick- und Ankunftszeit sowie den Truppen — damit kannst Du auf einen Blick erkennen, welche Spieler welchen Befehl auf das Ziel-Dorf vorbereiten.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/discordbot/planning-system/25_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer_detailed.png" data-title="Detaillierte Bot-Antwort mit Plan-Information" data-desc-position="bottom"><img alt="Detaillierte Bot-Antwort mit Plan-Information" class="screenshot" src="../../assets/discordbot/planning-system/25_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer_detailed.png"></a></p>
 <div class="admonition info">
-<p class="admonition-title">Sichtbarkeit Leaderview-PlanInfo</p>
-<p>Der <code>#⚫-leaderview-planinfo</code>-Kanal ist wie die übrigen Kanäle des Moduls sichtbar; wer ihn sehen darf, steuert ihr über die <a href="../modul-verwaltung/">Sichtbarkeits-Rollen</a>. Den Button <code>Retrieve Plan Information</code> können aber nur User mit der Rolle <code>TWU-Planner</code> oder <code>TWU-Leader</code> benutzen — und die Antwort des Bots ist ephemeral, sieht also ausschließlich der Anfragende. Plan-Informationen bleiben damit innerhalb der Stammes-Führung.</p>
+<p class="admonition-title">Wer die Plan-Informationen abrufen darf</p>
+<p>Der <code>#⚫-leaderview-planinfo</code>-Kanal ist wie die übrigen Kanäle des Moduls sichtbar; wer ihn sehen darf, steuert ihr über die <a href="../modul-verwaltung/">Sichtbarkeits-Rollen</a>. Das Modal <code>Plan Information</code> öffnet sich für jeden — was der Bot antwortet, hängt von der Koordinate ab:</p>
+<ul>
+<li><strong><code>TWU-Planner</code> und <code>TWU-Leader</code></strong> sehen die Befehle auf jedes Dorf.</li>
+<li><strong>Alle anderen</strong> sehen die Befehle auf ein Dorf nur, wenn einer ihrer auf diesem Server verknüpften Accounts dort einen Befehl vom Typ <strong>AG</strong> in einem aktiven Container des Leader-Views (<strong>„Veröffentlichung: Aktiv"</strong>) hat. AG-Fakes und AGs, die der Planer vor ihrer Abschickzeit ausgeblendet hat, zählen nicht, und die Einsicht endet 24 Stunden nach der Ankunft des AGs. Angezeigt wird dasselbe Bild wie für die Stammes-Führung — so sieht jeder AG-Schicker, wer die Off auf sein Ziel schickt.</li>
+</ul>
+<p>Für jedes andere Dorf lautet die Absage immer gleich, auch wenn dort gar nichts geplant ist. Die Antwort des Bots ist ephemeral, sieht also ausschließlich der Anfragende; jeder Abruf wird im <code>#⚫-admin-logs</code> vermerkt, ein abgelehnter samt Grund.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Externe Pläne: Typ AG richtig zuordnen</p>
+<p>Ob ein Befehl als AG zählt, entscheidet allein sein Typ. Wer einen externen Plan importiert, muss beim Import darauf achten, dass die AGs dem Typ <strong>AG</strong> zugeordnet sind — sonst sehen die AG-Schicker die Befehle auf ihre Ziele nicht.</p>
 </div>
 <h2 id="7-off-ersatz">7. Off-Ersatz<a class="headerlink" href="#7-off-ersatz" title="Permanent link">¶</a></h2>
 <p>Im <code>#⚫-nuke-replacement</code>-Kanal findest Du oben unter dem <code>Nuke-Replacement</code>-Embed fünf Verwaltungs-Buttons; darunter listen zwei Status-Embeds (<code>NOT DONE</code> und <code>DONE</code>) den aktuellen Stand aller Ersatz-Anfragen auf.</p>
