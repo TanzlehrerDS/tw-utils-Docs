@@ -104,7 +104,7 @@ For script developers: endpoints, authentication and examples.
     → [Permission Concept](discord-bot/berechtigungskonzept.md)
 
 ??? question "I have no tw-utils role — what am I still allowed to do?"
-    Every verified member may, without holding any role at all: view their **own** planned commands, upload and view their **own** running commands, and view their **own** troops. So there is no such thing as “no access” — roles widen the view onto everyone else's data.
+    Every verified member may, without holding any role at all: view their **own** planned commands, upload and view their **own** running commands, and view their **own** troops. One exception on top: anyone with a planned snob on a village can see all planned commands on that village in the planning system via `Retrieve Plan Information`, until 24 hours after the snob's arrival. So there is no such thing as “no access” — roles widen the view onto everyone else's data.
 
     → [Permission Concept](discord-bot/berechtigungskonzept.md)
 

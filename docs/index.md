@@ -104,7 +104,7 @@ Für Script-Entwickler: Endpunkte, Authentifizierung und Beispiele.
     → [Berechtigungskonzept](discord-bot/berechtigungskonzept.md)
 
 ??? question "Ich habe keine tw-utils-Rolle — was darf ich trotzdem?"
-    Jedes verifizierte Mitglied darf auch ganz ohne Rolle: die **eigenen** geplanten Befehle einsehen, die **eigenen** laufenden Befehle hochladen und einsehen sowie die **eigenen** Truppen einsehen. „Gar kein Zugriff" gibt es also nicht — Rollen erweitern den Blick auf die Daten der anderen.
+    Jedes verifizierte Mitglied darf auch ganz ohne Rolle: die **eigenen** geplanten Befehle einsehen, die **eigenen** laufenden Befehle hochladen und einsehen sowie die **eigenen** Truppen einsehen. Dazu kommt eine Ausnahme: Wer einen geplanten AG auf ein Dorf hat, sieht im Planning-System über `Retrieve Plan Information` alle geplanten Befehle auf dieses Dorf, bis 24 Stunden nach der Ankunft des AGs. „Gar kein Zugriff" gibt es also nicht — Rollen erweitern den Blick auf die Daten der anderen.
 
     → [Berechtigungskonzept](discord-bot/berechtigungskonzept.md)
 

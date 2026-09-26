@@ -26,7 +26,7 @@ can use the interactive features of the installed modules:
 - Upload their running commands through the tw-utils API
 - etc.
 
-They always see **their own** data only. They cannot open the
+They always see **their own** data only — with one exception: anyone with a planned snob on a village can retrieve the [plan information](planning-system.md#6-plan-information) for that village in the planning system and sees the other players' commands there as well. They cannot open the
 Leader-View on tw-utils.net.
 
 ## 2. The four tw-utils roles

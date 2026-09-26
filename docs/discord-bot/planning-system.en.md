@@ -1,6 +1,6 @@
 # Planning-System
 
-The Planning-System is the Discord-side bridge to the Off-Planner on [tw-utils.net](https://tw-utils.net). In addition to the website, players can also use the tw-utils Discord bot to report Snobs, enter launch times and exclude origin villages from their plans. Tribe leadership in turn distributes the finished attack plans. Leaders can also check in on the planning from anywhere via Discord.
+The Planning-System is the Discord-side bridge to the Off-Planner on [tw-utils.net](https://tw-utils.net). In addition to the website, players can also use the tw-utils Discord bot to report Snobs, enter launch times and exclude origin villages from their plans. Tribe leadership in turn distributes the finished attack plans. Leaders can also check in on the planning from anywhere via Discord, and snob senders can use the [plan information](#6-plan-information) to see who sends the Nuke on their target.
 
 !!! info "Prerequisite: verified TW account"
     Without a linked account the input buttons and the `Download` button in the Plan-Distribution channel cannot be used.
@@ -11,7 +11,7 @@ After the [setup](modul-verwaltung.md), the bot creates the category `🪓 PLANN
 
 - `#⚫-queries` — reporting channel for players (Snob reports, launch times, off-exclusions)
 - `#⚫-plan-distribution` — players can download their personal attack plan here
-- `#⚫-leaderview-planinfo` — leaders can review the planned commands here
+- `#⚫-leaderview-planinfo` — leaders can review the planned commands here, snob senders the commands on their snob targets
 - `#⚫-nuke-replacement` — enables a structured search for replacement Nukes
 
 ![Channel overview of the Planning-System](../assets/discordbot/planning-system/01_planning_system_channels.png){ .screenshot }
@@ -120,12 +120,20 @@ The bot then renders an overview of all currently planned commands from all acti
 
 ![Bot answer with plan information](../assets/discordbot/planning-system/24_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer.png){ .screenshot }
 
-The detailed view additionally shows the individual commands with origin village, player, command type as well as launch and arrival time — so you can tell at a glance which players are preparing which command on the target village.
+The detailed view additionally shows the individual commands with command type, player, launch and arrival time and the troops — so you can tell at a glance which players are preparing which command on the target village.
 
 ![Detailed bot answer with plan information](../assets/discordbot/planning-system/25_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer_detailed.png){ .screenshot }
 
-!!! info "Leaderview-PlanInfo visibility"
-    The `#⚫-leaderview-planinfo` channel is visible like the other channels of the module; who may see it is controlled by your [visibility roles](modul-verwaltung.md). The `Retrieve Plan Information` button, however, can only be used by users with the `TWU-Planner` or `TWU-Leader` role — and the bot's answer is ephemeral, so only the requester sees it. Plan information thus stays within the tribe leadership.
+!!! info "Who may retrieve plan information"
+    The `#⚫-leaderview-planinfo` channel is visible like the other channels of the module; who may see it is controlled by your [visibility roles](modul-verwaltung.md). The `Plan Information` modal opens for everyone — what the bot answers depends on the coordinate:
+
+    - **`TWU-Planner` and `TWU-Leader`** see the commands on any village.
+    - **Everyone else** sees the commands on a village only if one of their accounts linked on this server has a command of type **Snob** on it in an active Leader-View container (**"Publishing: Active"**). Snob fakes and snobs the planner hid before their launch time don't count, and access ends 24 hours after the snob's arrival. The image is the same one the tribe leadership sees — so every snob sender can see who sends the Nuke on their target.
+
+    For any other village the refusal always reads the same, even if nothing is planned there at all. The bot's answer is ephemeral, so only the requester sees it; every lookup is noted in `#⚫-admin-logs`, a refused one together with the reason.
+
+!!! warning "External plans: assign the Snob type correctly"
+    Whether a command counts as a snob depends on its type alone. When importing an external plan, make sure the snobs are assigned the **Snob** type — otherwise the snob senders won't see the commands on their targets.
 
 ## 7. Nuke-Replacement
 

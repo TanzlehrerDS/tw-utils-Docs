@@ -362,8 +362,10 @@ internally in the Leader-View — ideal during the preparation of an
 operation.
 
 !!! info "No effect on already distributed DSU plans"
-    The publishing toggle only affects the Discord download and the
-    display under **"My Commands"**. Plans already synchronized to
+    The publishing toggle only acts within tw-utils — besides the
+    Discord download and the display under **"My Commands"**, for
+    example also on the [plan information](../discord-bot/planning-system.md#6-plan-information)
+    for snob senders in Discord. Plans already synchronized to
     DS-Ultimate remain there and are still accessible, even if the
     container is switched to **"Inactive"**.
 

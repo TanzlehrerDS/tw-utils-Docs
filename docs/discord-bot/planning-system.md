@@ -1,6 +1,6 @@
 # Planning-System
 
-Das Planning-System ist die Discord-seitige Brücke zum Off-Planner auf [tw-utils.net](https://tw-utils.net). Zusätzlich zur Website haben die Spieler auch über den tw-utils Discordbot die Möglichkeit Adelsgeschlechter zu melden, Abschickzeiten einzutragen und Herkunftsdörfer auszuplanen. Die Stammesführung kann im Gegenzug die fertig erstellten Angriffspläne verteilen. Zusätzlich können die Leader auch von unterwegs über Discord Einsicht in die Planung nehmen.
+Das Planning-System ist die Discord-seitige Brücke zum Off-Planner auf [tw-utils.net](https://tw-utils.net). Zusätzlich zur Website haben die Spieler auch über den tw-utils Discordbot die Möglichkeit Adelsgeschlechter zu melden, Abschickzeiten einzutragen und Herkunftsdörfer auszuplanen. Die Stammesführung kann im Gegenzug die fertig erstellten Angriffspläne verteilen. Zusätzlich können die Leader auch von unterwegs über Discord Einsicht in die Planung nehmen, und AG-Schicker sehen dort über die [Plan-Informationen](#6-plan-informationen), wer die Off auf ihr Ziel schickt.
 
 !!! info "Voraussetzung verifizierter TW-Account"
     Ohne verknüpften Account können die Eingabe-Buttons und der `Download`-Button im Plan-Verteilungs-Kanal nicht genutzt werden.
@@ -11,7 +11,7 @@ Nach der [Installation](modul-verwaltung.md) legt der Bot die Kategorie `🪓 PL
 
 - `#⚫-queries` — Meldungs-Kanal für Spieler (AG-Meldungen, Abschickzeiten, Off-Ausschlüsse)
 - `#⚫-plan-distribution` — Spieler können sich hier Ihren persönlichen Angriffsplan herunterladen
-- `#⚫-leaderview-planinfo` — Leader können hier Einsicht in die geplanten Befehle nehmen
+- `#⚫-leaderview-planinfo` — Leader können hier Einsicht in die geplanten Befehle nehmen, AG-Schicker in die Befehle auf ihre AG-Ziele
 - `#⚫-nuke-replacement` — ermöglicht das strukturierte Suchen nach Ersatz-Offs
 
 ![Kanal-Übersicht des Planning-Systems](../assets/discordbot/planning-system/01_planning_system_channels.png){ .screenshot }
@@ -120,12 +120,20 @@ Der Bot rendert daraufhin eine Übersicht aller aktuell geplanten Befehle aus al
 
 ![Bot-Antwort mit Plan-Information](../assets/discordbot/planning-system/24_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer.png){ .screenshot }
 
-Die detailliertere Ansicht zeigt zusätzlich die einzelnen Befehle mit Herkunfts-Dorf, Spieler, Befehlstyp sowie Abschick- und Ankunftszeit — damit kannst Du auf einen Blick erkennen, welche Spieler welchen Befehl auf das Ziel-Dorf vorbereiten.
+Die detailliertere Ansicht zeigt zusätzlich die einzelnen Befehle mit Befehlstyp, Spieler, Abschick- und Ankunftszeit sowie den Truppen — damit kannst Du auf einen Blick erkennen, welche Spieler welchen Befehl auf das Ziel-Dorf vorbereiten.
 
 ![Detaillierte Bot-Antwort mit Plan-Information](../assets/discordbot/planning-system/25_planning_system_leaderview-planinfo_retrieve-plan-information_botanswer_detailed.png){ .screenshot }
 
-!!! info "Sichtbarkeit Leaderview-PlanInfo"
-    Der `#⚫-leaderview-planinfo`-Kanal ist wie die übrigen Kanäle des Moduls sichtbar; wer ihn sehen darf, steuert ihr über die [Sichtbarkeits-Rollen](modul-verwaltung.md). Den Button `Retrieve Plan Information` können aber nur User mit der Rolle `TWU-Planner` oder `TWU-Leader` benutzen — und die Antwort des Bots ist ephemeral, sieht also ausschließlich der Anfragende. Plan-Informationen bleiben damit innerhalb der Stammes-Führung.
+!!! info "Wer die Plan-Informationen abrufen darf"
+    Der `#⚫-leaderview-planinfo`-Kanal ist wie die übrigen Kanäle des Moduls sichtbar; wer ihn sehen darf, steuert ihr über die [Sichtbarkeits-Rollen](modul-verwaltung.md). Das Modal `Plan Information` öffnet sich für jeden — was der Bot antwortet, hängt von der Koordinate ab:
+
+    - **`TWU-Planner` und `TWU-Leader`** sehen die Befehle auf jedes Dorf.
+    - **Alle anderen** sehen die Befehle auf ein Dorf nur, wenn einer ihrer auf diesem Server verknüpften Accounts dort einen Befehl vom Typ **AG** in einem aktiven Container des Leader-Views (**„Veröffentlichung: Aktiv"**) hat. AG-Fakes und AGs, die der Planer vor ihrer Abschickzeit ausgeblendet hat, zählen nicht, und die Einsicht endet 24 Stunden nach der Ankunft des AGs. Angezeigt wird dasselbe Bild wie für die Stammes-Führung — so sieht jeder AG-Schicker, wer die Off auf sein Ziel schickt.
+
+    Für jedes andere Dorf lautet die Absage immer gleich, auch wenn dort gar nichts geplant ist. Die Antwort des Bots ist ephemeral, sieht also ausschließlich der Anfragende; jeder Abruf wird im `#⚫-admin-logs` vermerkt, ein abgelehnter samt Grund.
+
+!!! warning "Externe Pläne: Typ AG richtig zuordnen"
+    Ob ein Befehl als AG zählt, entscheidet allein sein Typ. Wer einen externen Plan importiert, muss beim Import darauf achten, dass die AGs dem Typ **AG** zugeordnet sind — sonst sehen die AG-Schicker die Befehle auf ihre Ziele nicht.
 
 ## 7. Off-Ersatz
 

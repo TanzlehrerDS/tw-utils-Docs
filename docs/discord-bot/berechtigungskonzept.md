@@ -28,7 +28,7 @@ nutzen:
 - ihre laufenden Befehle über die tw-utils-API hochladen
 - usw.
 
-Sie sehen dabei immer nur **ihre eigenen** Daten. Den Leader-View auf
+Sie sehen dabei immer nur **ihre eigenen** Daten — mit einer Ausnahme: Wer einen geplanten AG auf ein Dorf hat, kann im Planning-System die [Plan-Informationen](planning-system.md#6-plan-informationen) zu diesem Dorf abrufen und sieht dort auch die Befehle der anderen. Den Leader-View auf
 tw-utils.net können sie nicht öffnen.
 
 ## 2. Die vier tw-utils-Rollen

@@ -288,7 +288,7 @@ nachträglich justieren.
 Im oberen Bereich des Dialogs stehen **Quelldorf** und **Zieldorf**
 mit ihren Koordinaten zur Bearbeitung bereit; der Spielername wird
 automatisch unter dem jeweiligen Feld angezeigt. Über die Felder
-**„Typ"** (z. B. **„Snob"**, **„Off"** oder **„Fake"**),
+**„Typ"** (z. B. **„AG"**, **„Off"** oder **„Fake"**),
 **„Einheit"** (schnellste verwendete Einheit, sie bestimmt die
 Laufzeit) und **„Symbol"** (DS-Ultimate-Icon des Befehls) legst du
 die Eckdaten des Befehls fest. Bei den Zeiten ist jeweils einer der
@@ -374,8 +374,10 @@ im Leader-View sichtbar — ideal während der Vorbereitung einer
 Operation.
 
 !!! info "Keine Auswirkung auf bereits verteilte DSU-Pläne"
-    Der Veröffentlichungs-Toggle beeinflusst ausschließlich den
-    Discord-Download und die Anzeige unter **„Meine Befehle"**.
+    Der Veröffentlichungs-Toggle wirkt nur innerhalb von tw-utils —
+    neben dem Discord-Download und der Anzeige unter **„Meine Befehle"**
+    etwa auch auf die [Plan-Informationen](../discord-bot/planning-system.md#6-plan-informationen)
+    für AG-Schicker im Discord.
     Bereits an DS-Ultimate synchronisierte Pläne bleiben dort
     erhalten und sind weiterhin abrufbar, auch wenn der Container auf
     **„Inaktiv"** geschaltet wird.
